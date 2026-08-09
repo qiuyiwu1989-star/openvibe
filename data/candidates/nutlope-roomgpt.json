@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 604791960,
+  "locale": "zh-CN",
+  "displayName": "RoomGPT",
+  "tagline": "用一条 AI 图像生成链路，学会把产品想法做成可用页面",
+  "summary": "RoomGPT 接收房间照片，调用托管的 ControlNet 模型生成改造效果。开源仓库是商业产品的早期简化版，刻意不含登录和支付，因此很适合初学者观察“上传输入—服务端调用 AI—结果对比”这条最小闭环。",
+  "recommendationReasons": [
+    "产品只围绕一个高感知价值任务展开，新手容易理解每个界面和接口的作用。",
+    "仓库把图片上传、AI 生成、加载反馈和前后对比放在同一个小型 Next.js 应用中，适合完整走读。",
+    "README 直接说明本地运行与部署方式，并标出 Replicate 等外部依赖。"
+  ],
+  "audiences": ["beginner", "starter"],
+  "categories": ["ai-app"],
+  "learningGoals": ["ui", "ai-integration", "deployment", "project-organization"],
+  "difficulty": {
+    "level": "easy",
+    "rationale": "代码规模小、业务链路单一，README 提供了直接的本地启动步骤。但要完成真实生成，仍需要外部 AI 服务凭证并理解图片上传链路。",
+    "prerequisites": ["JavaScript/TypeScript 基础", "React 组件基础", "会配置 .env 环境变量"]
+  },
+  "techStack": [
+    {"name": "Next.js 13", "role": "页面、服务端路由与应用构建", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT/blob/main/package.json"},
+    {"name": "TypeScript", "role": "前后端应用代码", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT"},
+    {"name": "Tailwind CSS", "role": "页面样式与表单样式", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT/blob/main/package.json"},
+    {"name": "Replicate / ControlNet", "role": "房间图像生成", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT/blob/main/README.md"},
+    {"name": "Bytescale", "role": "图片上传与存储", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT/blob/main/README.md"},
+    {"name": "Upstash Redis", "role": "可选的请求限流", "confidence": "confirmed", "evidenceUrl": "https://github.com/Nutlope/roomGPT/blob/main/utils/redis.ts"}
+  ],
+  "learningHighlights": [
+    {"title": "单功能 AI 产品闭环", "description": "沿着用户选择图片、设置风格、发起生成到查看对比的路径，理解如何用少量页面完成明确价值交付。", "evidencePaths": ["app/dream/page.tsx", "app/generate/route.ts", "components/CompareSlider.tsx"]},
+    {"title": "长耗时任务的界面反馈", "description": "观察生成期间的加载状态、可视化结果与下载操作，再把其替换成自己的 AI 能力。", "evidencePaths": ["app/dream/page.tsx", "components/LoadingDots.tsx", "utils/downloadPhoto.ts"]},
+    {"title": "最小化限流设计", "description": "对照可选 Upstash 配置，理解公开 AI 接口为什么需要成本保护和如何渐进引入。", "evidencePaths": ["utils/redis.ts", ".example.env", "README.md"]}
+  ],
+  "learningPath": {
+    "thirtyMinutes": {"objective": "理清产品主链路与运行条件", "steps": ["阅读 README 的 How it works 和 Running Locally", "从 app/page.tsx 进入 app/dream/page.tsx", "标出上传、生成、对比三个状态"], "outcome": "画出一张从图片输入到 AI 结果展示的简图。"},
+    "twoHours": {"objective": "做出一个不依赖真实 AI 的界面改版", "steps": ["完成本地安装并打开首页", "用固定示例图替代真实生成结果", "新增一种房间或风格选项", "改造结果页的文案与加载反馈"], "outcome": "交付一个可点击演示的个人化版本。"},
+    "oneDay": {"objective": "把同一闭环迁移到自己的 AI 场景", "steps": ["替换为自选图像或文本生成 API", "为服务端路由增加输入校验和错误状态", "设置每用户或 IP 的基本限流", "完成成功、超时、配额不足三类测试"], "outcome": "得到一个具备成本保护和错误反馈的单功能 AI 应用原型。"}
+  },
+  "readingGuide": [
+    {"path": "README.md", "reason": "先确认这是商业产品的早期简化版及外部服务依赖。"},
+    {"path": "app/dream/page.tsx", "reason": "主交互、状态切换和请求入口集中在此。"},
+    {"path": "app/generate/route.ts", "reason": "理解服务端如何接收参数并调用生成服务。"},
+    {"path": "utils/redis.ts", "reason": "观察限流如何作为可选基础设施加入。"},
+    {"path": "components/CompareSlider.tsx", "reason": "学习用前后对比放大 AI 结果的产品表达。"}
+  ],
+  "risks": [
+    {"kind": "paid-service", "severity": "medium", "note": "真实生成依赖 Replicate，图片上传链路也引入外部服务；实验前需核对当前计费和配额。"},
+    {"kind": "maintenance", "severity": "medium", "note": "仓库是早期开源版，主分支最近推送时间为 2024-04-20；依赖版本和外部 API 可能需要更新。"},
+    {"kind": "security", "severity": "medium", "note": "上传用户房间照片涉及隐私；复刻时需补充文件类型、大小、保留周期和密钥隔离策略。"}
+  ],
+  "score": {
+    "replicability": 22, "clarity": 18, "beginnerValue": 18, "productCompleteness": 11, "vibeCodingRelevance": 8, "maintenance": 2, "novelty": 3, "total": 82,
+    "rationale": {
+      "replicability": "规模小、单仓库且有本地启动步骤，扣分点是真实链路依赖外部付费 API。",
+      "clarity": "README 把产品机制和环境配置说得清楚，主链路文件少。",
+      "beginnerValue": "适合从一个界面、一个路由、一个 AI 任务建立全栈概念。",
+      "productCompleteness": "输入、生成和结果展示闭环完整，但开源版明确不含登录、支付等 SaaS 功能。",
+      "vibeCodingRelevance": "非常适合用“修改一个小功能—替换模型—做个人变体”的方式学习。",
+      "maintenance": "仓库未归档，但主分支长时间未推送，不应将其当作当前技术模板直接上线。",
+      "novelty": "产品表达直观，但 AI 图像风格化已是成熟常见的应用形态。"
+    }
+  },
+  "sources": [
+    {"kind": "repository", "url": "https://github.com/Nutlope/roomGPT", "accessedAt": "2026-08-09T15:03:02Z"},
+    {"kind": "readme", "url": "https://github.com/Nutlope/roomGPT/blob/main/README.md", "accessedAt": "2026-08-09T15:03:02Z"},
+    {"kind": "file", "url": "https://github.com/Nutlope/roomGPT/blob/main/package.json", "accessedAt": "2026-08-09T15:03:02Z"},
+    {"kind": "file", "url": "https://github.com/Nutlope/roomGPT/blob/main/app/generate/route.ts", "accessedAt": "2026-08-09T15:03:02Z"}
+  ],
+  "provenance": {"createdBy": "agent", "generator": "Codex phase-1 Agent B", "createdAt": "2026-08-09T15:03:02Z"},
+  "review": {"state": "pending", "reviewer": null, "reviewedAt": null, "notes": "待人工复核外部服务当前可用性、成本和隐私提示。"}
+}

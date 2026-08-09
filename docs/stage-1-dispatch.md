@@ -8,6 +8,26 @@
 - 主 Agent 冻结 Schema v1。
 - 选定 5 个覆盖不同类型和难度的测试仓库。
 
+## 已锁定的 5 个样板仓库
+
+核对日期：2026-08-09。它们只是纵向样板，不因入选样板而自动获得最终发布资格。
+
+| 仓库 | 样板角色 | 预期难度 |
+|---|---|---|
+| `Nutlope/roomGPT` | 单功能 AI 图片应用，验证新手级学习路径 | 简单 |
+| `nextjs/saas-starter` | 登录、数据库、支付的 SaaS 骨架 | 中等 |
+| `browser-use/web-ui` | Python 浏览器 Agent 与多模型配置 | 中等 |
+| `openstatusHQ/openstatus` | 监控平台与多应用工程结构 | 较难 |
+| `actualbudget/actual` | local-first 个人财务产品与成熟工程 | 较难 |
+
+来源：
+
+- <https://github.com/Nutlope/roomGPT>
+- <https://github.com/nextjs/saas-starter>
+- <https://github.com/browser-use/web-ui>
+- <https://github.com/openstatusHQ/openstatus>
+- <https://github.com/actualbudget/actual>
+
 ## 可并行工作包
 
 ### A：GitHub 抓取器
@@ -51,4 +71,3 @@ GitHub URL → 快照 → 评分 → 学习卡 → 审核 → 页面展示
 ```
 
 5 个样板全部跑通且测试为绿，才进入 30 项目扩展。
-

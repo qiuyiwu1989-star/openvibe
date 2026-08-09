@@ -53,3 +53,10 @@ test("拒绝缺少发布审计字段的已发布内容", () => {
 
   assert.equal(RadarProjectBundleSchema.safeParse(fixture).success, false);
 });
+
+test("拒绝没有事实来源的编辑内容", () => {
+  const fixture = cloneFixture();
+  fixture.editorial.sources = [];
+
+  assert.equal(RadarProjectBundleSchema.safeParse(fixture).success, false);
+});

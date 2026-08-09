@@ -49,6 +49,7 @@ discovered → fetched → evaluated → review → published
 {
   locator: { owner: string; name: string };
   ifNoneMatch?: string;
+  knownRepositoryId?: number;
   force: boolean;
 }
 ```
@@ -56,8 +57,8 @@ discovered → fetched → evaluated → review → published
 输出：`IngestOutcome`
 
 - `changed`：返回新快照。
-- `not_modified`：GitHub 返回 304，不改写文件。
-- `failed`：返回结构化错误，不删除旧快照。
+- `not_modified`：GitHub 返回 304，返回已知 repository ID、检查时间与 ETag，不改写文件。
+- `failed`：返回 HTTP 状态、是否可重试及退避信息，不删除旧快照。
 
 ### 策展 Agent
 
@@ -81,4 +82,3 @@ discovered → fetched → evaluated → review → published
 - 破坏性字段变化提升主版本，并提供迁移脚本。
 - 新增可选字段提升次版本。
 - Agent 不得在未修改 Schema 和 fixture 的情况下私自增加字段。
-

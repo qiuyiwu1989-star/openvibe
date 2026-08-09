@@ -1,0 +1,319 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 854894542,
+    "nodeId": "R_kgDOMvSnzg",
+    "owner": {
+      "login": "nextjs",
+      "id": 126103961,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/126103961?v=4"
+    },
+    "name": "saas-starter",
+    "fullName": "nextjs/saas-starter",
+    "htmlUrl": "https://github.com/nextjs/saas-starter",
+    "description": "Get started quickly with Next.js, Postgres, Stripe, and shadcn/ui.",
+    "homepageUrl": "https://next-saas-start.vercel.app/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 16018,
+      "forks": 2688,
+      "openIssues": 52,
+      "subscribers": 96
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 108101,
+      "CSS": 7954,
+      "JavaScript": 70
+    },
+    "topics": [
+      "nextjs",
+      "postgres",
+      "shadcn-ui",
+      "stripe"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2024-09-10T00:18:56Z",
+      "updatedAt": "2026-08-08T16:57:15Z",
+      "pushedAt": "2025-12-11T22:35:37Z",
+      "fetchedAt": "2026-08-09T15:02:34.504Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "093d91d2eb3c310f802a459e6bfdb69cd6cee7fd",
+      "htmlUrl": "https://github.com/nextjs/saas-starter/blob/main/README.md",
+      "excerpt": "# Next.js SaaS Starter\n\nThis is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.\n\n**Demo: [https://next-saas-start.vercel.app/](https://next-saas-start.vercel.app/)**\n\n## Features\n\n- Marketing landing page (`/`) with animated Terminal element\n- Pricing page (`/pricing`) which connects to Stripe Checkout\n- Dashboard pages with CRUD operations on users/teams\n- Basic RBAC with Owner and Member roles\n- Subscription management with Stripe Customer Portal\n- Email/password authentication with JWTs stored to cookies\n- Global middleware to protect logged-in routes\n- Local middleware to protect Server Actions or validate Zod schemas\n- Activity logging system for any user events\n\n## Tech Stack\n\n- **Framework**: [Next.js](https://nextjs.org/)\n- **Database**: [Postgres](https://www.postgresql.org/)\n- **ORM**: [Drizzle](https://orm.drizzle.team/)\n- **Payments**: [Stripe](https://stripe.com/)\n- **UI Library**: [shadcn/ui](https://ui.shadcn.com/)\n\n## Getting Started\n\n```bash\ngit clone https://github.com/nextjs/saas-starter\ncd saas-starter\npnpm install\n```\n\n## Running Locally",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"ee4e85493bd59f9545d31a9e777e90b47e876a172f161eb0713b4c3f1b285c16\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 854894542,
+    "locale": "zh-CN",
+    "displayName": "Next.js SaaS Starter",
+    "tagline": "用一个最小可运行模板，拆解 SaaS 的登录、团队、数据库和支付",
+    "summary": "Next.js SaaS Starter 是一个有意保持精简的 SaaS 起步项目，将营销页、价格页、邮箱密码登录、团队与角色、活动日志、Stripe 订阅和 Postgres 数据库放在一个 Next.js 仓库里。它适合已经会做页面、正在学如何连成完整 SaaS 链路的学习者。",
+    "recommendationReasons": [
+      "登录、授权、数据访问、支付回调和仪表盘均有具体代码入口，可以端到端跟踪。",
+      "以单体 Next.js 应用呈现常见 SaaS 边界，比大型多服务模板更容易建立整体认知。",
+      "README 提供数据库初始化、测试账号、Stripe CLI 回调与生产配置清单。"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "payments",
+      "ui",
+      "deployment"
+    ],
+    "difficulty": {
+      "level": "medium",
+      "rationale": "项目结构紧凑且说明清晰，但本地运行需要 Postgres、迁移、种子数据、Stripe CLI 和多个密钥；读懂会话、中间件和 webhook 也需要基础后端概念。",
+      "prerequisites": [
+        "React 与 Next.js 基础",
+        "TypeScript 基础",
+        "SQL 与关系型数据库概念",
+        "HTTP cookie 与 webhook 基础",
+        "会管理本地环境变量"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Next.js",
+        "role": "页面、Server Actions、API 路由与中间件",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/README.md"
+      },
+      {
+        "name": "PostgreSQL",
+        "role": "用户、团队、订阅与活动数据存储",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/README.md"
+      },
+      {
+        "name": "Drizzle ORM",
+        "role": "数据 Schema、查询与迁移",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/lib/db/schema.ts"
+      },
+      {
+        "name": "Stripe",
+        "role": "Checkout、客户门户和订阅 webhook",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/app/api/stripe/webhook/route.ts"
+      },
+      {
+        "name": "shadcn/ui",
+        "role": "仪表盘与表单组件基础",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/README.md"
+      },
+      {
+        "name": "Zod",
+        "role": "表单和服务端输入校验",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/nextjs/saas-starter/blob/main/package.json"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "会话与双层路由保护",
+        "description": "对照全局 middleware 和局部 Server Action 校验，理解页面可见性与服务端授权为什么需要分开。",
+        "evidencePaths": [
+          "middleware.ts",
+          "lib/auth/middleware.ts",
+          "lib/auth/session.ts",
+          "app/(login)/actions.ts"
+        ]
+      },
+      {
+        "title": "支付系统的异步真相",
+        "description": "跟踪从价格页到 Checkout，再由 webhook 更新订阅状态的过程，避免把前端跳转误当成支付成功凭据。",
+        "evidencePaths": [
+          "app/(dashboard)/pricing/page.tsx",
+          "app/api/stripe/checkout/route.ts",
+          "app/api/stripe/webhook/route.ts",
+          "lib/payments/stripe.ts"
+        ]
+      },
+      {
+        "title": "从 Schema 到产品权限",
+        "description": "从 users、teams、teamMembers 和 activityLogs 的关系出发，理解数据模型如何支撑 Owner/Member 角色和审计记录。",
+        "evidencePaths": [
+          "lib/db/schema.ts",
+          "lib/db/queries.ts",
+          "app/(dashboard)/dashboard/activity/page.tsx"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立完整 SaaS 功能地图",
+        "steps": [
+          "阅读 README 的 Features 和 Tech Stack",
+          "在 lib/db/schema.ts 标注用户、团队、订阅关系",
+          "沿定价页追到 checkout 和 webhook 路由"
+        ],
+        "outcome": "能用一张图说清登录用户如何成为付费团队。"
+      },
+      "twoHours": {
+        "objective": "本地运行并完成一个可验证的业务修改",
+        "steps": [
+          "按 README 初始化数据库并登录测试账号",
+          "在仪表盘增加一个团队属性",
+          "通过 Drizzle 迁移和查询展示该字段",
+          "验证未登录访问仍被拦截"
+        ],
+        "outcome": "完成一次从数据库到受保护页面的端到端改动。"
+      },
+      "oneDay": {
+        "objective": "改造成一个细分 SaaS 原型",
+        "steps": [
+          "替换营销页、价格和团队核心对象",
+          "为关键 Server Action 补充 Zod 校验与角色授权",
+          "使用 Stripe 测试模式跑通 Checkout 与 webhook",
+          "测试重复 webhook、越权请求和无效输入"
+        ],
+        "outcome": "得到一个拥有可证明数据和权限边界的 SaaS 纵向样片。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先掌握功能边界、启动顺序和生产所需环境变量。"
+      },
+      {
+        "path": "lib/db/schema.ts",
+        "reason": "用数据关系建立业务骨架。"
+      },
+      {
+        "path": "lib/auth/session.ts",
+        "reason": "理解 JWT cookie 会话的创建、读取与校验。"
+      },
+      {
+        "path": "lib/auth/middleware.ts",
+        "reason": "学习服务端动作中的用户与团队上下文。"
+      },
+      {
+        "path": "app/api/stripe/webhook/route.ts",
+        "reason": "查看支付结果如何以已签名事件落入业务状态。"
+      },
+      {
+        "path": "lib/db/queries.ts",
+        "reason": "将页面与数据访问层的责任连起来。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "setup",
+        "severity": "medium",
+        "note": "本地闭环需要 Postgres、迁移与种子数据；支付链路还需 Stripe CLI 和 webhook 转发。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "这是学习起点而非无审核生产模板；上线前必须独立审查会话、密码、RBAC、webhook 幂等和密钥管理。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "生产使用需要数据库与 Stripe 账户，其当前政策、地区可用性和成本需另行核对。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "low",
+        "note": "package.json 使用 Next.js canary 版本；复刻时应先锁定已测试的依赖，避免盲目升级。"
+      }
+    ],
+    "score": {
+      "replicability": 21,
+      "clarity": 19,
+      "beginnerValue": 17,
+      "productCompleteness": 14,
+      "vibeCodingRelevance": 9,
+      "maintenance": 4,
+      "novelty": 3,
+      "total": 87,
+      "rationale": {
+        "replicability": "为最小模板且有明确初始化命令，但数据库与 Stripe 使复现不是零配置。",
+        "clarity": "README、目录命名与分层一致，主要业务边界容易定位。",
+        "beginnerValue": "对已会 React 的入门者价值高；完全零基础用户会同时遇到认证、SQL 和支付概念。",
+        "productCompleteness": "已包含营销、登录、团队、角色、支付和活动日志的 SaaS 主闭环。",
+        "vibeCodingRelevance": "适合以可运行骨架为起点，通过替换领域对象和界面快速做变体。",
+        "maintenance": "仓库未归档且有较新推送，但 canary 框架版本增加了更新风险。",
+        "novelty": "SaaS 能力组合典型且实用，但产品模式本身并不新颖。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/nextjs/saas-starter",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/nextjs/saas-starter/blob/main/README.md",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/nextjs/saas-starter/blob/main/lib/db/schema.ts",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/nextjs/saas-starter/blob/main/app/api/stripe/webhook/route.ts",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      }
+    ],
+    "provenance": {
+      "createdBy": "agent",
+      "generator": "Codex phase-1 Agent B",
+      "createdAt": "2026-08-09T15:03:02Z"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-09T15:30:00Z",
+      "notes": "阶段 1 本地纵向样板复核通过；不代表已获得公网发布授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 854894542,
+    "slug": "nextjs-saas-starter",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-09T15:30:00Z",
+    "lastReviewedAt": "2026-08-09T15:30:00Z",
+    "rejectionReasons": []
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 486815039,
+  "nodeId": "R_kgDOHQQ1Pw",
+  "owner": {
+    "login": "actualbudget",
+    "id": 37879538,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/37879538?v=4"
+  },
+  "name": "actual",
+  "fullName": "actualbudget/actual",
+  "htmlUrl": "https://github.com/actualbudget/actual",
+  "description": "A local-first personal finance app",
+  "homepageUrl": "https://actualbudget.org/",
+  "defaultBranch": "master",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 28042,
+    "forks": 2807,
+    "openIssues": 222,
+    "subscribers": 78
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 8397144,
+    "JavaScript": 428963,
+    "CSS": 48180,
+    "Shell": 29554,
+    "Dockerfile": 7402,
+    "HTML": 7178,
+    "PEG.js": 6305,
+    "Swift": 3031,
+    "MDX": 1346,
+    "Java": 1292,
+    "Ruby": 731,
+    "SCSS": 504
+  },
+  "topics": [
+    "budgeting",
+    "finance",
+    "money",
+    "personal-finance"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2022-04-29T02:41:34Z",
+    "updatedAt": "2026-08-09T14:55:23Z",
+    "pushedAt": "2026-08-09T06:58:41Z",
+    "fetchedAt": "2026-08-09T15:02:37.988Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "572459a994da6176be7071e40deac42270e851e1",
+    "htmlUrl": "https://github.com/actualbudget/actual/blob/master/README.md",
+    "excerpt": "<p align=\"center\">\n  <img src=\"/demo.png\" alt=\"Actualbudget\" />\n</p>\n\n## Getting Started\n\nActual is a local-first personal finance tool. It is 100% free and open-source, written in NodeJS, it has a synchronization element so that all your changes can move between devices without any heavy lifting.\n\nIf you are interested in contributing, or want to know how development works, see our [contributing](https://actualbudget.org/docs/contributing/) document we would love to have you.\n\nWant to say thanks? Click the ⭐ at the top of the page.\n\n## Key Links\n\n- Actual [discord](https://discord.gg/pRYNYr4W5A) community.\n- Actual [Community Documentation](https://actualbudget.org/docs)\n- [Frequently asked questions](https://actualbudget.org/docs/faq)\n\n## Installation\n\nThere are four ways to deploy Actual:\n\n1. One-click deployment [via PikaPods](https://www.pikapods.com/pods?run=actual) (~2.00 $/month) - recommended for non-technical users\n1. Managed hosting [via Fly.io](https://actualbudget.org/docs/install/fly) (~1.50 $/month)\n1. Self-hosted by using [a Docker image](https://actualbudget.org/docs/install/docker)\n1. Local-only apps - [downloadable Windows, Mac and Linux apps](https://actualbudge",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"0f939318105729c3f43ffe7b9f0179f02027ba88c89bc2d902248133a0005a9a\""
+  }
+}

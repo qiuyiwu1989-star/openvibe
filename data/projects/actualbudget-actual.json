@@ -1,0 +1,350 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 486815039,
+    "nodeId": "R_kgDOHQQ1Pw",
+    "owner": {
+      "login": "actualbudget",
+      "id": 37879538,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/37879538?v=4"
+    },
+    "name": "actual",
+    "fullName": "actualbudget/actual",
+    "htmlUrl": "https://github.com/actualbudget/actual",
+    "description": "A local-first personal finance app",
+    "homepageUrl": "https://actualbudget.org/",
+    "defaultBranch": "master",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 28042,
+      "forks": 2807,
+      "openIssues": 222,
+      "subscribers": 78
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 8397144,
+      "JavaScript": 428963,
+      "CSS": 48180,
+      "Shell": 29554,
+      "Dockerfile": 7402,
+      "HTML": 7178,
+      "PEG.js": 6305,
+      "Swift": 3031,
+      "MDX": 1346,
+      "Java": 1292,
+      "Ruby": 731,
+      "SCSS": 504
+    },
+    "topics": [
+      "budgeting",
+      "finance",
+      "money",
+      "personal-finance"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2022-04-29T02:41:34Z",
+      "updatedAt": "2026-08-09T14:55:23Z",
+      "pushedAt": "2026-08-09T06:58:41Z",
+      "fetchedAt": "2026-08-09T15:02:37.988Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "572459a994da6176be7071e40deac42270e851e1",
+      "htmlUrl": "https://github.com/actualbudget/actual/blob/master/README.md",
+      "excerpt": "<p align=\"center\">\n  <img src=\"/demo.png\" alt=\"Actualbudget\" />\n</p>\n\n## Getting Started\n\nActual is a local-first personal finance tool. It is 100% free and open-source, written in NodeJS, it has a synchronization element so that all your changes can move between devices without any heavy lifting.\n\nIf you are interested in contributing, or want to know how development works, see our [contributing](https://actualbudget.org/docs/contributing/) document we would love to have you.\n\nWant to say thanks? Click the ⭐ at the top of the page.\n\n## Key Links\n\n- Actual [discord](https://discord.gg/pRYNYr4W5A) community.\n- Actual [Community Documentation](https://actualbudget.org/docs)\n- [Frequently asked questions](https://actualbudget.org/docs/faq)\n\n## Installation\n\nThere are four ways to deploy Actual:\n\n1. One-click deployment [via PikaPods](https://www.pikapods.com/pods?run=actual) (~2.00 $/month) - recommended for non-technical users\n1. Managed hosting [via Fly.io](https://actualbudget.org/docs/install/fly) (~1.50 $/month)\n1. Self-hosted by using [a Docker image](https://actualbudget.org/docs/install/docker)\n1. Local-only apps - [downloadable Windows, Mac and Linux apps](https://actualbudge",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"0f939318105729c3f43ffe7b9f0179f02027ba88c89bc2d902248133a0005a9a\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 486815039,
+    "locale": "zh-CN",
+    "displayName": "Actual Budget",
+    "tagline": "从成熟个人财务产品学习 local-first、同步与跨平台工程",
+    "summary": "Actual Budget 是一个 local-first 个人财务工具，核心数据和业务逻辑可在本地运行，并通过同步服务在设备间传递变更。它是包含核心引擎、Web/桌面端、Electron、移动端、CRDT、同步服务和文档的成熟 monorepo。这个案例的学习价值在于拆解数据所有权与复杂工程边界，而不是让新手一天内复制完整产品。",
+    "recommendationReasons": [
+      "它将 local-first 从口号变成可阅读的本地数据库、同步协议、冲突处理和服务端代码。",
+      "预算、账户、交易、报表与规则等完整产品域，适合学习成熟产品如何长期组织业务代码。",
+      "同一核心能力服务于浏览器、Electron、移动端与 API，能观察共享逻辑与平台适配的分界。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "data-visualization",
+      "mobile-app"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "project-organization",
+      "ui",
+      "deployment"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "这是一个多包、多端、拥有自定义同步与大量业务规则的长期项目。根脚本需要 Node 22.18+ 与 Yarn 4，完整开发还涉及 SQLite、Electron、移动构建和同步服务，应以小切片阅读而非整仓复制。",
+      "prerequisites": [
+        "TypeScript/React 中型项目经验",
+        "SQL/SQLite 基础",
+        "理解本地状态、同步与冲突的区别",
+        "monorepo 与 workspace 基础",
+        "能阅读测试并小步调试成熟代码库"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "TypeScript / Node.js",
+        "role": "核心业务、客户端与同步服务主语言",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/blob/master/package.json"
+      },
+      {
+        "name": "React",
+        "role": "Web 与桌面客户端界面",
+        "confidence": "inferred",
+        "evidenceUrl": "https://github.com/actualbudget/actual/tree/master/packages/desktop-client/src"
+      },
+      {
+        "name": "SQLite / sql.js",
+        "role": "local-first 数据持久化",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/blob/master/packages/loot-core/package.json"
+      },
+      {
+        "name": "CRDT",
+        "role": "跨设备变更合并与同步基础",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/tree/master/packages/crdt"
+      },
+      {
+        "name": "Electron",
+        "role": "桌面应用运行时",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/tree/master/packages/desktop-electron"
+      },
+      {
+        "name": "Express",
+        "role": "同步服务 HTTP 层",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/blob/master/packages/sync-server/package.json"
+      },
+      {
+        "name": "Yarn workspaces / Lage",
+        "role": "多包构建、测试与任务编排",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/blob/master/package.json"
+      },
+      {
+        "name": "Capacitor",
+        "role": "将 Web 客户端能力封装到 iOS 与 Android",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/actualbudget/actual/blob/master/packages/mobile-client/package.json"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "local-first 不等于只有本地存储",
+        "description": "对照核心数据库、CRDT 时间戳与 Merkle 结构、客户端同步和 sync-server，理解离线可用与跨设备同步是两个相关但独立的问题。",
+        "evidencePaths": [
+          "packages/loot-core/src/server/db",
+          "packages/loot-core/src/server/sync",
+          "packages/crdt/src/crdt",
+          "packages/sync-server/src/app-sync.ts"
+        ]
+      },
+      {
+        "title": "核心业务与平台适配",
+        "description": "从 loot-core 的 platform imports 和多个客户端包出发，观察文件系统、SQLite、网络连接等能力如何在浏览器、Electron 和 API 环境中被替换。",
+        "evidencePaths": [
+          "packages/loot-core/package.json",
+          "packages/loot-core/src/platform",
+          "packages/desktop-client",
+          "packages/desktop-electron"
+        ]
+      },
+      {
+        "title": "成熟财务产品的领域分区",
+        "description": "通过 accounts、budget、transactions、rules、reports 等目录，学习如何让复杂业务能力在服务层、查询层和 UI 中保持可定位性。",
+        "evidencePaths": [
+          "packages/loot-core/src/server/budget",
+          "packages/loot-core/src/server/transactions",
+          "packages/loot-core/src/server/rules",
+          "packages/loot-core/src/server/reports",
+          "packages/desktop-client/src/budget",
+          "packages/desktop-client/src/transactions"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立 local-first 与仓库分层的正确心智模型",
+        "steps": [
+          "阅读 README 的 Getting Started 和 Code structure",
+          "在根 package.json 列出主要客户端与服务启动命令",
+          "对照 loot-core、crdt、desktop-client 和 sync-server 的责任"
+        ],
+        "outcome": "画出本地数据、核心业务、界面和同步服务的四层关系。"
+      },
+      "twoHours": {
+        "objective": "沿一个预算数字完成小范围走读",
+        "steps": [
+          "选择一个预算页的显示字段",
+          "从 desktop-client/src/budget 找到查询或动作调用",
+          "在 loot-core 中定位对应业务与 SQL 实现",
+          "阅读相邻测试并记录其不变量"
+        ],
+        "outcome": "得到一张某个预算值从本地数据到界面的追踪笔记。"
+      },
+      "oneDay": {
+        "objective": "用小实验理解离线变更与同步冲突",
+        "steps": [
+          "仅运行浏览器客户端与本地测试环境",
+          "为一个简化账户字段添加变更与测试",
+          "用两个独立测试实例模拟并发编辑",
+          "对照 CRDT 测试解释最终结果并补充一个冲突用例"
+        ],
+        "outcome": "产出一个不触及真实财务数据的双实例同步实验和解释。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先确认 local-first 定位、同步能力和官方建议的代码结构。"
+      },
+      {
+        "path": "package.json",
+        "reason": "从 workspace 和脚本识别 Web、桌面、移动、API 与同步服务的构建边界。"
+      },
+      {
+        "path": "packages/loot-core/package.json",
+        "reason": "理解核心包的平台条件导入、数据库依赖与公开边界。"
+      },
+      {
+        "path": "packages/loot-core/src/server/budget",
+        "reason": "从一个明确领域切片开始，避免整仓漫游。"
+      },
+      {
+        "path": "packages/crdt/src/crdt",
+        "reason": "通过实现和测试理解时间戳、Merkle 树与变更合并。"
+      },
+      {
+        "path": "packages/sync-server/src/app-sync.ts",
+        "reason": "查看跨设备同步在服务端的接口入口。"
+      },
+      {
+        "path": "packages/desktop-client/src/budget",
+        "reason": "将预算领域与用户界面连起来。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "仓库包含大量长期演进的业务与多平台代码；新手应严格限定到单一领域和单一运行时。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "根配置要求 Node >=22.18 和 Yarn 4.9.1 系列，桌面端还涉及 Electron 原生依赖重建。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "个人财务数据高度敏感；学习和测试只应使用合成数据，自托管时需单独评估认证、加密、备份与暴露面。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "low",
+        "note": "项目在核对时仍活跃，但快速演进意味着阅读指南和精确路径需要定期复核。"
+      }
+    ],
+    "score": {
+      "replicability": 12,
+      "clarity": 16,
+      "beginnerValue": 11,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 6,
+      "maintenance": 5,
+      "novelty": 5,
+      "total": 70,
+      "rationale": {
+        "replicability": "官方提供多种安装与自托管方式，但从代码复刻核心产品的成本很高。",
+        "clarity": "README 和社区文档给出包边界，目录领域命名清晰；但精确走读仍需较强工程能力。",
+        "beginnerValue": "可建立 local-first 与成熟工程认知，但只适合有基础的学习者做小切片。",
+        "productCompleteness": "个人财务主要领域、多端客户端、同步、导入与自托管都已具备。",
+        "vibeCodingRelevance": "适合学习如何让 AI 在成熟仓库中小步改动，但不适合把整个产品作为快速生成目标。",
+        "maintenance": "仓库未归档、核对时有当日推送，并有测试、代码审查指南和社区文档。",
+        "novelty": "local-first 财务、CRDT 同步与多平台核心共享组合，具有显著的学习差异化。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/actualbudget/actual",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/actualbudget/actual/blob/master/README.md",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/actualbudget/actual/blob/master/package.json",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/actualbudget/actual/blob/master/packages/loot-core/package.json",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/actualbudget/actual/blob/master/packages/sync-server/package.json",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      }
+    ],
+    "provenance": {
+      "createdBy": "agent",
+      "generator": "Codex phase-1 Agent B",
+      "createdAt": "2026-08-09T15:03:02Z"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-09T15:30:00Z",
+      "notes": "阶段 1 本地纵向样板复核通过；不代表已获得公网发布授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 486815039,
+    "slug": "actualbudget-actual",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-09T15:30:00Z",
+    "lastReviewedAt": "2026-08-09T15:30:00Z",
+    "rejectionReasons": []
+  }
+}

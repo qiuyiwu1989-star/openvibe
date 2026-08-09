@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 604791960,
+  "nodeId": "R_kgDOJAxkmA",
+  "owner": {
+    "login": "Nutlope",
+    "id": 63742054,
+    "type": "User",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/63742054?v=4"
+  },
+  "name": "roomGPT",
+  "fullName": "Nutlope/roomGPT",
+  "htmlUrl": "https://github.com/Nutlope/roomGPT",
+  "description": "Upload a photo of your room to generate your dream room with AI.",
+  "homepageUrl": "https://www.roomgpt.io/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 10666,
+    "forks": 1495,
+    "openIssues": 36,
+    "subscribers": 72
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 31178,
+    "CSS": 1410,
+    "JavaScript": 595
+  },
+  "topics": [],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2023-02-21T19:54:43Z",
+    "updatedAt": "2026-08-07T20:56:55Z",
+    "pushedAt": "2024-04-20T12:17:17Z",
+    "fetchedAt": "2026-08-09T15:01:10.545Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "3f9430dfda746bd37ea15a9f78e30784700f07ac",
+    "htmlUrl": "https://github.com/Nutlope/roomGPT/blob/main/README.md",
+    "excerpt": "# [RoomGPT](https://roomGPT.io) - redesign your room with AI\n\nThis is the previous and open source version of RoomGPT.io (a paid SaaS product). It's the very first version of roomGPT without the auth, payments, or additional features and it's simple to clone, deploy, and play around with.\n\n[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/roomGPT&env=REPLICATE_API_KEY&project-name=room-GPT&repo-name=roomGPT)\n\n[![Room GPT](./public/screenshot.png)](https://roomGPT.io)\n\n## How it works\n\nIt uses an ML model called [ControlNet](https://github.com/lllyasviel/ControlNet) to generate variations of rooms. This application gives you the ability to upload a photo of any room, which will send it through this ML Model using a Next.js API route, and return your generated room. The ML Model is hosted on [Replicate](https://replicate.com) and [Bytescale](https://www.bytescale.com/) is used for image storage.\n\n## Running Locally\n\n### Cloning the repository the local machine.\n\n```bash\ngit clone https://github.com/Nutlope/roomGPT\n```\n\n### Creating a account on Replicate to get an API key.\n\n1. Go to [Replicate](https://replicate.",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"37864b1f8eed93d06515547003e9efce927b3ce20c943daff006b37c421f0b7c\""
+  }
+}

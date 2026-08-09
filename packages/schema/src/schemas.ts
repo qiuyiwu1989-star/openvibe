@@ -9,7 +9,7 @@ import {
   RISK_KINDS,
   SCHEMA_VERSION,
   SCORE_MAX,
-} from "./taxonomies.js";
+} from "./taxonomies";
 
 const isoDateTime = z.string().datetime({ offset: true });
 const nullableUrl = z.string().url().nullable();
@@ -320,6 +320,7 @@ export const IngestCommandSchema = z
   .object({
     locator: RepositoryLocatorSchema,
     ifNoneMatch: z.string().trim().min(1).optional(),
+    knownRepositoryId: repositoryId.optional(),
     force: z.boolean().default(false),
   })
   .strict();
@@ -348,13 +349,17 @@ export const IngestOutcomeSchema = z.discriminatedUnion("status", [
             "not_found",
             "rate_limited",
             "unauthorized",
+            "forbidden",
             "invalid_response",
             "network",
+            "github_error",
             "unknown",
           ]),
           message: nonEmptyText,
+          status: z.number().int().min(100).max(599).nullable(),
           retryable: z.boolean(),
           retryAt: isoDateTime.nullable(),
+          retryAfterSeconds: z.number().int().nonnegative().nullable(),
         })
         .strict(),
     })
@@ -368,4 +373,3 @@ export type RadarProjectBundle = z.infer<typeof RadarProjectBundleSchema>;
 export type RepositoryLocator = z.infer<typeof RepositoryLocatorSchema>;
 export type IngestCommand = z.infer<typeof IngestCommandSchema>;
 export type IngestOutcome = z.infer<typeof IngestOutcomeSchema>;
-

@@ -1,3 +1,2 @@
-export * from "./schemas.js";
-export * from "./taxonomies.js";
-
+export * from "./schemas";
+export * from "./taxonomies";

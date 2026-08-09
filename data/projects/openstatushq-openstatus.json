@@ -1,0 +1,362 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 655783613,
+    "nodeId": "R_kgDOJxZ2vQ",
+    "owner": {
+      "login": "openstatusHQ",
+      "id": 136892265,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/136892265?v=4"
+    },
+    "name": "openstatus",
+    "fullName": "openstatusHQ/openstatus",
+    "htmlUrl": "https://github.com/openstatusHQ/openstatus",
+    "description": "🫖 Status page with uptime monitoring & API monitoring as code   🫖",
+    "homepageUrl": "https://openstatus.dev/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 8950,
+      "forks": 737,
+      "openIssues": 70,
+      "subscribers": 26
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 8632125,
+      "MDX": 1538696,
+      "Go": 308127,
+      "Dockerfile": 25711,
+      "CSS": 15849,
+      "JavaScript": 7508,
+      "Bru": 1562,
+      "Just": 1296,
+      "Shell": 1275
+    },
+    "topics": [
+      "alerting",
+      "incident-management",
+      "mcp",
+      "mcp-server",
+      "monitoring",
+      "monitoring-as-code",
+      "observability",
+      "on-call",
+      "open-source",
+      "sre",
+      "status-page",
+      "statuspage",
+      "synthetic-monitoring",
+      "terraform",
+      "tinybird",
+      "turso",
+      "uptime",
+      "uptime-checker",
+      "uptime-monitor"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0"
+    },
+    "timestamps": {
+      "createdAt": "2023-06-19T15:32:41Z",
+      "updatedAt": "2026-08-09T14:48:29Z",
+      "pushedAt": "2026-08-09T13:32:36Z",
+      "fetchedAt": "2026-08-09T15:02:36.942Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "818d9c2a404a180afb302ff8a100c04bb52b870e",
+      "htmlUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md",
+      "excerpt": "<p align=\"center\" style=\"margin-top: 120px\">\n\n  <h3 align=\"center\">openstatus</h3>\n\n  <p align=\"center\">The open-source status page and uptime monitoring platform.\n    <br />\n    <a href=\"https://www.openstatus.dev\"><strong>Learn more »</strong></a>\n    <br />\n    <br />\n    <a href=\"https://www.openstatus.dev/docs\">Documentation</a>\n    ·\n    <a href=\"https://www.openstatus.dev\">Website</a>\n    ·\n    <a href=\"https://www.openstatus.dev/discord\">Discord</a>\n  </p>\n\n  <p align=\"center\">\n  <a href=\"https://status.openstatus.dev\"><img src=\"https://status.openstatus.dev/badge/v2?variant=outline\" alt=\"openstatus status\"></a>\n\n  </p>\n  <p align=\"center\">\n      <a href=\"https://github.com/openstatushq/openstatus/blob/main/LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue.svg\" alt=\"License\"></a>\n      <a href=\"https://github.com/openstatushq/openstatus/stargazers\"><img src=\"https://img.shields.io/github/stars/openstatushq/openstatus?style=social\" alt=\"GitHub stars\"></a>\n      <a href=\"https://www.openstatus.dev/discord\"><img src=\"https://img.shields.io/discord/1129008226264940625?color=7289da&logo=discord&logoColor=white\" alt=\"Discord\"></a>\n</p>\n\n## About openstatus\n\no",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"383bf0f97417cdeabf87220e80f48a9454c31702f2c80a0df07825f2edfa4628\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 655783613,
+    "locale": "zh-CN",
+    "displayName": "openstatus",
+    "tagline": "从成熟监控平台学习多应用、多语言和运维产品的真实边界",
+    "summary": "openstatus 把全球可用性检查、API 监控、状态页、事故沟通和通知集成在一个可托管也可自建的平台中。仓库是包含 Next.js 仪表盘、Hono API、Go 检查器、数据包和部署设施的 monorepo，适合已有全栈基础的学习者研究成熟开源 SaaS 如何拆分责任，不适合作为第一个完整复刻项目。",
+    "recommendationReasons": [
+      "从监控配置到检查执行、时序数据、仪表盘和公开状态页，可观察完整的运维产品链路。",
+      "apps 与 packages 拆分、TypeScript 与 Go 并存，是学习 monorepo 边界和多运行时协作的真实案例。",
+      "同一平台同时提供 UI、API、CLI、Terraform 和 MCP 入口，便于学习多渠道如何共用业务能力。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "developer-tool",
+      "automation"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "project-organization",
+      "database",
+      "deployment",
+      "ui",
+      "agent-workflow"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "Docker 提供了快速体验路径，但完整开发环境涉及 pnpm、Bun、Deno、Turso，仓库还包含多个应用、共享包、Go 检查器和外部分析系统，需要较强的全栈与运维基础。",
+      "prerequisites": [
+        "TypeScript/React/Next.js 项目经验",
+        "REST/RPC 与异步任务概念",
+        "SQL 与时序数据基础",
+        "Docker Compose 基础",
+        "能阅读 Go 代码",
+        "monorepo 与多服务调试经验"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Next.js",
+        "role": "仪表盘等 Web 应用",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md"
+      },
+      {
+        "name": "Hono",
+        "role": "API 服务",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md"
+      },
+      {
+        "name": "Go",
+        "role": "分布式可用性检查器",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/apps/checker/cmd/server/main.go"
+      },
+      {
+        "name": "Turso",
+        "role": "业务数据库",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md"
+      },
+      {
+        "name": "Drizzle ORM",
+        "role": "数据库模型与访问",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md"
+      },
+      {
+        "name": "Tinybird",
+        "role": "监控分析数据",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md"
+      },
+      {
+        "name": "Turborepo / pnpm workspaces",
+        "role": "多应用与共享包编排",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/package.json"
+      },
+      {
+        "name": "Docker Compose",
+        "role": "本地体验与自托管服务编排",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/openstatusHQ/openstatus/blob/main/docker-compose.yaml"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "监控产品的端到端数据流",
+        "description": "选一个 HTTP 监控器，跟踪其从仪表盘配置、检查器执行、结果存储到状态页和通知的路径。",
+        "evidencePaths": [
+          "apps/dashboard/src/app/(dashboard)/monitors",
+          "apps/checker/pkg/job/monitors.go",
+          "apps/status-page",
+          "packages/db"
+        ]
+      },
+      {
+        "title": "多应用 monorepo 的责任分区",
+        "description": "对照 apps、packages、workspace 配置和 turbo 脚本，理解什么应该独立运行，什么应该作为共享契约。",
+        "evidencePaths": [
+          "apps/README.md",
+          "package.json",
+          "pnpm-workspace.yaml",
+          "turbo.json",
+          "packages"
+        ]
+      },
+      {
+        "title": "一套能力的多入口设计",
+        "description": "对照仪表盘、API、CLI、Terraform 和 MCP，思考如何让人、自动化脚本和 AI 助手共用同一领域模型。",
+        "evidencePaths": [
+          "README.md",
+          "apps/dashboard"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立仓库地图而不陷入细节",
+        "steps": [
+          "阅读 README 的 About、Tooling 和 Tech Stack",
+          "对照 package.json 与 pnpm-workspace.yaml 列出应用和共享包",
+          "选定“创建监控器”作为唯一跟踪用例"
+        ],
+        "outcome": "产出一张不超过十个节点的系统边界图。"
+      },
+      "twoHours": {
+        "objective": "通过可控切片理解一个业务对象",
+        "steps": [
+          "阅读仪表盘监控器列表与创建页",
+          "找到对应的数据 Schema 和 API 边界",
+          "查看 Go 检查器如何取得与执行任务",
+          "记录哪些事实进入状态页"
+        ],
+        "outcome": "能说清监控器对象在 UI、API、数据库和 worker 中的表达。"
+      },
+      "oneDay": {
+        "objective": "独立复刻一个迷你监控纵向样片",
+        "steps": [
+          "只保留单地区 HTTP 检查、一个存储和一个状态页",
+          "实现创建监控器和定时执行",
+          "记录响应码与延迟并生成最小历史",
+          "测试 DNS 失败、超时、HTTP 5xx 与 worker 重试"
+        ],
+        "outcome": "得到一个不复制大型基础设施、却保留核心闭环的学习版监控器。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先理解产品能力、工具入口和官方快速启动方式。"
+      },
+      {
+        "path": "apps/README.md",
+        "reason": "建立多应用分工的总览。"
+      },
+      {
+        "path": "pnpm-workspace.yaml",
+        "reason": "核对 workspace 范围与依赖分组。"
+      },
+      {
+        "path": "apps/dashboard/src/app/(dashboard)/monitors",
+        "reason": "从用户看得见的监控器列表、创建和详情开始。"
+      },
+      {
+        "path": "packages/db",
+        "reason": "对照领域对象与持久化边界。"
+      },
+      {
+        "path": "apps/checker/pkg/job/monitors.go",
+        "reason": "查看检查器任务与 Web 应用之间的分界。"
+      },
+      {
+        "path": "docker-compose.yaml",
+        "reason": "识别完整自托管环境需要的服务数量和运行关系。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "不建议新手尝试整仓复制；应先选一个监控器纵向切片，否则多语言、多应用和基础设施会遮蔽学习目标。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "手动开发需要 Node/pnpm、Bun、Deno、Turso 等工具；完整 Docker Compose 也会启动多个服务。"
+      },
+      {
+        "kind": "license",
+        "severity": "high",
+        "note": "仓库使用 AGPL-3.0；进行网络服务改造或商业化前，需专门确认源码提供义务及兼容性。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "生产级多区域检查、数据库、分析和通知可涉及外部服务成本；学习版应主动缩小范围。"
+      }
+    ],
+    "score": {
+      "replicability": 14,
+      "clarity": 17,
+      "beginnerValue": 12,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 7,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 74,
+      "rationale": {
+        "replicability": "Docker 能快速体验，但完整开发与复刻涉及多运行时和外部基础设施。",
+        "clarity": "README、应用目录和部署文档较丰富，但仓库面积大，需主动限定阅读范围。",
+        "beginnerValue": "对全栈进阶者价值高，但对刚学 vibe coding 的用户只适合拆解小切片。",
+        "productCompleteness": "监控、状态页、事故沟通、通知、多工具入口与自托管方案都已具备。",
+        "vibeCodingRelevance": "适合学习真实产品边界和 MCP 等入口，但不适合通过少量提示直接重建全部。",
+        "maintenance": "仓库未归档且在核对时有当日推送，活跃度高。",
+        "novelty": "将监控即代码、MCP、CLI、Terraform 和状态页收敛为一套平台，具有较强参考性。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/openstatusHQ/openstatus",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/openstatusHQ/openstatus/blob/main/README.md",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/openstatusHQ/openstatus/blob/main/package.json",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/openstatusHQ/openstatus/blob/main/apps/checker/pkg/job/monitors.go",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/openstatusHQ/openstatus/blob/main/docker-compose.yaml",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      }
+    ],
+    "provenance": {
+      "createdBy": "agent",
+      "generator": "Codex phase-1 Agent B",
+      "createdAt": "2026-08-09T15:03:02Z"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-09T15:30:00Z",
+      "notes": "阶段 1 本地纵向样板复核通过；不代表已获得公网发布授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 655783613,
+    "slug": "openstatushq-openstatus",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-09T15:30:00Z",
+    "lastReviewedAt": "2026-08-09T15:30:00Z",
+    "rejectionReasons": []
+  }
+}

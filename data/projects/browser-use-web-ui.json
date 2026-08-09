@@ -1,0 +1,327 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 910986056,
+    "nodeId": "R_kgDONkyLSA",
+    "owner": {
+      "login": "browser-use",
+      "id": 192012301,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/192012301?v=4"
+    },
+    "name": "web-ui",
+    "fullName": "browser-use/web-ui",
+    "htmlUrl": "https://github.com/browser-use/web-ui",
+    "description": "🖥️ Run AI Agent in your browser.",
+    "homepageUrl": null,
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 16271,
+      "forks": 2730,
+      "openIssues": 324,
+      "subscribers": 123
+    },
+    "primaryLanguage": "Python",
+    "languages": {
+      "Python": 218371,
+      "Dockerfile": 2339
+    },
+    "topics": [
+      "ai-agent",
+      "browser-automation",
+      "browser-use-box",
+      "cloud-browser"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2025-01-02T01:29:44Z",
+      "updatedAt": "2026-08-08T16:53:44Z",
+      "pushedAt": "2026-05-15T07:26:24Z",
+      "fetchedAt": "2026-08-09T15:02:35.883Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "e5a24ea4a05b8950775f1c13b7f32cdeb446d373",
+      "htmlUrl": "https://github.com/browser-use/web-ui/blob/main/README.md",
+      "excerpt": "<img src=\"./assets/web-ui.png\" alt=\"Browser Use Web UI\" width=\"full\"/>\n\n<br/>\n\n[![GitHub stars](https://img.shields.io/github/stars/browser-use/web-ui?style=social)](https://github.com/browser-use/web-ui/stargazers)\n[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)\n[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)\n[![WarmShao](https://img.shields.io/twitter/follow/warmshao?style=social)](https://x.com/warmshao)\n\nThis project builds upon the foundation of the [browser-use](https://github.com/browser-use/browser-use), which is designed to make websites accessible for AI agents.\n\nWe would like to officially thank [WarmShao](https://github.com/warmshao) for his contribution to this project.\n\n**WebUI:** is built on Gradio and supports most of `browser-use` functionalities. This UI is designed to be user-friendly and enables easy interaction with the browser agent.\n\n**Expanded LLM Support:** We've integrated support for various Large Language Models (LLMs), including: Google, OpenAI, Azure OpenAI, Anthropic, DeepSeek, Ollama etc.",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"ac416a4580bd2443e5ef77f4151f5d95f951501b6fac3f3a09d0256301861e91\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 910986056,
+    "locale": "zh-CN",
+    "displayName": "Browser Use Web UI",
+    "tagline": "从可视化界面入门浏览器 Agent 的模型、任务与执行环",
+    "summary": "Browser Use Web UI 为 browser-use 提供 Gradio 图形界面，支持多家模型、自定义浏览器、持久会话、录屏以及深度研究任务。它比纯 Agent SDK 更容易观察配置和执行结果，适合已会基础 Python、想理解“模型选择—浏览器上下文—Agent 循环—界面反馈”如何连接的学习者。",
+    "recommendationReasons": [
+      "用可视化界面暴露模型、浏览器和 Agent 参数，方便通过实验理解不同配置的影响。",
+      "Agent、自定义浏览器、模型提供商和 Web UI 分目录组织，有利于分层阅读。",
+      "同时提供本地与 Docker 方案，能对比开发环境和隔离运行环境。"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "agent",
+      "automation",
+      "ai-app"
+    ],
+    "learningGoals": [
+      "agent-workflow",
+      "ai-integration",
+      "product-architecture",
+      "project-organization",
+      "deployment"
+    ],
+    "difficulty": {
+      "level": "medium",
+      "rationale": "README 提供详细安装步骤和 Docker 替代方案，但需要 Python 3.11、Playwright 浏览器依赖、模型配置，并理解 Agent 执行和持久浏览器上下文的安全边界。",
+      "prerequisites": [
+        "Python 基础",
+        "虚拟环境与 pip/uv 基础",
+        "LLM API 与环境变量概念",
+        "了解浏览器自动化的基本风险"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Python 3.11",
+        "role": "Agent、浏览器适配与 Web UI 主语言",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/README.md"
+      },
+      {
+        "name": "browser-use",
+        "role": "浏览器 Agent 执行基础",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/requirements.txt"
+      },
+      {
+        "name": "Gradio",
+        "role": "Agent 配置与运行的图形界面",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/requirements.txt"
+      },
+      {
+        "name": "Playwright",
+        "role": "安装和提供可自动化的浏览器",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/README.md"
+      },
+      {
+        "name": "LangGraph",
+        "role": "Agent 工作流依赖",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/requirements.txt"
+      },
+      {
+        "name": "Docker Compose",
+        "role": "容器化 Web UI、浏览器和 VNC 环境",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/docker-compose.yml"
+      },
+      {
+        "name": "多家 LLM 提供商",
+        "role": "OpenAI、Anthropic、Google、DeepSeek、Ollama 等模型的配置适配",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/browser-use/web-ui/blob/main/.env.example"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "将 Agent 参数变成可实验界面",
+        "description": "对照 Gradio 选项卡与 Agent 实例化代码，看清模型、任务、步数和浏览器选项如何进入执行层。",
+        "evidencePaths": [
+          "src/webui/components/agent_settings_tab.py",
+          "src/webui/components/browser_use_agent_tab.py",
+          "src/agent/browser_use/browser_use_agent.py"
+        ]
+      },
+      {
+        "title": "持久浏览器上下文",
+        "description": "研究如何复用本地浏览器路径、用户数据和会话，同时识别这种便利性带来的账号与隐私风险。",
+        "evidencePaths": [
+          "src/browser/custom_browser.py",
+          "src/browser/custom_context.py",
+          "src/webui/components/browser_settings_tab.py",
+          ".env.example"
+        ]
+      },
+      {
+        "title": "模型提供商抽象",
+        "description": "沿着环境配置与模型工厂，理解一个界面如何在不同 API 端点和本地模型之间切换。",
+        "evidencePaths": [
+          ".env.example",
+          "src/utils/llm_provider.py",
+          "src/utils/config.py"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "看懂一次浏览器 Agent 任务的数据流",
+        "steps": [
+          "阅读 README 的能力与安装部分",
+          "从 webui.py 追到 src/webui/interface.py",
+          "再从 Agent 选项卡追到 browser_use_agent.py"
+        ],
+        "outcome": "能说清用户任务、模型配置、浏览器上下文和执行结果的连接关系。"
+      },
+      "twoHours": {
+        "objective": "在安全测试站点上完成一次可观察实验",
+        "steps": [
+          "用独立测试配置启动 Web UI",
+          "选择一个无登录、无写操作的测试页面",
+          "运行一个三步以内的信息查找任务",
+          "比较两组 Agent 或模型参数的执行日志"
+        ],
+        "outcome": "产出一份包含成功、失败和参数差异的实验记录。"
+      },
+      "oneDay": {
+        "objective": "为一个窄任务做出可控 Agent 变体",
+        "steps": [
+          "限定允许访问的测试域名与可执行动作",
+          "在 controller 层新增一个只读动作",
+          "在 UI 中显示任务步骤、失败原因和中止控件",
+          "测试超时、模型失败、页面改版和越界动作"
+        ],
+        "outcome": "得到一个范围有限、过程可观测、用户可中止的浏览器 Agent 原型。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先确认支持能力、两种安装路径和自有浏览器注意事项。"
+      },
+      {
+        "path": "webui.py",
+        "reason": "定位应用启动与命令行参数入口。"
+      },
+      {
+        "path": "src/webui/interface.py",
+        "reason": "理解页面组装和各功能选项卡的边界。"
+      },
+      {
+        "path": "src/agent/browser_use/browser_use_agent.py",
+        "reason": "查看 UI 配置如何变成实际 Agent 执行。"
+      },
+      {
+        "path": "src/utils/llm_provider.py",
+        "reason": "学习多模型提供商的集中创建和配置。"
+      },
+      {
+        "path": "src/browser/custom_context.py",
+        "reason": "理解会话持久化与浏览器上下文定制。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "本地方案需要特定 Python 环境、Playwright 浏览器及系统依赖；Docker 方案也包含浏览器与 VNC 服务。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "多数托管模型需要 API 凭证并可能产生费用；可使用 Ollama 作为本地选项，但效果和资源要求需实测。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "复用日常浏览器用户数据可暴露已登录会话；学习时应使用独立配置和测试账号，不允许自动化任务执行不可逆操作。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "medium",
+        "note": "requirements.txt 固定了部分核心版本、也包含未固定依赖；应在独立环境中运行并验证兼容性。"
+      }
+    ],
+    "score": {
+      "replicability": 18,
+      "clarity": 16,
+      "beginnerValue": 15,
+      "productCompleteness": 13,
+      "vibeCodingRelevance": 10,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 81,
+      "rationale": {
+        "replicability": "有本地与 Docker 双路径，但浏览器系统依赖和模型凭证使复现成本中等。",
+        "clarity": "README 安装说明详细、目录分层清晰，但 Agent 和界面配置面较广。",
+        "beginnerValue": "便于观察 Agent 执行，但完全初学者会同时面对 Python、模型和浏览器自动化。",
+        "productCompleteness": "具备配置、运行、会话、录屏和部署方案，已形成可使用的 Agent 操作界面。",
+        "vibeCodingRelevance": "浏览器 Agent、多模型切换与可视化试错都与当前 vibe coding 学习高度相关。",
+        "maintenance": "仓库未归档且在核对时仍有近期推送。",
+        "novelty": "把浏览器 Agent 的高级配置集成为通用 Web UI，具有较强学习辨识度。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/browser-use/web-ui",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/browser-use/web-ui/blob/main/README.md",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/browser-use/web-ui/blob/main/requirements.txt",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/browser-use/web-ui/blob/main/src/agent/browser_use/browser_use_agent.py",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/browser-use/web-ui/blob/main/.env.example",
+        "accessedAt": "2026-08-09T15:03:02Z"
+      }
+    ],
+    "provenance": {
+      "createdBy": "agent",
+      "generator": "Codex phase-1 Agent B",
+      "createdAt": "2026-08-09T15:03:02Z"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-09T15:30:00Z",
+      "notes": "阶段 1 本地纵向样板复核通过；不代表已获得公网发布授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 910986056,
+    "slug": "browser-use-web-ui",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-09T15:30:00Z",
+    "lastReviewedAt": "2026-08-09T15:30:00Z",
+    "rejectionReasons": []
+  }
+}

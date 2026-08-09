@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 910986056,
+  "nodeId": "R_kgDONkyLSA",
+  "owner": {
+    "login": "browser-use",
+    "id": 192012301,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/192012301?v=4"
+  },
+  "name": "web-ui",
+  "fullName": "browser-use/web-ui",
+  "htmlUrl": "https://github.com/browser-use/web-ui",
+  "description": "🖥️ Run AI Agent in your browser.",
+  "homepageUrl": null,
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 16271,
+    "forks": 2730,
+    "openIssues": 324,
+    "subscribers": 123
+  },
+  "primaryLanguage": "Python",
+  "languages": {
+    "Python": 218371,
+    "Dockerfile": 2339
+  },
+  "topics": [
+    "ai-agent",
+    "browser-automation",
+    "browser-use-box",
+    "cloud-browser"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2025-01-02T01:29:44Z",
+    "updatedAt": "2026-08-08T16:53:44Z",
+    "pushedAt": "2026-05-15T07:26:24Z",
+    "fetchedAt": "2026-08-09T15:02:35.883Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "e5a24ea4a05b8950775f1c13b7f32cdeb446d373",
+    "htmlUrl": "https://github.com/browser-use/web-ui/blob/main/README.md",
+    "excerpt": "<img src=\"./assets/web-ui.png\" alt=\"Browser Use Web UI\" width=\"full\"/>\n\n<br/>\n\n[![GitHub stars](https://img.shields.io/github/stars/browser-use/web-ui?style=social)](https://github.com/browser-use/web-ui/stargazers)\n[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)\n[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)\n[![WarmShao](https://img.shields.io/twitter/follow/warmshao?style=social)](https://x.com/warmshao)\n\nThis project builds upon the foundation of the [browser-use](https://github.com/browser-use/browser-use), which is designed to make websites accessible for AI agents.\n\nWe would like to officially thank [WarmShao](https://github.com/warmshao) for his contribution to this project.\n\n**WebUI:** is built on Gradio and supports most of `browser-use` functionalities. This UI is designed to be user-friendly and enables easy interaction with the browser agent.\n\n**Expanded LLM Support:** We've integrated support for various Large Language Models (LLMs), including: Google, OpenAI, Azure OpenAI, Anthropic, DeepSeek, Ollama etc.",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"ac416a4580bd2443e5ef77f4151f5d95f951501b6fac3f3a09d0256301861e91\""
+  }
+}

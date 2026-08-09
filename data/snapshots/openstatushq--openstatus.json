@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 655783613,
+  "nodeId": "R_kgDOJxZ2vQ",
+  "owner": {
+    "login": "openstatusHQ",
+    "id": 136892265,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/136892265?v=4"
+  },
+  "name": "openstatus",
+  "fullName": "openstatusHQ/openstatus",
+  "htmlUrl": "https://github.com/openstatusHQ/openstatus",
+  "description": "🫖 Status page with uptime monitoring & API monitoring as code   🫖",
+  "homepageUrl": "https://openstatus.dev/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 8950,
+    "forks": 737,
+    "openIssues": 70,
+    "subscribers": 26
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 8632125,
+    "MDX": 1538696,
+    "Go": 308127,
+    "Dockerfile": 25711,
+    "CSS": 15849,
+    "JavaScript": 7508,
+    "Bru": 1562,
+    "Just": 1296,
+    "Shell": 1275
+  },
+  "topics": [
+    "alerting",
+    "incident-management",
+    "mcp",
+    "mcp-server",
+    "monitoring",
+    "monitoring-as-code",
+    "observability",
+    "on-call",
+    "open-source",
+    "sre",
+    "status-page",
+    "statuspage",
+    "synthetic-monitoring",
+    "terraform",
+    "tinybird",
+    "turso",
+    "uptime",
+    "uptime-checker",
+    "uptime-monitor"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2023-06-19T15:32:41Z",
+    "updatedAt": "2026-08-09T14:48:29Z",
+    "pushedAt": "2026-08-09T13:32:36Z",
+    "fetchedAt": "2026-08-09T15:02:36.942Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "818d9c2a404a180afb302ff8a100c04bb52b870e",
+    "htmlUrl": "https://github.com/openstatusHQ/openstatus/blob/main/README.md",
+    "excerpt": "<p align=\"center\" style=\"margin-top: 120px\">\n\n  <h3 align=\"center\">openstatus</h3>\n\n  <p align=\"center\">The open-source status page and uptime monitoring platform.\n    <br />\n    <a href=\"https://www.openstatus.dev\"><strong>Learn more »</strong></a>\n    <br />\n    <br />\n    <a href=\"https://www.openstatus.dev/docs\">Documentation</a>\n    ·\n    <a href=\"https://www.openstatus.dev\">Website</a>\n    ·\n    <a href=\"https://www.openstatus.dev/discord\">Discord</a>\n  </p>\n\n  <p align=\"center\">\n  <a href=\"https://status.openstatus.dev\"><img src=\"https://status.openstatus.dev/badge/v2?variant=outline\" alt=\"openstatus status\"></a>\n\n  </p>\n  <p align=\"center\">\n      <a href=\"https://github.com/openstatushq/openstatus/blob/main/LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPL--3.0-blue.svg\" alt=\"License\"></a>\n      <a href=\"https://github.com/openstatushq/openstatus/stargazers\"><img src=\"https://img.shields.io/github/stars/openstatushq/openstatus?style=social\" alt=\"GitHub stars\"></a>\n      <a href=\"https://www.openstatus.dev/discord\"><img src=\"https://img.shields.io/discord/1129008226264940625?color=7289da&logo=discord&logoColor=white\" alt=\"Discord\"></a>\n</p>\n\n## About openstatus\n\no",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"383bf0f97417cdeabf87220e80f48a9454c31702f2c80a0df07825f2edfa4628\""
+  }
+}

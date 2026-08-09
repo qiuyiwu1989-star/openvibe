@@ -4,16 +4,32 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "ingest": "tsx scripts/ingest/cli.ts",
+    "publish:local": "tsx scripts/publish/approve-project.ts",
     "typecheck": "tsc --noEmit",
     "validate:fixtures": "tsx packages/schema/src/validate-fixtures.ts",
+    "validate:snapshots": "tsx scripts/ingest/validate-snapshots.ts",
+    "validate:candidates": "tsx scripts/evaluate/validate-candidates.ts",
     "test:schema": "tsx --test packages/schema/src/schemas.test.ts",
-    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema"
+    "test:ingest": "tsx --test scripts/ingest/ingest.test.ts",
+    "test:data": "tsx --test tests/data-integrity.test.ts",
+    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:ingest && npm run test:data"
   },
   "dependencies": {
+    "next": "^16.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "zod": "^4.0.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
     "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^4.3.3",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },

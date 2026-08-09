@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 854894542,
+  "nodeId": "R_kgDOMvSnzg",
+  "owner": {
+    "login": "nextjs",
+    "id": 126103961,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/126103961?v=4"
+  },
+  "name": "saas-starter",
+  "fullName": "nextjs/saas-starter",
+  "htmlUrl": "https://github.com/nextjs/saas-starter",
+  "description": "Get started quickly with Next.js, Postgres, Stripe, and shadcn/ui.",
+  "homepageUrl": "https://next-saas-start.vercel.app/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 16018,
+    "forks": 2688,
+    "openIssues": 52,
+    "subscribers": 96
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 108101,
+    "CSS": 7954,
+    "JavaScript": 70
+  },
+  "topics": [
+    "nextjs",
+    "postgres",
+    "shadcn-ui",
+    "stripe"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2024-09-10T00:18:56Z",
+    "updatedAt": "2026-08-08T16:57:15Z",
+    "pushedAt": "2025-12-11T22:35:37Z",
+    "fetchedAt": "2026-08-09T15:02:34.504Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "093d91d2eb3c310f802a459e6bfdb69cd6cee7fd",
+    "htmlUrl": "https://github.com/nextjs/saas-starter/blob/main/README.md",
+    "excerpt": "# Next.js SaaS Starter\n\nThis is a starter template for building a SaaS application using **Next.js** with support for authentication, Stripe integration for payments, and a dashboard for logged-in users.\n\n**Demo: [https://next-saas-start.vercel.app/](https://next-saas-start.vercel.app/)**\n\n## Features\n\n- Marketing landing page (`/`) with animated Terminal element\n- Pricing page (`/pricing`) which connects to Stripe Checkout\n- Dashboard pages with CRUD operations on users/teams\n- Basic RBAC with Owner and Member roles\n- Subscription management with Stripe Customer Portal\n- Email/password authentication with JWTs stored to cookies\n- Global middleware to protect logged-in routes\n- Local middleware to protect Server Actions or validate Zod schemas\n- Activity logging system for any user events\n\n## Tech Stack\n\n- **Framework**: [Next.js](https://nextjs.org/)\n- **Database**: [Postgres](https://www.postgresql.org/)\n- **ORM**: [Drizzle](https://orm.drizzle.team/)\n- **Payments**: [Stripe](https://stripe.com/)\n- **UI Library**: [shadcn/ui](https://ui.shadcn.com/)\n\n## Getting Started\n\n```bash\ngit clone https://github.com/nextjs/saas-starter\ncd saas-starter\npnpm install\n```\n\n## Running Locally",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"ee4e85493bd59f9545d31a9e777e90b47e876a172f161eb0713b4c3f1b285c16\""
+  }
+}
