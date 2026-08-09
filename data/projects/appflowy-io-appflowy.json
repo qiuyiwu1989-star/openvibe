@@ -1,0 +1,356 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 377496562,
+    "nodeId": "MDEwOlJlcG9zaXRvcnkzNzc0OTY1NjI=",
+    "owner": {
+      "login": "AppFlowy-IO",
+      "id": 86002201,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/86002201?v=4"
+    },
+    "name": "AppFlowy",
+    "fullName": "AppFlowy-IO/AppFlowy",
+    "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+    "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
+    "homepageUrl": "https://appflowy.com/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 75114,
+      "forks": 5807,
+      "openIssues": 978,
+      "subscribers": 393
+    },
+    "primaryLanguage": "Dart",
+    "languages": {},
+    "topics": [
+      "blog",
+      "confluence-alternative",
+      "content-management",
+      "content-services",
+      "documentation",
+      "flutter",
+      "note-taking",
+      "notion-alternative",
+      "project-management",
+      "task-management",
+      "team-collaboration",
+      "wiki"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0"
+    },
+    "timestamps": {
+      "createdAt": "2021-06-16T12:56:48Z",
+      "updatedAt": "2026-08-09T04:14:28Z",
+      "pushedAt": "2026-08-09T02:32:35Z",
+      "fetchedAt": "2026-08-09T16:20:00.000Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "e5d68967564db60b843ecea535b70e57a4f5d969",
+      "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/README.md",
+      "excerpt": "<h1 align=\"center\" style=\"border-bottom: none\">\n    <b><a href=\"https://www.appflowy.com\">AppFlowy</a></b><br>\n    ⭐️ The Open Source Alternative To Notion ⭐️\n</h1>\n\n<p align=\"center\">\nAppFlowy is the AI workspace where you achieve more without losing control of your data.\n</p>\n\n## User Installation\n\n- Download AppFlowy Desktop for macOS, Windows, and Linux from GitHub Releases.\n- Mobile apps are available for iPhone and Android.\n- Self-hosting and source-build guides are linked from the official documentation.\n\n## Built With\n\n- Flutter\n- Rust",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": null
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 377496562,
+    "locale": "zh-CN",
+    "displayName": "AppFlowy",
+    "tagline": "用 Flutter 与 Rust 拆解一款本地优先的跨平台知识工作区",
+    "summary": "AppFlowy 是一款强调数据控制权的开源知识工作区，覆盖文档、数据库视图、项目协作与 AI 辅助，并以同一套 Flutter 客户端支持桌面和移动平台。这个仓库把可见的 Dart 界面与 Rust 文档、数据库、搜索、存储和同步适配层连接起来，适合学习本地优先产品如何在原生体验、数据模型与跨语言边界之间取舍；完整云端协作服务位于独立仓库。",
+    "recommendationReasons": [
+      "文档与数据库视图都是熟悉的生产力场景，可以从一个组件或交互开始学习",
+      "Flutter 界面、Rust 领域模块和 Dart FFI 边界清晰，展示了跨平台复杂产品的真实分层",
+      "本地数据能力与云端协作解耦，便于讨论离线可用、同步和数据控制权"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "content-tool",
+      "mobile-app",
+      "ai-app"
+    ],
+    "learningGoals": [
+      "ui",
+      "product-architecture",
+      "database",
+      "ai-integration",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "修改单个 Flutter 界面相对直观，但完整产品涉及富文本编辑、数据库视图、本地存储、协作数据结构、Rust 与 Dart 桥接以及多平台构建。",
+      "prerequisites": [
+        "掌握 Flutter 与 Dart 基础",
+        "能阅读 Rust 模块",
+        "理解本地数据库和同步概念",
+        "了解桌面或移动端构建流程"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Flutter",
+        "role": "桌面与移动客户端的跨平台界面框架",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/frontend/appflowy_flutter/pubspec.yaml"
+      },
+      {
+        "name": "Dart",
+        "role": "客户端界面、交互和应用状态",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/AppFlowy-IO/AppFlowy/tree/main/frontend/appflowy_flutter/lib"
+      },
+      {
+        "name": "Rust",
+        "role": "文档、数据库、搜索、存储与同步适配等核心模块",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/frontend/rust-lib/Cargo.toml"
+      },
+      {
+        "name": "Dart FFI",
+        "role": "Flutter 客户端与 Rust 核心之间的调用桥梁",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/AppFlowy-IO/AppFlowy/tree/main/frontend/rust-lib/dart-ffi"
+      },
+      {
+        "name": "SQLite",
+        "role": "本地工作区数据与搜索相关存储",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/AppFlowy-IO/AppFlowy/tree/main/frontend/rust-lib/flowy-sqlite"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "可见界面与领域核心分层",
+        "description": "从 Flutter 页面追踪到 Rust 文档或数据库模块，理解跨语言架构如何避免把业务规则散落在组件中。",
+        "evidencePaths": [
+          "frontend/appflowy_flutter/lib",
+          "frontend/rust-lib/flowy-document",
+          "frontend/rust-lib/flowy-database2"
+        ]
+      },
+      {
+        "title": "本地优先的数据底座",
+        "description": "观察本地存储、搜索与协作数据整合层如何让客户端在不依赖持续联网时仍具备核心价值。",
+        "evidencePaths": [
+          "frontend/rust-lib/flowy-sqlite",
+          "frontend/rust-lib/flowy-search",
+          "frontend/rust-lib/collab-integrate"
+        ]
+      },
+      {
+        "title": "同一产品的多平台交付",
+        "description": "比较 Android、iOS、macOS、Windows、Linux 和 Web 工程入口，识别共享 Flutter 代码之外仍需维护的平台配置。",
+        "evidencePaths": [
+          "frontend/appflowy_flutter/android",
+          "frontend/appflowy_flutter/ios",
+          "frontend/appflowy_flutter/macos",
+          "frontend/appflowy_flutter/windows",
+          "frontend/appflowy_flutter/linux",
+          "frontend/appflowy_flutter/web"
+        ]
+      },
+      {
+        "title": "AI 作为工作区能力接入",
+        "description": "通过独立的 AI 模块理解模型能力如何服务文档任务，同时保留文档与数据库的非 AI 主链路。",
+        "evidencePaths": [
+          "frontend/rust-lib/flowy-ai",
+          "frontend/rust-lib/flowy-ai-pub",
+          "frontend/appflowy_flutter/lib"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立 AppFlowy 客户端的代码地图。",
+        "steps": [
+          "先读 README 的产品定位与平台范围",
+          "查看 frontend 下 Flutter 与 rust-lib 的边界",
+          "在 Flutter lib 中找到一个熟悉的文档或设置界面",
+          "在 rust-lib 中定位对应领域模块"
+        ],
+        "outcome": "能说明界面、领域逻辑、本地存储与云端服务分别位于哪里。"
+      },
+      "twoHours": {
+        "objective": "完成一个不触及同步协议的界面改造。",
+        "steps": [
+          "选择空状态、快捷操作或设置项等小需求",
+          "定位 Flutter 组件与状态来源",
+          "复用现有主题和本地化约定",
+          "补充桌面与移动宽度下的交互检查"
+        ],
+        "outcome": "得到一个符合现有设计语言、跨屏幕可用的客户端功能。"
+      },
+      "oneDay": {
+        "objective": "追踪一个文档动作跨越 Dart 与 Rust 的完整链路。",
+        "steps": [
+          "选择创建块、修改标题或更新数据库单元格等单一动作",
+          "从 Flutter 事件找到 FFI 调用",
+          "定位 Rust 的公开接口与领域模块",
+          "确认数据落盘和错误返回方式",
+          "为离线、失败与重复操作设计验证用例"
+        ],
+        "outcome": "得到一份标注界面、桥接、领域模型和持久化责任的端到端学习记录。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认产品定位、支持平台、开源许可和开发文档入口。"
+      },
+      {
+        "path": "frontend/appflowy_flutter/README.md",
+        "reason": "了解 Flutter 客户端的贡献与平台说明。"
+      },
+      {
+        "path": "frontend/appflowy_flutter/lib",
+        "reason": "从用户可见的页面、组件和状态开始阅读。"
+      },
+      {
+        "path": "frontend/rust-lib/Cargo.toml",
+        "reason": "建立 Rust 工作区及领域 crate 地图。"
+      },
+      {
+        "path": "frontend/rust-lib/dart-ffi",
+        "reason": "理解 Dart 与 Rust 的跨语言调用边界。"
+      },
+      {
+        "path": "frontend/rust-lib/flowy-document",
+        "reason": "研究富文本与文档领域能力。"
+      },
+      {
+        "path": "frontend/rust-lib/flowy-database2",
+        "reason": "研究表格、看板等数据库视图的数据模型。"
+      },
+      {
+        "path": "frontend/resources/translations",
+        "reason": "学习大型多端产品的本地化资源组织。"
+      },
+      {
+        "path": "doc",
+        "reason": "补充架构、构建和项目约定。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "这是跨语言、多平台的大型客户端；初学者应固定一条用户动作，不宜从整库重构开始。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "源码构建同时需要 Flutter、Rust、桥接生成与目标平台工具链，首次体验可先使用发布版理解产品。"
+      },
+      {
+        "kind": "license",
+        "severity": "medium",
+        "note": "本仓库采用 AGPL-3.0；分发修改版本或提供网络服务前应理解对应源码提供义务。"
+      },
+      {
+        "kind": "documentation",
+        "severity": "medium",
+        "note": "部分仓内说明可能滞后于当前移动端与 Web 支持状态，应以最新根 README、发布记录和开发文档交叉核对。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "medium",
+        "note": "完整自托管协作还涉及独立的 AppFlowy-Cloud 等仓库，不能仅凭本客户端仓库推断整套部署。"
+      }
+    ],
+    "score": {
+      "replicability": 16,
+      "clarity": 17,
+      "beginnerValue": 16,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 8,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 81,
+      "rationale": {
+        "replicability": "局部 Flutter 功能可复刻，完整编辑器、协作与跨平台构建门槛较高。",
+        "clarity": "Flutter 与 Rust 顶层分工明确，深入功能时仍需跨多个 crate 和桥接层。",
+        "beginnerValue": "产品任务直观，适合有基础的学习者按单一流程深入。",
+        "productCompleteness": "文档、数据库视图、项目协作、AI 与多平台客户端均较成熟。",
+        "vibeCodingRelevance": "适合用 AI 辅助定位跨语言调用和制作局部体验，但数据一致性必须人工验证。",
+        "maintenance": "仓库持续发布并保持较活跃的开发。",
+        "novelty": "本地优先知识工作区与 Flutter、Rust 组合具有较强参考价值。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/frontend/appflowy_flutter/pubspec.yaml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/frontend/rust-lib/Cargo.toml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "release",
+        "url": "https://github.com/AppFlowy-IO/AppFlowy/releases",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 377496562,
+    "slug": "appflowy-io-appflowy",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

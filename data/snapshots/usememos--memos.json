@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 436297812,
+  "nodeId": "R_kgDOGgFgVA",
+  "owner": {
+    "login": "usememos",
+    "id": 95764151,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/95764151?v=4"
+  },
+  "name": "memos",
+  "fullName": "usememos/memos",
+  "htmlUrl": "https://github.com/usememos/memos",
+  "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
+  "homepageUrl": "https://usememos.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 62125,
+    "forks": 4635,
+    "openIssues": 29,
+    "subscribers": 187
+  },
+  "primaryLanguage": "Go",
+  "languages": {
+    "Go": 2123296,
+    "TypeScript": 1962300,
+    "Shell": 23303,
+    "CSS": 11684,
+    "JavaScript": 4802,
+    "Dockerfile": 1928,
+    "HTML": 1068
+  },
+  "topics": [
+    "docker",
+    "foss",
+    "go",
+    "markdown",
+    "memo",
+    "microblog",
+    "note-taking",
+    "notecard",
+    "own-your-data",
+    "react",
+    "self-hosted",
+    "social-network",
+    "sqlite"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2021-12-08T15:30:18Z",
+    "updatedAt": "2026-08-09T15:27:25Z",
+    "pushedAt": "2026-08-09T15:27:50Z",
+    "fetchedAt": "2026-08-09T15:59:28.410Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "72b9c880445c299547ae56d012d0cf231db5baf3",
+    "htmlUrl": "https://github.com/usememos/memos/blob/main/README.md",
+    "excerpt": "> ✨ Featured Sponsor: [CodeRabbit](https://coderabbit.link/usememos) — Cut code review time & bugs in half, instantly.\n\n# Memos\n\n<img align=\"right\" height=\"96px\" src=\"https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/logo-rounded.png\" alt=\"Memos\" />\n\nMemos is an open-source, self-hosted note-taking app built for quick capture. It is Markdown-native, lightweight, and keeps your data under your control.\n\n[![Home](https://img.shields.io/badge/🏠-usememos.com-blue?style=flat-square)](https://usememos.com)\n[![Live Demo](https://img.shields.io/badge/✨-Try%20Demo-orange?style=flat-square)](https://demo.usememos.com/)\n[![Docs](https://img.shields.io/badge/📚-Documentation-green?style=flat-square)](https://usememos.com/docs)\n[![Discord](https://img.shields.io/badge/💬-Discord-5865f2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/tfPJa4UmAv)\n[![Docker Pulls](https://img.shields.io/docker/pulls/neosmemo/memos?style=flat-square&logo=docker)](https://hub.docker.com/r/neosmemo/memos)\n\n<img src=\"https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/demo.png\" alt=\"Memos Demo Screenshot\" height=\"512\" />\n\n## Features\n\n- **Capture quick",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"24d319cbdb059402e74cfc7a8d13c5c3ba76212aa9ad451eea3eaae374d2754c\""
+  }
+}

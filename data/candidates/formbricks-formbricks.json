@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 500289888,
+  "locale": "zh-CN",
+  "displayName": "Formbricks",
+  "tagline": "用问卷平台学习编辑器、受众定向和反馈数据链",
+  "summary": "Formbricks 是支持链接、网站、应用内与邮件问卷的开源体验管理平台。其 Next.js/React monorepo 包含无代码问卷编辑、人群定向、邀请、响应分析、SDK/API 和自托管。它适合学习“问卷定义—触达规则—响应事件—聚合洞察”的完整数据流。",
+  "recommendationReasons": [
+    "问卷 schema 同时驱动编辑器、运行时和结果解析。",
+    "应用内问卷提供了 SDK、定向与事件触发的真实案例。",
+    "根目录明确标出 AGPL core 与 apps/web/modules/ee 商业版边界。"
+  ],
+  "audiences": [
+    "starter",
+    "intermediate"
+  ],
+  "categories": [
+    "saas",
+    "content-tool",
+    "data-visualization"
+  ],
+  "learningGoals": [
+    "product-architecture",
+    "database",
+    "ui",
+    "authentication",
+    "deployment",
+    "project-organization"
+  ],
+  "difficulty": {
+    "level": "hard",
+    "rationale": "局部 UI 切片易学，整体则涉及编辑器、多渠道运行时、定向、SDK、分析、Postgres 和 MailHog。",
+    "prerequisites": [
+      "React/Next.js 基础",
+      "TypeScript schema 建模",
+      "SQL/Prisma 基础",
+      "SDK 事件与隐私概念"
+    ]
+  },
+  "techStack": [
+    {
+      "name": "Next.js + React + TypeScript",
+      "role": "管理端、编辑器与运行时",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/blob/main/README.md"
+    },
+    {
+      "name": "Prisma + PostgreSQL",
+      "role": "问卷、人群、响应与组织数据",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/blob/main/README.md"
+    },
+    {
+      "name": "Auth.js",
+      "role": "身份与组织会话",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/blob/main/README.md"
+    },
+    {
+      "name": "Zod",
+      "role": "输入与域模型校验",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/blob/main/README.md"
+    },
+    {
+      "name": "Vitest / Playwright",
+      "role": "单元与 E2E 测试",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/blob/main/vitest.workspace.ts"
+    },
+    {
+      "name": "Docker / Helm",
+      "role": "自托管部署",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/formbricks/formbricks/tree/main/charts/formbricks"
+    }
+  ],
+  "learningHighlights": [
+    {
+      "title": "schema 驱动问卷编辑与运行",
+      "description": "选一种题型，追踪它从编辑器配置到填答 UI 和响应解析。",
+      "evidencePaths": [
+        "apps/web",
+        "packages"
+      ]
+    },
+    {
+      "title": "应用内定向与事件触发",
+      "description": "理解用户属性、事件和人群条件如何决定问卷曝光。",
+      "evidencePaths": [
+        "packages",
+        "apps/web",
+        "openapi.yml"
+      ]
+    },
+    {
+      "title": "开源核心与 EE 边界",
+      "description": "从目录与许可文档识别哪些能力可按 AGPL 学习复用。",
+      "evidencePaths": [
+        "apps/web/modules/ee",
+        "LICENSE",
+        "README.md"
+      ]
+    }
+  ],
+  "learningPath": {
+    "thirtyMinutes": {
+      "objective": "跟踪一种问题类型",
+      "steps": [
+        "读 README Features/License",
+        "选单选题定义",
+        "找到编辑、填答、结果三处"
+      ],
+      "outcome": "一张 schema 驱动图。"
+    },
+    "twoHours": {
+      "objective": "增加一个合成问卷变体",
+      "steps": [
+        "用 fixture 运行编辑器",
+        "新增一个校验选项",
+        "展示错误和完成状态",
+        "补响应解析测试"
+      ],
+      "outcome": "一个不依赖生产数据的问卷切片。"
+    },
+    "oneDay": {
+      "objective": "做出最小应用内调研闭环",
+      "steps": [
+        "定义一个事件和一组定向条件",
+        "用 SDK mock 触发问卷",
+        "幂等保存响应",
+        "测试重复曝光、拒答、跨租户和 PII 输入"
+      ],
+      "outcome": "一个有隐私和租户边界的调研原型。"
+    }
+  },
+  "readingGuide": [
+    {
+      "path": "README.md",
+      "reason": "确认功能和许可边界。"
+    },
+    {
+      "path": "apps/web",
+      "reason": "从主应用用户流入手。"
+    },
+    {
+      "path": "packages",
+      "reason": "识别 SDK 与共享契约。"
+    },
+    {
+      "path": "openapi.yml",
+      "reason": "查看对外 API 面。"
+    },
+    {
+      "path": "apps/web/modules/ee",
+      "reason": "明确商业许可边界。"
+    }
+  ],
+  "risks": [
+    {
+      "kind": "license",
+      "severity": "high",
+      "note": "核心为 AGPLv3，apps/web/modules/ee 另用 Enterprise 许可，不得混用。"
+    },
+    {
+      "kind": "security",
+      "severity": "high",
+      "note": "调研数据可包含个人信息，定向与响应查询需严格租户隔离。"
+    },
+    {
+      "kind": "complexity",
+      "severity": "high",
+      "note": "多渠道问卷与分析引入很多跨层状态。"
+    }
+  ],
+  "score": {
+    "replicability": 14,
+    "clarity": 17,
+    "beginnerValue": 14,
+    "productCompleteness": 15,
+    "vibeCodingRelevance": 7,
+    "maintenance": 5,
+    "novelty": 4,
+    "total": 76,
+    "rationale": {
+      "replicability": "Docker 可体验，整体开发依赖多。",
+      "clarity": "README 功能、栈与许可清楚。",
+      "beginnerValue": "单一题型切片适合入门。",
+      "productCompleteness": "编辑、发布、定向、响应与分析完整。",
+      "vibeCodingRelevance": "适合快速改问卷垂直切片。",
+      "maintenance": "仓库活跃。",
+      "novelty": "应用内定向与 SDK 链路有差异化。"
+    }
+  },
+  "sources": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/formbricks/formbricks",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "readme",
+      "url": "https://github.com/formbricks/formbricks/blob/main/README.md",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/formbricks/formbricks/blob/main/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/formbricks/formbricks/blob/main/openapi.yml",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/formbricks/formbricks/blob/main/LICENSE",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    }
+  ],
+  "provenance": {
+    "createdBy": "hybrid",
+    "generator": "open-source-radar-curated-catalog-v1",
+    "createdAt": "2026-08-10T01:15:00+09:00"
+  },
+  "review": {
+    "state": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "notes": "批量策展草案已绑定事实快照，等待独立审核。"
+  }
+}

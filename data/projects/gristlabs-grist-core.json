@@ -1,0 +1,320 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 266033395,
+    "nodeId": "MDEwOlJlcG9zaXRvcnkyNjYwMzMzOTU=",
+    "owner": {
+      "login": "gristlabs",
+      "id": 19978005,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/19978005?v=4"
+    },
+    "name": "grist-core",
+    "fullName": "gristlabs/grist-core",
+    "htmlUrl": "https://github.com/gristlabs/grist-core",
+    "description": "Grist is the evolution of spreadsheets.",
+    "homepageUrl": "https://www.getgrist.com/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 11432,
+      "forks": 604,
+      "openIssues": 703,
+      "subscribers": 68
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 14048602,
+      "Python": 1797617,
+      "JavaScript": 914282,
+      "CSS": 156510,
+      "Shell": 33479,
+      "HTML": 9328,
+      "Dockerfile": 8299,
+      "Makefile": 1208
+    },
+    "topics": [
+      "awesome",
+      "database",
+      "spreadsheet"
+    ],
+    "license": {
+      "spdxId": "Apache-2.0",
+      "name": "Apache License 2.0",
+      "url": "https://api.github.com/licenses/apache-2.0"
+    },
+    "timestamps": {
+      "createdAt": "2020-05-22T06:16:02Z",
+      "updatedAt": "2026-08-09T13:06:12Z",
+      "pushedAt": "2026-08-09T10:41:09Z",
+      "fetchedAt": "2026-08-09T16:02:20.196Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "58467b40a51276f00c2c60c05371345e8e5b6990",
+      "htmlUrl": "https://github.com/gristlabs/grist-core/blob/main/README.md",
+      "excerpt": "# Grist\n\nGrist is a modern relational spreadsheet. It combines the flexibility of a spreadsheet with the robustness of a database.\n\n* `grist-core` (this repo – also known as Grist Community edition) has what you need to run a powerful server for hosting spreadsheets.\n* [`grist-desktop`](https://github.com/gristlabs/grist-desktop) is a Linux/macOS/Windows desktop app for viewing and editing spreadsheets stored locally.\n* [`grist-static`](https://github.com/gristlabs/grist-static) is a fully in-browser build of Grist for displaying spreadsheets on a website without back-end support.\n\nGrist is developed by [Grist Labs](https://www.linkedin.com/company/grist-labs/), an NYC-based company 🇺🇸🗽. The French government 🇫🇷 organizations [ANCT Données et Territoires](https://donnees.incubateur.anct.gouv.fr/toolbox/grist) and [DINUM (Direction Interministérielle du Numérique)](https://www.numerique.gouv.fr/dinum/) have also made significant contributions to the codebase.\n\nThe `grist-core`, `grist-desktop`, and `grist-static` repositories are all open-source (Apache License, Version 2.0). Grist Labs sells an edition of Grist with [additional features](#features-not-in-grist-core). Grist Lab",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"1cb7eb58367596d9b96b60d3b5310e13e45ea7164457c806d584c864390f31a4\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 266033395,
+    "locale": "zh-CN",
+    "displayName": "Grist Core",
+    "tagline": "把电子表格变成带关系、权限和 Python 公式的数据应用",
+    "summary": "Grist Core 是 Apache-2.0 许可的关系型电子表格应用，把熟悉的网格编辑与关系数据、表单、图表、细粒度访问控制、协作和 Python 公式结合起来。它适合作为 NocoDB 的开源准入替代：学习者既能研究表格式交互，也能观察文档数据、计算沙箱与多人应用服务如何分层。",
+    "recommendationReasons": [
+      "用电子表格这一熟悉入口展示关系、视图、公式与权限如何组成数据应用",
+      "TypeScript 应用层与 Python 公式沙箱形成清楚的信任边界，适合学习安全设计"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "data-visualization",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "ui",
+      "database",
+      "authentication",
+      "product-architecture",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "用户概念容易理解，但网格编辑、实时协作、权限、公式计算与不可信代码沙箱构成了较大的系统。初学者宜选表单或视图等局部阅读。",
+      "prerequisites": [
+        "掌握 TypeScript 前端基础",
+        "理解关系数据和权限",
+        "了解 Python 公式",
+        "会使用 Docker"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "TypeScript",
+        "role": "Web 客户端与应用服务的主要实现语言",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gristlabs/grist-core/blob/main/package.json"
+      },
+      {
+        "name": "Python",
+        "role": "表格公式与文档计算引擎",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gristlabs/grist-core/tree/main/sandbox"
+      },
+      {
+        "name": "SQLite",
+        "role": "可移植的 Grist 文档数据存储",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gristlabs/grist-core/blob/main/README.md"
+      },
+      {
+        "name": "Docker",
+        "role": "自托管运行与公式沙箱选项",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gristlabs/grist-core/blob/main/Dockerfile"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "从网格到关系数据应用",
+        "description": "观察列类型、引用关系、多个视图和表单如何共享同一文档模型。",
+        "evidencePaths": [
+          "app/client",
+          "app/common",
+          "app/server"
+        ]
+      },
+      {
+        "title": "不可信公式的隔离边界",
+        "description": "学习为什么用户可编辑的 Python 公式需要独立沙箱，以及不同运行方式的安全取舍。",
+        "evidencePaths": [
+          "sandbox",
+          "app/server/lib",
+          "README.md"
+        ]
+      },
+      {
+        "title": "数据级访问控制",
+        "description": "从用户属性和单元格值出发理解权限规则，而不是只在页面层隐藏按钮。",
+        "evidencePaths": [
+          "app/common",
+          "app/server",
+          "test"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "理解 Grist 与普通电子表格的核心差异。",
+        "steps": [
+          "浏览 README 的功能与许可证说明",
+          "创建表、引用列和两个视图",
+          "尝试一条 Python 公式"
+        ],
+        "outcome": "能解释结构化列、关系和视图如何让表格成为应用。"
+      },
+      "twoHours": {
+        "objective": "做一个小型关系数据工作台。",
+        "steps": [
+          "建立客户与任务两张表",
+          "用引用列连接记录",
+          "添加卡片或图表视图",
+          "创建录入表单",
+          "配置一条只读权限规则"
+        ],
+        "outcome": "得到一个包含关系、录入、展示和权限的内部工具原型。"
+      },
+      "oneDay": {
+        "objective": "读懂一条从编辑到计算再到同步的链路。",
+        "steps": [
+          "从 app/client 定位单元格编辑动作",
+          "在 common 层识别共享数据结构",
+          "追踪 server 对文档动作的处理",
+          "查看 sandbox 如何执行公式",
+          "为边界情况补一条测试设计"
+        ],
+        "outcome": "得到一份标注客户端、服务端、文档存储和公式沙箱职责的代码地图。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "了解开源范围、功能、Docker 选择与沙箱警告。"
+      },
+      {
+        "path": "app/client",
+        "reason": "从网格、视图和表单等用户交互进入。"
+      },
+      {
+        "path": "app/common",
+        "reason": "理解客户端与服务端共享的文档协议。"
+      },
+      {
+        "path": "app/server",
+        "reason": "追踪文档、认证、权限和协作逻辑。"
+      },
+      {
+        "path": "sandbox",
+        "reason": "研究 Python 公式执行与隔离。"
+      },
+      {
+        "path": "test",
+        "reason": "用测试理解复杂表格行为的预期。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "电子表格交互、公式和协作都包含大量边界情况，应从一条功能链路学习。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "用户公式属于不可信代码；自托管时必须选择并验证合适的沙箱，不能随意使用无隔离模式。"
+      },
+      {
+        "kind": "setup",
+        "severity": "medium",
+        "note": "源码构建同时涉及 Node.js 与 Python；初次体验可优先使用官方纯开源 grist-oss 镜像。"
+      },
+      {
+        "kind": "license",
+        "severity": "medium",
+        "note": "grist-core 仓库是 Apache-2.0；官方说明默认 grist 镜像还包含默认不启用的额外 source-available 代码，纯开源部署应选择 grist-oss 镜像。"
+      }
+    ],
+    "score": {
+      "replicability": 15,
+      "clarity": 17,
+      "beginnerValue": 15,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 7,
+      "maintenance": 5,
+      "novelty": 5,
+      "total": 79,
+      "rationale": {
+        "replicability": "可快速搭建业务表，但完整网格与公式引擎不宜从零复刻。",
+        "clarity": "客户端、共享层、服务端和沙箱边界清楚，代码规模仍大。",
+        "beginnerValue": "适合学习数据应用设计，深入内核需要一定基础。",
+        "productCompleteness": "关系、视图、表单、权限、协作和自托管链路成熟。",
+        "vibeCodingRelevance": "适合让 AI 辅助设计数据模型和界面，但公式与权限必须人工验证。",
+        "maintenance": "仓库持续发布并有清楚的自托管资料。",
+        "novelty": "电子表格交互与关系数据库、Python 公式的组合很有启发。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/gristlabs/grist-core",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/gristlabs/grist-core/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gristlabs/grist-core/blob/main/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gristlabs/grist-core/blob/main/LICENSE.txt",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gristlabs/grist-core/blob/main/NOTICE.txt",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "release",
+        "url": "https://github.com/gristlabs/grist-core/releases",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 266033395,
+    "slug": "gristlabs-grist-core",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

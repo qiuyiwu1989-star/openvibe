@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 455229168,
+  "nodeId": "R_kgDOGyI-8A",
+  "owner": {
+    "login": "immich-app",
+    "id": 109746326,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/109746326?v=4"
+  },
+  "name": "immich",
+  "fullName": "immich-app/immich",
+  "htmlUrl": "https://github.com/immich-app/immich",
+  "description": "High performance self-hosted photo and video management solution.",
+  "homepageUrl": "https://immich.app/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 110055,
+    "forks": 6473,
+    "openIssues": 754,
+    "subscribers": 344
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 5604036,
+    "Dart": 3133357,
+    "Svelte": 1396001,
+    "Python": 169180,
+    "Kotlin": 154077,
+    "Swift": 119286,
+    "JavaScript": 28597,
+    "Ruby": 15757,
+    "Shell": 15105,
+    "Dockerfile": 12806,
+    "C++": 10903,
+    "C": 9037,
+    "Java": 6867,
+    "HCL": 5257,
+    "HTML": 4941,
+    "CSS": 4318,
+    "CMake": 284,
+    "Go Template": 207,
+    "Objective-C": 38
+  },
+  "topics": [
+    "backup-tool",
+    "flutter",
+    "google-photos",
+    "google-photos-alternative",
+    "javascript",
+    "mobile-app",
+    "nestjs",
+    "nodejs",
+    "photo-gallery",
+    "photos",
+    "photos-management",
+    "self-hosted",
+    "svelte",
+    "sveltekit",
+    "typescript",
+    "videos"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2022-02-03T15:56:27Z",
+    "updatedAt": "2026-08-09T15:28:08Z",
+    "pushedAt": "2026-08-09T15:51:32Z",
+    "fetchedAt": "2026-08-09T15:59:41.322Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "02ae01857e52955e07cdb4d83a3d8f1d45e29e53",
+    "htmlUrl": "https://github.com/immich-app/immich/blob/main/README.md",
+    "excerpt": "<p align=\"center\"> \n  <br/>\n  <a href=\"https://opensource.org/license/agpl-v3\"><img src=\"https://img.shields.io/badge/License-AGPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec\" alt=\"License: AGPLv3\"></a>\n  <a href=\"https://discord.immich.app\">\n    <img src=\"https://img.shields.io/discord/979116623879368755.svg?label=Discord&logo=Discord&style=for-the-badge&logoColor=000000&labelColor=ececec\" alt=\"Discord\"/>\n  </a>\n  <br/>\n  <br/>\n</p>\n\n<p align=\"center\">\n<img src=\"design/immich-logo-stacked-light.svg\" width=\"300\" title=\"Login With Custom URL\">\n</p>\n<h3 align=\"center\">High performance self-hosted photo and video management solution</h3>\n<br/>\n<a href=\"https://immich.app\">\n<img src=\"design/immich-screenshots.png\" title=\"Main Screenshot\">\n</a>\n<br/>\n\n<p align=\"center\">\n  <a href=\"readme_i18n/README_ca_ES.md\">Català</a>\n  <a href=\"readme_i18n/README_es_ES.md\">Español</a>\n  <a href=\"readme_i18n/README_fr_FR.md\">Français</a>\n  <a href=\"readme_i18n/README_it_IT.md\">Italiano</a>\n  <a href=\"readme_i18n/README_ja_JP.md\">日本語</a>\n  <a href=\"readme_i18n/README_ko_KR.md\">한국어</a>\n  <a href=\"readme_i18n/README_de_DE.md\">Deutsch</a>\n  <a href=\"readme",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"b06e1abb68ff6268cb54a907f1c5f7a4514457ac245b5a8ac725145276f4f1a1\""
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 361044034,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkzNjEwNDQwMzQ=",
+  "owner": {
+    "login": "slidevjs",
+    "id": 83095831,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/83095831?v=4"
+  },
+  "name": "slidev",
+  "fullName": "slidevjs/slidev",
+  "htmlUrl": "https://github.com/slidevjs/slidev",
+  "description": "Presentation Slides for Developers",
+  "homepageUrl": "https://sli.dev/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 48020,
+    "forks": 2144,
+    "openIssues": 205,
+    "subscribers": 162
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 648621,
+    "Vue": 245484,
+    "JavaScript": 20578,
+    "CSS": 12269,
+    "HTML": 305
+  },
+  "topics": [
+    "markdown",
+    "presentation",
+    "slides",
+    "vite",
+    "vue",
+    "vueuse"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2021-04-24T01:25:23Z",
+    "updatedAt": "2026-08-09T14:30:10Z",
+    "pushedAt": "2026-08-05T01:31:36Z",
+    "fetchedAt": "2026-08-09T15:59:37.761Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "91a541c078b38510c6c993e5fdab1e20f7400237",
+    "htmlUrl": "https://github.com/slidevjs/slidev/blob/main/README.md",
+    "excerpt": "<br>\n<p align=\"center\">\n<a href=\"https://sli.dev\" target=\"_blank\">\n<img src=\"https://sli.dev/logo-title.png\" alt=\"Slidev\" height=\"250\" width=\"250\"/>\n</a>\n</p>\n\n<p align=\"center\">\nPresentation <b>slide</b>s for <b>dev</b>elopers 🧑‍💻👩‍💻👨‍💻\n</p>\n\n<p align=\"center\">\n<a href=\"https://www.npmjs.com/package/@slidev/cli\" target=\"__blank\"><img src=\"https://img.shields.io/npm/v/@slidev/cli?color=2B90B6&label=\" alt=\"NPM version\"></a>\n<a href=\"https://www.npmjs.com/package/@slidev/cli\" target=\"__blank\"><img alt=\"NPM Downloads\" src=\"https://img.shields.io/npm/dm/@slidev/cli?color=349dbe&label=\"></a>\n<a href=\"https://sli.dev/\" target=\"__blank\"><img src=\"https://img.shields.io/static/v1?label=&message=docs%20%26%20demos&color=45b8cd\" alt=\"Docs & Demos\"></a>\n<a href=\"https://sli.dev/resources/theme-gallery\" target=\"__blank\"><img src=\"https://img.shields.io/static/v1?label=&message=themes&color=4ec5d4\" alt=\"Themes\"></a>\n<br>\n<a href=\"https://github.com/slidevjs/slidev/stargazers\" target=\"__blank\"><img alt=\"GitHub stars\" src=\"https://img.shields.io/github/stars/slidevjs/slidev?style=social\"></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://x.com/antfu7/status/1389604687502995457\">Video Preview<",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"2cce80f0f594b04b16c9533802d4811be094d44bdf243cc458384cbc71a888ed\""
+  }
+}

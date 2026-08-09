@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 613010835,
+  "nodeId": "R_kgDOJInNkw",
+  "owner": {
+    "login": "documenso",
+    "id": 127681099,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/127681099?v=4"
+  },
+  "name": "documenso",
+  "fullName": "documenso/documenso",
+  "htmlUrl": "https://github.com/documenso/documenso",
+  "description": "The Open Source DocuSign Alternative.",
+  "homepageUrl": "https://documenso.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 14314,
+    "forks": 3020,
+    "openIssues": 210,
+    "subscribers": 49
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 11293307,
+    "MDX": 946304,
+    "JavaScript": 39603,
+    "Shell": 18015,
+    "CSS": 16659,
+    "PLpgSQL": 5293,
+    "Dockerfile": 4228
+  },
+  "topics": [
+    "digital-signature",
+    "document-signing",
+    "docusign-alternative",
+    "e-signature",
+    "esign",
+    "esignature",
+    "next-auth",
+    "nextjs",
+    "open-source",
+    "pades-standard",
+    "pdf",
+    "pdf-sign",
+    "pdf-signature",
+    "postgresql",
+    "prisma",
+    "self-hosted",
+    "signing",
+    "typescript"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2023-03-12T16:28:56Z",
+    "updatedAt": "2026-08-09T14:18:29Z",
+    "pushedAt": "2026-08-09T14:13:37Z",
+    "fetchedAt": "2026-08-09T15:59:23.237Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "642a285ebb7f12542a73237bd99613e527963fe9",
+    "htmlUrl": "https://github.com/documenso/documenso/blob/main/README.md",
+    "excerpt": "<img src=\"https://github.com/documenso/documenso/assets/13398220/a643571f-0239-46a6-a73e-6bef38d1228b\" alt=\"Documenso Logo\">\n\n<p align=\"center\" style=\"margin-top: 20px\">\n  <p align=\"center\">\n  The Open Source DocuSign Alternative.\n  <br>\n    <a href=\"https://documenso.com\"><strong>Learn more »</strong></a>\n    <br />\n    <br />\n    <a href=\"https://documen.so/discord\">Discord</a>\n    ·\n    <a href=\"https://documenso.com\">Website</a>\n    ·\n    <a href=\"https://docs.documenso.com\">Documentation</a>\n    ·\n    <a href=\"https://github.com/documenso/documenso/issues\">Issues</a>\n    ·\n    <a href=\"https://documen.so/live\">Upcoming Releases</a>\n    ·\n    <a href=\"https://documen.so/roadmap\">Roadmap</a>\n  </p>\n</p>\n\n<p align=\"center\">\n   <a href=\"https://documen.so/discord\"><img src=\"https://img.shields.io/badge/Discord-documen.so/discord-%235865F2\" alt=\"Join Documenso on Discord\"></a>\n   <a href=\"https://github.com/documenso/documenso/stargazers\"><img src=\"https://img.shields.io/github/stars/documenso/documenso\" alt=\"Github Stars\"></a>\n   <a href=\"https://github.com/documenso/documenso/blob/main/LICENSE\"><img src=\"https://img.shields.io/badge/license-AGPLv3-purple\" alt=\"License\"></a>\n   <a",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"9fba09c02cfa97de7970578ea7484e76ad2dead422c3c93e1d8d6c00584d5b52\""
+  }
+}

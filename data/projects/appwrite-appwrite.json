@@ -1,0 +1,300 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 180190854,
+    "nodeId": "MDEwOlJlcG9zaXRvcnkxODAxOTA4NTQ=",
+    "owner": {
+      "login": "appwrite",
+      "id": 25003669,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/25003669?v=4"
+    },
+    "name": "appwrite",
+    "fullName": "appwrite/appwrite",
+    "htmlUrl": "https://github.com/appwrite/appwrite",
+    "description": "Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime and more",
+    "homepageUrl": "https://appwrite.io/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 56818,
+      "forks": 5621,
+      "openIssues": 1031,
+      "subscribers": 417
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 490130,
+      "PHP": 303111,
+      "Shell": 8521,
+      "Dockerfile": 4964,
+      "JavaScript": 439
+    },
+    "topics": [
+      "android",
+      "appwrite",
+      "backend",
+      "backend-as-a-service",
+      "docker",
+      "firebase",
+      "flutter",
+      "hosting",
+      "ios",
+      "javascript",
+      "nextjs",
+      "react",
+      "react-native",
+      "reactnative",
+      "self-hosted",
+      "selfhosted",
+      "serverless",
+      "supabase",
+      "swift",
+      "web"
+    ],
+    "license": {
+      "spdxId": "BSD-3-Clause",
+      "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+      "url": "https://api.github.com/licenses/bsd-3-clause"
+    },
+    "timestamps": {
+      "createdAt": "2019-04-08T16:36:25Z",
+      "updatedAt": "2026-08-09T15:36:53Z",
+      "pushedAt": "2026-08-09T12:57:08Z",
+      "fetchedAt": "2026-08-09T15:59:33.521Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "44025486a00f85d07c55d8bea4b9f073a5443b19",
+      "htmlUrl": "https://github.com/appwrite/appwrite/blob/main/README.md",
+      "excerpt": "<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/55a81268-4ecc-46cd-bdf5-73f7e8662fee\" />\n\n<br />\n<p align=\"center\">\n    <h1>Appwrite</h1>\n    <b>Appwrite is an open-source, all-in-one development platform. Use built-in backend infrastructure and web hosting, all from a single place.</b>\n    <br />\n    <br />\n</p>\n\n[![Discord](https://img.shields.io/badge/chat-5865F2?style=flat-square&logo=discord&logoColor=white)](https://appwrite.io/discord)\n[![X](https://img.shields.io/badge/follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/appwrite)\n[![Appwrite Cloud](https://img.shields.io/badge/Cloud-F02E65?style=flat-square&logo=icloud&logoColor=white)](https://cloud.appwrite.io)\n\nEnglish | [简体中文](README-CN.md)\n\nAppwrite is an open-source development platform for building web, mobile, and AI applications. It brings together backend infrastructure and web hosting in one place, so teams can build, ship, and scale without stitching together a fragmented stack. Appwrite is available as a managed cloud platform and can also be self-hosted on infrastructure you control.\n\nWith Appwrite, you can add authentication, databases, storage, f",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"8542495687d688a8c50f6d5a43b42bdb96672cdc5ff5932da520d1758ed67d42\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 180190854,
+    "locale": "zh-CN",
+    "displayName": "Appwrite",
+    "tagline": "从鉴权、数据库到函数，拆解一个一体化应用后端",
+    "summary": "Appwrite 把鉴权、数据库、存储、函数、消息、实时和托管收进同一开发平台。仓库以 PHP/Swoole 为服务核心，配合 Docker 和多个基础设施服务，适合用“一个产品能力”为单位学习 API、权限、队列和自托管架构。",
+    "recommendationReasons": [
+      "后端能力覆盖完整，可对照理解 BaaS 如何把通用需求做成稳定产品",
+      "PSR-4 模块边界、单元/E2E 测试与 Docker 服务编排都可作为大型后端样本"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "developer-tool",
+      "saas"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "完整环境包含 PHP 8.5、Swoole、Docker 和多个配套服务，适合阅读单一能力链路，不适合初学者直接改造整个平台。",
+      "prerequisites": [
+        "理解 REST API 和身份鉴权",
+        "会阅读服务端分层",
+        "了解 Docker 与队列概念"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "PHP 8.5",
+        "role": "核心服务端业务代码",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/appwrite/appwrite/blob/main/composer.json"
+      },
+      {
+        "name": "Swoole 6",
+        "role": "常驻异步 PHP 服务运行时",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/appwrite/appwrite/blob/main/composer.json"
+      },
+      {
+        "name": "Docker Compose",
+        "role": "自托管多服务编排",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/appwrite/appwrite/blob/main/docker-compose.yml"
+      },
+      {
+        "name": "Redis",
+        "role": "缓存与异步协作配套",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/appwrite/appwrite/blob/main/composer.json"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "一个后端能力的端到端分层",
+        "description": "以 Auth 或 Storage 为切口，追踪配置、路由、服务、数据与测试。",
+        "evidencePaths": [
+          "app",
+          "src/Appwrite",
+          "tests/e2e",
+          "tests/unit"
+        ]
+      },
+      {
+        "title": "把开发平台当作分布系统",
+        "description": "从容器定义和安装器入口理解 API、worker、存储与队列的协作。",
+        "evidencePaths": [
+          "docker-compose.yml",
+          "src/Appwrite/Platform",
+          "src/Executor"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立 Appwrite 产品能力与代码目录的对照表。",
+        "steps": [
+          "阅读 README 的 Products 和 Architecture",
+          "浏览 app、src/Appwrite 与 tests",
+          "在 docker-compose.yml 认出主要服务"
+        ],
+        "outcome": "能说出 API 层、核心逻辑、异步执行和数据服务的边界。"
+      },
+      "twoHours": {
+        "objective": "追踪一条鉴权或文件存储请求。",
+        "steps": [
+          "选定一个对外 API",
+          "找到路由与对应的 Appwrite 命名空间",
+          "对照一个 E2E 测试记录边界条件"
+        ],
+        "outcome": "得到一份从 HTTP 到持久化的请求地图。"
+      },
+      "oneDay": {
+        "objective": "用熟悉语言复刻一个缩小版后端能力。",
+        "steps": [
+          "只选用户注册、会话或文件上传之一",
+          "定义输入校验与权限",
+          "实现服务和数据层",
+          "写一条端到端测试"
+        ],
+        "outcome": "得到一个边界清楚的通用后端子系统。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先建立产品能力与部署方式。"
+      },
+      {
+        "path": "composer.json",
+        "reason": "确认运行时、模块映射和核心依赖。"
+      },
+      {
+        "path": "src/Appwrite",
+        "reason": "阅读主业务层。"
+      },
+      {
+        "path": "tests/e2e",
+        "reason": "从对外行为反推实现。"
+      },
+      {
+        "path": "docker-compose.yml",
+        "reason": "理解完整运行拓扑。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "完整开发环境是多容器架构，资源需求和故障面都高于单体应用。"
+      },
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "平台能力多，必须严格限定阅读与复刻范围。"
+      }
+    ],
+    "score": {
+      "replicability": 14,
+      "clarity": 16,
+      "beginnerValue": 14,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 7,
+      "maintenance": 5,
+      "novelty": 3,
+      "total": 74,
+      "rationale": {
+        "replicability": "单一能力可复刻，整体平台不适合短周期复制。",
+        "clarity": "代码映射和测试分区明确，但业务量很大。",
+        "beginnerValue": "能学通用后端边界，但需要已有服务端基础。",
+        "productCompleteness": "覆盖应用后端从开发到部署的主要能力。",
+        "vibeCodingRelevance": "适合让 AI 辅助追踪 API 和测试，不适合大范围自动改造。",
+        "maintenance": "仓库活跃，版本和安全流程成熟。",
+        "novelty": "一体化 BaaS 很具代表性，但领域本身已较成熟。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/appwrite/appwrite",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/appwrite/appwrite/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/appwrite/appwrite/blob/main/composer.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/appwrite/appwrite/blob/main/docker-compose.yml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/appwrite/appwrite/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 180190854,
+    "slug": "appwrite-appwrite",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

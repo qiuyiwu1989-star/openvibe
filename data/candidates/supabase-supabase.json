@@ -1,0 +1,213 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 214587193,
+  "locale": "zh-CN",
+  "displayName": "Supabase",
+  "tagline": "从 Postgres 出发，理解一个开发平台如何组装",
+  "summary": "Supabase 仓库把管理工作台、官网文档、设计系统、实例与自托管 Docker 配置组在同一 monorepo 中，并说明数据库、鉴权、自动 API、实时、函数与存储的组合方式。对 vibe coding 学习者，最有价值的不是复刻整个平台，而是看懂“以 Postgres 为核心”的产品和控制台设计。",
+  "recommendationReasons": [
+    "能对照 apps/studio 学习复杂数据产品的控制台信息架构",
+    "docker、examples 和 packages 同时展示自托管拓扑、SDK 使用和共享工程能力"
+  ],
+  "audiences": [
+    "starter",
+    "intermediate"
+  ],
+  "categories": [
+    "developer-tool",
+    "saas"
+  ],
+  "learningGoals": [
+    "database",
+    "authentication",
+    "product-architecture",
+    "ui",
+    "deployment",
+    "project-organization"
+  ],
+  "difficulty": {
+    "level": "hard",
+    "rationale": "仓库本身是大型 monorepo，完整自托管又包含多个独立服务；可以从 Studio 或单个 example 入门，不应把全平台作为一天复刻目标。",
+    "prerequisites": [
+      "了解 SQL 与 Postgres",
+      "会使用 React/TypeScript",
+      "理解鉴权和 API 基础"
+    ]
+  },
+  "techStack": [
+    {
+      "name": "PostgreSQL",
+      "role": "平台的核心数据库与权限基础",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/supabase/supabase/blob/master/README.md"
+    },
+    {
+      "name": "TypeScript",
+      "role": "Studio、文档与共享前端工程",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/supabase/supabase/tree/master/apps"
+    },
+    {
+      "name": "Next.js / TanStack Start",
+      "role": "Studio 当前并行的 Web 应用运行时",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/supabase/supabase/blob/master/apps/studio/package.json"
+    },
+    {
+      "name": "Docker Compose",
+      "role": "自托管完整服务拓扑",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/supabase/supabase/tree/master/docker"
+    }
+  ],
+  "learningHighlights": [
+    {
+      "title": "数据产品控制台",
+      "description": "观察数据表、SQL、鉴权、存储和日志如何被组织成一个统一界面。",
+      "evidencePaths": [
+        "apps/studio",
+        "packages/ui",
+        "packages/design-system"
+      ]
+    },
+    {
+      "title": "开源组件的平台化组装",
+      "description": "从 README 的 How it works 与 docker 拓扑理解 Postgres 周边服务的责任分工。",
+      "evidencePaths": [
+        "README.md",
+        "docker",
+        "apps/studio"
+      ]
+    },
+    {
+      "title": "从文档到可运行样例",
+      "description": "对照文档内容和 examples，学习开发平台如何降低首次成功门槛。",
+      "evidencePaths": [
+        "apps/docs",
+        "examples",
+        "packages"
+      ]
+    }
+  ],
+  "learningPath": {
+    "thirtyMinutes": {
+      "objective": "理解 Supabase 不是单一服务，而是以 Postgres 为核心的组合。",
+      "steps": [
+        "阅读 README 的功能清单和 How it works",
+        "浏览 apps/studio、docker 与 examples",
+        "画出数据库、鉴权、API 和前端的关系"
+      ],
+      "outcome": "能解释平台的主要组件及边界。"
+    },
+    "twoHours": {
+      "objective": "沿 Studio 里一个数据表功能追踪 UI 与 API。",
+      "steps": [
+        "选定表格、SQL 编辑器或鉴权用户页",
+        "在 apps/studio 定位路由和功能组件",
+        "找到共享 UI 和数据请求边界"
+      ],
+      "outcome": "得到一条可验证的控制台功能链。"
+    },
+    "oneDay": {
+      "objective": "用托管 Supabase 做一个有权限的数据小应用。",
+      "steps": [
+        "建立一张核心业务表",
+        "增加登录和行级安全策略",
+        "做列表与编辑界面",
+        "记录从云托管到自托管会新增的责任"
+      ],
+      "outcome": "得到一个包含数据、鉴权和权限的完整小应用。"
+    }
+  },
+  "readingGuide": [
+    {
+      "path": "README.md",
+      "reason": "先理解产品组件和开源上游。"
+    },
+    {
+      "path": "apps/studio",
+      "reason": "阅读数据平台控制台。"
+    },
+    {
+      "path": "examples",
+      "reason": "从小型集成学习正确用法。"
+    },
+    {
+      "path": "docker",
+      "reason": "识别自托管组件和运维责任。"
+    },
+    {
+      "path": "DEVELOPERS.md",
+      "reason": "了解 monorepo 本地开发约定。"
+    }
+  ],
+  "risks": [
+    {
+      "kind": "complexity",
+      "severity": "high",
+      "note": "仓库不是全部 Supabase 服务的单体源码，部分能力来自独立上游项目。"
+    },
+    {
+      "kind": "setup",
+      "severity": "high",
+      "note": "自托管会同时引入密钥、网络、存储、升级和备份责任。"
+    }
+  ],
+  "score": {
+    "replicability": 16,
+    "clarity": 17,
+    "beginnerValue": 17,
+    "productCompleteness": 15,
+    "vibeCodingRelevance": 9,
+    "maintenance": 5,
+    "novelty": 3,
+    "total": 82,
+    "rationale": {
+      "replicability": "托管服务上的单一用例很易复刻，完整平台则不易。",
+      "clarity": "README、官方文档、examples 和 Studio 边界清楚。",
+      "beginnerValue": "是学数据库、鉴权和端到端产品的高价值案例。",
+      "productCompleteness": "从数据到控制台和自托管都有成熟链路。",
+      "vibeCodingRelevance": "结构化 API 和官方 SDK 非常适合 AI 辅助构建小产品。",
+      "maintenance": "仓库高度活跃且版本流程完善。",
+      "novelty": "Postgres 为核心的 BaaS 已成熟，但仍具标杆价值。"
+    }
+  },
+  "sources": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/supabase/supabase",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "readme",
+      "url": "https://github.com/supabase/supabase/blob/master/README.md",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/supabase/supabase/blob/master/apps/studio/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/supabase/supabase/tree/master/docker",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/supabase/supabase/blob/master/LICENSE",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    }
+  ],
+  "provenance": {
+    "createdBy": "hybrid",
+    "generator": "open-source-radar-curated-catalog-v1",
+    "createdAt": "2026-08-10T01:15:00+09:00"
+  },
+  "review": {
+    "state": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "notes": "批量策展草案已绑定事实快照，等待独立审核。"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 231283452,
+    "nodeId": "MDEwOlJlcG9zaXRvcnkyMzEyODM0NTI=",
+    "owner": {
+      "login": "excalidraw",
+      "id": 59452120,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/59452120?v=4"
+    },
+    "name": "excalidraw",
+    "fullName": "excalidraw/excalidraw",
+    "htmlUrl": "https://github.com/excalidraw/excalidraw",
+    "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+    "homepageUrl": "https://excalidraw.com/",
+    "defaultBranch": "master",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 129214,
+      "forks": 14781,
+      "openIssues": 3304,
+      "subscribers": 508
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 7455130,
+      "SCSS": 205416,
+      "MDX": 131763,
+      "JavaScript": 89009,
+      "HTML": 7979,
+      "CSS": 1455,
+      "Dockerfile": 877,
+      "Shell": 29
+    },
+    "topics": [
+      "canvas",
+      "collaboration",
+      "diagrams",
+      "drawing",
+      "hacktoberfest",
+      "productivity",
+      "whiteboard"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2020-01-02T01:04:43Z",
+      "updatedAt": "2026-08-09T15:45:09Z",
+      "pushedAt": "2026-08-08T21:17:28Z",
+      "fetchedAt": "2026-08-09T15:59:30.416Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "48b9d1de9fbb1c74406407e89e2471a01b1f28de",
+      "htmlUrl": "https://github.com/excalidraw/excalidraw/blob/master/README.md",
+      "excerpt": "<a href=\"https://excalidraw.com/\" target=\"_blank\" rel=\"noopener\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" alt=\"Excalidraw\" srcset=\"https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2_dark.png\" />\n    <img alt=\"Excalidraw\" src=\"https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2.png\" />\n  </picture>\n</a>\n\n<h4 align=\"center\">\n  <a href=\"https://excalidraw.com\">Excalidraw Editor</a> |\n  <a href=\"https://plus.excalidraw.com/blog\">Blog</a> |\n  <a href=\"https://docs.excalidraw.com\">Documentation</a> |\n  <a href=\"https://plus.excalidraw.com\">Excalidraw+</a>\n</h4>\n\n<div align=\"center\">\n  <h2>\n    An open source virtual hand-drawn style whiteboard. </br>\n    Collaborative and end-to-end encrypted. </br>\n  <br />\n  </h2>\n</div>\n\n<br />\n<p align=\"center\">\n  <a href=\"https://github.com/excalidraw/excalidraw/blob/master/LICENSE\">\n    <img alt=\"Excalidraw is released under the MIT license.\" src=\"https://img.shields.io/badge/license-MIT-blue.svg\"  /></a>\n  <a href=\"https://www.npmjs.com/package/@excalidraw/excalidraw\">\n    <img alt=\"npm downloads/month\" src=\"https://img.shields.io/npm/dm/@excalidraw/excalidraw\"",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"b6906d9d0d7c5484872554c3b0fbee4fb846555560dc30ec8db6a40300ac1fed\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 231283452,
+    "locale": "zh-CN",
+    "displayName": "Excalidraw",
+    "tagline": "从可嵌入画布到实时协作，拆解一款成熟的手绘风白板",
+    "summary": "Excalidraw 既是可直接使用的白板应用，也是可嵌入 React 项目的编辑器包。仓库把图形元素、数学几何、编辑器交互和在线协作分成独立工作区，适合学习复杂前端产品如何从基础模型逐步组成用户体验。",
+    "recommendationReasons": [
+      "编辑器核心以独立 React 包发布，可对照学习“可复用能力”与“完整应用”的边界",
+      "同时覆盖 Canvas 交互、本地优先、PWA 和端到端加密协作，有足够多的可选学习切口"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "content-tool",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "ui",
+      "product-architecture",
+      "project-organization",
+      "deployment"
+    ],
+    "difficulty": {
+      "level": "medium",
+      "rationale": "可先只嵌入 @excalidraw/excalidraw 学习，但完整仓库是大型 Yarn monorepo，协作与几何内核需要更多前端经验。",
+      "prerequisites": [
+        "会运行 Node.js 项目",
+        "理解 React 组件与状态",
+        "了解基础坐标与指针事件"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "TypeScript",
+        "role": "编辑器、元素与应用逻辑",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/excalidraw/excalidraw/tree/master/packages"
+      },
+      {
+        "name": "React",
+        "role": "可嵌入编辑器和应用界面",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/package.json"
+      },
+      {
+        "name": "Rough.js",
+        "role": "手绘风图形渲染",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/package.json"
+      },
+      {
+        "name": "Firebase",
+        "role": "在线应用的协作与持久化配套",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/excalidraw/excalidraw/tree/master/firebase-project"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "把画布交互拆成可组合能力",
+        "description": "追踪选择、绘制、绑定和撤销如何围绕元素模型协作。",
+        "evidencePaths": [
+          "packages/excalidraw",
+          "packages/element",
+          "packages/math"
+        ]
+      },
+      {
+        "title": "从组件包走到完整产品",
+        "description": "对照 npm 编辑器包和 excalidraw.com 应用，理解业务能力如何在外层组装。",
+        "evidencePaths": [
+          "packages/excalidraw",
+          "excalidraw-app",
+          "examples"
+        ]
+      },
+      {
+        "title": "协作与本地优先的产品取舍",
+        "description": "从应用层的协作和本地保存入口学习离线体验、分享与隐私的边界。",
+        "evidencePaths": [
+          "excalidraw-app",
+          "firebase-project",
+          "public"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "理清编辑器包与线上应用的边界。",
+        "steps": [
+          "阅读 README 的 Features 与 Excalidraw.com 两节",
+          "对照根 package.json 的 workspaces",
+          "浏览 packages/excalidraw 和 excalidraw-app"
+        ],
+        "outcome": "能画出核心包、在线应用与协作服务的关系。"
+      },
+      "twoHours": {
+        "objective": "在一个小 React 项目中使用编辑器并修改一项交互。",
+        "steps": [
+          "按 Quick start 嵌入组件",
+          "设置初始数据或界面选项",
+          "监听变更并在本地保存 JSON"
+        ],
+        "outcome": "得到一个可保存与恢复图形的小白板。"
+      },
+      "oneDay": {
+        "objective": "用编辑器核心做一个具体场景变体。",
+        "steps": [
+          "选定流程图、教学批注或头脑风暴场景",
+          "预制图形库与工具栏",
+          "增加导出和恢复",
+          "记录未实现的协作边界"
+        ],
+        "outcome": "得到一个可分享的专用画布原型。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先区分编辑器包与 excalidraw.com 的能力。"
+      },
+      {
+        "path": "package.json",
+        "reason": "认出 monorepo 工作区和开发命令。"
+      },
+      {
+        "path": "packages/excalidraw",
+        "reason": "阅读 React 编辑器主体。"
+      },
+      {
+        "path": "packages/element",
+        "reason": "理解图形元素的数据与操作边界。"
+      },
+      {
+        "path": "excalidraw-app",
+        "reason": "观察可复用编辑器如何被组装为完整应用。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "medium",
+        "note": "完整仓库包含几何、应用和协作多条链路，初学者应先限定到编辑器包。"
+      },
+      {
+        "kind": "setup",
+        "severity": "medium",
+        "note": "完整本地应用与只嵌入 npm 包的环境要求不同，不应混用两套指南。"
+      }
+    ],
+    "score": {
+      "replicability": 21,
+      "clarity": 18,
+      "beginnerValue": 18,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 9,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 90,
+      "rationale": {
+        "replicability": "可先通过独立 React 包做小变体，无需复刻全站。",
+        "clarity": "README、开发文档和工作区边界都较明确。",
+        "beginnerValue": "可从组件嵌入起步，再向复杂交互深入。",
+        "productCompleteness": "编辑、导出、离线与协作构成完整产品链。",
+        "vibeCodingRelevance": "适合让 AI 帮助快速组装专用画布和预制工具。",
+        "maintenance": "仓库活跃，文档和包仍持续更新。",
+        "novelty": "手绘渲染、可嵌入编辑器和加密协作的组合很有代表性。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/excalidraw/excalidraw",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/excalidraw/excalidraw/blob/master/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/excalidraw/excalidraw/blob/master/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/excalidraw/excalidraw/blob/master/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 231283452,
+    "slug": "excalidraw-excalidraw",
+    "status": "published",
+    "featured": true,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

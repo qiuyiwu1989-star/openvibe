@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 612344730,
+  "nodeId": "R_kgDOJH-jmg",
+  "owner": {
+    "login": "ChatGPTNextWeb",
+    "id": 153288546,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/153288546?v=4"
+  },
+  "name": "NextChat",
+  "fullName": "ChatGPTNextWeb/NextChat",
+  "htmlUrl": "https://github.com/ChatGPTNextWeb/NextChat",
+  "description": "✨ Light and Fast AI Assistant. Support: Web | iOS | MacOS | Android |  Linux | Windows",
+  "homepageUrl": "https://nextchat.club/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 88596,
+    "forks": 59301,
+    "openIssues": 846,
+    "subscribers": 484
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 1331900,
+    "SCSS": 97069,
+    "JavaScript": 9989,
+    "Rust": 4632,
+    "Shell": 3882,
+    "Dockerfile": 1673
+  },
+  "topics": [
+    "calclaude",
+    "chatgpt",
+    "claude",
+    "cross-platform",
+    "desktop",
+    "fe",
+    "gemini",
+    "gemini-pro",
+    "gemini-server",
+    "gemini-ultra",
+    "gpt-4o",
+    "groq",
+    "nextjs",
+    "ollama",
+    "react",
+    "tauri",
+    "tauri-app",
+    "vercel",
+    "webui"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2023-03-10T18:27:54Z",
+    "updatedAt": "2026-08-09T15:47:47Z",
+    "pushedAt": "2026-07-06T06:19:02Z",
+    "fetchedAt": "2026-08-09T15:59:38.910Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "2e45c7120fa9ab3083f4943601f9061b4e856cd6",
+    "htmlUrl": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/README.md",
+    "excerpt": "<div align=\"center\">\n\n<a href='https://nextchat.club'>\n  <img src=\"https://github.com/user-attachments/assets/83bdcc07-ae5e-4954-a53a-ac151ba6ccf3\" width=\"1000\" alt=\"icon\"/>\n</a>\n\n<h1 align=\"center\">NextChat</h1>\n\nEnglish / [简体中文](./README_CN.md)\n\n<a href=\"https://trendshift.io/repositories/5973\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/5973\" alt=\"ChatGPTNextWeb%2FChatGPT-Next-Web | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n\n✨ Light and Fast AI Assistant,with Claude, DeepSeek, GPT4 & Gemini Pro support.\n\n[![Saas][Saas-image]][saas-url]\n[![Web][Web-image]][web-url]\n[![Windows][Windows-image]][download-url]\n[![MacOS][MacOS-image]][download-url]\n[![Linux][Linux-image]][download-url]\n\n[NextChatAI](https://nextchat.club?utm_source=readme) / [iOS APP](https://apps.apple.com/us/app/nextchat-ai/id6743085599) / [Web App Demo](https://app.nextchat.club) / [Desktop App](https://github.com/Yidadaa/ChatGPT-Next-Web/releases) / [Enterprise Edition](#enterprise-edition)\n\n[saas-url]: https://nextchat.club?utm_source=readme\n[saas-image]: https://img.shields.io/badge/NextChat-Saas-green?logo=microsoftedge\n[web-url]: https://app.nextch",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"a91388822cd3db31f9aa7d4e834b65836dfeb3b708d6af13b50b642ea1a0c980\""
+  }
+}

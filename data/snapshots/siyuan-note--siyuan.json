@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 291438522,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkyOTE0Mzg1MjI=",
+  "owner": {
+    "login": "siyuan-note",
+    "id": 70468694,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/70468694?v=4"
+  },
+  "name": "siyuan",
+  "fullName": "siyuan-note/siyuan",
+  "htmlUrl": "https://github.com/siyuan-note/siyuan",
+  "description": "An open-source, privacy-first, self-hosted knowledge workspace where humans and AI agents work together 开源、隐私优先、自托管的知识工作空间，让人与智能体在此协作",
+  "homepageUrl": "https://b3log.org/siyuan",
+  "defaultBranch": "master",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 45688,
+    "forks": 2940,
+    "openIssues": 97,
+    "subscribers": 177
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 5934860,
+    "Go": 4744397,
+    "JavaScript": 884937,
+    "SCSS": 279676,
+    "HTML": 126552,
+    "CSS": 23953,
+    "Python": 22595,
+    "Shell": 11409,
+    "Go Template": 9438,
+    "NSIS": 7220,
+    "Batchfile": 6792,
+    "Lua": 3385,
+    "Dockerfile": 1542
+  },
+  "topics": [
+    "agentic-ai",
+    "ai-agent",
+    "digital-garden",
+    "electron",
+    "knowledge-base",
+    "knowledge-graph",
+    "local-first",
+    "markdown",
+    "mcp",
+    "note-taking",
+    "notebook",
+    "notes-app",
+    "pdf",
+    "pkm",
+    "s3",
+    "self-hosted",
+    "siyuan",
+    "webdav",
+    "wiki"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2020-08-30T09:21:35Z",
+    "updatedAt": "2026-08-09T15:35:30Z",
+    "pushedAt": "2026-08-09T15:29:51Z",
+    "fetchedAt": "2026-08-09T15:59:29.391Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "e3ec077eb69322a1b2d56b07ed7114a4661c3b23",
+    "htmlUrl": "https://github.com/siyuan-note/siyuan/blob/master/README.md",
+    "excerpt": "<p align=\"center\">\n<img alt=\"SiYuan\" src=\"https://b3log.org/images/brand/siyuan-128.png\">\n<br>\n<em>Refactor your thinking</em>\n<br><br>\n<a title=\"Build Status\" target=\"_blank\" href=\"https://github.com/siyuan-note/siyuan/actions/workflows/cd.yml\"><img src=\"https://img.shields.io/github/actions/workflow/status/siyuan-note/siyuan/cd.yml?style=flat-square\"></a>\n<a title=\"Releases\" target=\"_blank\" href=\"https://github.com/siyuan-note/siyuan/releases\"><img src=\"https://img.shields.io/github/release/siyuan-note/siyuan.svg?style=flat-square&color=9CF\"></a>\n<a title=\"Downloads\" target=\"_blank\" href=\"https://github.com/siyuan-note/siyuan/releases\"><img src=\"https://img.shields.io/github/downloads/siyuan-note/siyuan/total.svg?style=flat-square&color=blueviolet\"></a>\n<br>\n<a title=\"Docker Pulls\" target=\"_blank\" href=\"https://hub.docker.com/r/b3log/siyuan\"><img src=\"https://img.shields.io/docker/pulls/b3log/siyuan.svg?style=flat-square&color=green\"></a>\n<a title=\"Docker Image Size\" target=\"_blank\" href=\"https://hub.docker.com/r/b3log/siyuan\"><img src=\"https://img.shields.io/docker/image-size/b3log/siyuan.svg?style=flat-square&color=ff96b4\"></a>\n<a title=\"Hits\" target=\"_blank\" href=\"https://gith",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"08f7f386d3133604b1b7c706ce706ace7d759a9308604ec6da9ec2ee68f454a8\""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "calcom/cal.com": {
+    "reason": "repository_redirected",
+    "note": "GitHub 当前将 https://github.com/calcom/cal.com 导向 calcom/cal.diy；旧 fullName 不应作为新的稳定策展键。",
+    "evidenceUrls": ["https://github.com/calcom/cal.com", "https://github.com/calcom/cal.diy"],
+    "replacement": {
+      "fullName": "calcom/cal.diy",
+      "reason": "这是当前的社区版仓库，README 明确说明已移除商业/Enterprise 代码并采用 MIT 许可证。"
+    }
+  },
+  "plane-software/plane": {
+    "reason": "repository_redirected",
+    "note": "当前正式仓库的 fullName 为 makeplane/plane；plane-software/plane 是过时定位，不适合作为发布关联键。",
+    "evidenceUrls": ["https://github.com/plane-software/plane", "https://github.com/makeplane/plane"],
+    "replacement": {
+      "fullName": "makeplane/plane",
+      "reason": "当前活跃的官方仓库，根目录含 apps/packages/deployments，README 与 LICENSE.txt 标明 AGPL-3.0。"
+    }
+  }
+}

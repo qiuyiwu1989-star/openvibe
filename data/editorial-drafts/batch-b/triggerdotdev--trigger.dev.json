@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0", "fullName": "triggerdotdev/trigger.dev", "locale": "zh-CN",
+  "displayName": "Trigger.dev", "tagline": "用持久任务、队列和可观测性理解 AI 工作流",
+  "summary": "Trigger.dev 是用 TypeScript 构建长时间后台任务和 AI 工作流的开源平台，把重试、队列、并发、等待、人工审批、追踪和部署做成统一编程模型。它对 vibe coding 的价值是展示：生成一段能调用模型的代码不难，把它做成可恢复、可观测的产品才是工程核心。",
+  "recommendationReasons": ["长任务、重试、并发和人工在环的抽象非常适合用来学习生产级 Agent", "SDK、Web 控制台、运行时和自托管层的分工可帮助初学者跳出单脚本视角"],
+  "audiences": ["starter", "intermediate"], "categories": ["automation", "agent", "developer-tool"],
+  "learningGoals": ["agent-workflow", "ai-integration", "product-architecture", "deployment", "project-organization"],
+  "difficulty": {"level": "medium", "rationale": "使用 SDK 写第一个任务不难，但阅读平台源码涉及队列、运行时、数据库和部署。", "prerequisites": ["会写 TypeScript 异步代码", "理解 API 和后台任务", "了解失败重试的意义"]},
+  "techStack": [
+    {"name": "TypeScript", "role": "SDK、平台和任务编程模型", "confidence": "confirmed", "evidenceUrl": "https://github.com/triggerdotdev/trigger.dev/blob/main/package.json"},
+    {"name": "Remix / Vite", "role": "Web 控制台应用", "confidence": "confirmed", "evidenceUrl": "https://github.com/triggerdotdev/trigger.dev/blob/main/apps/webapp/package.json"},
+    {"name": "pnpm workspaces", "role": "apps、packages 与 integrations 的 monorepo 组织", "confidence": "confirmed", "evidenceUrl": "https://github.com/triggerdotdev/trigger.dev/blob/main/package.json"}
+  ],
+  "learningHighlights": [
+    {"title": "持久任务的状态机", "description": "从 SDK 到运行时理解等待、重试、并发限制和幂等如何被表达。", "evidencePaths": ["packages/sdk", "packages/core", "apps"]},
+    {"title": "可观测的 AI 工作流", "description": "观察控制台如何展示 run、trace、log 和错误，并与任务定义对照。", "evidencePaths": ["apps/webapp", "packages", "docs"]},
+    {"title": "人工在环不是弹窗", "description": "从 waitpoint 和等待抽象理解长流程如何在审批期间持久化。", "evidencePaths": ["packages/sdk", "apps/webapp", "README.md"]}
+  ],
+  "learningPath": {
+    "thirtyMinutes": {"objective": "认出一个生产级后台任务需要的非业务能力。", "steps": ["阅读 README 的 Key features", "区分 packages/sdk、apps/webapp 和 docker", "写下一个 AI 任务的失败点"], "outcome": "能说明重试、队列、等待和观测性各解决什么问题。"},
+    "twoHours": {"objective": "定义一个带重试与进度的后台任务。", "steps": ["从官方示例建立任务", "增加结构化输入与超时策略", "故意制造一次可重试失败"], "outcome": "得到一个能查看执行轨迹的后台任务。"},
+    "oneDay": {"objective": "做一个可暂停等待人工决策的 AI 流程。", "steps": ["设计生成、审核、发布三阶段", "保存每阶段结构化结果", "增加批准与拒绝分支", "验证重试不会重复外部副作用"], "outcome": "得到一个有恢复能力的人机协作 Agent 流程。"}
+  },
+  "readingGuide": [{"path": "README.md", "reason": "先理解长任务的产品语义。"}, {"path": "packages/sdk", "reason": "阅读开发者直接使用的抽象。"}, {"path": "apps/webapp", "reason": "对照运行状态与可观测界面。"}, {"path": "DOCKER_INSTALLATION.md", "reason": "了解自托管平台的运行拓扑。"}],
+  "risks": [{"kind": "complexity", "severity": "high", "note": "学 SDK 使用和学平台实现是两个难度级别，必须先选一个。"}, {"kind": "paid-service", "severity": "medium", "note": "托管 Trigger.dev 与外部模型 API 可能产生费用；自托管则增加运维责任。"}],
+  "score": {"replicability": 19, "clarity": 17, "beginnerValue": 18, "productCompleteness": 14, "vibeCodingRelevance": 10, "maintenance": 5, "novelty": 5, "total": 88, "rationale": {"replicability": "SDK 用例容易复刻，自托管平台则较重。", "clarity": "README 围绕持久任务的价值讲解清晰，monorepo 边界明确。", "beginnerValue": "能补上 AI 应用从 demo 到生产工程的关键一课。", "productCompleteness": "任务定义、部署、运行和观测链路完整。", "vibeCodingRelevance": "与 Agent、AI 流程和人工审批直接相关。", "maintenance": "仓库与 SDK 持续活跃。", "novelty": "把持久执行与 AI Agent 结合是当前很有价值的工程方向。"}},
+  "sourceUrls": [{"kind": "repository", "url": "https://github.com/triggerdotdev/trigger.dev"}, {"kind": "readme", "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/README.md"}, {"kind": "file", "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/package.json"}, {"kind": "file", "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/apps/webapp/package.json"}, {"kind": "file", "url": "https://github.com/triggerdotdev/trigger.dev/blob/main/LICENSE"}]
+}

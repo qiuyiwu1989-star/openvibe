@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 48769241,
+  "nodeId": "MDEwOlJlcG9zaXRvcnk0ODc2OTI0MQ==",
+  "owner": {
+    "login": "penpot",
+    "id": 30179644,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/30179644?v=4"
+  },
+  "name": "penpot",
+  "fullName": "penpot/penpot",
+  "htmlUrl": "https://github.com/penpot/penpot",
+  "description": "Penpot: The open-source design platform for Product teams that need scalable collaboration.",
+  "homepageUrl": "https://penpot.app/",
+  "defaultBranch": "develop",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 58316,
+    "forks": 3916,
+    "openIssues": 769,
+    "subscribers": 279
+  },
+  "primaryLanguage": "Clojure",
+  "languages": {
+    "Clojure": 13115005,
+    "JavaScript": 1372980,
+    "Rust": 1126043,
+    "TypeScript": 1076632,
+    "SCSS": 804220,
+    "HTML": 290703,
+    "Shell": 128344,
+    "CSS": 103433,
+    "Python": 66406,
+    "MDX": 49923,
+    "Java": 28483,
+    "Go Template": 28121,
+    "Dockerfile": 24388,
+    "PLpgSQL": 11938,
+    "Mustache": 5020,
+    "XSLT": 1575,
+    "Lua": 1261,
+    "Vim Script": 309
+  },
+  "topics": [
+    "clojure",
+    "clojurescript",
+    "design",
+    "prototyping",
+    "ui",
+    "ux-design",
+    "ux-experience"
+  ],
+  "license": {
+    "spdxId": "MPL-2.0",
+    "name": "Mozilla Public License 2.0",
+    "url": "https://api.github.com/licenses/mpl-2.0"
+  },
+  "timestamps": {
+    "createdAt": "2015-12-29T22:09:07Z",
+    "updatedAt": "2026-08-09T15:39:35Z",
+    "pushedAt": "2026-08-08T19:40:08Z",
+    "fetchedAt": "2026-08-09T15:59:31.380Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "5a1d6d60c2315790368230a3832aa0c093ac6b22",
+    "htmlUrl": "https://github.com/penpot/penpot/blob/develop/README.md",
+    "excerpt": "<img width=\"100%\" src=\"https://github.com/user-attachments/assets/da17b160-f289-436f-b140-972083a08602\" />\n\n[uri_license]: https://www.mozilla.org/en-US/MPL/2.0\n[uri_license_image]: https://img.shields.io/badge/MPL-2.0-blue.svg\n\n<p align=\"center\">\n  <a href=\"https://www.digitalpublicgoods.net/r/penpot\" rel=\"nofollow\">\n    <img alt=\"Verified DPG\" src=\"https://img.shields.io/badge/Verified-DPG-3333AB?logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMzEiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMSAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjIwMDggMjEuMzY3OEwxMC4xNzM2IDE4LjAxMjRMMTEuNTIxOSAxNi40MDAzTDEzLjk5MjggMTguNDU5TDE5LjYyNjkgMTIuMjExMUwyMS4xOTA5IDEzLjYxNkwxNC4yMDA4IDIxLjM2NzhaTTI0LjYyNDEgOS4zNTEyN0wyNC44MDcxIDMuMDcyOTdMMTguODgxIDUuMTg2NjJMMTUuMzMxNCAtMi4zMzA4MmUtMDVMMTEuNzgyMSA1LjE4NjYyTDUuODU2MDEgMy4wNzI5N0w2LjAzOTA2IDkuMzUxMjdMMCAxMS4xMTc3TDMuODQ1MjEgMTYuMDg5NUwwIDIxLjA2MTJMNi4wMzkwNiAyMi44Mjc3TDUuODU2MDEgMjkuMTA2TDExLjc4MjEgMjYuOTkyM0wxNS4zMzE0IDMyLjE3OUwxOC44ODEgMjYuOTkyM0wyNC44MDcxIDI5LjEwNkwyNC42MjQxIDIyLjgyNzdMMzAuNjYzMSAyMS4wNjEyTDI2LjgxNzYgMTYuMDg5NUwzMC42NjMxIDExLjExNzdMMjQuNjI0MSA5LjM1MTI3WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==\">\n  </a>",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"d9b8993e9225c50560e3be608f71e3c96b8e4b58b70b1103571caf655d440298\""
+  }
+}

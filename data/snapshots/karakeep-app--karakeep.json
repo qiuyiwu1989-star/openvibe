@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 753589979,
+  "nodeId": "R_kgDOLOre2w",
+  "owner": {
+    "login": "karakeep-app",
+    "id": 202258986,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/202258986?v=4"
+  },
+  "name": "karakeep",
+  "fullName": "karakeep-app/karakeep",
+  "htmlUrl": "https://github.com/karakeep-app/karakeep",
+  "description": "A self-hostable bookmark-everything app (links, notes and images) with AI-based automatic tagging and full text search",
+  "homepageUrl": "https://karakeep.app/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 28209,
+    "forks": 1409,
+    "openIssues": 678,
+    "subscribers": 82
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 4069684,
+    "Shell": 20277,
+    "JavaScript": 13351,
+    "Astro": 9174,
+    "Dockerfile": 7790,
+    "CSS": 3972,
+    "HTML": 2133,
+    "Makefile": 491
+  },
+  "topics": [
+    "bookmark-manager",
+    "bookmarks",
+    "bookmarks-manager",
+    "nextjs",
+    "react-native",
+    "read-it-later",
+    "self-hosted"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2024-02-06T12:28:31Z",
+    "updatedAt": "2026-08-09T15:12:29Z",
+    "pushedAt": "2026-08-02T14:40:11Z",
+    "fetchedAt": "2026-08-09T15:59:40.168Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "737b05636aa5ab592d3dfbca9887fca45cc99e86",
+    "htmlUrl": "https://github.com/karakeep-app/karakeep/blob/main/README.md",
+    "excerpt": "<div align=\"center\">\n    <a href=\"https://github.com/karakeep-app/karakeep/actions/workflows/ci.yml\">\n        <img alt=\"GitHub Actions Workflow Status\" src=\"https://img.shields.io/github/actions/workflow/status/karakeep-app/karakeep/ci.yml\" />\n    </a>\n    <a href=\"https://github.com/karakeep-app/karakeep/releases\">\n        <img alt=\"GitHub Release\" src=\"https://img.shields.io/github/v/release/karakeep-app/karakeep\" />\n    </a>\n    <a href=\"https://discord.gg/NrgeYywsFh\">\n        <img alt=\"Discord\" src=\"https://img.shields.io/discord/1223681308962721802?label=chat%20on%20discord\" />\n    </a>\n    <a href=\"https://hosted.weblate.org/engage/hoarder/\">\n        <img src=\"https://hosted.weblate.org/widget/hoarder/hoarder/svg-badge.svg\" alt=\"Translation status\" />\n    </a>\n</div>\n\n# <img height=\"50px\" src=\"./screenshots/logo.png\" />\n\nKarakeep (previously Hoarder) is a self-hostable bookmark-everything app with a touch of AI for the data hoarders out there.\n\n![homepage screenshot](https://github.com/karakeep-app/karakeep/blob/main/screenshots/homepage.png?raw=true)\n\n## Features\n\n- Bookmark links, take simple notes and store images and pdfs.\n- Automatic fetching for link titles, description",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"b55401bdb9d6bd5539b515b1d66199319353c3577ec986e9b545f6ad51f6da37\""
+  }
+}

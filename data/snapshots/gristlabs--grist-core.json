@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 266033395,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkyNjYwMzMzOTU=",
+  "owner": {
+    "login": "gristlabs",
+    "id": 19978005,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/19978005?v=4"
+  },
+  "name": "grist-core",
+  "fullName": "gristlabs/grist-core",
+  "htmlUrl": "https://github.com/gristlabs/grist-core",
+  "description": "Grist is the evolution of spreadsheets.",
+  "homepageUrl": "https://www.getgrist.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 11432,
+    "forks": 604,
+    "openIssues": 703,
+    "subscribers": 68
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 14048602,
+    "Python": 1797617,
+    "JavaScript": 914282,
+    "CSS": 156510,
+    "Shell": 33479,
+    "HTML": 9328,
+    "Dockerfile": 8299,
+    "Makefile": 1208
+  },
+  "topics": [
+    "awesome",
+    "database",
+    "spreadsheet"
+  ],
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://api.github.com/licenses/apache-2.0"
+  },
+  "timestamps": {
+    "createdAt": "2020-05-22T06:16:02Z",
+    "updatedAt": "2026-08-09T13:06:12Z",
+    "pushedAt": "2026-08-09T10:41:09Z",
+    "fetchedAt": "2026-08-09T16:02:20.196Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "58467b40a51276f00c2c60c05371345e8e5b6990",
+    "htmlUrl": "https://github.com/gristlabs/grist-core/blob/main/README.md",
+    "excerpt": "# Grist\n\nGrist is a modern relational spreadsheet. It combines the flexibility of a spreadsheet with the robustness of a database.\n\n* `grist-core` (this repo – also known as Grist Community edition) has what you need to run a powerful server for hosting spreadsheets.\n* [`grist-desktop`](https://github.com/gristlabs/grist-desktop) is a Linux/macOS/Windows desktop app for viewing and editing spreadsheets stored locally.\n* [`grist-static`](https://github.com/gristlabs/grist-static) is a fully in-browser build of Grist for displaying spreadsheets on a website without back-end support.\n\nGrist is developed by [Grist Labs](https://www.linkedin.com/company/grist-labs/), an NYC-based company 🇺🇸🗽. The French government 🇫🇷 organizations [ANCT Données et Territoires](https://donnees.incubateur.anct.gouv.fr/toolbox/grist) and [DINUM (Direction Interministérielle du Numérique)](https://www.numerique.gouv.fr/dinum/) have also made significant contributions to the codebase.\n\nThe `grist-core`, `grist-desktop`, and `grist-static` repositories are all open-source (Apache License, Version 2.0). Grist Labs sells an edition of Grist with [additional features](#features-not-in-grist-core). Grist Lab",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"1cb7eb58367596d9b96b60d3b5310e13e45ea7164457c806d584c864390f31a4\""
+  }
+}

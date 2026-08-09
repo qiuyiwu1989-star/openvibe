@@ -17,7 +17,7 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="live-dot" aria-hidden="true" />
-            为 vibe coding 初学者编辑
+            已审核 {projects.length} 个 vibe coding 学习案例
           </p>
           <h1>
             别只看 Star。
@@ -78,8 +78,8 @@ export default function HomePage() {
       <section className="section shell" aria-labelledby="featured-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">本期样板</p>
-            <h2 id="featured-title">先拆一个小而完整的项目</h2>
+            <p className="eyebrow">本期精选 · {featured.length} 个</p>
+            <h2 id="featured-title">先拆一批小而完整的项目</h2>
           </div>
           <Link className="text-link" href="/explore">
             查看全部 <span aria-hidden="true">→</span>

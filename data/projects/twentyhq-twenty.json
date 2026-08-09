@@ -1,0 +1,329 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 572984571,
+    "nodeId": "R_kgDOIicM-w",
+    "owner": {
+      "login": "twentyhq",
+      "id": 119600397,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/119600397?v=4"
+    },
+    "name": "twenty",
+    "fullName": "twentyhq/twenty",
+    "htmlUrl": "https://github.com/twentyhq/twenty",
+    "description": "The open alternative to Salesforce, designed for AI.",
+    "homepageUrl": "https://twenty.com/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 54560,
+      "forks": 8421,
+      "openIssues": 147,
+      "subscribers": 215
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 75799918,
+      "MDX": 16200199,
+      "JavaScript": 2520929,
+      "Python": 201946,
+      "CSS": 153564,
+      "SCSS": 119696,
+      "Shell": 38247,
+      "HCL": 19327,
+      "Dockerfile": 18054,
+      "Go Template": 7607,
+      "HTML": 3862,
+      "Makefile": 3149
+    },
+    "topics": [
+      "crm",
+      "crm-system",
+      "customer",
+      "good-first-issue",
+      "graphql",
+      "hacktoberfest",
+      "javascript",
+      "marketing",
+      "monorepo",
+      "nestjs",
+      "open-source",
+      "postgresql",
+      "react",
+      "reactjs",
+      "sales",
+      "typescript",
+      "web"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0 with stated exceptions",
+      "url": "https://github.com/twentyhq/twenty/blob/main/LICENSE"
+    },
+    "timestamps": {
+      "createdAt": "2022-12-01T13:04:40Z",
+      "updatedAt": "2026-08-09T15:57:20Z",
+      "pushedAt": "2026-08-09T15:23:49Z",
+      "fetchedAt": "2026-08-09T15:59:24.367Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "63755643162272f17113c2c0fe4e666e6c3615fb",
+      "htmlUrl": "https://github.com/twentyhq/twenty/blob/main/README.md",
+      "excerpt": "<p align=\"center\">\n  <a href=\"https://www.twenty.com\">\n    <img src=\"./packages/twenty-website/public/images/core/logo.svg\" width=\"100px\" alt=\"Twenty logo\" />\n  </a>\n</p>\n\n<h2 align=\"center\">The #1 Open-Source CRM</h2>\n\n<p align=\"center\"><a href=\"https://twenty.com\"><img src=\"./packages/twenty-website/public/images/readme/globe-icon.svg\" width=\"12\" height=\"12\"/> Website</a> · <a href=\"https://docs.twenty.com\"><img src=\"./packages/twenty-website/public/images/readme/book-icon.svg\" width=\"12\" height=\"12\"/> Documentation</a> · <a href=\"https://github.com/orgs/twentyhq/projects/1\"><img src=\"./packages/twenty-website/public/images/readme/map-icon.svg\" width=\"12\" height=\"12\"/> Roadmap </a> · <a href=\"https://discord.gg/cx5n4Jzs57\"><img src=\"./packages/twenty-website/public/images/readme/discord-icon.svg\" width=\"12\" height=\"12\"/> Discord</a> · <a href=\"https://www.figma.com/file/xt8O9mFeLl46C5InWwoMrN/Twenty\"><img src=\"./packages/twenty-website/public/images/readme/figma-icon.webp\"  width=\"12\" height=\"12\"/>  Figma</a></p>\n\n<p align=\"center\">\n  <a href=\"https://www.twenty.com\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"./packages/twenty-website/public/images/",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"2ebb76d1b262e95e68e4ce77bfa18177200a205851c680b6a307becb4e4c8d68\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 572984571,
+    "locale": "zh-CN",
+    "displayName": "Twenty",
+    "tagline": "用现代 CRM 学习元数据驱动对象、权限和工作流",
+    "summary": "Twenty 是面向 AI 时代的开源 CRM，把联系人、公司、机会、自定义对象与工作流放在 TypeScript/Nx monorepo 中。NestJS、PostgreSQL、Redis/BullMQ 支撑服务端，React、Jotai、Linaria 与 Lingui 支撑前端。它适合研究“可配置业务对象”如何贯穿 schema、API、表格和权限。",
+    "recommendationReasons": [
+      "不只有固定 CRM 表，可学元数据驱动的可扩展对象系统。",
+      "前后端技术栈在 README 中明确列出，便于按层阅读。",
+      "处理多租户、背景任务、国际化和大量表格交互，产品工程参考价值高。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "automation"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "ui",
+      "agent-workflow",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "CRM 领域、元数据引擎、GraphQL/API、权限、后台任务和数据迁移形成大型 Nx monorepo，不适合整仓复制。",
+      "prerequisites": [
+        "TypeScript/React 中大型项目经验",
+        "NestJS 基础",
+        "PostgreSQL 与迁移概念",
+        "RBAC/多租户基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Nx + TypeScript",
+        "role": "monorepo 与统一类型系统",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/twentyhq/twenty/blob/main/README.md"
+      },
+      {
+        "name": "NestJS",
+        "role": "后端 API 与领域服务",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/twentyhq/twenty/blob/main/README.md"
+      },
+      {
+        "name": "PostgreSQL + Redis + BullMQ",
+        "role": "业务数据、缓存与背景任务",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/twentyhq/twenty/blob/main/README.md"
+      },
+      {
+        "name": "React + Jotai",
+        "role": "CRM 交互与客户端状态",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/twentyhq/twenty/blob/main/README.md"
+      },
+      {
+        "name": "Linaria + Lingui",
+        "role": "样式与国际化",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/twentyhq/twenty/blob/main/README.md"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "元数据驱动对象",
+        "description": "选一个自定义字段，跟踪它从 metadata 到数据库、API、表格和编辑器的表达。",
+        "evidencePaths": [
+          "packages/twenty-server/src/engine",
+          "packages/twenty-front/src/modules"
+        ]
+      },
+      {
+        "title": "前台请求与背景任务分工",
+        "description": "区分即时 CRM 操作与 BullMQ 后台处理，理解可重试任务边界。",
+        "evidencePaths": [
+          "packages/twenty-server/src",
+          "packages/twenty-server/src/engine/core-modules"
+        ]
+      },
+      {
+        "title": "表格型产品交互",
+        "description": "观察列配置、选择、批量操作、过滤和视图如何共享对象契约。",
+        "evidencePaths": [
+          "packages/twenty-front/src/modules/object-record",
+          "packages/twenty-front/src/modules/views"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立 CRM 对象地图",
+        "steps": [
+          "读 README Stack",
+          "选 company/person/opportunity 之一",
+          "在 front/server 中各定位一次"
+        ],
+        "outcome": "一张对象从 metadata 到 UI 的图。"
+      },
+      "twoHours": {
+        "objective": "设计一个自定义字段切片",
+        "steps": [
+          "定义字段类型与校验",
+          "对照 API 输入输出",
+          "找到表格和编辑器组件",
+          "列出迁移、索引和权限影响"
+        ],
+        "outcome": "一份跨层改动清单。"
+      },
+      "oneDay": {
+        "objective": "实现简化可配置 CRM 原型",
+        "steps": [
+          "仅支持两种对象和三种字段",
+          "实现元数据驱动表格",
+          "加入租户边界和背景导入任务",
+          "测试迁移、批量操作和跨租户访问"
+        ],
+        "outcome": "一个能解释 metadata 价值与成本的小型 CRM。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认官方栈和产品定位。"
+      },
+      {
+        "path": "package.json",
+        "reason": "了解 Nx 任务入口。"
+      },
+      {
+        "path": "packages/twenty-server",
+        "reason": "定位后端领域与引擎。"
+      },
+      {
+        "path": "packages/twenty-front/src/modules",
+        "reason": "按领域对照 UI。"
+      },
+      {
+        "path": "LICENSE",
+        "reason": "核对 AGPL 与附加许可语句。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "元数据引擎和庞大领域使局部改动可跨多层。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "需 PostgreSQL、Redis 与多包构建。"
+      },
+      {
+        "kind": "license",
+        "severity": "high",
+        "note": "LICENSE 以 AGPLv3 为核心且包含项目附加文本，商业复用前需审阅。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "CRM 含客户与销售数据，租户隔离与权限不可依赖前端。"
+      }
+    ],
+    "score": {
+      "replicability": 11,
+      "clarity": 16,
+      "beginnerValue": 10,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 6,
+      "maintenance": 5,
+      "novelty": 5,
+      "total": 68,
+      "rationale": {
+        "replicability": "大型引擎与多服务不利整体复刻。",
+        "clarity": "技术栈清晰，但代码面积大。",
+        "beginnerValue": "适合进阶工程学习。",
+        "productCompleteness": "CRM 与工作流能力成熟。",
+        "vibeCodingRelevance": "适合学小步改成熟仓库。",
+        "maintenance": "活跃发布和社区。",
+        "novelty": "元数据驱动 CRM 有高学习价值。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/twentyhq/twenty",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/twentyhq/twenty/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/twentyhq/twenty/blob/main/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/twentyhq/twenty/blob/main/nx.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/twentyhq/twenty/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 572984571,
+    "slug": "twentyhq-twenty",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

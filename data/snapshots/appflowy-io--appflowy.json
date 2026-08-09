@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 377496562,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkzNzc0OTY1NjI=",
+  "owner": {
+    "login": "AppFlowy-IO",
+    "id": 86002201,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/86002201?v=4"
+  },
+  "name": "AppFlowy",
+  "fullName": "AppFlowy-IO/AppFlowy",
+  "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy",
+  "description": "Bring projects, wikis, and teams together with AI. AppFlowy is the AI collaborative workspace where you achieve more without losing control of your data. The leading open source Notion alternative.",
+  "homepageUrl": "https://appflowy.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 75114,
+    "forks": 5807,
+    "openIssues": 978,
+    "subscribers": 393
+  },
+  "primaryLanguage": "Dart",
+  "languages": {},
+  "topics": [
+    "blog",
+    "confluence-alternative",
+    "content-management",
+    "content-services",
+    "documentation",
+    "flutter",
+    "note-taking",
+    "notion-alternative",
+    "project-management",
+    "task-management",
+    "team-collaboration",
+    "wiki"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2021-06-16T12:56:48Z",
+    "updatedAt": "2026-08-09T04:14:28Z",
+    "pushedAt": "2026-08-09T02:32:35Z",
+    "fetchedAt": "2026-08-09T16:20:00.000Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "e5d68967564db60b843ecea535b70e57a4f5d969",
+    "htmlUrl": "https://github.com/AppFlowy-IO/AppFlowy/blob/main/README.md",
+    "excerpt": "<h1 align=\"center\" style=\"border-bottom: none\">\n    <b><a href=\"https://www.appflowy.com\">AppFlowy</a></b><br>\n    ⭐️ The Open Source Alternative To Notion ⭐️\n</h1>\n\n<p align=\"center\">\nAppFlowy is the AI workspace where you achieve more without losing control of your data.\n</p>\n\n## User Installation\n\n- Download AppFlowy Desktop for macOS, Windows, and Linux from GitHub Releases.\n- Mobile apps are available for iPhone and Android.\n- Self-hosting and source-build guides are linked from the official documentation.\n\n## Built With\n\n- Flutter\n- Rust",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": null
+  }
+}

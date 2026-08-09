@@ -742,7 +742,7 @@ h3 {
 
 .filter-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(3, 1fr);
+  grid-template-columns: minmax(220px, 1.55fr) repeat(4, minmax(130px, 1fr));
   gap: 12px;
 }
 

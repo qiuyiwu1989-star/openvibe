@@ -1,0 +1,40 @@
+name: Discover review candidates
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 3 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate review queue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run discover
+
+      - name: Upload review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-review-queue
+          path: data/discovery/queue.json
+          if-no-files-found: error
+          retention-days: 14

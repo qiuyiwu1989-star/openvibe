@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 510607652,
+  "nodeId": "R_kgDOHm9BJA",
+  "owner": {
+    "login": "pocketbase",
+    "id": 101000011,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/101000011?v=4"
+  },
+  "name": "pocketbase",
+  "fullName": "pocketbase/pocketbase",
+  "htmlUrl": "https://github.com/pocketbase/pocketbase",
+  "description": "Open Source realtime backend in 1 file",
+  "homepageUrl": "https://pocketbase.io/",
+  "defaultBranch": "master",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 60569,
+    "forks": 3628,
+    "openIssues": 19,
+    "subscribers": 319
+  },
+  "primaryLanguage": "Go",
+  "languages": {
+    "Go": 3572571,
+    "JavaScript": 1284112,
+    "CSS": 333978,
+    "HTML": 555,
+    "Makefile": 240
+  },
+  "topics": [
+    "authentication",
+    "backend",
+    "golang",
+    "realtime"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2022-07-05T06:06:21Z",
+    "updatedAt": "2026-08-09T14:57:47Z",
+    "pushedAt": "2026-08-03T17:05:03Z",
+    "fetchedAt": "2026-08-09T15:59:42.319Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "dc4b8fd3441ff91bcb8c1640b81c1e503a988559",
+    "htmlUrl": "https://github.com/pocketbase/pocketbase/blob/master/README.md",
+    "excerpt": "<p align=\"center\">\n    <a href=\"https://pocketbase.io\" target=\"_blank\" rel=\"noopener\">\n        <img src=\"https://i.imgur.com/aCBbjKx.png\" alt=\"PocketBase - open source backend in 1 file\" />\n    </a>\n</p>\n\n<p align=\"center\">\n    <a href=\"https://github.com/pocketbase/pocketbase/actions/workflows/release.yaml\" target=\"_blank\" rel=\"noopener\"><img src=\"https://github.com/pocketbase/pocketbase/actions/workflows/release.yaml/badge.svg\" alt=\"build\" /></a>\n    <a href=\"https://github.com/pocketbase/pocketbase/releases\" target=\"_blank\" rel=\"noopener\"><img src=\"https://img.shields.io/github/release/pocketbase/pocketbase.svg\" alt=\"Latest releases\" /></a>\n    <a href=\"https://pkg.go.dev/github.com/pocketbase/pocketbase\" target=\"_blank\" rel=\"noopener\"><img src=\"https://godoc.org/github.com/pocketbase/pocketbase?status.svg\" alt=\"Go package documentation\" /></a>\n</p>\n\n[PocketBase](https://pocketbase.io) is an open source Go backend that includes:\n\n- embedded database (_SQLite_) with **realtime subscriptions**\n- built-in **files and users management**\n- convenient **Admin dashboard UI**\n- and simple **REST-ish API**\n\n**For documentation and examples, please visit https://pocketbase.io/docs.**\n\n> [",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"81c3affe1df1f5ff3558ff131407e604ba78f5f2ed50d9ec3b2363d5d8f295d7\""
+  }
+}

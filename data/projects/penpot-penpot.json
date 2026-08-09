@@ -1,0 +1,319 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 48769241,
+    "nodeId": "MDEwOlJlcG9zaXRvcnk0ODc2OTI0MQ==",
+    "owner": {
+      "login": "penpot",
+      "id": 30179644,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/30179644?v=4"
+    },
+    "name": "penpot",
+    "fullName": "penpot/penpot",
+    "htmlUrl": "https://github.com/penpot/penpot",
+    "description": "Penpot: The open-source design platform for Product teams that need scalable collaboration.",
+    "homepageUrl": "https://penpot.app/",
+    "defaultBranch": "develop",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 58316,
+      "forks": 3916,
+      "openIssues": 769,
+      "subscribers": 279
+    },
+    "primaryLanguage": "Clojure",
+    "languages": {
+      "Clojure": 13115005,
+      "JavaScript": 1372980,
+      "Rust": 1126043,
+      "TypeScript": 1076632,
+      "SCSS": 804220,
+      "HTML": 290703,
+      "Shell": 128344,
+      "CSS": 103433,
+      "Python": 66406,
+      "MDX": 49923,
+      "Java": 28483,
+      "Go Template": 28121,
+      "Dockerfile": 24388,
+      "PLpgSQL": 11938,
+      "Mustache": 5020,
+      "XSLT": 1575,
+      "Lua": 1261,
+      "Vim Script": 309
+    },
+    "topics": [
+      "clojure",
+      "clojurescript",
+      "design",
+      "prototyping",
+      "ui",
+      "ux-design",
+      "ux-experience"
+    ],
+    "license": {
+      "spdxId": "MPL-2.0",
+      "name": "Mozilla Public License 2.0",
+      "url": "https://api.github.com/licenses/mpl-2.0"
+    },
+    "timestamps": {
+      "createdAt": "2015-12-29T22:09:07Z",
+      "updatedAt": "2026-08-09T15:39:35Z",
+      "pushedAt": "2026-08-08T19:40:08Z",
+      "fetchedAt": "2026-08-09T15:59:31.380Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "5a1d6d60c2315790368230a3832aa0c093ac6b22",
+      "htmlUrl": "https://github.com/penpot/penpot/blob/develop/README.md",
+      "excerpt": "<img width=\"100%\" src=\"https://github.com/user-attachments/assets/da17b160-f289-436f-b140-972083a08602\" />\n\n[uri_license]: https://www.mozilla.org/en-US/MPL/2.0\n[uri_license_image]: https://img.shields.io/badge/MPL-2.0-blue.svg\n\n<p align=\"center\">\n  <a href=\"https://www.digitalpublicgoods.net/r/penpot\" rel=\"nofollow\">\n    <img alt=\"Verified DPG\" src=\"https://img.shields.io/badge/Verified-DPG-3333AB?logo=data:image/svg%2bxml;base64,PHN2ZyB3aWR0aD0iMzEiIGhlaWdodD0iMzMiIHZpZXdCb3g9IjAgMCAzMSAzMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjIwMDggMjEuMzY3OEwxMC4xNzM2IDE4LjAxMjRMMTEuNTIxOSAxNi40MDAzTDEzLjk5MjggMTguNDU5TDE5LjYyNjkgMTIuMjExMUwyMS4xOTA5IDEzLjYxNkwxNC4yMDA4IDIxLjM2NzhaTTI0LjYyNDEgOS4zNTEyN0wyNC44MDcxIDMuMDcyOTdMMTguODgxIDUuMTg2NjJMMTUuMzMxNCAtMi4zMzA4MmUtMDVMMTEuNzgyMSA1LjE4NjYyTDUuODU2MDEgMy4wNzI5N0w2LjAzOTA2IDkuMzUxMjdMMCAxMS4xMTc3TDMuODQ1MjEgMTYuMDg5NUwwIDIxLjA2MTJMNi4wMzkwNiAyMi44Mjc3TDUuODU2MDEgMjkuMTA2TDExLjc4MjEgMjYuOTkyM0wxNS4zMzE0IDMyLjE3OUwxOC44ODEgMjYuOTkyM0wyNC44MDcxIDI5LjEwNkwyNC42MjQxIDIyLjgyNzdMMzAuNjYzMSAyMS4wNjEyTDI2LjgxNzYgMTYuMDg5NUwzMC42NjMxIDExLjExNzdMMjQuNjI0MSA5LjM1MTI3WiIgZmlsbD0id2hpdGUiLz4KPC9zdmc+Cg==\">\n  </a>",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"d9b8993e9225c50560e3be608f71e3c96b8e4b58b70b1103571caf655d440298\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 48769241,
+    "locale": "zh-CN",
+    "displayName": "Penpot",
+    "tagline": "用开放 Web 标准理解设计工具、协作与设计系统",
+    "summary": "Penpot 是面向产品团队的开源设计平台，以 SVG、CSS、HTML 和 JSON 等开放标准表达设计，同时提供实时协作、设计令牌、插件和开发者 Inspect 工具。它的前端、后端、共享模型、WASM 渲染与部署层清晰分区，适合进阶学习复杂编辑器和设计开发协作。",
+    "recommendationReasons": [
+      "可从真实代码理解设计令牌、组件变体和 Inspect 模式如何连接设计与前端",
+      "Clojure/ClojureScript、Rust/WASM 与标准 Web 技术的组合，能展示大型创作工具的性能分层"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "content-tool",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "ui",
+      "product-architecture",
+      "database",
+      "authentication",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "它是跨前后端、协作、渲染和存储的大型系统，并使用 Clojure 生态与 Rust/WASM，不适合作为第一个完整复刻项目。",
+      "prerequisites": [
+        "能阅读大型前端项目",
+        "理解客户端与服务端边界",
+        "了解数据库与实时协作基本概念"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "ClojureScript",
+        "role": "编辑器前端主要应用逻辑",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/penpot/penpot/tree/develop/frontend/src"
+      },
+      {
+        "name": "Clojure",
+        "role": "后端服务与共享逻辑",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/penpot/penpot/tree/develop/backend"
+      },
+      {
+        "name": "Rust / WebAssembly",
+        "role": "高性能渲染链路",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/penpot/penpot/tree/develop/render-wasm"
+      },
+      {
+        "name": "PostgreSQL",
+        "role": "自托管部署的核心数据库",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/penpot/penpot/tree/develop/docker"
+      },
+      {
+        "name": "MPL-2.0",
+        "role": "仓库开源许可证",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/penpot/penpot/blob/develop/LICENSE"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "开放标准驱动的设计数据",
+        "description": "观察设计对象如何被表达、渲染并转为开发者可用信息。",
+        "evidencePaths": [
+          "common",
+          "frontend",
+          "exporter"
+        ]
+      },
+      {
+        "title": "复杂编辑器的性能分层",
+        "description": "对照前端交互与 Rust/WASM 渲染模块，理解性能敏感任务的分工。",
+        "evidencePaths": [
+          "frontend",
+          "render-wasm",
+          "media-processor"
+        ]
+      },
+      {
+        "title": "设计系统与插件边界",
+        "description": "从令牌、组件变体和插件运行时学习可扩展产品的边界设计。",
+        "evidencePaths": [
+          "frontend/packages",
+          "plugins",
+          "library"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "建立 Penpot 五个主要工程边界的地图。",
+        "steps": [
+          "阅读 README 的 Why Penpot",
+          "浏览 frontend、backend、common、render-wasm 和 docker",
+          "记下一条从设计数据到渲染的推测链路"
+        ],
+        "outcome": "能解释前端、共享模型、后端和渲染层的职责。"
+      },
+      "twoHours": {
+        "objective": "沿一个明确界面功能追踪代码。",
+        "steps": [
+          "选择设计令牌或 Inspect 功能",
+          "在 frontend/src 定位界面与事件",
+          "找出 common 或 backend 中对应的数据处理"
+        ],
+        "outcome": "形成一份带真实路径的功能调用图。"
+      },
+      "oneDay": {
+        "objective": "做一个不依赖完整后端的设计开发小实验。",
+        "steps": [
+          "用 SVG 和 CSS 定义一组可视化令牌",
+          "制作组件变体展示",
+          "增加类 Inspect 的属性面板",
+          "记录与 Penpot 完整实现的差距"
+        ],
+        "outcome": "得到一个可解释开放设计数据的轻量原型。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先理解开放标准、设计令牌和 Inspect 的产品立场。"
+      },
+      {
+        "path": "frontend",
+        "reason": "建立编辑器界面和 ClojureScript 应用的地图。"
+      },
+      {
+        "path": "common",
+        "reason": "观察前后端共用的数据与规则。"
+      },
+      {
+        "path": "backend",
+        "reason": "了解服务端业务与持久化边界。"
+      },
+      {
+        "path": "render-wasm",
+        "reason": "识别性能敏感的渲染子系统。"
+      },
+      {
+        "path": "docker",
+        "reason": "理解自托管需要的多服务组合。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "代码库体量大且横跨 ClojureScript、Clojure、Rust/WASM 与多个基础设施服务。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "完整开发环境不是单个 Node.js 应用，建议先使用官方自托管说明或只阅读子系统。"
+      }
+    ],
+    "score": {
+      "replicability": 13,
+      "clarity": 17,
+      "beginnerValue": 14,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 6,
+      "maintenance": 5,
+      "novelty": 5,
+      "total": 75,
+      "rationale": {
+        "replicability": "可复刻单个设计开发概念，但不适合短时间复刻完整产品。",
+        "clarity": "根目录按主要子系统分区，README 对产品能力说明完整。",
+        "beginnerValue": "对设计系统很有价值，但技术栈和系统规模对初学者有明显门槛。",
+        "productCompleteness": "从设计、协作到开发交付和自托管都有成熟实现。",
+        "vibeCodingRelevance": "适合让 AI 辅助阅读单个子系统，不适合一次性生成式改造。",
+        "maintenance": "仓库保持高活跃度且开发流程完整。",
+        "novelty": "以开放 Web 标准连接设计与代码是鲜明且罕见的学习角度。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/penpot/penpot",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/penpot/penpot/blob/develop/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/penpot/penpot/blob/develop/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/penpot/penpot/blob/develop/frontend/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/penpot/penpot/blob/develop/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 48769241,
+    "slug": "penpot-penpot",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

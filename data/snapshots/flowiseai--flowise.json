@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 621803253,
+  "nodeId": "R_kgDOJQ_29Q",
+  "owner": {
+    "login": "FlowiseAI",
+    "id": 128289781,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/128289781?v=4"
+  },
+  "name": "Flowise",
+  "fullName": "FlowiseAI/Flowise",
+  "htmlUrl": "https://github.com/FlowiseAI/Flowise",
+  "description": "Build AI Agents, Visually",
+  "homepageUrl": "https://flowiseai.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 55273,
+    "forks": 24873,
+    "openIssues": 1045,
+    "subscribers": 362
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 8773523,
+    "JavaScript": 3882965,
+    "HTML": 789221,
+    "Handlebars": 716174,
+    "CSS": 26973,
+    "SCSS": 9005,
+    "Dockerfile": 3564,
+    "Shell": 3431,
+    "Batchfile": 60
+  },
+  "topics": [
+    "agentic-ai",
+    "agentic-workflow",
+    "agents",
+    "artificial-intelligence",
+    "chatbot",
+    "chatgpt",
+    "javascript",
+    "langchain",
+    "large-language-models",
+    "low-code",
+    "multiagent-systems",
+    "no-code",
+    "openai",
+    "rag",
+    "react",
+    "typescript",
+    "workflow-automation"
+  ],
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0 with commercial enterprise exceptions",
+    "url": "https://github.com/FlowiseAI/Flowise/blob/main/LICENSE.md"
+  },
+  "timestamps": {
+    "createdAt": "2023-03-31T12:23:09Z",
+    "updatedAt": "2026-08-09T15:00:10Z",
+    "pushedAt": "2026-08-07T05:55:02Z",
+    "fetchedAt": "2026-08-09T15:59:18.861Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "72e4081c6b6f41c45916f42cde52fdd9e4695391",
+    "htmlUrl": "https://github.com/FlowiseAI/Flowise/blob/main/README.md",
+    "excerpt": "<!-- markdownlint-disable MD030 -->\n\n<p align=\"center\">\n<img src=\"https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_white.svg#gh-light-mode-only\">\n<img src=\"https://github.com/FlowiseAI/Flowise/blob/main/images/flowise_dark.svg#gh-dark-mode-only\">\n</p>\n\n<div align=\"center\">\n\n[![Release Notes](https://img.shields.io/github/release/FlowiseAI/Flowise)](https://github.com/FlowiseAI/Flowise/releases)\n[![Discord](https://img.shields.io/discord/1087698854775881778?label=Discord&logo=discord)](https://discord.gg/jbaHfsRVBW)\n[![Twitter Follow](https://img.shields.io/twitter/follow/FlowiseAI?style=social)](https://twitter.com/FlowiseAI)\n[![GitHub star chart](https://img.shields.io/github/stars/FlowiseAI/Flowise?style=social)](https://star-history.com/#FlowiseAI/Flowise)\n[![GitHub fork](https://img.shields.io/github/forks/FlowiseAI/Flowise?style=social)](https://github.com/FlowiseAI/Flowise/fork)\n\nEnglish | [繁體中文](./i18n/README-TW.md) | [简体中文](./i18n/README-ZH.md) | [日本語](./i18n/README-JA.md) | [한국어](./i18n/README-KR.md)\n\n</div>\n\n<h3>Build AI Agents, Visually</h3>\n<a href=\"https://github.com/FlowiseAI/Flowise\">\n<img width=\"100%\" src=\"https://github.com/FlowiseAI/Flowise/blob/main/",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"e6a283653d4d2d137b45879c5434eeb6770bf1f648b1499a07dae079e30eb6c1\""
+  }
+}

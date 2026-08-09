@@ -5,7 +5,7 @@ import { getPublishedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "发现项目",
-  description: "按难度、项目类型和学习目标筛选值得复刻的开源案例。",
+  description: "按难度、项目类型、学习目标和技术栈筛选值得复刻的开源案例。",
 };
 
 type ExplorePageProps = {
@@ -34,6 +34,7 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
         initialFilters={{
           category: firstValue(query.category) ?? "",
           learningGoal: firstValue(query.goal) ?? "",
+          techStack: firstValue(query.tech) ?? "",
         }}
       />
     </div>

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 572570113,
+  "nodeId": "R_kgDOIiC6AQ",
+  "owner": {
+    "login": "triggerdotdev",
+    "id": 95297378,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/95297378?v=4"
+  },
+  "name": "trigger.dev",
+  "fullName": "triggerdotdev/trigger.dev",
+  "htmlUrl": "https://github.com/triggerdotdev/trigger.dev",
+  "description": "Trigger.dev – build and deploy fully‑managed AI agents and workflows",
+  "homepageUrl": "https://trigger.dev/changelog",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 15951,
+    "forks": 1401,
+    "openIssues": 415,
+    "subscribers": 51
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 25872652,
+    "JavaScript": 121603,
+    "Shell": 59593,
+    "CSS": 35847,
+    "ANTLR": 27543,
+    "Go Template": 23587,
+    "PLpgSQL": 11589,
+    "Dockerfile": 9211
+  },
+  "topics": [
+    "ai",
+    "ai-agent-framework",
+    "ai-agents",
+    "automation",
+    "background-jobs",
+    "mcp",
+    "mcp-server",
+    "nextjs",
+    "orchestration",
+    "scheduler",
+    "serverless",
+    "workflow-automation",
+    "workflows"
+  ],
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://api.github.com/licenses/apache-2.0"
+  },
+  "timestamps": {
+    "createdAt": "2022-11-30T14:59:07Z",
+    "updatedAt": "2026-08-09T15:23:05Z",
+    "pushedAt": "2026-08-09T14:55:09Z",
+    "fetchedAt": "2026-08-09T15:59:36.725Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "0d7f1ca2930179925a03863e454c659447e42544",
+    "htmlUrl": "https://github.com/triggerdotdev/trigger.dev/blob/main/README.md",
+    "excerpt": "<div align=\"center\">\n\n![Trigger.dev logo](https://content.trigger.dev/github-header-banner.jpg)\n\n### Build and deploy fully‑managed AI agents and workflows\n\n[Website](https://trigger.dev) | [Docs](https://trigger.dev/docs) | [Issues](https://github.com/triggerdotdev/trigger.dev/issues) | [Example projects](https://github.com/triggerdotdev/examples) | [Feature requests](https://triggerdev.featurebase.app/) | [Public roadmap](https://triggerdev.featurebase.app/roadmap) | [Self-hosting](https://trigger.dev/docs/self-hosting/overview) \n\n[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red.svg)](https://github.com/triggerdotdev/trigger.dev)\n[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/triggerdotdev/trigger.dev/blob/main/LICENSE)\n[![npm](https://img.shields.io/npm/v/@trigger.dev/sdk.svg?label=npm)](https://www.npmjs.com/package/@trigger.dev/sdk)\n[![SDK downloads](https://img.shields.io/npm/dm/@trigger.dev/sdk.svg?label=SDK%20downloads)](https://www.npmjs.com/package/@trigger.dev/sdk)\n\n[![Twitter Follow](https://img.shields.io/twitter/follow/triggerdotdev?style=social)](https://twitter.com/triggerdotdev)\n[![Discord](https:",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"a33409a7e950cc1e10ce2e9bc083eedc87bc0fbe49971e9459a7c147440f2df1\""
+  }
+}

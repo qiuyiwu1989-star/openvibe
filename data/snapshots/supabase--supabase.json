@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 214587193,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkyMTQ1ODcxOTM=",
+  "owner": {
+    "login": "supabase",
+    "id": 54469796,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/54469796?v=4"
+  },
+  "name": "supabase",
+  "fullName": "supabase/supabase",
+  "htmlUrl": "https://github.com/supabase/supabase",
+  "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+  "homepageUrl": "https://supabase.com/",
+  "defaultBranch": "master",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 107733,
+    "forks": 13506,
+    "openIssues": 1229,
+    "subscribers": 738
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 29482866,
+    "MDX": 11058055,
+    "JavaScript": 344211,
+    "CSS": 287910,
+    "Shell": 219578,
+    "Vue": 74704,
+    "PLpgSQL": 54978,
+    "Makefile": 7249,
+    "Dockerfile": 6114,
+    "Smarty": 2352,
+    "Mermaid": 1578,
+    "Elixir": 1103,
+    "HTML": 486
+  },
+  "topics": [
+    "ai",
+    "alternative",
+    "auth",
+    "database",
+    "deno",
+    "embeddings",
+    "example",
+    "firebase",
+    "nextjs",
+    "oauth2",
+    "pgvector",
+    "postgis",
+    "postgres",
+    "postgresql",
+    "postgrest",
+    "realtime",
+    "supabase",
+    "vectors",
+    "websockets"
+  ],
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://api.github.com/licenses/apache-2.0"
+  },
+  "timestamps": {
+    "createdAt": "2019-10-12T05:56:49Z",
+    "updatedAt": "2026-08-09T15:31:59Z",
+    "pushedAt": "2026-08-09T00:23:11Z",
+    "fetchedAt": "2026-08-09T15:59:34.578Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "0b5a5e6f4556ca4e99f0980192cc15587083c3c6",
+    "htmlUrl": "https://github.com/supabase/supabase/blob/master/README.md",
+    "excerpt": "<p align=\"center\">\n<img src=\"https://user-images.githubusercontent.com/8291514/213727234-cda046d6-28c6-491a-b284-b86c5cede25d.png#gh-light-mode-only\">\n<img src=\"https://user-images.githubusercontent.com/8291514/213727225-56186826-bee8-43b5-9b15-86e839d89393.png#gh-dark-mode-only\">\n</p>\n\n# Supabase\n\n[Supabase](https://supabase.com) is the Postgres development platform. We're building the features of Firebase using enterprise-grade open source tools.\n\n- [x] Hosted Postgres Database. [Docs](https://supabase.com/docs/guides/database)\n- [x] Authentication and Authorization. [Docs](https://supabase.com/docs/guides/auth)\n- [x] Auto-generated APIs.\n  - [x] REST. [Docs](https://supabase.com/docs/guides/api)\n  - [x] GraphQL. [Docs](https://supabase.com/docs/guides/graphql)\n  - [x] Realtime subscriptions. [Docs](https://supabase.com/docs/guides/realtime)\n- [x] Functions.\n  - [x] Database Functions. [Docs](https://supabase.com/docs/guides/database/functions)\n  - [x] Edge Functions [Docs](https://supabase.com/docs/guides/functions)\n- [x] File Storage. [Docs](https://supabase.com/docs/guides/storage)\n- [x] AI + Vector/Embeddings Toolkit. [Docs](https://supabase.com/docs/guides/ai)\n- [x] Dashboar",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"f76e5c5c0cc054cfb43db37ca78ff32b9536b63665f2e2bd4ca0ea561ab3ca1e\""
+  }
+}

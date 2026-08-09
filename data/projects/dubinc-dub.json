@@ -1,0 +1,323 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 529708137,
+    "nodeId": "R_kgDOH5K0aQ",
+    "owner": {
+      "login": "dubinc",
+      "id": 153106492,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/153106492?v=4"
+    },
+    "name": "dub",
+    "fullName": "dubinc/dub",
+    "htmlUrl": "https://github.com/dubinc/dub",
+    "description": "The modern link attribution platform. Loved by world-class marketing teams like Framer, Perplexity, Superhuman, Twilio, Buffer and more.",
+    "homepageUrl": "https://dub.co/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 24248,
+      "forks": 3185,
+      "openIssues": 164,
+      "subscribers": 83
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 14295718,
+      "JavaScript": 8296,
+      "CSS": 3544,
+      "HTML": 457
+    },
+    "topics": [
+      "clickhouse",
+      "mysql",
+      "nextjs",
+      "open-source",
+      "planetscale",
+      "prisma",
+      "tailwindcss",
+      "tinybird",
+      "typescript",
+      "upstash",
+      "vercel"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0 with commercial enterprise exceptions",
+      "url": "https://github.com/dubinc/dub/blob/main/LICENSE.md"
+    },
+    "timestamps": {
+      "createdAt": "2022-08-27T22:15:11Z",
+      "updatedAt": "2026-08-09T15:26:46Z",
+      "pushedAt": "2026-08-09T12:32:20Z",
+      "fetchedAt": "2026-08-09T15:59:22.092Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "977e1ccc0ae00e3d81d6dd2f8f41b35d703d6c9c",
+      "htmlUrl": "https://github.com/dubinc/dub/blob/main/README.md",
+      "excerpt": "<a href=\"https://dub.co\">\n  <img alt=\"Dub is the modern, open-source link attribution platform for short links, conversion tracking, and affiliate programs.\" src=\"https://github.com/user-attachments/assets/42cf0705-f5a2-4200-bc4a-c5acf0ba9e15\">\n</a>\n\n<h3 align=\"center\">Dub</h3>\n\n<p align=\"center\">\n    The open-source link attribution platform.\n    <br />\n    <a href=\"https://dub.co\"><strong>Learn more »</strong></a>\n    <br />\n    <br />\n    <a href=\"#introduction\"><strong>Introduction</strong></a> ·\n    <a href=\"#tech-stack\"><strong>Tech Stack</strong></a> ·\n    <a href=\"#self-hosting\"><strong>Self-hosting</strong></a> ·\n    <a href=\"#contributing\"><strong>Contributing</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://twitter.com/dubdotco\">\n    <img src=\"https://img.shields.io/twitter/follow/dubdotco?style=flat&label=%40dubdotco&logo=twitter&color=0bf&logoColor=fff\" alt=\"Twitter\" />\n  </a>\n  <a href=\"https://news.ycombinator.com/item?id=32939407\"><img src=\"https://img.shields.io/badge/Hacker%20News-255-%23FF6600\" alt=\"Hacker News\"></a>\n  <a href=\"https://github.com/dubinc/dub/blob/main/LICENSE.md\">\n    <img src=\"https://img.shields.io/github/license/dubinc/dub?label=license",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"a36fcb2a7168741d40473b780e3f88ea2987c6ac92d03f2c25ffc8f8a0b9079a\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 529708137,
+    "locale": "zh-CN",
+    "displayName": "Dub",
+    "tagline": "从短链接跳转到转化归因，学习高流量 SaaS 的数据链路",
+    "summary": "Dub 是一个开源链接归因平台，同时处理短链接、点击事件、转化跟踪和联盟计划。它的 Next.js monorepo 结合关系数据、Redis、分析管道、认证、支付和邮件，适合学习一个看似简单的 redirect 如何演变成多租户数据产品。",
+    "recommendationReasons": [
+      "短链接跳转、点击采集和分析查询构成清晰的端到端切片。",
+      "官方 README 直接列出技术栈和本地种子数据步骤。",
+      "可对比请求热路径与后台 SaaS 界面的不同工程要求。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "data-visualization",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "payments",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "单一主 Web 应用但基础设施多，包括 MySQL/PlanetScale、Upstash、Tinybird、Stripe、Resend 和 SSO，且根目录已有 2.5 万以上提交。",
+      "prerequisites": [
+        "Next.js 全栈经验",
+        "SQL 与事件分析基础",
+        "Redis/缓存概念",
+        "SaaS 认证和支付基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Next.js + TypeScript",
+        "role": "平台 UI、API 与跳转服务",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      },
+      {
+        "name": "Prisma + PlanetScale/MySQL",
+        "role": "业务数据持久化",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      },
+      {
+        "name": "Upstash Redis",
+        "role": "缓存与请求协调",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      },
+      {
+        "name": "Tinybird",
+        "role": "点击与转化分析",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      },
+      {
+        "name": "NextAuth.js / BoxyHQ",
+        "role": "认证与 SAML/SSO",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      },
+      {
+        "name": "Stripe / Resend",
+        "role": "计费与交易邮件",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/dubinc/dub/blob/main/README.md"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "跳转热路径",
+        "description": "从域名和 key 解析、访问控制、事件记录到 redirect，理解低延迟路径。",
+        "evidencePaths": [
+          "apps/web",
+          "packages"
+        ]
+      },
+      {
+        "title": "事件与业务事实分层",
+        "description": "对比 Prisma 业务实体与 Tinybird 点击/转化事件，避免把分析数据当成交易真相。",
+        "evidencePaths": [
+          "apps/web/prisma",
+          "packages/tinybird"
+        ]
+      },
+      {
+        "title": "多租户 SaaS 边界",
+        "description": "从 workspace、domain、billing 和 SSO 识别权限与商业能力如何围绕核心链接对象展开。",
+        "evidencePaths": [
+          "apps/web",
+          "packages",
+          "LICENSE.md"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "画出短链接访问链路",
+        "steps": [
+          "读 README Introduction/Tech Stack",
+          "在 apps/web 定位 redirect 入口",
+          "标出业务库、缓存和分析写入"
+        ],
+        "outcome": "一张同步响应与异步分析分离图。"
+      },
+      "twoHours": {
+        "objective": "设计一个最小短链接服务",
+        "steps": [
+          "定义 link/domain/click 最小 schema",
+          "实现不带分析的 redirect",
+          "增加异步点击事件",
+          "测试不存在、禁用与循环跳转"
+        ],
+        "outcome": "一个可证明热路径边界的原型。"
+      },
+      "oneDay": {
+        "objective": "增加可查询的转化漏斗",
+        "steps": [
+          "定义点击与转化事件 ID",
+          "实现幂等采集",
+          "构建按时间聚合的最小图表",
+          "测试重放、延迟到达和跨租户查询"
+        ],
+        "outcome": "一个有事件身份、幂等与租户隔离的分析切片。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认产品和基础设施。"
+      },
+      {
+        "path": "apps/web",
+        "reason": "从主应用路由入手。"
+      },
+      {
+        "path": "apps/web/prisma",
+        "reason": "建立业务模型。"
+      },
+      {
+        "path": "packages",
+        "reason": "识别共享域能力。"
+      },
+      {
+        "path": "LICENSE.md",
+        "reason": "分清 AGPL 核心与 /ee 商业代码。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "仓库庞大，必须从 redirect 单切片开始。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "high",
+        "note": "官方技术栈含多个托管数据与通信服务。"
+      },
+      {
+        "kind": "license",
+        "severity": "high",
+        "note": "开源核心为 AGPLv3，/ee 为商业许可；复用前必须按路径核对。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "自定义域、redirect、webhook 和归因数据涉及滥用、隐私与注入风险。"
+      }
+    ],
+    "score": {
+      "replicability": 12,
+      "clarity": 16,
+      "beginnerValue": 11,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 6,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 69,
+      "rationale": {
+        "replicability": "外部基础设施与规模降低复刻性。",
+        "clarity": "README 技术栈清楚，代码面积大。",
+        "beginnerValue": "适合进阶者拆切片。",
+        "productCompleteness": "链接、归因、联盟与 SaaS 闭环成熟。",
+        "vibeCodingRelevance": "适合学产品工程，不适合快速整仓复制。",
+        "maintenance": "仓库持续高活跃。",
+        "novelty": "归因与联盟数据链路有差异化。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/dubinc/dub",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/dubinc/dub/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/dubinc/dub/blob/main/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/dubinc/dub/blob/main/pnpm-workspace.yaml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/dubinc/dub/blob/main/LICENSE.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 529708137,
+    "slug": "dubinc-dub",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

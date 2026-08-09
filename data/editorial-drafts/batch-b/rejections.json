@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-08-10",
+  "rejections": [
+    {
+      "fullName": "toeverything/AFFiNE",
+      "status": "rejected",
+      "reasonCode": "mixed-restrictive-license",
+      "reason": "仓库根许可证说明存在分区许可：除指定后端目录外的代码采用 MIT，而社区版后端采用 MPL-2.0，企业版后端文件还附带限制生产使用、商业许可与分发方式的 Enterprise Edition 条款。由于同一仓库同时包含不满足本项目开源准入的生产受限代码，本批不发布学习卡。",
+      "sourceUrls": [
+        {"kind": "repository", "url": "https://github.com/toeverything/AFFiNE"},
+        {"kind": "readme", "url": "https://github.com/toeverything/AFFiNE/blob/canary/README.md"},
+        {"kind": "file", "url": "https://github.com/toeverything/AFFiNE/blob/canary/LICENSE"},
+        {"kind": "file", "url": "https://github.com/toeverything/AFFiNE/blob/canary/packages/backend/server/LICENSE"},
+        {"kind": "file", "url": "https://github.com/toeverything/AFFiNE/blob/canary/package.json"}
+      ],
+      "suggestedAlternative": {"fullName": "AppFlowy-IO/AppFlowy", "license": "AGPL-3.0", "reason": "同属可自托管的知识工作空间，主仓库以明确的自由软件许可证开放 Flutter 客户端与 Rust 后端，适合作为产品架构学习替代。", "url": "https://github.com/AppFlowy-IO/AppFlowy"}
+    },
+    {
+      "fullName": "nocodb/nocodb",
+      "status": "rejected",
+      "reasonCode": "non-osi-source-available-license",
+      "reason": "当前根 LICENSE.md 为 Sustainable Use License，对使用目的和分发方式附加限制，不是 OSI 批准的开源许可证，因此不作为本项目的开源学习案例发布。",
+      "sourceUrls": [
+        {"kind": "repository", "url": "https://github.com/nocodb/nocodb"},
+        {"kind": "readme", "url": "https://github.com/nocodb/nocodb/blob/develop/README.md"},
+        {"kind": "file", "url": "https://github.com/nocodb/nocodb/blob/develop/LICENSE.md"},
+        {"kind": "file", "url": "https://github.com/nocodb/nocodb/blob/develop/package.json"}
+      ],
+      "suggestedAlternative": {"fullName": "gristlabs/grist-core", "license": "Apache-2.0", "reason": "同样用电子表格式界面构建关系数据应用，核心仓库采用 OSI 批准的 Apache-2.0；本批已单独补充完整学习卡。", "url": "https://github.com/gristlabs/grist-core"}
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0.0", "fullName": "pocketbase/pocketbase", "locale": "zh-CN",
+  "displayName": "PocketBase", "tagline": "从一个可执行文件理解数据库、认证、文件与实时 API",
+  "summary": "PocketBase 是一个以 Go 构建的轻量后端，把嵌入式 SQLite、实时订阅、文件与用户管理、管理后台和 REST 风格 API 打包进单个可执行文件。它既能作为独立后端运行，也能作为 Go 框架扩展，特别适合初学者用最小运维成本理解常见 SaaS 后端能力如何被组织。",
+  "recommendationReasons": ["单文件启动让学习重点回到数据模型、权限、认证和前端连接", "核心、API、表单、迁移、插件和管理 UI 的目录边界直接，适合逐层阅读"],
+  "audiences": ["beginner", "starter", "intermediate"], "categories": ["developer-tool", "saas"],
+  "learningGoals": ["database", "authentication", "product-architecture", "deployment", "project-organization"],
+  "difficulty": {"level": "easy", "rationale": "作为后端使用时启动与建表非常直接；若要阅读 Go 内核或扩展框架，则需要理解请求生命周期、迁移和并发。", "prerequisites": ["理解表、字段与关系", "会调用 HTTP API", "阅读内核时需 Go 基础"]},
+  "techStack": [
+    {"name": "Go", "role": "后端核心、命令行和扩展框架", "confidence": "confirmed", "evidenceUrl": "https://github.com/pocketbase/pocketbase/blob/master/go.mod"},
+    {"name": "SQLite", "role": "嵌入式业务数据与应用配置存储", "confidence": "confirmed", "evidenceUrl": "https://github.com/pocketbase/pocketbase/blob/master/README.md"},
+    {"name": "Vite", "role": "管理后台前端的开发与构建", "confidence": "confirmed", "evidenceUrl": "https://github.com/pocketbase/pocketbase/blob/master/ui/package.json"}
+  ],
+  "learningHighlights": [
+    {"title": "后端能力的最小打包", "description": "观察数据库、认证、文件、实时推送和管理界面如何在单一进程中形成可用产品。", "evidencePaths": ["core", "apis", "cmd", "ui"]},
+    {"title": "从表单到领域规则", "description": "沿表单校验、模型事件和 API 处理学习如何把输入约束放到服务端。", "evidencePaths": ["forms", "core", "apis"]},
+    {"title": "可嵌入、可迁移的扩展方式", "description": "通过基础示例、迁移和插件目录理解从直接使用到 Go 定制的渐进路径。", "evidencePaths": ["examples/base", "migrations", "plugins"]}
+  ],
+  "learningPath": {
+    "thirtyMinutes": {"objective": "用管理后台建立一个最小数据后端。", "steps": ["按 README 获取并启动 PocketBase", "创建一个带标题和状态的集合", "在 API 预览中验证读写规则"], "outcome": "得到一个自带管理界面和 API 的本地数据服务。"},
+    "twoHours": {"objective": "把一个前端接到带用户权限的数据模型。", "steps": ["创建用户集合和登录流程", "配置记录级访问规则", "在前端完成登录和列表读写", "验证未登录与越权请求"], "outcome": "得到一个具备认证和最小权限边界的小应用后端。"},
+    "oneDay": {"objective": "用 Go 扩展一条服务端业务规则。", "steps": ["阅读 examples/base 的启动方式", "定位 core 事件与 API 注册点", "增加一条写入校验或自定义路由", "编写迁移保存数据结构", "验证升级和回滚场景"], "outcome": "得到一个可重建、包含自定义业务规则的 PocketBase 应用。"}
+  },
+  "readingGuide": [{"path": "README.md", "reason": "确认能力边界、官方文档入口和版本警告。"}, {"path": "examples/base", "reason": "从最小 Go 应用理解嵌入方式。"}, {"path": "core", "reason": "认识集合、记录、事件和应用生命周期。"}, {"path": "apis", "reason": "追踪认证与数据接口。"}, {"path": "forms", "reason": "学习输入校验与业务动作封装。"}, {"path": "migrations", "reason": "理解可重复的数据结构演进。"}, {"path": "ui", "reason": "观察管理后台如何消费同一后端能力。"}],
+  "risks": [{"kind": "maintenance", "severity": "high", "note": "官方明确提示 v1.0 前不保证完全向后兼容，生产升级需阅读迁移说明并备份。"}, {"kind": "security", "severity": "medium", "note": "管理后台便利不等于默认安全；公开部署前要验证集合规则、管理员账户和文件访问。"}, {"kind": "complexity", "severity": "low", "note": "单体结构降低部署复杂度，但不等同于适合所有高并发或多服务场景。"}],
+  "score": {"replicability": 24, "clarity": 18, "beginnerValue": 19, "productCompleteness": 14, "vibeCodingRelevance": 9, "maintenance": 5, "novelty": 3, "total": 92, "rationale": {"replicability": "单文件启动、可视化建模和直接 API 让原型成本很低。", "clarity": "目录按后端职责划分，README 清楚说明定位与限制。", "beginnerValue": "能以较低门槛学习数据、认证、权限和部署。", "productCompleteness": "常见小型应用后端能力和管理工具齐全。", "vibeCodingRelevance": "适合让 AI 辅助生成前端与规则，再用真实权限测试校验。", "maintenance": "项目活跃，但 v1.0 前升级兼容性需谨慎。", "novelty": "单文件后端设计简洁，产品范式已较成熟。"}},
+  "sourceUrls": [{"kind": "repository", "url": "https://github.com/pocketbase/pocketbase"}, {"kind": "readme", "url": "https://github.com/pocketbase/pocketbase/blob/master/README.md"}, {"kind": "file", "url": "https://github.com/pocketbase/pocketbase/blob/master/go.mod"}, {"kind": "file", "url": "https://github.com/pocketbase/pocketbase/blob/master/ui/package.json"}, {"kind": "file", "url": "https://github.com/pocketbase/pocketbase/blob/master/LICENSE.md"}]
+}

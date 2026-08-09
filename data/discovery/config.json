@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.0.0",
+  "seeds": [
+    { "owner": "Nutlope", "name": "roomGPT" },
+    { "owner": "nextjs", "name": "saas-starter" },
+    { "owner": "browser-use", "name": "web-ui" },
+    { "owner": "openstatusHQ", "name": "openstatus" },
+    { "owner": "actualbudget", "name": "actual" },
+    { "owner": "Nutlope", "name": "llamacoder" },
+    { "owner": "vercel", "name": "ai-chatbot" },
+    { "owner": "FlowiseAI", "name": "Flowise" },
+    { "owner": "langflow-ai", "name": "langflow" },
+    { "owner": "calcom", "name": "cal.diy" },
+    { "owner": "dubinc", "name": "dub" },
+    { "owner": "documenso", "name": "documenso" },
+    { "owner": "twentyhq", "name": "twenty" },
+    { "owner": "gitroomhq", "name": "postiz-app" },
+    { "owner": "formbricks", "name": "formbricks" },
+    { "owner": "makeplane", "name": "plane" },
+    { "owner": "usememos", "name": "memos" },
+    { "owner": "siyuan-note", "name": "siyuan" },
+    { "owner": "excalidraw", "name": "excalidraw" },
+    { "owner": "penpot", "name": "penpot" },
+    { "owner": "AppFlowy-IO", "name": "AppFlowy" },
+    { "owner": "appwrite", "name": "appwrite" },
+    { "owner": "supabase", "name": "supabase" },
+    { "owner": "gristlabs", "name": "grist-core" },
+    { "owner": "triggerdotdev", "name": "trigger.dev" },
+    { "owner": "slidevjs", "name": "slidev" },
+    { "owner": "ChatGPTNextWeb", "name": "NextChat" },
+    { "owner": "karakeep-app", "name": "karakeep" },
+    { "owner": "immich-app", "name": "immich" },
+    { "owner": "pocketbase", "name": "pocketbase" }
+  ],
+  "searches": [
+    {
+      "id": "ai-app-typescript",
+      "query": "topic:ai-app language:TypeScript stars:>=500 archived:false fork:false",
+      "maxResults": 20
+    },
+    {
+      "id": "ai-agent",
+      "query": "topic:ai-agent stars:>=500 archived:false fork:false",
+      "maxResults": 20
+    },
+    {
+      "id": "nextjs-product",
+      "query": "topic:nextjs stars:>=1000 archived:false fork:false",
+      "maxResults": 20
+    }
+  ],
+  "gates": {
+    "minStars": 100,
+    "requireLicense": true,
+    "requireDescription": true,
+    "allowForks": false,
+    "allowArchived": false,
+    "maxPushedAgeDays": 1095
+  }
+}

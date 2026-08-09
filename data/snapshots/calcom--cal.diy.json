@@ -1,0 +1,79 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 350360184,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkzNTAzNjAxODQ=",
+  "owner": {
+    "login": "calcom",
+    "id": 79145102,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/79145102?v=4"
+  },
+  "name": "cal.diy",
+  "fullName": "calcom/cal.diy",
+  "htmlUrl": "https://github.com/calcom/cal.diy",
+  "description": "Scheduling infrastructure for absolutely everyone.",
+  "homepageUrl": "https://cal.diy/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 47374,
+    "forks": 14696,
+    "openIssues": 1391,
+    "subscribers": 194
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 17983997,
+    "CSS": 401304,
+    "HTML": 131359,
+    "PLpgSQL": 72184,
+    "JavaScript": 65909,
+    "MDX": 58425,
+    "Mermaid": 19086,
+    "Apex": 15176,
+    "Shell": 11975,
+    "Dockerfile": 4090,
+    "PHP": 1241,
+    "Procfile": 37
+  },
+  "topics": [
+    "next-auth",
+    "nextjs",
+    "open-source",
+    "postgresql",
+    "prisma",
+    "t3-stack",
+    "tailwindcss",
+    "trpc",
+    "turborepo",
+    "typescript",
+    "zod"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2021-03-22T13:47:42Z",
+    "updatedAt": "2026-08-09T15:58:50Z",
+    "pushedAt": "2026-08-08T17:13:42Z",
+    "fetchedAt": "2026-08-09T15:59:20.925Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "4bfd00c01597ecb1fbd76bcaff5d018c7b61b7bd",
+    "htmlUrl": "https://github.com/calcom/cal.diy/blob/main/README.md",
+    "excerpt": "> [!WARNING]  \n> Use at your own risk. Cal.diy is the open source community edition of Cal.com and it is intended for users who want to self-host their own Cal.diy instance. It is strictly recommended for personal, non-production use. Please review all installation and configuration steps carefully. Self-hosting requires advanced knowledge of server administration, database management, and securing sensitive data. Proceed only if you are comfortable with these responsibilities.\n\n> [!TIP]\n> For any commercial and enterprise-ready scheduling infrastructure, use Cal.com, not Cal.diy; hosted by us or get invited to on-prem enterprise access here: <a href=\"https://cal.com/sales\">https://cal.com/sales</a>\n\n<!-- PROJECT LOGO -->\n<p align=\"center\">\n  <a href=\"https://github.com/calcom/cal.diy\">\n   <img src=\"https://user-images.githubusercontent.com/8019099/210054112-5955e812-a76e-4160-9ddd-58f2c72f1cce.png\" alt=\"Logo\">\n  </a>\n\n  <h3 align=\"center\">Cal.diy</h3>\n\n  <p align=\"center\">\n    The community-driven, open-source scheduling platform.\n    <br />\n    <a href=\"https://github.com/calcom/cal.diy\"><strong>GitHub</strong></a>\n    <br />\n    <a href=\"https://github.com/calcom/cal.diy/issues\"",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"09063f24159446c61fb99e633e937689e67a4e054c3583ceeca0c312014fe076\""
+  }
+}

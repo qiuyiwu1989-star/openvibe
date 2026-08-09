@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 500289888,
+  "nodeId": "R_kgDOHdHRYA",
+  "owner": {
+    "login": "formbricks",
+    "id": 105877416,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/105877416?v=4"
+  },
+  "name": "formbricks",
+  "fullName": "formbricks/formbricks",
+  "htmlUrl": "https://github.com/formbricks/formbricks",
+  "description": "Open Source Qualtrics Alternative",
+  "homepageUrl": "https://formbricks.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 12747,
+    "forks": 2448,
+    "openIssues": 232,
+    "subscribers": 45
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 16478568,
+    "Shell": 119226,
+    "JavaScript": 111227,
+    "CSS": 48190,
+    "Go Template": 24708,
+    "Dockerfile": 15322,
+    "MDX": 11296,
+    "PLpgSQL": 8418,
+    "HTML": 304
+  },
+  "topics": [
+    "experience-management",
+    "form",
+    "forms",
+    "nextjs",
+    "open-source",
+    "react",
+    "reactjs",
+    "survey",
+    "survey-analysis",
+    "survey-data",
+    "survey-form",
+    "surveys",
+    "tailwindcss",
+    "turborepo",
+    "typeform",
+    "typescript",
+    "xm"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0 with package and enterprise exceptions",
+    "url": "https://github.com/formbricks/formbricks/blob/main/LICENSE"
+  },
+  "timestamps": {
+    "createdAt": "2022-06-06T04:25:21Z",
+    "updatedAt": "2026-08-09T06:08:23Z",
+    "pushedAt": "2026-08-09T10:09:36Z",
+    "fetchedAt": "2026-08-09T15:59:26.328Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "88dffb1c7369d979278bfe917ab43d3e1dc769eb",
+    "htmlUrl": "https://github.com/formbricks/formbricks/blob/main/README.md",
+    "excerpt": "<div id=\"top\"></div>\n\n<p align=\"center\">Help us grow and star us on Github! ⭐️</p>\n\n<p align=\"center\">\n\n<a href=\"https://formbricks.com\">\n\n<img width=\"120\" alt=\"Open Source Privacy First Experience Management Solution Qualtrics Alternative Logo\" src=\"https://github.com/formbricks/formbricks/assets/72809645/0086704f-bee7-4d38-9cc8-fa42ee59e004\">\n\n</a>\n\n<h3 align=\"center\">Formbricks</h3>\n\n<p align=\"center\">\nThe Open Source Qualtrics Alternative\n<br />\n<a href=\"https://formbricks.com/\">Website</a>\n</p>\n</p>\n\n<p align=\"center\">\n<a href=\"https://github.com/formbricks/formbricks/blob/main/LICENSE\"><img src=\"https://img.shields.io/badge/License-AGPL-purple\" alt=\"License\"></a> <a href=\"https://github.com/formbricks/formbricks/stargazers\"><img src=\"https://img.shields.io/github/stars/formbricks/formbricks?logo=github\" alt=\"Github Stars\"></a>\n<a href=\"https://insights.linuxfoundation.org/project/formbricks\"><img src=\"https://insights.linuxfoundation.org/api/badge/health-score?project=formbricks\"></a>\n<a href=\"https://news.ycombinator.com/item?id=32303986\"><img src=\"https://img.shields.io/badge/Hacker%20News-122-%23FF6600\" alt=\"Hacker News\"></a>\n<a href=\"[https://www.producthunt.com/products/",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"c4bebab52708f6a533fb0549ac4103714b724e2a07ce4098bbdef82f451bd0f6\""
+  }
+}

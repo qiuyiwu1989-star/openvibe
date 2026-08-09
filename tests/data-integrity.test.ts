@@ -21,6 +21,31 @@ const expectedRepositories = new Set([
   "browser-use/web-ui",
   "openstatusHQ/openstatus",
   "actualbudget/actual",
+  "Nutlope/llamacoder",
+  "vercel/chatbot",
+  "FlowiseAI/Flowise",
+  "langflow-ai/langflow",
+  "calcom/cal.diy",
+  "dubinc/dub",
+  "documenso/documenso",
+  "twentyhq/twenty",
+  "gitroomhq/postiz-app",
+  "formbricks/formbricks",
+  "makeplane/plane",
+  "usememos/memos",
+  "siyuan-note/siyuan",
+  "excalidraw/excalidraw",
+  "penpot/penpot",
+  "AppFlowy-IO/AppFlowy",
+  "appwrite/appwrite",
+  "supabase/supabase",
+  "gristlabs/grist-core",
+  "triggerdotdev/trigger.dev",
+  "slidevjs/slidev",
+  "ChatGPTNextWeb/NextChat",
+  "karakeep-app/karakeep",
+  "immich-app/immich",
+  "pocketbase/pocketbase",
 ]);
 
 async function readJsonDirectory(directory: string): Promise<Array<{ file: string; value: unknown }>> {
@@ -35,7 +60,7 @@ async function readJsonDirectory(directory: string): Promise<Array<{ file: strin
   );
 }
 
-test("5 个阶段 1 快照全部合法且仓库身份不重复", async () => {
+test("30 个 MVP 快照全部合法、可学习且仓库身份不重复", async () => {
   const records = await readJsonDirectory(path.join(projectRoot, "data/snapshots"));
   const snapshots: RepositorySnapshot[] = [];
 
@@ -47,9 +72,18 @@ test("5 个阶段 1 快照全部合法且仓库身份不重复", async () => {
 
   assert.deepEqual(new Set(snapshots.map((snapshot) => snapshot.fullName)), expectedRepositories);
   assert.equal(new Set(snapshots.map((snapshot) => snapshot.repositoryId)).size, snapshots.length);
+
+  for (const snapshot of snapshots) {
+    assert.equal(snapshot.visibility, "public");
+    assert.equal(snapshot.isFork, false, `${snapshot.fullName} 不应是 fork`);
+    assert.equal(snapshot.archived, false, `${snapshot.fullName} 不应已归档`);
+    assert.equal(snapshot.disabled, false, `${snapshot.fullName} 不应已禁用`);
+    assert.ok(snapshot.license, `${snapshot.fullName} 缺少已核实许可证`);
+    assert.ok(snapshot.readme, `${snapshot.fullName} 缺少 README 学习证据`);
+  }
 });
 
-test("5 份候选策展内容合法、保持待审核，并能与快照一一关联", async () => {
+test("30 份候选策展内容合法、保持待审核，并能与快照一一关联", async () => {
   const snapshotRecords = await readJsonDirectory(path.join(projectRoot, "data/snapshots"));
   const candidateRecords = await readJsonDirectory(path.join(projectRoot, "data/candidates"));
   const snapshotIds = new Set(
@@ -71,7 +105,7 @@ test("5 份候选策展内容合法、保持待审核，并能与快照一一关
   assert.equal(new Set(editorials.map((editorial) => editorial.repositoryId)).size, editorials.length);
 });
 
-test("5 个本地发布 bundle 全部通过审核门且覆盖既定样板", async () => {
+test("30 个本地发布 bundle 全部通过审核门并达到内容覆盖目标", async () => {
   const projectRecords = await readJsonDirectory(path.join(projectRoot, "data/projects"));
   const projects = projectRecords.map((record) => {
     const parsed = RadarProjectBundleSchema.safeParse(record.value);
@@ -82,10 +116,16 @@ test("5 个本地发布 bundle 全部通过审核门且覆盖既定样板", asyn
 
   assert.equal(projects.length, expectedRepositories.size);
   assert.deepEqual(new Set(projects.map((project) => project.snapshot.fullName)), expectedRepositories);
+  assert.equal(new Set(projects.map((project) => project.publication.slug)).size, projects.length);
 
   for (const project of projects) {
     assert.equal(project.publication.status, "published");
     assert.equal(project.editorial.review.state, "approved");
     assert.equal(project.editorial.review.reviewer?.id, "codex-main-agent");
   }
+
+  const categories = new Set(projects.flatMap((project) => project.editorial.categories));
+  const learningGoals = new Set(projects.flatMap((project) => project.editorial.learningGoals));
+  assert.ok(categories.size >= 6, `项目类型覆盖不足：${categories.size}/6`);
+  assert.ok(learningGoals.size >= 8, `学习目标覆盖不足：${learningGoals.size}/8`);
 });

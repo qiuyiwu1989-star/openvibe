@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 833453356,
+  "nodeId": "R_kgDOMa19LA",
+  "owner": {
+    "login": "Nutlope",
+    "id": 63742054,
+    "type": "User",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/63742054?v=4"
+  },
+  "name": "llamacoder",
+  "fullName": "Nutlope/llamacoder",
+  "htmlUrl": "https://github.com/Nutlope/llamacoder",
+  "description": "Open source Claude Artifacts – built with Llama 3.1 405B",
+  "homepageUrl": "https://www.llamacoder.io/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 7048,
+    "forks": 1669,
+    "openIssues": 6,
+    "subscribers": 94
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 1025695,
+    "CSS": 2634,
+    "JavaScript": 135
+  },
+  "topics": [],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2024-07-25T05:01:54Z",
+    "updatedAt": "2026-08-06T23:21:21Z",
+    "pushedAt": "2026-08-05T09:02:50Z",
+    "fetchedAt": "2026-08-09T15:59:16.331Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "d42ec77c54fcb1c34e6c6befd4cbb5595b22e547",
+    "htmlUrl": "https://github.com/Nutlope/llamacoder/blob/main/README.md",
+    "excerpt": "<a href=\"https://www.llamacoder.io\">\n  <img alt=\"Llama Coder\" src=\"./public/og-image.png\">\n  <h1 align=\"center\">Llama Coder</h1>\n</a>\n\n<p align=\"center\">\n  An open source Claude Artifacts – generate small apps with one prompt. Powered by Llama 3 on Together.ai.\n</p>\n\n## Tech stack\n\n- [Llama 3.1 405B](https://ai.meta.com/blog/meta-llama-3-1/) from Meta for the LLM\n- [Together AI](https://togetherai.link/?utm_source=llamacoder&utm_medium=referral&utm_campaign=example-app) for LLM inference\n- [esbuild-wasm](https://github.com/evanw/esbuild) + [esm.sh](https://esm.sh) for the in-browser preview renderer (runs in a sandboxed iframe)\n- Next.js app router with Tailwind\n- [Braintrust](https://www.braintrust.dev/) for observability\n- Plausible for website analytics\n\n## Cloning & running\n\n1. Clone the repo: `git clone https://github.com/Nutlope/llamacoder`\n2. Create a `.env` file and add your API keys:\n   - **[Together AI API key](https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup)**: `TOGETHER_API_KEY=<your_together_ai_api_key>`\n   - **Database URL**: Use [Neon](https://neon.tech) to set up your PostgreSQL database and add the Prisma",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"29670d736ccb399129611e1a07da7e0237cf00339f03dbe6e6671b7722d60393\""
+  }
+}

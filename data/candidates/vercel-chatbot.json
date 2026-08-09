@@ -1,0 +1,242 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 642917329,
+  "locale": "zh-CN",
+  "displayName": "Chat SDK",
+  "tagline": "用生产级 Next.js 模板学习流式对话、工具调用与持久化",
+  "summary": "Chat SDK 是 Vercel 维护的可修改 AI 聊天模板，结合 Next.js App Router、AI SDK、Auth.js、Postgres 和 Blob 存储，并通过 artifacts 与 tools 展示对话之外的生成式 UI。它适合用一条真实聊天链路学习流式传输、模型抽象、身份、数据持久化和 E2E 测试。",
+  "recommendationReasons": [
+    "从服务端 streamText 到客户端消息状态的路径清晰。",
+    "工具调用与 artifact 让学习不停在文本聊天。",
+    "登录、聊天记录、文件和测试齐全，能看到完整产品边界。"
+  ],
+  "audiences": [
+    "starter",
+    "intermediate"
+  ],
+  "categories": [
+    "ai-app",
+    "saas"
+  ],
+  "learningGoals": [
+    "ai-integration",
+    "authentication",
+    "database",
+    "ui",
+    "product-architecture",
+    "deployment"
+  ],
+  "difficulty": {
+    "level": "medium",
+    "rationale": "项目文档好且是单体 Next.js，但需要 AI Gateway/模型凭证、Postgres、Blob、Auth 和数据迁移。",
+    "prerequisites": [
+      "Next.js App Router 基础",
+      "TypeScript/React 基础",
+      "HTTP 流与 Server Actions 概念",
+      "SQL 和认证基础"
+    ]
+  },
+  "techStack": [
+    {
+      "name": "Next.js App Router",
+      "role": "Web 应用与服务端路由",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/blob/main/README.md"
+    },
+    {
+      "name": "Vercel AI SDK",
+      "role": "模型抽象、流式输出与工具调用",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/blob/main/package.json"
+    },
+    {
+      "name": "Auth.js",
+      "role": "用户会话",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/blob/main/README.md"
+    },
+    {
+      "name": "Drizzle + Postgres",
+      "role": "用户、对话与消息持久化",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/tree/main/lib/db"
+    },
+    {
+      "name": "Vercel Blob",
+      "role": "文件存储",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/blob/main/README.md"
+    },
+    {
+      "name": "Playwright",
+      "role": "端到端测试",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/vercel/chatbot/blob/main/playwright.config.ts"
+    }
+  ],
+  "learningHighlights": [
+    {
+      "title": "流式对话全链路",
+      "description": "从 chat API 的模型调用追到客户端消息和错误状态。",
+      "evidencePaths": [
+        "app/(chat)/api/chat/route.ts",
+        "components/chat.tsx",
+        "hooks"
+      ]
+    },
+    {
+      "title": "Tools 与 Artifacts",
+      "description": "观察工具 schema、服务端执行和生成式 UI 如何通过统一消息协议连接。",
+      "evidencePaths": [
+        "lib/ai/tools",
+        "artifacts",
+        "components/artifact.tsx"
+      ]
+    },
+    {
+      "title": "对话数据模型",
+      "description": "理解 user、chat、message、vote 与 document 如何支撑历史和反馈。",
+      "evidencePaths": [
+        "lib/db/schema.ts",
+        "lib/db/queries.ts",
+        "lib/db/migrations"
+      ]
+    }
+  ],
+  "learningPath": {
+    "thirtyMinutes": {
+      "objective": "跟通一次聊天请求",
+      "steps": [
+        "读 README Features",
+        "从 chat route 找到 AI SDK 调用",
+        "对照 schema 标出持久化节点"
+      ],
+      "outcome": "一张请求、流、UI、数据库的链路图。"
+    },
+    "twoHours": {
+      "objective": "新增一个只读工具",
+      "steps": [
+        "定义工具输入 schema",
+        "用固定数据实现执行",
+        "在聊天 UI 渲染结果",
+        "测试无效参数和模型未调用工具"
+      ],
+      "outcome": "一个可测试的 tool-call 纵向切片。"
+    },
+    "oneDay": {
+      "objective": "改造为细分领域助手",
+      "steps": [
+        "替换系统提示与模型选择",
+        "新增领域数据工具",
+        "限制文件类型、工具权限和 token 预算",
+        "补登录、流中断、重试与越权 E2E"
+      ],
+      "outcome": "一个有持久化、工具边界与回归测试的领域聊天应用。"
+    }
+  },
+  "readingGuide": [
+    {
+      "path": "README.md",
+      "reason": "确认能力和服务依赖。"
+    },
+    {
+      "path": "app/(chat)/api/chat/route.ts",
+      "reason": "阅读流式核心。"
+    },
+    {
+      "path": "lib/ai",
+      "reason": "理解模型、prompt 与 tools。"
+    },
+    {
+      "path": "lib/db/schema.ts",
+      "reason": "建立数据模型。"
+    },
+    {
+      "path": "artifacts",
+      "reason": "学习生成式 UI 扩展点。"
+    },
+    {
+      "path": "tests",
+      "reason": "从用户行为理解验收边界。"
+    }
+  ],
+  "risks": [
+    {
+      "kind": "paid-service",
+      "severity": "medium",
+      "note": "AI Gateway/模型、Postgres 与 Blob 可产生费用。"
+    },
+    {
+      "kind": "security",
+      "severity": "high",
+      "note": "文件上传、工具调用、聊天数据与会话均需生产审核。"
+    },
+    {
+      "kind": "maintenance",
+      "severity": "medium",
+      "note": "AI SDK 与模型提供商迭代快，需按当前主分支核对文档。"
+    },
+    {
+      "kind": "license",
+      "severity": "low",
+      "note": "当前仓库 LICENSE 为 Apache-2.0；分发修改版时仍需保留许可证与声明。"
+    }
+  ],
+  "score": {
+    "replicability": 20,
+    "clarity": 18,
+    "beginnerValue": 17,
+    "productCompleteness": 14,
+    "vibeCodingRelevance": 10,
+    "maintenance": 5,
+    "novelty": 4,
+    "total": 88,
+    "rationale": {
+      "replicability": "模板导向明确，但外部服务较多。",
+      "clarity": "README、目录与测试导航良好。",
+      "beginnerValue": "适合已会 Next.js 的入门者。",
+      "productCompleteness": "聊天、身份、持久化、文件和工具闭环完整。",
+      "vibeCodingRelevance": "是 AI 应用骨架的直接参考。",
+      "maintenance": "Vercel 持续维护。",
+      "novelty": "Artifacts 和 tools 比基础聊天更有学习价值。"
+    }
+  },
+  "sources": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/vercel/chatbot",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "readme",
+      "url": "https://github.com/vercel/chatbot/blob/main/README.md",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/vercel/chatbot/blob/main/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/vercel/chatbot/blob/main/lib/db/schema.ts",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/vercel/chatbot/blob/main/LICENSE",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    }
+  ],
+  "provenance": {
+    "createdBy": "hybrid",
+    "generator": "open-source-radar-curated-catalog-v1",
+    "createdAt": "2026-08-10T01:15:00+09:00"
+  },
+  "review": {
+    "state": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "notes": "批量策展草案已绑定事实快照，等待独立审核。"
+  }
+}

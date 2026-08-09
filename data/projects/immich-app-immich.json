@@ -1,0 +1,374 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 455229168,
+    "nodeId": "R_kgDOGyI-8A",
+    "owner": {
+      "login": "immich-app",
+      "id": 109746326,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/109746326?v=4"
+    },
+    "name": "immich",
+    "fullName": "immich-app/immich",
+    "htmlUrl": "https://github.com/immich-app/immich",
+    "description": "High performance self-hosted photo and video management solution.",
+    "homepageUrl": "https://immich.app/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 110055,
+      "forks": 6473,
+      "openIssues": 754,
+      "subscribers": 344
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 5604036,
+      "Dart": 3133357,
+      "Svelte": 1396001,
+      "Python": 169180,
+      "Kotlin": 154077,
+      "Swift": 119286,
+      "JavaScript": 28597,
+      "Ruby": 15757,
+      "Shell": 15105,
+      "Dockerfile": 12806,
+      "C++": 10903,
+      "C": 9037,
+      "Java": 6867,
+      "HCL": 5257,
+      "HTML": 4941,
+      "CSS": 4318,
+      "CMake": 284,
+      "Go Template": 207,
+      "Objective-C": 38
+    },
+    "topics": [
+      "backup-tool",
+      "flutter",
+      "google-photos",
+      "google-photos-alternative",
+      "javascript",
+      "mobile-app",
+      "nestjs",
+      "nodejs",
+      "photo-gallery",
+      "photos",
+      "photos-management",
+      "self-hosted",
+      "svelte",
+      "sveltekit",
+      "typescript",
+      "videos"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0"
+    },
+    "timestamps": {
+      "createdAt": "2022-02-03T15:56:27Z",
+      "updatedAt": "2026-08-09T15:28:08Z",
+      "pushedAt": "2026-08-09T15:51:32Z",
+      "fetchedAt": "2026-08-09T15:59:41.322Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "02ae01857e52955e07cdb4d83a3d8f1d45e29e53",
+      "htmlUrl": "https://github.com/immich-app/immich/blob/main/README.md",
+      "excerpt": "<p align=\"center\"> \n  <br/>\n  <a href=\"https://opensource.org/license/agpl-v3\"><img src=\"https://img.shields.io/badge/License-AGPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec\" alt=\"License: AGPLv3\"></a>\n  <a href=\"https://discord.immich.app\">\n    <img src=\"https://img.shields.io/discord/979116623879368755.svg?label=Discord&logo=Discord&style=for-the-badge&logoColor=000000&labelColor=ececec\" alt=\"Discord\"/>\n  </a>\n  <br/>\n  <br/>\n</p>\n\n<p align=\"center\">\n<img src=\"design/immich-logo-stacked-light.svg\" width=\"300\" title=\"Login With Custom URL\">\n</p>\n<h3 align=\"center\">High performance self-hosted photo and video management solution</h3>\n<br/>\n<a href=\"https://immich.app\">\n<img src=\"design/immich-screenshots.png\" title=\"Main Screenshot\">\n</a>\n<br/>\n\n<p align=\"center\">\n  <a href=\"readme_i18n/README_ca_ES.md\">Català</a>\n  <a href=\"readme_i18n/README_es_ES.md\">Español</a>\n  <a href=\"readme_i18n/README_fr_FR.md\">Français</a>\n  <a href=\"readme_i18n/README_it_IT.md\">Italiano</a>\n  <a href=\"readme_i18n/README_ja_JP.md\">日本語</a>\n  <a href=\"readme_i18n/README_ko_KR.md\">한국어</a>\n  <a href=\"readme_i18n/README_de_DE.md\">Deutsch</a>\n  <a href=\"readme",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"b06e1abb68ff6268cb54a907f1c5f7a4514457ac245b5a8ac725145276f4f1a1\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 455229168,
+    "locale": "zh-CN",
+    "displayName": "Immich",
+    "tagline": "从手机备份到智能检索，拆解一套自托管相册系统",
+    "summary": "Immich 是面向照片与视频的高性能自托管管理系统，覆盖手机自动备份、时间线、相册、分享、地图、重复检测、人脸聚类和语义搜索。仓库同时包含服务端、Svelte Web、Flutter 移动端、Python 机器学习服务、开放 API 与部署配置，是观察多端产品如何围绕同一媒体资产模型协作的成熟案例。",
+    "recommendationReasons": [
+      "真实产品链路横跨上传、元数据、缩略图、检索、分享和备份，适合学习系统分层",
+      "Web、移动端、服务端和机器学习服务边界清晰，可按兴趣选一个局部深入"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "mobile-app",
+      "content-tool",
+      "ai-app"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "ai-integration",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "产品概念直观，但完整系统包含大文件上传、异步媒体处理、数据库、缓存、机器学习、多端同步与备份责任，不适合首次全量复刻。",
+      "prerequisites": [
+        "理解前后端 API",
+        "了解关系数据库与后台任务",
+        "有移动端或 Web 框架基础",
+        "会使用 Docker Compose"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "NestJS",
+        "role": "服务端 API 与业务模块",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/server/package.json"
+      },
+      {
+        "name": "SvelteKit",
+        "role": "Web 相册与管理界面",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/web/package.json"
+      },
+      {
+        "name": "Flutter",
+        "role": "iOS 与 Android 移动客户端",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/mobile/pubspec.yaml"
+      },
+      {
+        "name": "Python",
+        "role": "视觉模型推理与机器学习服务",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/machine-learning/pyproject.toml"
+      },
+      {
+        "name": "PostgreSQL",
+        "role": "资产、用户与检索元数据存储",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/docker/docker-compose.yml"
+      },
+      {
+        "name": "Docker Compose",
+        "role": "服务端、机器学习与数据依赖部署",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/immich-app/immich/blob/main/docker/docker-compose.yml"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "媒体资产的异步处理链",
+        "description": "沿上传后的缩略图、元数据、转码和机器学习任务，理解耗时工作为何不能阻塞用户请求。",
+        "evidencePaths": [
+          "server",
+          "machine-learning",
+          "docker"
+        ]
+      },
+      {
+        "title": "多端围绕同一 API 协作",
+        "description": "比较 Web 与移动端如何消费开放 API，并处理备份、浏览和同步等不同任务。",
+        "evidencePaths": [
+          "web",
+          "mobile",
+          "open-api"
+        ]
+      },
+      {
+        "title": "AI 检索嵌入既有产品",
+        "description": "观察人脸识别和语义搜索如何作为独立服务接入，而媒体管理在模型不可用时仍保留基本价值。",
+        "evidencePaths": [
+          "machine-learning",
+          "server",
+          "docs"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "画出照片从手机进入时间线的关键组件。",
+        "steps": [
+          "浏览 README 的功能与架构入口",
+          "查看根目录中 mobile、server、web 和 machine-learning",
+          "阅读开放 API 与 Docker 服务清单"
+        ],
+        "outcome": "能说明上传、处理、存储和展示分别由哪个组件负责。"
+      },
+      "twoHours": {
+        "objective": "深入一个不依赖全量系统改造的用户流程。",
+        "steps": [
+          "选择 Web 时间线或移动端上传流程",
+          "定位对应界面和 API 调用",
+          "追踪服务端处理与错误返回",
+          "记录离线、重复或失败场景"
+        ],
+        "outcome": "得到一条带异常分支的端到端流程图。"
+      },
+      "oneDay": {
+        "objective": "为相册增加一个可验证的小功能原型。",
+        "steps": [
+          "限定在标签、筛选或资产信息等局部需求",
+          "基于开放 API 完成界面与数据连接",
+          "补充加载、空状态和失败恢复",
+          "用非唯一副本的测试媒体验证",
+          "记录部署与备份注意事项"
+        ],
+        "outcome": "得到一个不破坏原始媒体、可演示且边界清楚的相册功能。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "了解核心功能、项目状态和重要使用警告。"
+      },
+      {
+        "path": "open-api",
+        "reason": "先建立跨客户端共享的接口地图。"
+      },
+      {
+        "path": "server",
+        "reason": "理解资产、任务与权限的服务端实现。"
+      },
+      {
+        "path": "web",
+        "reason": "观察大规模媒体列表的 Web 交互。"
+      },
+      {
+        "path": "mobile",
+        "reason": "研究后台备份与移动体验。"
+      },
+      {
+        "path": "machine-learning",
+        "reason": "了解模型服务、推理接口及模型许可提醒。"
+      },
+      {
+        "path": "deployment",
+        "reason": "核对生产部署与运维边界。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "这是多语言、多服务的大型生产系统，初学者应选单一流程阅读，不宜整库仿写。"
+      },
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "机器学习、数据库和媒体处理对 CPU、内存与存储都有要求。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "照片通常含隐私与位置数据，练习必须使用测试素材并保护账户、存储和公网入口。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "high",
+        "note": "自托管不是备份；应遵循 3-2-1 原则并在升级前备份数据库与原始媒体。"
+      },
+      {
+        "kind": "license",
+        "severity": "medium",
+        "note": "代码采用 AGPL-3.0；机器学习目录还提醒部分第三方模型存在单独的再分发或商业使用条件。"
+      }
+    ],
+    "score": {
+      "replicability": 14,
+      "clarity": 17,
+      "beginnerValue": 15,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 7,
+      "maintenance": 5,
+      "novelty": 5,
+      "total": 78,
+      "rationale": {
+        "replicability": "局部功能可复刻，完整媒体平台的资源和系统门槛很高。",
+        "clarity": "按端和服务分区明确，文档丰富，但调用链较长。",
+        "beginnerValue": "能学习成熟工程，需有意识地缩小阅读范围。",
+        "productCompleteness": "备份、管理、搜索、分享与多端体验非常完整。",
+        "vibeCodingRelevance": "适合借助 AI 理解局部模块，不适合无验证地生成媒体基础设施。",
+        "maintenance": "仓库活跃且发布持续。",
+        "novelty": "自托管相册与本地机器学习的组合具有鲜明价值。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/immich-app/immich",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/immich-app/immich/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/server/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/web/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/mobile/pubspec.yaml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/machine-learning/pyproject.toml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/docker/docker-compose.yml",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/immich-app/immich/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 455229168,
+    "slug": "immich-app-immich",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

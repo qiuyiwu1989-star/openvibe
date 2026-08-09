@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 572984571,
+  "nodeId": "R_kgDOIicM-w",
+  "owner": {
+    "login": "twentyhq",
+    "id": 119600397,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/119600397?v=4"
+  },
+  "name": "twenty",
+  "fullName": "twentyhq/twenty",
+  "htmlUrl": "https://github.com/twentyhq/twenty",
+  "description": "The open alternative to Salesforce, designed for AI.",
+  "homepageUrl": "https://twenty.com/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 54560,
+    "forks": 8421,
+    "openIssues": 147,
+    "subscribers": 215
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 75799918,
+    "MDX": 16200199,
+    "JavaScript": 2520929,
+    "Python": 201946,
+    "CSS": 153564,
+    "SCSS": 119696,
+    "Shell": 38247,
+    "HCL": 19327,
+    "Dockerfile": 18054,
+    "Go Template": 7607,
+    "HTML": 3862,
+    "Makefile": 3149
+  },
+  "topics": [
+    "crm",
+    "crm-system",
+    "customer",
+    "good-first-issue",
+    "graphql",
+    "hacktoberfest",
+    "javascript",
+    "marketing",
+    "monorepo",
+    "nestjs",
+    "open-source",
+    "postgresql",
+    "react",
+    "reactjs",
+    "sales",
+    "typescript",
+    "web"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0 with stated exceptions",
+    "url": "https://github.com/twentyhq/twenty/blob/main/LICENSE"
+  },
+  "timestamps": {
+    "createdAt": "2022-12-01T13:04:40Z",
+    "updatedAt": "2026-08-09T15:57:20Z",
+    "pushedAt": "2026-08-09T15:23:49Z",
+    "fetchedAt": "2026-08-09T15:59:24.367Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "63755643162272f17113c2c0fe4e666e6c3615fb",
+    "htmlUrl": "https://github.com/twentyhq/twenty/blob/main/README.md",
+    "excerpt": "<p align=\"center\">\n  <a href=\"https://www.twenty.com\">\n    <img src=\"./packages/twenty-website/public/images/core/logo.svg\" width=\"100px\" alt=\"Twenty logo\" />\n  </a>\n</p>\n\n<h2 align=\"center\">The #1 Open-Source CRM</h2>\n\n<p align=\"center\"><a href=\"https://twenty.com\"><img src=\"./packages/twenty-website/public/images/readme/globe-icon.svg\" width=\"12\" height=\"12\"/> Website</a> · <a href=\"https://docs.twenty.com\"><img src=\"./packages/twenty-website/public/images/readme/book-icon.svg\" width=\"12\" height=\"12\"/> Documentation</a> · <a href=\"https://github.com/orgs/twentyhq/projects/1\"><img src=\"./packages/twenty-website/public/images/readme/map-icon.svg\" width=\"12\" height=\"12\"/> Roadmap </a> · <a href=\"https://discord.gg/cx5n4Jzs57\"><img src=\"./packages/twenty-website/public/images/readme/discord-icon.svg\" width=\"12\" height=\"12\"/> Discord</a> · <a href=\"https://www.figma.com/file/xt8O9mFeLl46C5InWwoMrN/Twenty\"><img src=\"./packages/twenty-website/public/images/readme/figma-icon.webp\"  width=\"12\" height=\"12\"/>  Figma</a></p>\n\n<p align=\"center\">\n  <a href=\"https://www.twenty.com\">\n    <picture>\n      <source media=\"(prefers-color-scheme: dark)\" srcset=\"./packages/twenty-website/public/images/",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"2ebb76d1b262e95e68e4ce77bfa18177200a205851c680b6a307becb4e4c8d68\""
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 231283452,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkyMzEyODM0NTI=",
+  "owner": {
+    "login": "excalidraw",
+    "id": 59452120,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/59452120?v=4"
+  },
+  "name": "excalidraw",
+  "fullName": "excalidraw/excalidraw",
+  "htmlUrl": "https://github.com/excalidraw/excalidraw",
+  "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+  "homepageUrl": "https://excalidraw.com/",
+  "defaultBranch": "master",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 129214,
+    "forks": 14781,
+    "openIssues": 3304,
+    "subscribers": 508
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 7455130,
+    "SCSS": 205416,
+    "MDX": 131763,
+    "JavaScript": 89009,
+    "HTML": 7979,
+    "CSS": 1455,
+    "Dockerfile": 877,
+    "Shell": 29
+  },
+  "topics": [
+    "canvas",
+    "collaboration",
+    "diagrams",
+    "drawing",
+    "hacktoberfest",
+    "productivity",
+    "whiteboard"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2020-01-02T01:04:43Z",
+    "updatedAt": "2026-08-09T15:45:09Z",
+    "pushedAt": "2026-08-08T21:17:28Z",
+    "fetchedAt": "2026-08-09T15:59:30.416Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "48b9d1de9fbb1c74406407e89e2471a01b1f28de",
+    "htmlUrl": "https://github.com/excalidraw/excalidraw/blob/master/README.md",
+    "excerpt": "<a href=\"https://excalidraw.com/\" target=\"_blank\" rel=\"noopener\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" alt=\"Excalidraw\" srcset=\"https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2_dark.png\" />\n    <img alt=\"Excalidraw\" src=\"https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2.png\" />\n  </picture>\n</a>\n\n<h4 align=\"center\">\n  <a href=\"https://excalidraw.com\">Excalidraw Editor</a> |\n  <a href=\"https://plus.excalidraw.com/blog\">Blog</a> |\n  <a href=\"https://docs.excalidraw.com\">Documentation</a> |\n  <a href=\"https://plus.excalidraw.com\">Excalidraw+</a>\n</h4>\n\n<div align=\"center\">\n  <h2>\n    An open source virtual hand-drawn style whiteboard. </br>\n    Collaborative and end-to-end encrypted. </br>\n  <br />\n  </h2>\n</div>\n\n<br />\n<p align=\"center\">\n  <a href=\"https://github.com/excalidraw/excalidraw/blob/master/LICENSE\">\n    <img alt=\"Excalidraw is released under the MIT license.\" src=\"https://img.shields.io/badge/license-MIT-blue.svg\"  /></a>\n  <a href=\"https://www.npmjs.com/package/@excalidraw/excalidraw\">\n    <img alt=\"npm downloads/month\" src=\"https://img.shields.io/npm/dm/@excalidraw/excalidraw\"",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"b6906d9d0d7c5484872554c3b0fbee4fb846555560dc30ec8db6a40300ac1fed\""
+  }
+}

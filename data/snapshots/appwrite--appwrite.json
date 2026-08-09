@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 180190854,
+  "nodeId": "MDEwOlJlcG9zaXRvcnkxODAxOTA4NTQ=",
+  "owner": {
+    "login": "appwrite",
+    "id": 25003669,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/25003669?v=4"
+  },
+  "name": "appwrite",
+  "fullName": "appwrite/appwrite",
+  "htmlUrl": "https://github.com/appwrite/appwrite",
+  "description": "Appwrite® - complete cloud infrastructure for your web, mobile and AI apps. Including Auth, Databases, Storage, Functions, Messaging, Hosting, Realtime and more",
+  "homepageUrl": "https://appwrite.io/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 56818,
+    "forks": 5621,
+    "openIssues": 1031,
+    "subscribers": 417
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 490130,
+    "PHP": 303111,
+    "Shell": 8521,
+    "Dockerfile": 4964,
+    "JavaScript": 439
+  },
+  "topics": [
+    "android",
+    "appwrite",
+    "backend",
+    "backend-as-a-service",
+    "docker",
+    "firebase",
+    "flutter",
+    "hosting",
+    "ios",
+    "javascript",
+    "nextjs",
+    "react",
+    "react-native",
+    "reactnative",
+    "self-hosted",
+    "selfhosted",
+    "serverless",
+    "supabase",
+    "swift",
+    "web"
+  ],
+  "license": {
+    "spdxId": "BSD-3-Clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "url": "https://api.github.com/licenses/bsd-3-clause"
+  },
+  "timestamps": {
+    "createdAt": "2019-04-08T16:36:25Z",
+    "updatedAt": "2026-08-09T15:36:53Z",
+    "pushedAt": "2026-08-09T12:57:08Z",
+    "fetchedAt": "2026-08-09T15:59:33.521Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "44025486a00f85d07c55d8bea4b9f073a5443b19",
+    "htmlUrl": "https://github.com/appwrite/appwrite/blob/main/README.md",
+    "excerpt": "<img width=\"1920\" height=\"1080\" alt=\"image\" src=\"https://github.com/user-attachments/assets/55a81268-4ecc-46cd-bdf5-73f7e8662fee\" />\n\n<br />\n<p align=\"center\">\n    <h1>Appwrite</h1>\n    <b>Appwrite is an open-source, all-in-one development platform. Use built-in backend infrastructure and web hosting, all from a single place.</b>\n    <br />\n    <br />\n</p>\n\n[![Discord](https://img.shields.io/badge/chat-5865F2?style=flat-square&logo=discord&logoColor=white)](https://appwrite.io/discord)\n[![X](https://img.shields.io/badge/follow-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/appwrite)\n[![Appwrite Cloud](https://img.shields.io/badge/Cloud-F02E65?style=flat-square&logo=icloud&logoColor=white)](https://cloud.appwrite.io)\n\nEnglish | [简体中文](README-CN.md)\n\nAppwrite is an open-source development platform for building web, mobile, and AI applications. It brings together backend infrastructure and web hosting in one place, so teams can build, ship, and scale without stitching together a fragmented stack. Appwrite is available as a managed cloud platform and can also be self-hosted on infrastructure you control.\n\nWith Appwrite, you can add authentication, databases, storage, f",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"8542495687d688a8c50f6d5a43b42bdb96672cdc5ff5932da520d1758ed67d42\""
+  }
+}

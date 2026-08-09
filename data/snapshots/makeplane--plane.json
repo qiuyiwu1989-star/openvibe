@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 568098118,
+  "nodeId": "R_kgDOIdx9Rg",
+  "owner": {
+    "login": "makeplane",
+    "id": 115727700,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/115727700?v=4"
+  },
+  "name": "plane",
+  "fullName": "makeplane/plane",
+  "htmlUrl": "https://github.com/makeplane/plane",
+  "description": "🔥🔥🔥 Open-source Jira, Linear, Monday, and ClickUp alternative. Plane is a modern project management platform to manage tasks, sprints, docs, and triage.",
+  "homepageUrl": "http://plane.so/",
+  "defaultBranch": "preview",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 55739,
+    "forks": 5274,
+    "openIssues": 996,
+    "subscribers": 174
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 10321723,
+    "Python": 3879601,
+    "HTML": 347697,
+    "CSS": 116001,
+    "Shell": 71069,
+    "Dockerfile": 2008,
+    "JavaScript": 710,
+    "Nix": 315
+  },
+  "topics": [
+    "boards",
+    "bug-tracker",
+    "django",
+    "docker",
+    "gantt",
+    "issue-tracker",
+    "jira",
+    "jira-alternative",
+    "kanban",
+    "linear",
+    "postgresql",
+    "product-management",
+    "project-management",
+    "project-planning",
+    "python",
+    "react",
+    "redis",
+    "typescipt",
+    "vite",
+    "work-management"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0",
+    "url": "https://api.github.com/licenses/agpl-3.0"
+  },
+  "timestamps": {
+    "createdAt": "2022-11-19T12:55:01Z",
+    "updatedAt": "2026-08-09T15:52:43Z",
+    "pushedAt": "2026-08-07T10:55:20Z",
+    "fetchedAt": "2026-08-09T15:59:27.382Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "fb425f6bda66bf4204abd625c51f1dae6214d376",
+    "htmlUrl": "https://github.com/makeplane/plane/blob/preview/README.md",
+    "excerpt": "<br /><br />\n\n<p align=\"center\">\n<a href=\"https://plane.so\">\n  <img src=\"https://media.docs.plane.so/logo/plane_github_readme.png\" alt=\"Plane Logo\" width=\"400\">\n</a>\n</p>\n<p align=\"center\"><b>Modern project management for all teams</b></p>\n\n<p align=\"center\">\n    <a href=\"https://plane.so/\"><b>Website</b></a> •\n    <a href=\"https://forum.plane.so\"><b>Forum</b></a> •\n    <a href=\"https://x.com/planepowers\"><b>X</b></a> •\n    <a href=\"https://docs.plane.so/\"><b>Documentation</b></a>\n</p>\n\n<p>\n    <a href=\"https://app.plane.so/#gh-light-mode-only\" target=\"_blank\">\n      <img\n        src=\"https://media.docs.plane.so/GitHub-readme/github-top.webp\"\n        alt=\"Plane Screens\"\n        width=\"100%\"\n      />\n    </a>\n</p>\n\nMeet [Plane](https://plane.so/), an open-source project management tool to track issues, run ~sprints~ cycles, and manage product roadmaps without the chaos of managing the tool itself. 🧘‍♀️\n\n> Plane is evolving every day. Your suggestions, ideas, and reported bugs help us immensely. Do not hesitate to join in the conversation on [Forum](https://forum.plane.so) or raise a GitHub issue. We read everything and respond to most.\n\n## 🚀 Installation\n\nGetting started with Plan",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"d74f82144ac189f350c466f0043d587579777e1d2be1e5877ef535533e9196c9\""
+  }
+}

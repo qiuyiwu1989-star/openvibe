@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "catalog:materialize": "tsx scripts/evaluate/materialize-catalog.ts",
+    "catalog:approve": "tsx scripts/publish/approve-catalog.ts",
+    "discover": "tsx scripts/discover/cli.ts",
     "ingest": "tsx scripts/ingest/cli.ts",
     "publish:local": "tsx scripts/publish/approve-project.ts",
     "typecheck": "tsc --noEmit",
@@ -13,9 +16,10 @@
     "validate:snapshots": "tsx scripts/ingest/validate-snapshots.ts",
     "validate:candidates": "tsx scripts/evaluate/validate-candidates.ts",
     "test:schema": "tsx --test packages/schema/src/schemas.test.ts",
+    "test:discover": "tsx --test scripts/discover/discover.test.ts",
     "test:ingest": "tsx --test scripts/ingest/ingest.test.ts",
     "test:data": "tsx --test tests/data-integrity.test.ts",
-    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:ingest && npm run test:data"
+    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:discover && npm run test:ingest && npm run test:data"
   },
   "dependencies": {
     "next": "^16.3.0",

@@ -1,0 +1,346 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 350360184,
+    "nodeId": "MDEwOlJlcG9zaXRvcnkzNTAzNjAxODQ=",
+    "owner": {
+      "login": "calcom",
+      "id": 79145102,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/79145102?v=4"
+    },
+    "name": "cal.diy",
+    "fullName": "calcom/cal.diy",
+    "htmlUrl": "https://github.com/calcom/cal.diy",
+    "description": "Scheduling infrastructure for absolutely everyone.",
+    "homepageUrl": "https://cal.diy/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 47374,
+      "forks": 14696,
+      "openIssues": 1391,
+      "subscribers": 194
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 17983997,
+      "CSS": 401304,
+      "HTML": 131359,
+      "PLpgSQL": 72184,
+      "JavaScript": 65909,
+      "MDX": 58425,
+      "Mermaid": 19086,
+      "Apex": 15176,
+      "Shell": 11975,
+      "Dockerfile": 4090,
+      "PHP": 1241,
+      "Procfile": 37
+    },
+    "topics": [
+      "next-auth",
+      "nextjs",
+      "open-source",
+      "postgresql",
+      "prisma",
+      "t3-stack",
+      "tailwindcss",
+      "trpc",
+      "turborepo",
+      "typescript",
+      "zod"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2021-03-22T13:47:42Z",
+      "updatedAt": "2026-08-09T15:58:50Z",
+      "pushedAt": "2026-08-08T17:13:42Z",
+      "fetchedAt": "2026-08-09T15:59:20.925Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "4bfd00c01597ecb1fbd76bcaff5d018c7b61b7bd",
+      "htmlUrl": "https://github.com/calcom/cal.diy/blob/main/README.md",
+      "excerpt": "> [!WARNING]  \n> Use at your own risk. Cal.diy is the open source community edition of Cal.com and it is intended for users who want to self-host their own Cal.diy instance. It is strictly recommended for personal, non-production use. Please review all installation and configuration steps carefully. Self-hosting requires advanced knowledge of server administration, database management, and securing sensitive data. Proceed only if you are comfortable with these responsibilities.\n\n> [!TIP]\n> For any commercial and enterprise-ready scheduling infrastructure, use Cal.com, not Cal.diy; hosted by us or get invited to on-prem enterprise access here: <a href=\"https://cal.com/sales\">https://cal.com/sales</a>\n\n<!-- PROJECT LOGO -->\n<p align=\"center\">\n  <a href=\"https://github.com/calcom/cal.diy\">\n   <img src=\"https://user-images.githubusercontent.com/8019099/210054112-5955e812-a76e-4160-9ddd-58f2c72f1cce.png\" alt=\"Logo\">\n  </a>\n\n  <h3 align=\"center\">Cal.diy</h3>\n\n  <p align=\"center\">\n    The community-driven, open-source scheduling platform.\n    <br />\n    <a href=\"https://github.com/calcom/cal.diy\"><strong>GitHub</strong></a>\n    <br />\n    <a href=\"https://github.com/calcom/cal.diy/issues\"",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"09063f24159446c61fb99e633e937689e67a4e054c3583ceeca0c312014fe076\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 350360184,
+    "locale": "zh-CN",
+    "displayName": "Cal.diy",
+    "tagline": "从开源排期平台学习时区、可用性计算与日历集成",
+    "summary": "Cal.diy 是 Cal.com 的社区自托管分支，官方 README 明确说明已移除商业与 Enterprise 代码，整库采用 MIT 许可证。项目以 Next.js、tRPC、Prisma 和 PostgreSQL 构成大型排期产品，覆盖事件类型、空闲时间、预约、通知与第三方日历集成。它适合用一个真实预约切片学习时间领域建模，但官方也明确提示主要面向个人、非生产自托管，部署与安全责任需由使用者承担。",
+    "recommendationReasons": [
+      "可用性、时区、冲突检测和预约落库形成高价值的端到端领域案例。",
+      "AGENTS.md 给出 apps/web、Prisma、tRPC、UI 与集成包的明确导航。",
+      "移除 Enterprise 代码后的 MIT 社区版让许可证边界比旧开源核心更直接。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "saas",
+      "automation"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "authentication",
+      "ui",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "这是拥有一万六千以上提交的大型 Yarn/Turbo 单仓，时间计算、第三方凭证、PostgreSQL、邮件与多种集成共同增加了理解和运行成本。",
+      "prerequisites": [
+        "Next.js 与 TypeScript 实战基础",
+        "SQL 和 Prisma 基础",
+        "认证与会话概念",
+        "UTC、时区与日历事件基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Next.js + React + TypeScript",
+        "role": "主 Web 应用与预约界面",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/AGENTS.md"
+      },
+      {
+        "name": "tRPC",
+        "role": "类型安全 API 路由",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/AGENTS.md"
+      },
+      {
+        "name": "Prisma + PostgreSQL",
+        "role": "用户、事件类型、可用性与预约数据",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/README.md"
+      },
+      {
+        "name": "NextAuth.js",
+        "role": "用户认证与会话",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/AGENTS.md"
+      },
+      {
+        "name": "Tailwind CSS",
+        "role": "产品界面样式",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/README.md"
+      },
+      {
+        "name": "Vitest + Playwright",
+        "role": "单元与端到端测试",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/calcom/cal.diy/blob/main/AGENTS.md"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "预约领域的时间建模",
+        "description": "从事件类型、可用时间和预约数据出发，理解时区转换、冲突判断与最终写入为何必须保持同一业务语义。",
+        "evidencePaths": [
+          "packages/prisma/schema.prisma",
+          "packages/features",
+          "apps/web"
+        ]
+      },
+      {
+        "title": "类型安全的纵向切片",
+        "description": "沿页面、tRPC router、service/repository 到 Prisma 查询阅读一次预约变更，观察权限检查与最小字段选择如何贯穿各层。",
+        "evidencePaths": [
+          "apps/web/app",
+          "packages/trpc/server/routers",
+          "packages/prisma"
+        ]
+      },
+      {
+        "title": "集成作为可插拔能力",
+        "description": "比较 App Store、凭证与共享 UI 包，学习如何把日历和会议服务隔离在核心预约模型之外。",
+        "evidencePaths": [
+          "packages/app-store",
+          "packages/app-store-cli",
+          "packages/ui"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "画出一次预约的最小数据链路",
+        "steps": [
+          "读 README 的 About、Built With 与风险提示",
+          "在 packages/prisma/schema.prisma 找事件类型、可用性和预约实体",
+          "对照 apps/web 与 packages/trpc 标出读写边界"
+        ],
+        "outcome": "一张从访客选时到预约落库的领域与调用图。"
+      },
+      "twoHours": {
+        "objective": "实现一个单人预约冲突检查原型",
+        "steps": [
+          "定义用户、事件类型、可用区间和预约最小模型",
+          "统一将输入时间转换为 UTC",
+          "计算候选时段并拒绝重叠预约",
+          "用跨日与夏令时样例测试"
+        ],
+        "outcome": "一个不依赖第三方日历、具备时区测试的最小预约服务。"
+      },
+      "oneDay": {
+        "objective": "增加一个受控的日历同步边界",
+        "steps": [
+          "定义 provider 接口与加密凭证引用",
+          "实现本地假 provider 而非接入真实账号",
+          "为拉取失败、重复事件和撤销设计幂等键",
+          "补越权、时区与重试测试并记录部署需求"
+        ],
+        "outcome": "一个将外部日历故障隔离于核心预约事务之外的可测试切片。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "先确认社区版定位、MIT 许可证说明、自托管警告与运行依赖。"
+      },
+      {
+        "path": "AGENTS.md",
+        "reason": "获得官方项目结构、技术栈与安全约束。"
+      },
+      {
+        "path": "packages/prisma/schema.prisma",
+        "reason": "建立排期领域数据模型。"
+      },
+      {
+        "path": "packages/trpc/server/routers",
+        "reason": "观察 API、权限与服务调用边界。"
+      },
+      {
+        "path": "packages/features",
+        "reason": "按业务能力阅读，而不是遍历整个单仓。"
+      },
+      {
+        "path": "packages/app-store",
+        "reason": "理解第三方日历和会议集成。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "setup",
+        "severity": "high",
+        "note": "官方要求 Node、Yarn、PostgreSQL，并明确自托管需要服务器、数据库与安全经验。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "日历凭证、预约者信息、邮件与加密密钥均属于敏感数据，示例默认值不可用于生产。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "medium",
+        "note": "这是社区维护分支；官方提示主要用于个人、非生产用途，生产采用前需独立评估维护与升级能力。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "核心可本地运行，但启用会议、邮件、短信或日历集成通常需要外部账号或费用。"
+      },
+      {
+        "kind": "license",
+        "severity": "low",
+        "note": "当前 README 与 LICENSE 标明整库 MIT；仍应在分发时保留许可证和版权声明。"
+      }
+    ],
+    "score": {
+      "replicability": 14,
+      "clarity": 17,
+      "beginnerValue": 10,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 5,
+      "maintenance": 5,
+      "novelty": 3,
+      "total": 69,
+      "rationale": {
+        "replicability": "可 Docker 自托管，但完整集成和时间语义使复刻成本较高。",
+        "clarity": "README 与 AGENTS.md 提供了较好的结构和安全导航。",
+        "beginnerValue": "适合进阶学习者，不适合第一次做全栈项目。",
+        "productCompleteness": "预约、可用性、认证、通知与集成闭环成熟。",
+        "vibeCodingRelevance": "适合从单一预约切片做受控改造，不适合整仓快速复制。",
+        "maintenance": "社区仓当前活跃且提交历史丰富。",
+        "novelty": "时区、冲突与日历同步提供一般 CRUD 项目没有的领域挑战。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/calcom/cal.diy",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/calcom/cal.diy/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/calcom/cal.diy/blob/main/AGENTS.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/calcom/cal.diy/blob/main/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/calcom/cal.diy/blob/main/packages/prisma/schema.prisma",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/calcom/cal.diy/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 350360184,
+    "slug": "calcom-cal-diy",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

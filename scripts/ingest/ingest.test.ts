@@ -202,6 +202,115 @@ test("a failed ingest leaves the previous snapshot file untouched", async () => 
   assert.deepEqual(await readStoredSnapshot(filePath), previous);
 });
 
+test("raw README mode uses the content endpoint and computes a Git blob SHA", async () => {
+  const requests: string[] = [];
+  const client = new GitHubClient({
+    fetchImpl: async (input) => {
+      const url = String(input);
+      requests.push(url);
+      if (url.endsWith("/languages")) return jsonResponse({ TypeScript: 1200 });
+      if (url.startsWith("https://raw.githubusercontent.com/")) {
+        return new Response("# Raw README\n\nExample", {
+          status: 200,
+          headers: { etag: '"raw-content-sha"' },
+        });
+      }
+      return jsonResponse(repositoryPayload(), 200, { etag: 'W/"repo-etag"' });
+    },
+  });
+
+  const outcome = await ingestRepository(
+    { locator: { owner: "example", name: "project" }, force: true },
+    client,
+    () => FIXED_NOW,
+    { readmeMode: "raw" },
+  );
+
+  IngestOutcomeSchema.parse(outcome);
+  assert.equal(outcome.status, "changed");
+  if (outcome.status !== "changed") return;
+  assert.equal(outcome.snapshot.readme?.sha, "1967d64cc93624d3dcf407784280b37774d8f251");
+  assert.equal(outcome.snapshot.readme?.excerpt, "# Raw README\n\nExample");
+  assert.equal(requests.filter((url) => url.startsWith("https://api.github.com")).length, 2);
+  assert.equal(requests.filter((url) => url.startsWith("https://raw.githubusercontent.com")).length, 1);
+});
+
+test("detects a recognizable root license when GitHub reports no assertion", async () => {
+  const client = new GitHubClient({
+    fetchImpl: async (input) => {
+      const url = String(input);
+      if (url.endsWith("/languages")) return jsonResponse({ TypeScript: 1200 });
+      if (url.endsWith("/readme")) return new Response(null, { status: 404 });
+      if (url.endsWith("/LICENSE")) {
+        return new Response("Apache License\nVersion 2.0, January 2004", { status: 200 });
+      }
+      return jsonResponse({ ...repositoryPayload(), license: null });
+    },
+  });
+
+  const outcome = await ingestRepository(
+    { locator: { owner: "example", name: "project" }, force: true },
+    client,
+    () => FIXED_NOW,
+  );
+
+  IngestOutcomeSchema.parse(outcome);
+  assert.equal(outcome.status, "changed");
+  if (outcome.status !== "changed") return;
+  assert.deepEqual(outcome.snapshot.license, {
+    spdxId: "Apache-2.0",
+    name: "Apache License 2.0",
+    url: "https://github.com/example/project/blob/main/LICENSE",
+  });
+});
+
+test("raw text requests reject untrusted origins before making a request", async () => {
+  let requestCount = 0;
+  const client = new GitHubClient({
+    fetchImpl: async () => {
+      requestCount += 1;
+      return new Response("secret", { status: 200 });
+    },
+  });
+
+  await assert.rejects(
+    () => client.getText("http://127.0.0.1/private"),
+    (error) =>
+      error instanceof Error &&
+      error.message === "README 源必须是可信的 GitHub Raw HTTPS 地址",
+  );
+  assert.equal(requestCount, 0);
+});
+
+test("raw README mode rejects oversized content", async () => {
+  const client = new GitHubClient({
+    fetchImpl: async (input) => {
+      const url = String(input);
+      if (url.endsWith("/languages")) return jsonResponse({ TypeScript: 1200 });
+      if (url.startsWith("https://raw.githubusercontent.com/")) {
+        return new Response("", {
+          status: 200,
+          headers: { "content-length": String(2 * 1024 * 1024 + 1) },
+        });
+      }
+      return jsonResponse(repositoryPayload(), 200, { etag: 'W/"repo-etag"' });
+    },
+  });
+
+  const outcome = await ingestRepository(
+    { locator: { owner: "example", name: "project" }, force: true },
+    client,
+    () => FIXED_NOW,
+    { readmeMode: "raw" },
+  );
+
+  IngestOutcomeSchema.parse(outcome);
+  assert.equal(outcome.status, "failed");
+  if (outcome.status !== "failed") return;
+  assert.equal(outcome.error.code, "invalid_response");
+  assert.match(outcome.error.message, /字节上限/);
+});
+
 function jsonResponse(
   value: unknown,
   status = 200,

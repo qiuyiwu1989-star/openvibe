@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 612344730,
+  "locale": "zh-CN",
+  "displayName": "NextChat",
+  "tagline": "从多模型聊天界面学会搭建一款可部署的 AI 产品",
+  "summary": "NextChat 是一款覆盖网页、移动端与桌面端的多模型聊天客户端，支持 OpenAI、Claude、Gemini、DeepSeek 等服务。仓库把对话界面、提示词面具、模型适配、服务端代理、配置与 Tauri 桌面封装放在同一产品里，适合从一个熟悉的聊天场景学习 AI 应用的完整交付链路。",
+  "recommendationReasons": [
+    "产品形态熟悉，修改界面、提示词或模型配置后能迅速看到结果",
+    "同一代码库同时展示模型接入、状态管理、服务端路由和桌面封装"
+  ],
+  "audiences": [
+    "beginner",
+    "starter",
+    "intermediate"
+  ],
+  "categories": [
+    "ai-app",
+    "content-tool"
+  ],
+  "learningGoals": [
+    "ui",
+    "ai-integration",
+    "product-architecture",
+    "deployment",
+    "project-organization"
+  ],
+  "difficulty": {
+    "level": "medium",
+    "rationale": "本地启动和界面改造门槛不高；理解多供应商适配、密钥边界和桌面端打包需要更多全栈经验。",
+    "prerequisites": [
+      "会使用 React 和 TypeScript",
+      "理解 HTTP API 与环境变量",
+      "了解流式响应的基本概念"
+    ]
+  },
+  "techStack": [
+    {
+      "name": "Next.js",
+      "role": "网页应用、路由与服务端接口",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/package.json"
+    },
+    {
+      "name": "React",
+      "role": "聊天界面与交互组件",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/package.json"
+    },
+    {
+      "name": "TypeScript",
+      "role": "前后端共享的类型化应用代码",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/tsconfig.json"
+    },
+    {
+      "name": "Tauri",
+      "role": "桌面应用外壳与原生能力",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/ChatGPTNextWeb/NextChat/tree/main/src-tauri"
+    },
+    {
+      "name": "Model Context Protocol",
+      "role": "连接外部工具与上下文服务",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/package.json"
+    }
+  ],
+  "learningHighlights": [
+    {
+      "title": "多模型接入的共同界面",
+      "description": "沿着 API 路由与配置追踪不同供应商如何被映射为统一的聊天体验。",
+      "evidencePaths": [
+        "app/api",
+        "app/client",
+        "app/config"
+      ]
+    },
+    {
+      "title": "对话产品的状态与交互",
+      "description": "观察会话列表、消息流、模型设置与提示词面具如何协同，而不只是拼出一个输入框。",
+      "evidencePaths": [
+        "app/components",
+        "app/store",
+        "app/masks"
+      ]
+    },
+    {
+      "title": "一套产品的多端交付",
+      "description": "比较 Web 应用与 Tauri 桌面壳的职责边界，理解复用前端时仍需处理的原生配置。",
+      "evidencePaths": [
+        "app",
+        "src-tauri",
+        "docs"
+      ]
+    }
+  ],
+  "learningPath": {
+    "thirtyMinutes": {
+      "objective": "识别一次聊天请求从界面到模型服务的主链路。",
+      "steps": [
+        "先读 README 的部署与供应商配置",
+        "定位聊天输入和消息列表组件",
+        "沿 API 路由找到请求转发入口"
+      ],
+      "outcome": "能画出用户输入、服务端代理和模型响应之间的数据流。"
+    },
+    "twoHours": {
+      "objective": "完成一个安全的小型产品改造。",
+      "steps": [
+        "新增一个预设提示词面具",
+        "调整空会话与加载状态",
+        "确认密钥只从受控配置读取",
+        "测试错误提示与流式回复"
+      ],
+      "outcome": "得到一个带自定义工作流且错误状态完整的聊天应用。"
+    },
+    "oneDay": {
+      "objective": "把一个垂直场景做成可部署的 AI 助手。",
+      "steps": [
+        "选择单一用户任务并收窄模型配置",
+        "设计系统提示词和示例对话",
+        "补充输入校验、超时与失败恢复",
+        "配置一种部署目标",
+        "记录隐私与成本边界"
+      ],
+      "outcome": "得到一款可演示、可部署并说明安全边界的垂直 AI 助手。"
+    }
+  },
+  "readingGuide": [
+    {
+      "path": "README.md",
+      "reason": "了解产品能力、部署选项和模型配置。"
+    },
+    {
+      "path": "app/components",
+      "reason": "从可见界面进入聊天交互。"
+    },
+    {
+      "path": "app/store",
+      "reason": "理解会话、设置和持久化状态。"
+    },
+    {
+      "path": "app/api",
+      "reason": "定位模型请求的服务端边界。"
+    },
+    {
+      "path": "app/masks",
+      "reason": "学习可复用提示词工作流。"
+    },
+    {
+      "path": "src-tauri",
+      "reason": "理解桌面封装与 Web 代码的分工。"
+    }
+  ],
+  "risks": [
+    {
+      "kind": "paid-service",
+      "severity": "medium",
+      "note": "多数云模型需要单独的 API 凭证并按量计费，练习时应设置额度。"
+    },
+    {
+      "kind": "security",
+      "severity": "high",
+      "note": "不要把供应商密钥提交到客户端代码或公开仓库；部署前需确认代理与访问控制。"
+    },
+    {
+      "kind": "maintenance",
+      "severity": "medium",
+      "note": "模型名称、接口参数与供应商能力变化较快，复刻时要以当前文档为准。"
+    }
+  ],
+  "score": {
+    "replicability": 23,
+    "clarity": 17,
+    "beginnerValue": 19,
+    "productCompleteness": 14,
+    "vibeCodingRelevance": 10,
+    "maintenance": 4,
+    "novelty": 3,
+    "total": 90,
+    "rationale": {
+      "replicability": "部署入口多，聊天界面和提示词容易做出个人版本。",
+      "clarity": "核心目录可辨，但多模型和多端配置增加了阅读跨度。",
+      "beginnerValue": "场景熟悉、反馈快，能覆盖 AI 应用的关键环节。",
+      "productCompleteness": "包含会话、设置、多模型、部署和桌面端等完整能力。",
+      "vibeCodingRelevance": "非常适合用 AI 辅助修改提示词、界面和垂直工作流。",
+      "maintenance": "项目活跃，但上游模型接口的快速变化会带来跟进成本。",
+      "novelty": "聊天客户端常见，价值主要在成熟实现和多端整合。"
+    }
+  },
+  "sources": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "readme",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/README.md",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/tsconfig.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat/blob/main/LICENSE",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    }
+  ],
+  "provenance": {
+    "createdBy": "hybrid",
+    "generator": "open-source-radar-curated-catalog-v1",
+    "createdAt": "2026-08-10T01:15:00+09:00"
+  },
+  "review": {
+    "state": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "notes": "批量策展草案已绑定事实快照，等待独立审核。"
+  }
+}

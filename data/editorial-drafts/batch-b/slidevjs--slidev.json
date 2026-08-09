@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0.0", "fullName": "slidevjs/slidev", "locale": "zh-CN",
+  "displayName": "Slidev", "tagline": "把 Markdown、Vue 和 Vite 变成可编程的演示文稿",
+  "summary": "Slidev 是为开发者设计的演示工具，用 Markdown 管内容，同时允许在页面中使用 Vue 组件、UnoCSS、Shiki、Mermaid 和主题包。它把一个明确的用户任务拆成 CLI、解析、客户端、主题、导出和文档等包，是学习“结构化文本如何变成交互产品”的优秀中型案例。",
+  "recommendationReasons": ["只修改 demo 就能得到即时可见成果，对初学者的反馈周期很短", "主题、插件、导出和嵌入 Vue 组件展示了良好的扩展性设计"],
+  "audiences": ["beginner", "starter", "intermediate"], "categories": ["content-tool", "developer-tool"],
+  "learningGoals": ["ui", "product-architecture", "deployment", "project-organization"],
+  "difficulty": {"level": "medium", "rationale": "创建和定制演示文稿很简单；阅读内核则需要理解 Vite、Vue 编译与 Markdown 转换。", "prerequisites": ["会写 Markdown", "了解 Vue 组件基础", "会运行 Node.js 项目"]},
+  "techStack": [
+    {"name": "Vue 3", "role": "演示文稿运行时与可嵌入组件", "confidence": "confirmed", "evidenceUrl": "https://github.com/slidevjs/slidev/blob/main/README.md"},
+    {"name": "Vite", "role": "开发服务、构建与插件底座", "confidence": "confirmed", "evidenceUrl": "https://github.com/slidevjs/slidev/blob/main/packages/slidev/package.json"},
+    {"name": "Markdown", "role": "演示内容的主要创作格式", "confidence": "confirmed", "evidenceUrl": "https://github.com/slidevjs/slidev/blob/main/README.md"},
+    {"name": "UnoCSS", "role": "按需样式与主题定制", "confidence": "confirmed", "evidenceUrl": "https://github.com/slidevjs/slidev/blob/main/README.md"}
+  ],
+  "learningHighlights": [
+    {"title": "从 Markdown 到交互页面", "description": "追踪幻灯片分隔、frontmatter、布局和 Vue 组件如何被转为应用。", "evidencePaths": ["packages/parser", "packages/slidev", "packages/client"]},
+    {"title": "可分发的主题与插件", "description": "学习如何用 npm 包封装布局、样式和组件，同时保留用户覆写点。", "evidencePaths": ["packages/theme-default", "demo", "docs"]},
+    {"title": "一份内容的多种输出", "description": "从预览、演讲者模式到 PDF、PNG 和 PPTX 导出，理解产品主链路的扩展。", "evidencePaths": ["packages/slidev", "packages/client", "packages/exporter"]}
+  ],
+  "learningPath": {
+    "thirtyMinutes": {"objective": "用 Markdown 做出一份可演示的文稿。", "steps": ["按 README 初始化项目", "阅读 demo 的页面分隔与 frontmatter", "增加代码高亮和 Mermaid 图"], "outcome": "得到一份可演示、可修改的开发者幻灯片。"},
+    "twoHours": {"objective": "做一个可复用的定制布局。", "steps": ["对照 packages/theme-default 理解布局约定", "新增一个 Vue 布局组件", "用 UnoCSS 定义视觉规则"], "outcome": "得到一个可在多页复用的个人布局。"},
+    "oneDay": {"objective": "做一份带交互演示的完整教学内容。", "steps": ["定义受众和一条教学主线", "嵌入一个可操作 Vue 组件", "增加演讲者提示", "验证 PDF 或 PPTX 导出"], "outcome": "得到一份可在线分享也可离线交付的互动课件。"}
+  },
+  "readingGuide": [{"path": "README.md", "reason": "先体验产品能力和最短路径。"}, {"path": "demo", "reason": "用真实文稿学习内容约定。"}, {"path": "packages/parser", "reason": "理解 Markdown 到结构化数据。"}, {"path": "packages/client", "reason": "观察演示运行时与交互。"}, {"path": "packages/slidev", "reason": "建立 CLI、构建与导出地图。"}],
+  "risks": [{"kind": "complexity", "severity": "medium", "note": "使用 Slidev 很简单，但阅读内核需区分解析、Vite 插件与客户端运行时。"}, {"kind": "setup", "severity": "low", "note": "导出和录制功能可能需要额外浏览器环境，首次练习可先不启用。"}],
+  "score": {"replicability": 24, "clarity": 19, "beginnerValue": 19, "productCompleteness": 14, "vibeCodingRelevance": 9, "maintenance": 5, "novelty": 4, "total": 94, "rationale": {"replicability": "初始化、改内容和部署的路径极短。", "clarity": "README、多语文档、demo 和包边界都很清楚。", "beginnerValue": "反馈快，同时能逐步学 Markdown、Vue 和工程扩展。", "productCompleteness": "创作、预览、演示、录制与导出链路完整。", "vibeCodingRelevance": "非常适合 AI 协作生成内容后由人调整结构和风格。", "maintenance": "仓库活跃，技术栈与文档持续升级。", "novelty": "可编程演示的产品形态鲜明且易于再创作。"}},
+  "sourceUrls": [{"kind": "repository", "url": "https://github.com/slidevjs/slidev"}, {"kind": "readme", "url": "https://github.com/slidevjs/slidev/blob/main/README.md"}, {"kind": "file", "url": "https://github.com/slidevjs/slidev/blob/main/package.json"}, {"kind": "file", "url": "https://github.com/slidevjs/slidev/blob/main/packages/slidev/package.json"}, {"kind": "file", "url": "https://github.com/slidevjs/slidev/blob/main/LICENSE"}]
+}

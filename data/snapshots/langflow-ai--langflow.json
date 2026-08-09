@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 599320067,
+  "nodeId": "R_kgDOI7jmAw",
+  "owner": {
+    "login": "langflow-ai",
+    "id": 85702467,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/85702467?v=4"
+  },
+  "name": "langflow",
+  "fullName": "langflow-ai/langflow",
+  "htmlUrl": "https://github.com/langflow-ai/langflow",
+  "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.",
+  "homepageUrl": "http://www.langflow.org/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 152976,
+    "forks": 9836,
+    "openIssues": 992,
+    "subscribers": 537
+  },
+  "primaryLanguage": "Python",
+  "languages": {
+    "Python": 26821178,
+    "TypeScript": 9092651,
+    "JavaScript": 4038677,
+    "CSS": 89892,
+    "Makefile": 57069,
+    "Dockerfile": 41542,
+    "Shell": 40207,
+    "PowerShell": 5904,
+    "Batchfile": 4447,
+    "HTML": 1091,
+    "Mako": 789
+  },
+  "topics": [
+    "agents",
+    "chatgpt",
+    "generative-ai",
+    "large-language-models",
+    "multiagent",
+    "react-flow"
+  ],
+  "license": {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "url": "https://api.github.com/licenses/mit"
+  },
+  "timestamps": {
+    "createdAt": "2023-02-08T22:28:03Z",
+    "updatedAt": "2026-08-09T15:11:28Z",
+    "pushedAt": "2026-08-09T06:06:30Z",
+    "fetchedAt": "2026-08-09T15:59:19.848Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "ccba723089429cedfa4a3bbbb11a897a57eb11e6",
+    "htmlUrl": "https://github.com/langflow-ai/langflow/blob/main/README.md",
+    "excerpt": "<!-- markdownlint-disable MD030 -->\n\n<picture>\n  <source media=\"(prefers-color-scheme: dark)\" srcset=\"./docs/static/img/langflow-logo-color-blue-bg.svg\">\n  <img src=\"./docs/static/img/langflow-logo-color-black-solid.svg\" alt=\"Langflow logo\">\n</picture>\n\n[![Release Notes](https://img.shields.io/github/release/langflow-ai/langflow?style=flat-square)](https://github.com/langflow-ai/langflow/releases)\n[![PyPI - License](https://img.shields.io/badge/license-MIT-orange)](https://opensource.org/licenses/MIT)\n[![PyPI - Downloads](https://img.shields.io/pypi/dm/langflow?style=flat-square)](https://pypistats.org/packages/langflow)\n[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/langflow-ai.svg?style=social&label=Follow%20%40Langflow)](https://twitter.com/langflow_ai)\n[![YouTube Channel](https://img.shields.io/youtube/channel/subscribers/UCn2bInQrjdDYKEEmbpwblLQ?label=Subscribe)](https://www.youtube.com/@Langflow)\n[![Discord Server](https://img.shields.io/discord/1116803230643527710?logo=discord&style=social&label=Join)](https://discord.gg/EqksyE2EX9)\n[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/langflow-ai/langflow)\n\n[Langflow](https://langflow.org)",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"1036a77b38589148dd761768ebc5c353d46fbdfa3a0ee5e52f7fe1f979be9c2a\""
+  }
+}

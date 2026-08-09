@@ -1,0 +1,311 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 833453356,
+    "nodeId": "R_kgDOMa19LA",
+    "owner": {
+      "login": "Nutlope",
+      "id": 63742054,
+      "type": "User",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/63742054?v=4"
+    },
+    "name": "llamacoder",
+    "fullName": "Nutlope/llamacoder",
+    "htmlUrl": "https://github.com/Nutlope/llamacoder",
+    "description": "Open source Claude Artifacts – built with Llama 3.1 405B",
+    "homepageUrl": "https://www.llamacoder.io/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 7048,
+      "forks": 1669,
+      "openIssues": 6,
+      "subscribers": 94
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 1025695,
+      "CSS": 2634,
+      "JavaScript": 135
+    },
+    "topics": [],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2024-07-25T05:01:54Z",
+      "updatedAt": "2026-08-06T23:21:21Z",
+      "pushedAt": "2026-08-05T09:02:50Z",
+      "fetchedAt": "2026-08-09T15:59:16.331Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "d42ec77c54fcb1c34e6c6befd4cbb5595b22e547",
+      "htmlUrl": "https://github.com/Nutlope/llamacoder/blob/main/README.md",
+      "excerpt": "<a href=\"https://www.llamacoder.io\">\n  <img alt=\"Llama Coder\" src=\"./public/og-image.png\">\n  <h1 align=\"center\">Llama Coder</h1>\n</a>\n\n<p align=\"center\">\n  An open source Claude Artifacts – generate small apps with one prompt. Powered by Llama 3 on Together.ai.\n</p>\n\n## Tech stack\n\n- [Llama 3.1 405B](https://ai.meta.com/blog/meta-llama-3-1/) from Meta for the LLM\n- [Together AI](https://togetherai.link/?utm_source=llamacoder&utm_medium=referral&utm_campaign=example-app) for LLM inference\n- [esbuild-wasm](https://github.com/evanw/esbuild) + [esm.sh](https://esm.sh) for the in-browser preview renderer (runs in a sandboxed iframe)\n- Next.js app router with Tailwind\n- [Braintrust](https://www.braintrust.dev/) for observability\n- Plausible for website analytics\n\n## Cloning & running\n\n1. Clone the repo: `git clone https://github.com/Nutlope/llamacoder`\n2. Create a `.env` file and add your API keys:\n   - **[Together AI API key](https://dub.sh/together-ai/?utm_source=example-app&utm_medium=llamacoder&utm_campaign=llamacoder-app-signup)**: `TOGETHER_API_KEY=<your_together_ai_api_key>`\n   - **Database URL**: Use [Neon](https://neon.tech) to set up your PostgreSQL database and add the Prisma",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"29670d736ccb399129611e1a07da7e0237cf00339f03dbe6e6671b7722d60393\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 833453356,
+    "locale": "zh-CN",
+    "displayName": "Llama Coder",
+    "tagline": "拆解从一句提示到可运行前端预览的 AI 生成闭环",
+    "summary": "Llama Coder 是一个开源 Artifacts 式小应用生成器：用户描述需求，服务端调用 Together AI 生成代码，浏览器内用 esbuild-wasm 和沙箱 iframe 构建预览。它将提示词、流式输出、自动修复、沙箱和分享收在一个中等规模 Next.js 应用中。",
+    "recommendationReasons": [
+      "产品链路与 vibe coding 学习目标直接一致。",
+      "仓库自带 architecture.md，可按架构图定向阅读。",
+      "预览器从旧 Sandpack 思路演进到 esbuild-wasm+沙箱 iframe，适合学安全边界。"
+    ],
+    "audiences": [
+      "starter",
+      "intermediate"
+    ],
+    "categories": [
+      "ai-app",
+      "developer-tool"
+    ],
+    "learningGoals": [
+      "ai-integration",
+      "ui",
+      "product-architecture",
+      "database",
+      "deployment"
+    ],
+    "difficulty": {
+      "level": "medium",
+      "rationale": "单仓 Next.js 便于定位，但真实闭环涉及 LLM 流式输出、浏览器编译沙箱、Prisma/Postgres 和外部 API。",
+      "prerequisites": [
+        "React/Next.js 基础",
+        "TypeScript 异步流基础",
+        "会配置 LLM API 密钥",
+        "HTML iframe 安全基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Next.js App Router",
+        "role": "页面与服务端 API",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/package.json"
+      },
+      {
+        "name": "Together AI / Llama",
+        "role": "代码生成推理",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/README.md"
+      },
+      {
+        "name": "esbuild-wasm + esm.sh",
+        "role": "浏览器内编译与依赖解析",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/README.md"
+      },
+      {
+        "name": "Prisma + Neon Postgres",
+        "role": "生成记录与分享数据",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/prisma/schema.prisma"
+      },
+      {
+        "name": "Tailwind CSS",
+        "role": "界面样式",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/tailwind.config.ts"
+      },
+      {
+        "name": "Braintrust",
+        "role": "可选 LLM 可观测性",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/Nutlope/llamacoder/blob/main/lib/braintrust.ts"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "代码生成与自动修复",
+        "description": "对照提示配置、生成请求和 chat-auto-fix，看模型输出如何变成可执行反馈环。",
+        "evidencePaths": [
+          "app/api",
+          "lib/generation.ts",
+          "lib/prompts.ts",
+          "lib/chat-auto-fix.ts"
+        ]
+      },
+      {
+        "title": "不可信代码预览",
+        "description": "学习依赖解析、浏览器编译和 sandboxed iframe 之间的分层。",
+        "evidencePaths": [
+          "lib/preview",
+          "preview-kits/baseui",
+          "architecture.md"
+        ]
+      },
+      {
+        "title": "可分享的生成结果",
+        "description": "跟踪从会话状态、Prisma 持久化到分享路由的产品闭环。",
+        "evidencePaths": [
+          "app/share",
+          "prisma/schema.prisma",
+          "lib/prisma.ts"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "画出生成与预览数据流",
+        "steps": [
+          "读 README 与 architecture.md",
+          "标出 app/api、lib/generation.ts 和 lib/preview 边界",
+          "识别所有外部服务"
+        ],
+        "outcome": "一张不超过 8 节点的数据流图。"
+      },
+      "twoHours": {
+        "objective": "修改一个生成体验切片",
+        "steps": [
+          "用 mock 输出运行 UI",
+          "增加一个提示模板",
+          "在预览失败时显示结构化错误",
+          "补一个 auto-fix 测试"
+        ],
+        "outcome": "一个可演示、可解释失败的生成流。"
+      },
+      "oneDay": {
+        "objective": "做出安全可控的个人变体",
+        "steps": [
+          "替换模型适配层",
+          "限制可用依赖与输出大小",
+          "测试超时、无效代码和恶意 iframe 输出",
+          "记录请求成本与失败原因"
+        ],
+        "outcome": "一个有输入、成本和执行边界的 AI 小应用生成器。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认当前技术栈与外部凭证。"
+      },
+      {
+        "path": "architecture.md",
+        "reason": "按官方架构说明建立地图。"
+      },
+      {
+        "path": "lib/generation.ts",
+        "reason": "定位生成核心。"
+      },
+      {
+        "path": "lib/preview",
+        "reason": "理解沙箱预览。"
+      },
+      {
+        "path": "lib/chat-auto-fix.ts",
+        "reason": "阅读失败修复策略。"
+      },
+      {
+        "path": "prisma/schema.prisma",
+        "reason": "核对持久化边界。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "Together AI、Neon 与可观测服务的当前计费需另行核对。"
+      },
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "模型生成代码不可信；复刻时不得放宽 iframe、网络与依赖白名单。"
+      },
+      {
+        "kind": "complexity",
+        "severity": "medium",
+        "note": "流式生成、编译器和数据持久化同时出现，应逐层学习。"
+      }
+    ],
+    "score": {
+      "replicability": 19,
+      "clarity": 18,
+      "beginnerValue": 17,
+      "productCompleteness": 13,
+      "vibeCodingRelevance": 10,
+      "maintenance": 4,
+      "novelty": 4,
+      "total": 85,
+      "rationale": {
+        "replicability": "单仓且步骤明确，但需外部 API 与数据库。",
+        "clarity": "README 和 architecture.md 提供良好导航。",
+        "beginnerValue": "对有 React 基础者价值高。",
+        "productCompleteness": "生成、预览、修复与分享闭环完整。",
+        "vibeCodingRelevance": "直接呈现 prompt-to-app 工作流。",
+        "maintenance": "仓库当前可访问且有近期活动。",
+        "novelty": "浏览器内安全预览较有辨识度。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/Nutlope/llamacoder",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/Nutlope/llamacoder/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/Nutlope/llamacoder/blob/main/architecture.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/Nutlope/llamacoder/blob/main/package.json",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/Nutlope/llamacoder/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 833453356,
+    "slug": "nutlope-llamacoder",
+    "status": "published",
+    "featured": true,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

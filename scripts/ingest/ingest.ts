@@ -1,3 +1,5 @@
+import { createHash } from "node:crypto";
+
 import { decodeBase64Text, GitHubClient, GitHubRequestError } from "./github-client.js";
 import {
   IngestOutcomeSchema,
@@ -53,10 +55,13 @@ type GitHubReadme = {
   truncated?: boolean;
 };
 
+type SnapshotLicense = RepositorySnapshot["license"];
+
 export async function ingestRepository(
   command: IngestCommand,
   client = new GitHubClient({ token: process.env.GITHUB_TOKEN }),
   now: () => Date = () => new Date(),
+  options: { readmeMode?: "api" | "raw" } = {},
 ): Promise<IngestOutcome> {
   const encodedOwner = encodeURIComponent(command.locator.owner);
   const encodedName = encodeURIComponent(command.locator.name);
@@ -102,18 +107,10 @@ export async function ingestRepository(
       throw new Error("languages 请求意外返回 304");
     }
 
-    let readme: RepositorySnapshot["readme"] = null;
-    try {
-      const readmeResponse = await client.getJson<GitHubReadme>(
-        `/repos/${encodeURIComponent(repository.owner.login)}/${encodeURIComponent(repository.name)}/readme`,
-      );
-      if (readmeResponse.status === "not_modified") {
-        throw new Error("README 请求意外返回 304");
-      }
-      readme = normalizeReadme(readmeResponse.data, repository);
-    } catch (error) {
-      if (!(error instanceof GitHubRequestError && error.failure.code === "not_found")) throw error;
-    }
+    const readme = options.readmeMode === "raw"
+      ? await fetchRawReadme(client, repository)
+      : await fetchApiReadme(client, repository);
+    const license = normalizeApiLicense(repository.license) ?? await detectRawLicense(client, repository);
 
     return parseOutcome({
       status: "changed",
@@ -121,6 +118,7 @@ export async function ingestRepository(
         repository,
         languagesResponse.data,
         readme,
+        license,
         repositoryResponse.etag,
         now().toISOString(),
       ),
@@ -144,6 +142,109 @@ export async function ingestRepository(
   }
 }
 
+async function detectRawLicense(
+  client: GitHubClient,
+  repository: GitHubRepository,
+): Promise<SnapshotLicense> {
+  const owner = encodeURIComponent(repository.owner.login);
+  const name = encodeURIComponent(repository.name);
+  const branch = encodeURIComponent(repository.default_branch);
+
+  for (const licensePath of ["LICENSE", "LICENSE.md", "LICENSE.txt"]) {
+    try {
+      const response = await client.getText(
+        `https://raw.githubusercontent.com/${owner}/${name}/${branch}/${licensePath}`,
+      );
+      const detected = detectLicenseText(response.data);
+      if (!detected) return null;
+      return {
+        ...detected,
+        url: `${repository.html_url}/blob/${branch}/${licensePath}`,
+      };
+    } catch (error) {
+      if (error instanceof GitHubRequestError && error.failure.code === "not_found") continue;
+      throw error;
+    }
+  }
+
+  return null;
+}
+
+function detectLicenseText(value: string): Omit<NonNullable<SnapshotLicense>, "url"> | null {
+  const text = value.slice(0, 30_000);
+  if (/GNU AFFERO GENERAL PUBLIC LICENSE|\bAGPLv?3\b/i.test(text)) {
+    return { spdxId: "AGPL-3.0", name: "GNU Affero General Public License v3.0" };
+  }
+  if (/Apache License[\s\S]{0,100}Version 2\.0/i.test(text)) {
+    return { spdxId: "Apache-2.0", name: "Apache License 2.0" };
+  }
+  if (/Mozilla Public License[\s\S]{0,100}2\.0/i.test(text)) {
+    return { spdxId: "MPL-2.0", name: "Mozilla Public License 2.0" };
+  }
+  if (/MIT License|Permission is hereby granted, free of charge/i.test(text)) {
+    return { spdxId: "MIT", name: "MIT License" };
+  }
+  if (/BSD 3-Clause/i.test(text)) {
+    return { spdxId: "BSD-3-Clause", name: "BSD 3-Clause License" };
+  }
+  return null;
+}
+
+async function fetchApiReadme(
+  client: GitHubClient,
+  repository: GitHubRepository,
+): Promise<RepositorySnapshot["readme"]> {
+  try {
+    const readmeResponse = await client.getJson<GitHubReadme>(
+      `/repos/${encodeURIComponent(repository.owner.login)}/${encodeURIComponent(repository.name)}/readme`,
+    );
+    if (readmeResponse.status === "not_modified") {
+      throw new Error("README 请求意外返回 304");
+    }
+    return normalizeReadme(readmeResponse.data, repository);
+  } catch (error) {
+    if (error instanceof GitHubRequestError && error.failure.code === "not_found") return null;
+    throw error;
+  }
+}
+
+async function fetchRawReadme(
+  client: GitHubClient,
+  repository: GitHubRepository,
+): Promise<RepositorySnapshot["readme"]> {
+  const owner = encodeURIComponent(repository.owner.login);
+  const name = encodeURIComponent(repository.name);
+  const branch = encodeURIComponent(repository.default_branch);
+  const readmePath = "README.md";
+
+  try {
+    const response = await client.getText(
+      `https://raw.githubusercontent.com/${owner}/${name}/${branch}/${readmePath}`,
+    );
+    const normalized = response.data.replace(/\r\n/g, "\n").trim();
+    const excerpt = normalized ? normalized.slice(0, 1200).trim() : null;
+    const contentSha = gitBlobSha(response.bytes);
+
+    return {
+      path: readmePath,
+      sha: contentSha,
+      htmlUrl: `${repository.html_url}/blob/${branch}/${readmePath}`,
+      excerpt,
+      truncated: normalized.length > 1200,
+    };
+  } catch (error) {
+    if (error instanceof GitHubRequestError && error.failure.code === "not_found") return null;
+    throw error;
+  }
+}
+
+function gitBlobSha(bytes: Uint8Array): string {
+  return createHash("sha1")
+    .update(`blob ${bytes.byteLength}\0`, "utf8")
+    .update(bytes)
+    .digest("hex");
+}
+
 function parseOutcome(value: unknown): IngestOutcome {
   return IngestOutcomeSchema.parse(value);
 }
@@ -152,6 +253,7 @@ function normalizeSnapshot(
   repository: GitHubRepository,
   languages: Record<string, number>,
   readme: RepositorySnapshot["readme"],
+  license: SnapshotLicense,
   etag: string | null,
   fetchedAt: string,
 ): RepositorySnapshot {
@@ -185,14 +287,7 @@ function normalizeSnapshot(
     primaryLanguage: repository.language,
     languages,
     topics: (repository.topics ?? []).slice(0, 50),
-    license:
-      repository.license && repository.license.spdx_id !== "NOASSERTION"
-        ? {
-            spdxId: repository.license.spdx_id,
-            name: repository.license.name,
-            url: repository.license.url,
-          }
-        : null,
+    license,
     timestamps: {
       createdAt: repository.created_at,
       updatedAt: repository.updated_at,
@@ -205,6 +300,15 @@ function normalizeSnapshot(
       apiVersion: GITHUB_API_VERSION,
       etag,
     },
+  };
+}
+
+function normalizeApiLicense(license: GitHubRepository["license"]): SnapshotLicense {
+  if (!license || license.spdx_id === "NOASSERTION") return null;
+  return {
+    spdxId: license.spdx_id,
+    name: license.name,
+    url: license.url,
   };
 }
 

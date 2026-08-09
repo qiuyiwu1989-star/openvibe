@@ -14,6 +14,8 @@ GitHub 可验证事实的时间切片。抓取器可以覆盖旧快照，但不�
 - `readme.excerpt`：最多 1200 字符；不能存整篇 README。
 - `source.apiVersion`、`etag`、`fetchedAt`：可追溯性与条件请求依据。
 
+默认抓取通过 GitHub REST 获取仓库、语言和 README；批量初始化可使用 `--raw-readme`，README 只允许来自受信任的 GitHub Raw HTTPS 地址，限制为 2 MiB，并按 Git blob 算法记录 SHA。GitHub 无法识别多许可证仓库时，抓取器可从根目录 `LICENSE`、`LICENSE.md` 或 `LICENSE.txt` 识别常见 SPDX 许可证；无法可靠识别时仍保持 `null`，由准入门拒绝或人工复核。
+
 ### EditorialProfile
 
 面向中文学习者的策展判断。包括适合人群、难度、学习目标、技术栈证据、三段学习路径、风险、评分和审核信息。

@@ -1,0 +1,324 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 436297812,
+    "nodeId": "R_kgDOGgFgVA",
+    "owner": {
+      "login": "usememos",
+      "id": 95764151,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/95764151?v=4"
+    },
+    "name": "memos",
+    "fullName": "usememos/memos",
+    "htmlUrl": "https://github.com/usememos/memos",
+    "description": "Open-source, self-hosted note-taking tool built for quick capture. Markdown-native, lightweight, and fully yours.",
+    "homepageUrl": "https://usememos.com/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 62125,
+      "forks": 4635,
+      "openIssues": 29,
+      "subscribers": 187
+    },
+    "primaryLanguage": "Go",
+    "languages": {
+      "Go": 2123296,
+      "TypeScript": 1962300,
+      "Shell": 23303,
+      "CSS": 11684,
+      "JavaScript": 4802,
+      "Dockerfile": 1928,
+      "HTML": 1068
+    },
+    "topics": [
+      "docker",
+      "foss",
+      "go",
+      "markdown",
+      "memo",
+      "microblog",
+      "note-taking",
+      "notecard",
+      "own-your-data",
+      "react",
+      "self-hosted",
+      "social-network",
+      "sqlite"
+    ],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2021-12-08T15:30:18Z",
+      "updatedAt": "2026-08-09T15:27:25Z",
+      "pushedAt": "2026-08-09T15:27:50Z",
+      "fetchedAt": "2026-08-09T15:59:28.410Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "72b9c880445c299547ae56d012d0cf231db5baf3",
+      "htmlUrl": "https://github.com/usememos/memos/blob/main/README.md",
+      "excerpt": "> ✨ Featured Sponsor: [CodeRabbit](https://coderabbit.link/usememos) — Cut code review time & bugs in half, instantly.\n\n# Memos\n\n<img align=\"right\" height=\"96px\" src=\"https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/logo-rounded.png\" alt=\"Memos\" />\n\nMemos is an open-source, self-hosted note-taking app built for quick capture. It is Markdown-native, lightweight, and keeps your data under your control.\n\n[![Home](https://img.shields.io/badge/🏠-usememos.com-blue?style=flat-square)](https://usememos.com)\n[![Live Demo](https://img.shields.io/badge/✨-Try%20Demo-orange?style=flat-square)](https://demo.usememos.com/)\n[![Docs](https://img.shields.io/badge/📚-Documentation-green?style=flat-square)](https://usememos.com/docs)\n[![Discord](https://img.shields.io/badge/💬-Discord-5865f2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/tfPJa4UmAv)\n[![Docker Pulls](https://img.shields.io/docker/pulls/neosmemo/memos?style=flat-square&logo=docker)](https://hub.docker.com/r/neosmemo/memos)\n\n<img src=\"https://raw.githubusercontent.com/usememos/.github/refs/heads/main/assets/demo.png\" alt=\"Memos Demo Screenshot\" height=\"512\" />\n\n## Features\n\n- **Capture quick",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"24d319cbdb059402e74cfc7a8d13c5c3ba76212aa9ad451eea3eaae374d2754c\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 436297812,
+    "locale": "zh-CN",
+    "displayName": "Memos",
+    "tagline": "从时间线记事学习 Go、React、SQLite 的轻量自托管闭环",
+    "summary": "Memos 是一个面向快速记录的 Markdown-native 自托管笔记工具。它以时间线代替文件夹导航，用 Go 单二进制承载 API 与静态 Web UI，默认可用 SQLite，也支持 MySQL/PostgreSQL 和 REST/gRPC。它是本批最适合新手学“小而完整”产品的案例。",
+    "recommendationReasons": [
+      "单一 Go 二进制与 SQLite 的部署模型简单可解释。",
+      "时间线、标签、可见性和 Markdown 形成清晰领域对象。",
+      "根目录将 cmd/internal/proto/server/store/web 分层，适合跟踪一条 CRUD 链路。"
+    ],
+    "audiences": [
+      "beginner",
+      "starter"
+    ],
+    "categories": [
+      "content-tool",
+      "personal-site"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "database",
+      "ui",
+      "authentication",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "medium",
+      "rationale": "Docker 体验简单，但源码阅读跨 Go、protobuf/gRPC、React 和多数据库适配，因此不定为 easy。",
+      "prerequisites": [
+        "Go 或 TypeScript 至少熟悉一种",
+        "HTTP CRUD 基础",
+        "SQL/SQLite 基础",
+        "React 组件基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Go",
+        "role": "服务器、API 与单二进制",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/usememos/memos/blob/main/go.mod"
+      },
+      {
+        "name": "React",
+        "role": "时间线与编辑 UI",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/usememos/memos/tree/main/web"
+      },
+      {
+        "name": "SQLite / MySQL / PostgreSQL",
+        "role": "可选持久化后端",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/usememos/memos/blob/main/README.md"
+      },
+      {
+        "name": "Protocol Buffers / gRPC",
+        "role": "类型化 API 契约",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/usememos/memos/tree/main/proto"
+      },
+      {
+        "name": "Docker",
+        "role": "轻量自托管",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/usememos/memos/blob/main/README.md"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "一条 memo CRUD 纵向切片",
+        "description": "从 proto 契约、server handler、store 查询到 web 时间线逐层追踪。",
+        "evidencePaths": [
+          "proto",
+          "server",
+          "store",
+          "web"
+        ]
+      },
+      {
+        "title": "单二进制交付",
+        "description": "理解 Go 服务如何嵌入前端产物，用少量运行组件交付完整产品。",
+        "evidencePaths": [
+          "cmd/memos",
+          "server",
+          "web"
+        ]
+      },
+      {
+        "title": "存储适配与可携带数据",
+        "description": "对比 SQLite 与外部数据库的配置，理解自托管的备份边界。",
+        "evidencePaths": [
+          "store",
+          "internal",
+          "README.md"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "跟通 memo 读写链路",
+        "steps": [
+          "读 README Features",
+          "对照 proto/server/store/web",
+          "列出 memo 主要字段"
+        ],
+        "outcome": "一张四层 CRUD 图。"
+      },
+      "twoHours": {
+        "objective": "做一个时间线 UI 变体",
+        "steps": [
+          "用 fixture 渲染 memo 列表",
+          "增加一个可见性筛选",
+          "完成空状态和错误状态",
+          "验证 Markdown 输出安全"
+        ],
+        "outcome": "一个可交互的时间线样片。"
+      },
+      "oneDay": {
+        "objective": "做出最小自托管记事应用",
+        "steps": [
+          "仅保留 SQLite 与单用户",
+          "实现创建、列表、标签和搜索",
+          "增加数据目录备份提示",
+          "测试 XSS、重复提交和数据库损坏恢复"
+        ],
+        "outcome": "一个可备份、可恢复的小型本地优先记事应用。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认产品与部署边界。"
+      },
+      {
+        "path": "proto",
+        "reason": "先读 API 契约。"
+      },
+      {
+        "path": "server",
+        "reason": "跟踪 handler。"
+      },
+      {
+        "path": "store",
+        "reason": "理解数据访问。"
+      },
+      {
+        "path": "web",
+        "reason": "回到用户时间线。"
+      },
+      {
+        "path": "cmd/memos",
+        "reason": "定位运行入口。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "security",
+        "severity": "medium",
+        "note": "Markdown 渲染、公开 memo 与 API 认证仍需安全处理。"
+      },
+      {
+        "kind": "setup",
+        "severity": "medium",
+        "note": "源码开发跨 Go 和 Web toolchain；初学可先 Docker 体验。"
+      },
+      {
+        "kind": "maintenance",
+        "severity": "low",
+        "note": "当前仓库活跃，但路径和 API 会持续演进。"
+      }
+    ],
+    "score": {
+      "replicability": 21,
+      "clarity": 18,
+      "beginnerValue": 18,
+      "productCompleteness": 13,
+      "vibeCodingRelevance": 8,
+      "maintenance": 5,
+      "novelty": 3,
+      "total": 86,
+      "rationale": {
+        "replicability": "单二进制与 SQLite 便于复现。",
+        "clarity": "根目录分层与 README 清楚。",
+        "beginnerValue": "小而完整的全栈案例。",
+        "productCompleteness": "记录、搜索、API 和部署完整。",
+        "vibeCodingRelevance": "适合快速改成个人工具。",
+        "maintenance": "仓库与发布活跃。",
+        "novelty": "时间线记事不新颖但表达克制。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/usememos/memos",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/usememos/memos/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/usememos/memos/blob/main/go.mod",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/usememos/memos/blob/main/AGENTS.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/usememos/memos/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 436297812,
+    "slug": "usememos-memos",
+    "status": "published",
+    "featured": true,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

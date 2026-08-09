@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 642917329,
+  "nodeId": "R_kgDOJlIj0Q",
+  "owner": {
+    "login": "vercel",
+    "id": 14985020,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/14985020?v=4"
+  },
+  "name": "chatbot",
+  "fullName": "vercel/chatbot",
+  "htmlUrl": "https://github.com/vercel/chatbot",
+  "description": "A full-featured, hackable Next.js AI chatbot built by Vercel",
+  "homepageUrl": "https://chatbot.ai-sdk.dev/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": true,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 20810,
+    "forks": 6726,
+    "openIssues": 24,
+    "subscribers": 139
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 597781,
+    "JavaScript": 13271,
+    "CSS": 11156
+  },
+  "topics": [
+    "ai",
+    "chatgpt",
+    "nextjs",
+    "react",
+    "redis",
+    "shadcn-ui",
+    "vercel"
+  ],
+  "license": {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "url": "https://github.com/vercel/chatbot/blob/main/LICENSE"
+  },
+  "timestamps": {
+    "createdAt": "2023-05-19T16:36:23Z",
+    "updatedAt": "2026-08-09T15:08:07Z",
+    "pushedAt": "2026-07-08T21:55:02Z",
+    "fetchedAt": "2026-08-09T15:59:17.832Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "b4070187c5dd19414472227dcb59a69abd24792b",
+    "htmlUrl": "https://github.com/vercel/chatbot/blob/main/README.md",
+    "excerpt": "<a href=\"https://chatbot.ai-sdk.dev/demo\">\n  <img alt=\"Chatbot\" src=\"app/(chat)/opengraph-image.png\">\n  <h1 align=\"center\">Chatbot</h1>\n</a>\n\n<p align=\"center\">\n    Chatbot (formerly AI Chatbot) is a free, open-source template built with Next.js and the AI SDK that helps you quickly build powerful chatbot applications.\n</p>\n\n<p align=\"center\">\n  <a href=\"https://chatbot.ai-sdk.dev/docs\"><strong>Read Docs</strong></a> ·\n  <a href=\"#features\"><strong>Features</strong></a> ·\n  <a href=\"#model-providers\"><strong>Model Providers</strong></a> ·\n  <a href=\"#deploy-your-own\"><strong>Deploy Your Own</strong></a> ·\n  <a href=\"#running-locally\"><strong>Running locally</strong></a>\n</p>\n<br/>\n\n## Features\n\n- [Next.js](https://nextjs.org) App Router\n  - Advanced routing for seamless navigation and performance\n  - React Server Components (RSCs) and Server Actions for server-side rendering and increased performance\n- [AI SDK](https://ai-sdk.dev/docs/introduction)\n  - Unified API for generating text, structured objects, and tool calls with LLMs\n  - Hooks for building dynamic chat and generative user interfaces\n  - Supports OpenAI, Anthropic, Google, xAI, and other model providers via AI Gateway\n-",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"733c3f34fd8928c55fb4140b17def35fc458ca3be30c2fb376cb986ef12c9baa\""
+  }
+}

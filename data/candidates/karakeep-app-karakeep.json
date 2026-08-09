@@ -1,0 +1,249 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 753589979,
+  "locale": "zh-CN",
+  "displayName": "Karakeep",
+  "tagline": "把收藏、归档、搜索和 AI 整理串成个人知识产品",
+  "summary": "Karakeep 是一款自托管的收藏与稍后读应用，可保存链接、笔记、图片和 PDF，并提供网页归档、全文与语义搜索、自动标签和摘要。它把浏览器采集、后台抓取、数据库、搜索服务、AI 处理、Web 与移动客户端连接成一条完整信息管线，适合学习真实内容产品的系统边界。",
+  "recommendationReasons": [
+    "从“保存一个链接”出发，可以逐层看到抓取、归档、索引、AI 标注和检索",
+    "Web、移动端、扩展、Docker 与文档齐全，能研究一个自托管产品如何交付"
+  ],
+  "audiences": [
+    "starter",
+    "intermediate"
+  ],
+  "categories": [
+    "content-tool",
+    "ai-app",
+    "mobile-app"
+  ],
+  "learningGoals": [
+    "ai-integration",
+    "database",
+    "authentication",
+    "product-architecture",
+    "deployment",
+    "project-organization"
+  ],
+  "difficulty": {
+    "level": "hard",
+    "rationale": "界面功能容易理解，但完整自托管涉及网页抓取、数据库、搜索、任务处理和可选 AI 服务，组件之间的运行依赖较多。",
+    "prerequisites": [
+      "掌握 TypeScript 全栈基础",
+      "理解数据库与后台任务",
+      "会使用 Docker Compose",
+      "了解认证与文件存储"
+    ]
+  },
+  "techStack": [
+    {
+      "name": "Next.js App Router",
+      "role": "Web 产品与服务端渲染",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json"
+    },
+    {
+      "name": "Drizzle ORM",
+      "role": "关系数据访问与模型层",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json"
+    },
+    {
+      "name": "Auth.js / NextAuth",
+      "role": "账户与登录会话",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json"
+    },
+    {
+      "name": "tRPC",
+      "role": "类型安全的应用接口",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json"
+    },
+    {
+      "name": "Puppeteer",
+      "role": "网页抓取、截图与归档",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json"
+    },
+    {
+      "name": "Meilisearch",
+      "role": "全文检索服务",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/README.md"
+    },
+    {
+      "name": "OpenAI-compatible APIs",
+      "role": "自动标签、摘要与语义处理",
+      "confidence": "confirmed",
+      "evidenceUrl": "https://github.com/karakeep-app/karakeep/blob/main/README.md"
+    }
+  ],
+  "learningHighlights": [
+    {
+      "title": "内容进入系统后的完整管线",
+      "description": "从用户保存链接开始，追踪抓取、元数据提取、归档、索引和展示之间的分工。",
+      "evidencePaths": [
+        "apps/web",
+        "packages",
+        "docker"
+      ]
+    },
+    {
+      "title": "AI 是增强层而非唯一入口",
+      "description": "学习如何把自动标签、摘要和语义检索叠加到可独立工作的收藏产品上。",
+      "evidencePaths": [
+        "apps/web",
+        "packages",
+        "docs"
+      ]
+    },
+    {
+      "title": "多入口采集与多端消费",
+      "description": "比较 Web、移动端、浏览器扩展与 RSS 等入口如何围绕同一数据模型协作。",
+      "evidencePaths": [
+        "apps/web",
+        "apps/mobile",
+        "packages"
+      ]
+    }
+  ],
+  "learningPath": {
+    "thirtyMinutes": {
+      "objective": "建立收藏产品的功能与服务地图。",
+      "steps": [
+        "浏览 README 的功能清单和截图",
+        "查看 apps 与 packages 的职责",
+        "在 Docker 配置中识别数据库和搜索依赖"
+      ],
+      "outcome": "能解释保存、抓取、索引、搜索和 AI 处理的基本链路。"
+    },
+    "twoHours": {
+      "objective": "围绕收藏列表完成一个小型体验改造。",
+      "steps": [
+        "定位收藏卡片与详情界面",
+        "增加一种明确的筛选或空状态",
+        "沿 tRPC 调用找到数据查询",
+        "验证移动宽度和键盘操作"
+      ],
+      "outcome": "得到一个从查询到界面均可解释的功能改造。"
+    },
+    "oneDay": {
+      "objective": "设计一个面向特定资料类型的收藏工作流。",
+      "steps": [
+        "定义资料来源和归档规则",
+        "为该类型增加字段或标签策略",
+        "配置 AI 摘要并保留失败降级",
+        "验证全文搜索结果",
+        "用 Docker 运行所需服务并记录资源占用"
+      ],
+      "outcome": "得到一条可复现、AI 失败时仍可用的垂直收藏流程。"
+    }
+  },
+  "readingGuide": [
+    {
+      "path": "README.md",
+      "reason": "先理解用户价值、功能范围与部署提示。"
+    },
+    {
+      "path": "apps/web",
+      "reason": "阅读主要产品界面、服务端逻辑和 API。"
+    },
+    {
+      "path": "apps/mobile",
+      "reason": "观察移动端如何复用产品模型。"
+    },
+    {
+      "path": "packages",
+      "reason": "识别跨应用共享的数据与业务模块。"
+    },
+    {
+      "path": "docker",
+      "reason": "理解自托管所需的服务拓扑。"
+    },
+    {
+      "path": "docs",
+      "reason": "核对配置、导入与运维约束。"
+    }
+  ],
+  "risks": [
+    {
+      "kind": "setup",
+      "severity": "high",
+      "note": "完整能力依赖数据库、搜索、抓取与可选 AI 服务，首次学习建议先跑最小配置。"
+    },
+    {
+      "kind": "paid-service",
+      "severity": "medium",
+      "note": "云端 LLM 和向量能力可能产生费用，也可按文档选择本地兼容服务。"
+    },
+    {
+      "kind": "security",
+      "severity": "medium",
+      "note": "网页抓取会处理外部不可信内容；公开部署时需保护管理入口、密钥与存储。"
+    },
+    {
+      "kind": "license",
+      "severity": "medium",
+      "note": "项目采用 AGPL-3.0，修改并通过网络提供服务时应理解其源码提供义务。"
+    }
+  ],
+  "score": {
+    "replicability": 20,
+    "clarity": 17,
+    "beginnerValue": 18,
+    "productCompleteness": 14,
+    "vibeCodingRelevance": 9,
+    "maintenance": 5,
+    "novelty": 4,
+    "total": 87,
+    "rationale": {
+      "replicability": "功能可拆成收藏、搜索或 AI 标注练习，但完整复刻依赖较多服务。",
+      "clarity": "工作区和文档边界清楚，业务链路仍需跨包阅读。",
+      "beginnerValue": "问题真实、反馈直观，适合从小功能逐步进入全栈。",
+      "productCompleteness": "采集、归档、搜索、AI、移动端和自托管链路完整。",
+      "vibeCodingRelevance": "适合用 AI 辅助生成分类、摘要和界面，再由人验证数据与隐私。",
+      "maintenance": "当前仓库活跃且部署资料充分。",
+      "novelty": "将网页归档、语义检索与多端收藏组合得较有辨识度。"
+    }
+  },
+  "sources": [
+    {
+      "kind": "repository",
+      "url": "https://github.com/karakeep-app/karakeep",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "readme",
+      "url": "https://github.com/karakeep-app/karakeep/blob/main/README.md",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/karakeep-app/karakeep/blob/main/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/karakeep-app/karakeep/blob/main/apps/web/package.json",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    },
+    {
+      "kind": "file",
+      "url": "https://github.com/karakeep-app/karakeep/blob/main/LICENSE",
+      "accessedAt": "2026-08-10T01:15:00+09:00"
+    }
+  ],
+  "provenance": {
+    "createdBy": "hybrid",
+    "generator": "open-source-radar-curated-catalog-v1",
+    "createdAt": "2026-08-10T01:15:00+09:00"
+  },
+  "review": {
+    "state": "pending",
+    "reviewer": null,
+    "reviewedAt": null,
+    "notes": "批量策展草案已绑定事实快照，等待独立审核。"
+  }
+}

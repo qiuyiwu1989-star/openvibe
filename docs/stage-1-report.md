@@ -67,4 +67,4 @@ GitHub → RepositorySnapshot → pending EditorialProfile
 - 未部署到公网。
 - 未推送远程仓库。
 - 未创建外部定时任务。
-- 阶段 1 变更尚未提交 Git，等待明确提交授权。
+- 阶段 1 已在提交 `e55cce5` 固化；公网部署与远程推送仍未执行。

@@ -1,0 +1,316 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 664013991,
+    "nodeId": "R_kgDOJ5QMpw",
+    "owner": {
+      "login": "gitroomhq",
+      "id": 128401275,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/128401275?v=4"
+    },
+    "name": "postiz-app",
+    "fullName": "gitroomhq/postiz-app",
+    "htmlUrl": "https://github.com/gitroomhq/postiz-app",
+    "description": "📨 The ultimate agentic social media scheduling tool 🤖",
+    "homepageUrl": "https://postiz.com/",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": false,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 34435,
+      "forks": 6474,
+      "openIssues": 242,
+      "subscribers": 131
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 3250580,
+      "JavaScript": 538853,
+      "CSS": 398701,
+      "SCSS": 22120,
+      "Shell": 496
+    },
+    "topics": [
+      "nextjs",
+      "open-source",
+      "open-source-social-media-scheduling-tool",
+      "oss",
+      "redis",
+      "scheduling-tool",
+      "social-media-scheduling-tool",
+      "typescript"
+    ],
+    "license": {
+      "spdxId": "AGPL-3.0",
+      "name": "GNU Affero General Public License v3.0",
+      "url": "https://api.github.com/licenses/agpl-3.0"
+    },
+    "timestamps": {
+      "createdAt": "2023-07-08T17:24:22Z",
+      "updatedAt": "2026-08-09T15:59:07Z",
+      "pushedAt": "2026-08-09T15:58:44Z",
+      "fetchedAt": "2026-08-09T15:59:25.345Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "f982792668b90cf3c4a3d43a3bde961e70a7b6d0",
+      "htmlUrl": "https://github.com/gitroomhq/postiz-app/blob/main/README.md",
+      "excerpt": "<p align=\"center\">\n  <a href=\"https://postiz.com/\" target=\"_blank\">\n  <picture>\n    <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://github.com/user-attachments/assets/765e9d72-3ee7-4a56-9d59-a2c9befe2311\">\n    <img alt=\"Postiz Logo\" src=\"https://github.com/user-attachments/assets/f0d30d70-dddb-4142-8876-e9aa6ed1cb99\" width=\"280\"/>\n  </picture>\n  </a>\n</p>\n\n<p align=\"center\">\n<a href=\"https://opensource.org/license/agpl-v3\">\n  <img src=\"https://img.shields.io/badge/License-AGPL%203.0-blue.svg\" alt=\"License\">\n</a>\n</p>\n\n<h3 align=\"center\"><strong><a href=\"https://github.com/gitroomhq/postiz-agent\">NEW: check out Postiz agent CLI! perfect for OpenClaw and other agents</a></strong></h3>\n<div align=\"center\">\n  <strong>\n  <h2>Your ultimate AI social media scheduling tool</h2><br />\n  <a href=\"https://postiz.com\">Postiz</a>: An alternative to: Buffer.com, Hypefury, Twitter Hunter, etc...<br /><br />\n  </strong>\n  Postiz offers everything you need to manage your social media posts,<br />build an audience, capture leads, and grow your business.\n</div>\n\n<div class=\"flex\" align=\"center\">\n  <br />\n  <img alt=\"Instagram\" src=\"https://postiz.com/svgs/socials/Instagram.svg\" width=\"32",
+      "truncated": true
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"b56c26a24f95d0e7f1112f33e23d3dee49633a5677c61348a8cd738d3ecf033d\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 664013991,
+    "locale": "zh-CN",
+    "displayName": "Postiz",
+    "tagline": "从内容日历到 Temporal 发布流，学习跨平台自动化",
+    "summary": "Postiz 是支持 28+ 渠道的社交媒体策划与发布平台。它将 Vite/React 前端、NestJS API、Temporal 编排器与共享 libraries 放在 pnpm monorepo 中，把“定时”实现为可重试、可观测的工作流，而不是单个 cron 脚本。",
+    "recommendationReasons": [
+      "CLAUDE.md 明确列出 frontend/backend/orchestrator/libraries 边界。",
+      "社交平台 OAuth、媒体和发布结果构成真实集成案例。",
+      "适合对比用户日历与耐久后台任务的不同状态。"
+    ],
+    "audiences": [
+      "intermediate"
+    ],
+    "categories": [
+      "automation",
+      "saas",
+      "agent"
+    ],
+    "learningGoals": [
+      "product-architecture",
+      "authentication",
+      "agent-workflow",
+      "database",
+      "deployment",
+      "project-organization"
+    ],
+    "difficulty": {
+      "level": "hard",
+      "rationale": "多平台 OAuth/API、媒体存储、Temporal、Postgres、Redis 与多服务调试同时存在。",
+      "prerequisites": [
+        "React/TypeScript 经验",
+        "NestJS 基础",
+        "队列/耐久工作流概念",
+        "OAuth 与 webhook 基础"
+      ]
+    },
+    "techStack": [
+      {
+        "name": "Vite + React",
+        "role": "内容编辑、日历与分析 UI",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md"
+      },
+      {
+        "name": "NestJS",
+        "role": "API 与业务层",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md"
+      },
+      {
+        "name": "Temporal",
+        "role": "定时发布、重试与工作流",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md"
+      },
+      {
+        "name": "Prisma + PostgreSQL",
+        "role": "账号、内容与发布状态",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md"
+      },
+      {
+        "name": "pnpm monorepo",
+        "role": "多应用和共享库管理",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "耐久发布工作流",
+        "description": "跟踪预定内容从 API 进入 Temporal workflow/activity，再回写结果。",
+        "evidencePaths": [
+          "apps/backend",
+          "apps/orchestrator",
+          "libraries"
+        ]
+      },
+      {
+        "title": "渠道适配层",
+        "description": "对比两个平台的认证、媒体限制与发布响应，提炼统一契约。",
+        "evidencePaths": [
+          "libraries",
+          "apps/backend"
+        ]
+      },
+      {
+        "title": "前端预期与后台真相",
+        "description": "区分日历上的 scheduled 与工作流实际成功，设计中间和失败状态。",
+        "evidencePaths": [
+          "apps/frontend/src/app",
+          "apps/orchestrator",
+          "apps/backend"
+        ]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "画出一次定时发布链路",
+        "steps": [
+          "读 README 与 CLAUDE.md",
+          "标出三个 apps 责任",
+          "列出状态与失败点"
+        ],
+        "outcome": "一张 UI/API/workflow/provider 链路图。"
+      },
+      "twoHours": {
+        "objective": "设计一个假渠道适配器",
+        "steps": [
+          "定义媒体和文本限制",
+          "实现幂等 publish",
+          "模拟限流与超时",
+          "记录外部 post id"
+        ],
+        "outcome": "一个可重试的渠道契约。"
+      },
+      "oneDay": {
+        "objective": "构建双渠道发布样片",
+        "steps": [
+          "用两个 mock provider",
+          "实现定时、取消和重试",
+          "在 UI 展示每渠道状态",
+          "测试 token 过期、部分成功和重放"
+        ],
+        "outcome": "一个不连真实账号的耐久发布原型。"
+      }
+    },
+    "readingGuide": [
+      {
+        "path": "README.md",
+        "reason": "确认产品和对外接口。"
+      },
+      {
+        "path": "CLAUDE.md",
+        "reason": "获得官方分层说明。"
+      },
+      {
+        "path": "apps/orchestrator",
+        "reason": "学习 Temporal 工作流。"
+      },
+      {
+        "path": "apps/backend",
+        "reason": "定位 API 和数据层。"
+      },
+      {
+        "path": "libraries",
+        "reason": "阅读共享适配器。"
+      }
+    ],
+    "risks": [
+      {
+        "kind": "security",
+        "severity": "high",
+        "note": "社交账号 token 可直接对外发布，学习不得使用真实主账号。"
+      },
+      {
+        "kind": "complexity",
+        "severity": "high",
+        "note": "多渠道差异和耐久工作流增加调试成本。"
+      },
+      {
+        "kind": "license",
+        "severity": "high",
+        "note": "仓库为 AGPL-3.0，运行修改网络服务需注意源码提供义务。"
+      },
+      {
+        "kind": "paid-service",
+        "severity": "medium",
+        "note": "媒体存储、AI 与部分平台 API 可有费用或审核门槛。"
+      }
+    ],
+    "score": {
+      "replicability": 13,
+      "clarity": 17,
+      "beginnerValue": 11,
+      "productCompleteness": 15,
+      "vibeCodingRelevance": 8,
+      "maintenance": 5,
+      "novelty": 4,
+      "total": 73,
+      "rationale": {
+        "replicability": "可 Docker 体验，真实集成成本高。",
+        "clarity": "CLAUDE.md 分层非常清晰。",
+        "beginnerValue": "适合进阶者学工作流。",
+        "productCompleteness": "内容、日历、发布、分析和团队完整。",
+        "vibeCodingRelevance": "Agent CLI 与自动化场景相关。",
+        "maintenance": "仓库当前活跃。",
+        "novelty": "Temporal+多社交渠道有辨识度。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/gitroomhq/postiz-app",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/gitroomhq/postiz-app/blob/main/README.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gitroomhq/postiz-app/blob/main/CLAUDE.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gitroomhq/postiz-app/blob/main/SECURITY.md",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      },
+      {
+        "kind": "file",
+        "url": "https://github.com/gitroomhq/postiz-app/blob/main/LICENSE",
+        "accessedAt": "2026-08-10T01:15:00+09:00"
+      }
+    ],
+    "provenance": {
+      "createdBy": "hybrid",
+      "generator": "open-source-radar-curated-catalog-v1",
+      "createdAt": "2026-08-10T01:15:00+09:00"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {
+        "kind": "agent",
+        "id": "codex-main-agent"
+      },
+      "reviewedAt": "2026-08-10T01:20:00+09:00",
+      "notes": "MVP 内容复核通过；这是本地发布状态，不代表已获得公网部署授权。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 664013991,
+    "slug": "gitroomhq-postiz-app",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-10T01:20:00+09:00",
+    "lastReviewedAt": "2026-08-10T01:20:00+09:00",
+    "rejectionReasons": []
+  }
+}

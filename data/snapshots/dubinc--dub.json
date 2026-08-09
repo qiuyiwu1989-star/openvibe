@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "repositoryId": 529708137,
+  "nodeId": "R_kgDOH5K0aQ",
+  "owner": {
+    "login": "dubinc",
+    "id": 153106492,
+    "type": "Organization",
+    "avatarUrl": "https://avatars.githubusercontent.com/u/153106492?v=4"
+  },
+  "name": "dub",
+  "fullName": "dubinc/dub",
+  "htmlUrl": "https://github.com/dubinc/dub",
+  "description": "The modern link attribution platform. Loved by world-class marketing teams like Framer, Perplexity, Superhuman, Twilio, Buffer and more.",
+  "homepageUrl": "https://dub.co/",
+  "defaultBranch": "main",
+  "visibility": "public",
+  "isFork": false,
+  "isTemplate": false,
+  "archived": false,
+  "disabled": false,
+  "metrics": {
+    "stars": 24248,
+    "forks": 3185,
+    "openIssues": 164,
+    "subscribers": 83
+  },
+  "primaryLanguage": "TypeScript",
+  "languages": {
+    "TypeScript": 14295718,
+    "JavaScript": 8296,
+    "CSS": 3544,
+    "HTML": 457
+  },
+  "topics": [
+    "clickhouse",
+    "mysql",
+    "nextjs",
+    "open-source",
+    "planetscale",
+    "prisma",
+    "tailwindcss",
+    "tinybird",
+    "typescript",
+    "upstash",
+    "vercel"
+  ],
+  "license": {
+    "spdxId": "AGPL-3.0",
+    "name": "GNU Affero General Public License v3.0 with commercial enterprise exceptions",
+    "url": "https://github.com/dubinc/dub/blob/main/LICENSE.md"
+  },
+  "timestamps": {
+    "createdAt": "2022-08-27T22:15:11Z",
+    "updatedAt": "2026-08-09T15:26:46Z",
+    "pushedAt": "2026-08-09T12:32:20Z",
+    "fetchedAt": "2026-08-09T15:59:22.092Z"
+  },
+  "readme": {
+    "path": "README.md",
+    "sha": "977e1ccc0ae00e3d81d6dd2f8f41b35d703d6c9c",
+    "htmlUrl": "https://github.com/dubinc/dub/blob/main/README.md",
+    "excerpt": "<a href=\"https://dub.co\">\n  <img alt=\"Dub is the modern, open-source link attribution platform for short links, conversion tracking, and affiliate programs.\" src=\"https://github.com/user-attachments/assets/42cf0705-f5a2-4200-bc4a-c5acf0ba9e15\">\n</a>\n\n<h3 align=\"center\">Dub</h3>\n\n<p align=\"center\">\n    The open-source link attribution platform.\n    <br />\n    <a href=\"https://dub.co\"><strong>Learn more »</strong></a>\n    <br />\n    <br />\n    <a href=\"#introduction\"><strong>Introduction</strong></a> ·\n    <a href=\"#tech-stack\"><strong>Tech Stack</strong></a> ·\n    <a href=\"#self-hosting\"><strong>Self-hosting</strong></a> ·\n    <a href=\"#contributing\"><strong>Contributing</strong></a>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://twitter.com/dubdotco\">\n    <img src=\"https://img.shields.io/twitter/follow/dubdotco?style=flat&label=%40dubdotco&logo=twitter&color=0bf&logoColor=fff\" alt=\"Twitter\" />\n  </a>\n  <a href=\"https://news.ycombinator.com/item?id=32939407\"><img src=\"https://img.shields.io/badge/Hacker%20News-255-%23FF6600\" alt=\"Hacker News\"></a>\n  <a href=\"https://github.com/dubinc/dub/blob/main/LICENSE.md\">\n    <img src=\"https://img.shields.io/github/license/dubinc/dub?label=license",
+    "truncated": true
+  },
+  "source": {
+    "provider": "github",
+    "apiVersion": "2026-03-10",
+    "etag": "W/\"a36fcb2a7168741d40473b780e3f88ea2987c6ac92d03f2c25ffc8f8a0b9079a\""
+  }
+}
