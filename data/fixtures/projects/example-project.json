@@ -1,0 +1,188 @@
+{
+  "snapshot": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 900000001,
+    "nodeId": "R_synthetic_vibe_starter",
+    "owner": {
+      "login": "example-org",
+      "id": 900000002,
+      "type": "Organization",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/1?v=4"
+    },
+    "name": "vibe-starter",
+    "fullName": "example-org/vibe-starter",
+    "htmlUrl": "https://github.com/example-org/vibe-starter",
+    "description": "Synthetic repository used only to verify the Open Source Radar contract.",
+    "homepageUrl": "https://example.com/vibe-starter",
+    "defaultBranch": "main",
+    "visibility": "public",
+    "isFork": false,
+    "isTemplate": true,
+    "archived": false,
+    "disabled": false,
+    "metrics": {
+      "stars": 128,
+      "forks": 21,
+      "openIssues": 4,
+      "subscribers": 6
+    },
+    "primaryLanguage": "TypeScript",
+    "languages": {
+      "TypeScript": 85000,
+      "CSS": 12000,
+      "JavaScript": 3000
+    },
+    "topics": ["vibe-coding", "nextjs", "starter"],
+    "license": {
+      "spdxId": "MIT",
+      "name": "MIT License",
+      "url": "https://api.github.com/licenses/mit"
+    },
+    "timestamps": {
+      "createdAt": "2026-06-01T09:00:00Z",
+      "updatedAt": "2026-08-08T12:00:00Z",
+      "pushedAt": "2026-08-08T11:30:00Z",
+      "fetchedAt": "2026-08-09T10:00:00Z"
+    },
+    "readme": {
+      "path": "README.md",
+      "sha": "synthetic-readme-sha",
+      "htmlUrl": "https://github.com/example-org/vibe-starter/blob/main/README.md",
+      "excerpt": "这是仅用于验证数据契约的合成 README 摘要，不代表真实 GitHub 项目。",
+      "truncated": false
+    },
+    "source": {
+      "provider": "github",
+      "apiVersion": "2026-03-10",
+      "etag": "W/\"synthetic-etag\""
+    }
+  },
+  "editorial": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 900000001,
+    "locale": "zh-CN",
+    "displayName": "Vibe Starter（合成样本）",
+    "tagline": "用一条完整但轻量的链路理解现代 Web 应用",
+    "summary": "这是一个只用于验证开源雷达数据结构的合成项目。它模拟了适合初学者研究的完整 Web 应用，但不能作为真实项目推荐发布。",
+    "recommendationReasons": [
+      "目录边界清晰，适合观察页面、数据与部署配置如何配合",
+      "功能规模有限，学习者可以在一天内完成一个自己的变体"
+    ],
+    "audiences": ["beginner", "starter"],
+    "categories": ["saas", "ai-app"],
+    "learningGoals": ["ui", "product-architecture", "project-organization"],
+    "difficulty": {
+      "level": "easy",
+      "rationale": "合成样本假定只有单一 Web 服务且不依赖复杂基础设施。",
+      "prerequisites": ["会运行 Node.js 命令", "能阅读基础 TypeScript"]
+    },
+    "techStack": [
+      {
+        "name": "TypeScript",
+        "role": "主要开发语言",
+        "confidence": "confirmed",
+        "evidenceUrl": "https://github.com/example-org/vibe-starter"
+      },
+      {
+        "name": "Next.js",
+        "role": "Web 应用框架",
+        "confidence": "inferred",
+        "evidenceUrl": "https://github.com/example-org/vibe-starter/blob/main/package.json"
+      }
+    ],
+    "learningHighlights": [
+      {
+        "title": "从页面到数据的完整路径",
+        "description": "观察一个用户操作如何穿过组件、服务与数据层。",
+        "evidencePaths": ["src/app", "src/lib"]
+      },
+      {
+        "title": "可替换的产品骨架",
+        "description": "保留工程结构，只替换主题和核心数据即可形成个人版本。",
+        "evidencePaths": ["src/features", "data"]
+      }
+    ],
+    "learningPath": {
+      "thirtyMinutes": {
+        "objective": "理解产品结构并找到一次用户操作的完整调用路径。",
+        "steps": ["阅读 README", "浏览 src/app", "定位项目卡片的数据来源"],
+        "outcome": "能够口述页面、组件和数据之间的关系。"
+      },
+      "twoHours": {
+        "objective": "修改主题和一项筛选条件。",
+        "steps": ["替换首页文案", "增加一个分类", "验证空状态"],
+        "outcome": "得到一个具有自己主题的可运行版本。"
+      },
+      "oneDay": {
+        "objective": "完成一个可分享的垂直变体。",
+        "steps": ["确定目标用户", "替换示例数据", "完成详情页", "执行构建检查"],
+        "outcome": "得到一个内容和界面都完成定制的小产品。"
+      }
+    },
+    "readingGuide": [
+      {"path": "README.md", "reason": "先理解项目目标和运行方式。"},
+      {"path": "src/app", "reason": "建立页面和路由的整体地图。"},
+      {"path": "src/features", "reason": "观察功能如何按业务边界组织。"}
+    ],
+    "risks": [
+      {
+        "kind": "documentation",
+        "severity": "low",
+        "note": "这是合成 fixture，所有仓库链接仅用于接口演示，不能公开推荐。"
+      }
+    ],
+    "score": {
+      "replicability": 22,
+      "clarity": 17,
+      "beginnerValue": 18,
+      "productCompleteness": 12,
+      "vibeCodingRelevance": 9,
+      "maintenance": 4,
+      "novelty": 3,
+      "total": 85,
+      "rationale": {
+        "replicability": "假定依赖少且提供固定样本。",
+        "clarity": "合成目录结构按业务边界组织。",
+        "beginnerValue": "覆盖页面、数据和构建的基本链路。",
+        "productCompleteness": "模拟完整产品，但没有登录和支付。",
+        "vibeCodingRelevance": "适合用 AI 工具完成主题替换和功能扩展。",
+        "maintenance": "合成快照显示近期有更新。",
+        "novelty": "结构实用，但不是新颖技术实验。"
+      }
+    },
+    "sources": [
+      {
+        "kind": "repository",
+        "url": "https://github.com/example-org/vibe-starter",
+        "accessedAt": "2026-08-09T10:00:00Z"
+      },
+      {
+        "kind": "readme",
+        "url": "https://github.com/example-org/vibe-starter/blob/main/README.md",
+        "accessedAt": "2026-08-09T10:00:00Z"
+      }
+    ],
+    "provenance": {
+      "createdBy": "agent",
+      "generator": "stage-0-contract-fixture",
+      "createdAt": "2026-08-09T10:30:00Z"
+    },
+    "review": {
+      "state": "approved",
+      "reviewer": {"kind": "human", "id": "fixture-reviewer"},
+      "reviewedAt": "2026-08-09T11:00:00Z",
+      "notes": "仅批准用于自动化测试，不批准作为真实内容发布。"
+    }
+  },
+  "publication": {
+    "schemaVersion": "1.0.0",
+    "repositoryId": 900000001,
+    "slug": "example-vibe-starter",
+    "status": "published",
+    "featured": false,
+    "editorialVersion": 1,
+    "publishedAt": "2026-08-09T11:30:00Z",
+    "lastReviewedAt": "2026-08-09T11:00:00Z",
+    "rejectionReasons": []
+  }
+}

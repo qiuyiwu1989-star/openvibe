@@ -1,0 +1,23 @@
+{
+  "name": "open-source-radar",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "validate:fixtures": "tsx packages/schema/src/validate-fixtures.ts",
+    "test:schema": "tsx --test packages/schema/src/schemas.test.ts",
+    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema"
+  },
+  "dependencies": {
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

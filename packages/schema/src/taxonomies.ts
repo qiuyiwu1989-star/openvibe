@@ -1,0 +1,60 @@
+export const SCHEMA_VERSION = "1.0.0" as const;
+
+export const PROJECT_CATEGORIES = [
+  "ai-app",
+  "agent",
+  "saas",
+  "content-tool",
+  "personal-site",
+  "data-visualization",
+  "automation",
+  "developer-tool",
+  "browser-extension",
+  "mobile-app",
+] as const;
+
+export const LEARNING_GOALS = [
+  "ui",
+  "product-architecture",
+  "database",
+  "authentication",
+  "payments",
+  "ai-integration",
+  "agent-workflow",
+  "deployment",
+  "project-organization",
+] as const;
+
+export const AUDIENCE_LEVELS = ["beginner", "starter", "intermediate"] as const;
+
+export const DIFFICULTY_LEVELS = ["easy", "medium", "hard"] as const;
+
+export const RISK_KINDS = [
+  "setup",
+  "documentation",
+  "paid-service",
+  "license",
+  "maintenance",
+  "security",
+  "complexity",
+] as const;
+
+export const PUBLICATION_STATUSES = [
+  "discovered",
+  "fetched",
+  "evaluated",
+  "review",
+  "published",
+  "rejected",
+] as const;
+
+export const SCORE_MAX = {
+  replicability: 25,
+  clarity: 20,
+  beginnerValue: 20,
+  productCompleteness: 15,
+  vibeCodingRelevance: 10,
+  maintenance: 5,
+  novelty: 5,
+} as const;
+
