@@ -4,7 +4,12 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { BeginnerMissionSchema, RadarProjectBundleSchema } from "./schemas.js";
+import {
+  BeginnerMissionSchema,
+  MakerProgressCollectionSchema,
+  MakerProgressRecordSchema,
+  RadarProjectBundleSchema,
+} from "./schemas.js";
 
 const currentDirectory = path.dirname(fileURLToPath(import.meta.url));
 const fixturePath = path.resolve(
@@ -95,4 +100,70 @@ test("拒绝需要付费服务的新手任务", () => {
   mission.noPaidService = false;
 
   assert.equal(BeginnerMissionSchema.safeParse(mission).success, false);
+});
+
+test("接受已署名并完成三步的作品记录", () => {
+  assert.equal(MakerProgressRecordSchema.safeParse({
+    missionSlug: "personal-card",
+    status: "completed",
+    completedStepIndexes: [0, 1, 2],
+    authorName: "小明",
+    makerDecision: "我决定让这张网页首先展示我做过的作品。",
+    reflection: "下一次会改善手机展示。",
+    workUrl: null,
+    startedAt: "2026-08-11T00:00:00Z",
+    updatedAt: "2026-08-11T01:00:00Z",
+    completedAt: "2026-08-11T01:00:00Z",
+  }).success, true);
+});
+
+test("拒绝没有作者决定的伪完成记录", () => {
+  assert.equal(MakerProgressRecordSchema.safeParse({
+    missionSlug: "personal-card",
+    status: "completed",
+    completedStepIndexes: [0, 1, 2],
+    authorName: "小明",
+    makerDecision: "AI 做的",
+    reflection: "",
+    workUrl: null,
+    startedAt: "2026-08-11T00:00:00Z",
+    updatedAt: "2026-08-11T01:00:00Z",
+    completedAt: "2026-08-11T01:00:00Z",
+  }).success, false);
+});
+
+test("拒绝同一任务的重复进度", () => {
+  const record = {
+    missionSlug: "personal-card",
+    status: "in_progress",
+    completedStepIndexes: [0],
+    authorName: "",
+    makerDecision: "",
+    reflection: "",
+    workUrl: null,
+    startedAt: "2026-08-11T00:00:00Z",
+    updatedAt: "2026-08-11T01:00:00Z",
+    completedAt: null,
+  };
+  assert.equal(MakerProgressCollectionSchema.safeParse({
+    schemaVersion: "1.0.0",
+    records: [record, record],
+  }).success, false);
+});
+
+test("拒绝非 HTTP 协议的作品网址", () => {
+  const result = MakerProgressRecordSchema.safeParse({
+    missionSlug: "personal-card",
+    status: "in_progress",
+    completedStepIndexes: [0],
+    authorName: "小明",
+    makerDecision: "",
+    reflection: "",
+    workUrl: "javascript:alert(1)",
+    startedAt: "2026-08-11T08:00:00.000Z",
+    updatedAt: "2026-08-11T08:10:00.000Z",
+    completedAt: null,
+  });
+
+  assert.equal(result.success, false);
 });

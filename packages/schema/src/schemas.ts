@@ -357,6 +357,59 @@ export const BeginnerMissionSchema = z
   })
   .strict();
 
+export const MakerProgressRecordSchema = z
+  .object({
+    missionSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    status: z.enum(["in_progress", "completed"]),
+    completedStepIndexes: z.array(z.number().int().min(0).max(2)).max(3),
+    authorName: z.string().trim().max(80),
+    makerDecision: z.string().trim().max(800),
+    reflection: z.string().trim().max(1200),
+    workUrl: z
+      .string()
+      .url()
+      .refine((value) => value.startsWith("https://") || value.startsWith("http://"), {
+        message: "作品网址只允许 HTTP 或 HTTPS",
+      })
+      .nullable(),
+    startedAt: isoDateTime,
+    updatedAt: isoDateTime,
+    completedAt: isoDateTime.nullable(),
+  })
+  .strict()
+  .superRefine((record, context) => {
+    if (new Set(record.completedStepIndexes).size !== record.completedStepIndexes.length) {
+      context.addIssue({
+        code: "custom",
+        path: ["completedStepIndexes"],
+        message: "完成步骤不能重复",
+      });
+    }
+    if (record.status === "completed") {
+      if (record.completedStepIndexes.length !== 3) {
+        context.addIssue({ code: "custom", message: "完成作品前必须完成三个步骤" });
+      }
+      if (!record.authorName || record.makerDecision.length < 10 || !record.completedAt) {
+        context.addIssue({ code: "custom", message: "完成作品必须署名并记录作者决定" });
+      }
+    } else if (record.completedAt !== null) {
+      context.addIssue({ code: "custom", path: ["completedAt"], message: "进行中作品不能有完成时间" });
+    }
+  });
+
+export const MakerProgressCollectionSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    records: z.array(MakerProgressRecordSchema).max(100),
+  })
+  .strict()
+  .superRefine((collection, context) => {
+    const slugs = collection.records.map((record) => record.missionSlug);
+    if (new Set(slugs).size !== slugs.length) {
+      context.addIssue({ code: "custom", path: ["records"], message: "每个任务只能有一份进度" });
+    }
+  });
+
 const updateFailureSchema = z
   .object({
     repositoryId,
@@ -556,6 +609,8 @@ export type EditorialProfile = z.infer<typeof EditorialProfileSchema>;
 export type PublicationRecord = z.infer<typeof PublicationRecordSchema>;
 export type RadarProjectBundle = z.infer<typeof RadarProjectBundleSchema>;
 export type BeginnerMission = z.infer<typeof BeginnerMissionSchema>;
+export type MakerProgressRecord = z.infer<typeof MakerProgressRecordSchema>;
+export type MakerProgressCollection = z.infer<typeof MakerProgressCollectionSchema>;
 export type UpdateQueueEntry = z.infer<typeof UpdateQueueEntrySchema>;
 export type UpdateQueue = z.infer<typeof UpdateQueueSchema>;
 export type UpdateDecision = z.infer<typeof UpdateDecisionSchema>;

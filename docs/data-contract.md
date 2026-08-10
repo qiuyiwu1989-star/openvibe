@@ -78,6 +78,25 @@ discovered → fetched → evaluated → review → published
 
 输出：Schema、交叉字段、链接、构建和页面行为的校验报告；不得静默修复策展内容。
 
+## 学习进度模型
+
+### MakerProgressRecord
+
+记录一个新手任务在当前设备上的制作状态。它不是打卡分数，而是最小作者记录：
+
+- `completedStepIndexes`：已完成的三段路径索引。
+- `authorName`：作品署名。
+- `makerDecision`：学习者亲自做出的关键决定，不能只描述 AI 做了什么。
+- `reflection`：下一次想继续修改的地方。
+- `workUrl`：可选的 HTTP/HTTPS 作品地址。
+- `startedAt`、`updatedAt`、`completedAt`：制作时间线。
+
+只有三步全部完成、作者署名非空、作者决定不少于 10 个字符时，状态才允许为 `completed`。完成后若撤销步骤或清空必要作者信息，客户端会将记录退回 `in_progress`。
+
+### MakerProgressCollection
+
+当前浏览器中的进度集合，每个任务只允许一份记录，最多 100 份。现阶段保存在 `openvibe:maker-progress:v1`，页面可导出完整 JSON。未来接入账号与数据库时，以这个已版本化 Schema 作为迁移输入，不直接读取任意浏览器对象。
+
 ## 持续更新模型
 
 ### UpdateQueue

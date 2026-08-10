@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { MissionCard } from "@/components/mission-card";
 import { ProjectCard } from "@/components/project-card";
+import { ContinueMaking } from "@/components/continue-making";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
 import { categoryLabels, learningGoalLabels } from "@/lib/labels";
 import { getPublishedProjects } from "@/lib/projects";
@@ -78,6 +79,8 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+
+      <ContinueMaking missions={missions.map(({ slug, title, tagline }) => ({ slug, title, tagline }))} />
 
       <section className="section shell" aria-labelledby="first-missions-title">
         <div className="section-heading">

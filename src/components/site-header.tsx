@@ -4,6 +4,7 @@ const navigation = [
   { href: "/", label: "首页" },
   { href: "/start", label: "新手开始" },
   { href: "/explore", label: "进阶案例" },
+  { href: "/works", label: "我的作品" },
   { href: "/updates", label: "更新" },
   { href: "/methodology", label: "筛选方法" },
 ];

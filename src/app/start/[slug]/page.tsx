@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { PromptCopy } from "@/components/prompt-copy";
+import { MissionProgressPanel } from "@/components/mission-progress-panel";
 import { trackLabels } from "@/components/mission-card";
 import { getBeginnerMissionBySlug, getBeginnerMissions } from "@/lib/beginner-missions";
 
@@ -63,27 +64,12 @@ export default async function MissionPage({ params }: MissionPageProps) {
             <p>{mission.firstChange}</p>
           </section>
 
-          <section className="content-block" aria-labelledby="steps-title">
-            <p className="eyebrow">三段路径</p>
-            <h2 id="steps-title">从第一个变化，到你的版本</h2>
-            <div className="beginner-steps">
-              {mission.steps.map((step, index) => (
-                <article key={step.title}>
-                  <div className="beginner-step-number">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <strong>{step.time}</strong>
-                  </div>
-                  <div>
-                    <h3>{step.title}</h3>
-                    <ol>
-                      {step.actions.map((action) => <li key={action}>{action}</li>)}
-                    </ol>
-                    <p><strong>做完的标志：</strong>{step.doneWhen}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
+          <MissionProgressPanel
+            missionSlug={mission.slug}
+            missionTitle={mission.title}
+            makerDecisionPrompt={mission.makerDecision}
+            steps={mission.steps}
+          />
 
           <section className="content-block" aria-labelledby="prompt-title">
             <p className="eyebrow">AI 协作提示词</p>
