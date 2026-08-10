@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer className="site-footer">
       <div className="shell footer-inner">
         <div>
-          <p className="footer-brand">OpenVibe Atlas</p>
+          <p className="footer-brand">OpenVibe</p>
           <p>Vibe Coding 探索者</p>
           <p>把热度变成可行动的学习路径。</p>
         </div>

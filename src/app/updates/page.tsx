@@ -5,7 +5,7 @@ import { getUpdateHistory, updateChangeLabels } from "@/lib/update-history";
 
 export const metadata: Metadata = {
   title: "更新日志",
-  description: "订阅 OpenVibe Atlas 的新作品任务、项目信息变化与维护风险提示。",
+  description: "订阅 OpenVibe 的新作品任务、项目信息变化与维护风险提示。",
 };
 
 const formatDate = new Intl.DateTimeFormat("zh-CN", {

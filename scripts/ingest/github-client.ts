@@ -63,7 +63,7 @@ export class GitHubClient {
   ): Promise<GitHubJsonResponse<T> | GitHubNotModifiedResponse> {
     const headers = new Headers({
       Accept: options.accept ?? "application/vnd.github+json",
-      "User-Agent": "openvibe-atlas-ingest",
+      "User-Agent": "openvibe-ingest",
       "X-GitHub-Api-Version": GITHUB_API_VERSION,
     });
 
@@ -124,7 +124,7 @@ export class GitHubClient {
     const requestedUrl = validateRawGitHubUrl(url);
     const headers = new Headers({
       Accept: "text/plain",
-      "User-Agent": "openvibe-atlas-ingest",
+      "User-Agent": "openvibe-ingest",
     });
 
     let response: Response;

@@ -7,10 +7,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  applicationName: "OpenVibe Atlas",
+  applicationName: "OpenVibe",
   title: {
-    default: "OpenVibe Atlas · Vibe Coding 探索者",
-    template: "%s · OpenVibe Atlas",
+    default: "OpenVibe · Vibe Coding 探索者",
+    template: "%s · OpenVibe",
   },
   description:
     "从 15 分钟新手任务开始做出作品，再通过已审核的 GitHub 案例学习产品与代码。",
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "zh_CN",
-    siteName: "OpenVibe Atlas",
-    title: "OpenVibe Atlas · 先做出一个东西，再慢慢看懂代码",
+    siteName: "OpenVibe",
+    title: "OpenVibe · 先做出一个东西，再慢慢看懂代码",
     description: "13 个新手作品任务，加上 30 个经过审核的进阶开源案例。",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OpenVibe Atlas · Vibe Coding 探索者",
+    title: "OpenVibe · Vibe Coding 探索者",
     description: "从一个小作品开始，再发现、看懂并改造 GitHub 开源项目。",
   },
 };

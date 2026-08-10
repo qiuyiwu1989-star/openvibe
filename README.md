@@ -1,8 +1,8 @@
-# OpenVibe Atlas：Vibe Coding 探索者
+# OpenVibe：Vibe Coding 探索者
 
 面向 vibe coding 初学者的 GitHub 开源项目学习导航。产品不以 Star 榜单为终点，而是回答：项目是否值得学、适合谁学、应该从哪里开始复刻。
 
-OpenVibe Atlas 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
+OpenVibe 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
 
 当前状态：**阶段 4 已完成：13 个低门槛作品任务、30 个进阶案例、每周更新检查、显式审核门与 RSS 订阅均已落地；尚未部署公网。**
 

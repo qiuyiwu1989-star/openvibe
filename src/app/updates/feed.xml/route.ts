@@ -26,7 +26,7 @@ export function GET() {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     "<channel>",
-    "<title>OpenVibe Atlas 更新</title>",
+    "<title>OpenVibe 更新</title>",
     `<link>${escapeXml(`${siteUrl}/updates`)}</link>`,
     "<description>已审核的新作品任务、项目信息变化与风险提示。</description>",
     `<atom:link href="${escapeXml(`${siteUrl}/updates/feed.xml`)}" rel="self" type="application/rss+xml" />`,

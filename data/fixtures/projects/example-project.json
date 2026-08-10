@@ -12,7 +12,7 @@
     "name": "vibe-starter",
     "fullName": "example-org/vibe-starter",
     "htmlUrl": "https://github.com/example-org/vibe-starter",
-    "description": "Synthetic repository used only to verify the OpenVibe Atlas contract.",
+    "description": "Synthetic repository used only to verify the OpenVibe contract.",
     "homepageUrl": "https://example.com/vibe-starter",
     "defaultBranch": "main",
     "visibility": "public",
@@ -63,7 +63,7 @@
     "locale": "zh-CN",
     "displayName": "Vibe Starter（合成样本）",
     "tagline": "用一条完整但轻量的链路理解现代 Web 应用",
-    "summary": "这是一个只用于验证 OpenVibe Atlas 数据结构的合成项目。它模拟了适合初学者研究的完整 Web 应用，但不能作为真实项目推荐发布。",
+    "summary": "这是一个只用于验证 OpenVibe 数据结构的合成项目。它模拟了适合初学者研究的完整 Web 应用，但不能作为真实项目推荐发布。",
     "recommendationReasons": [
       "目录边界清晰，适合观察页面、数据与部署配置如何配合",
       "功能规模有限，学习者可以在一天内完成一个自己的变体"

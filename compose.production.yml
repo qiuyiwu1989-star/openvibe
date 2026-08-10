@@ -4,7 +4,7 @@ services:
       context: .
       args:
         NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
-    image: openvibe-atlas:latest
+    image: openvibe:latest
     restart: unless-stopped
     environment:
       NODE_ENV: production

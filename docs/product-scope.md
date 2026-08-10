@@ -2,7 +2,7 @@
 
 ## 产品命题
 
-OpenVibe Atlas 是一张帮助 vibe coding 初学者“找到案例、看懂案例、复刻案例”的学习地图，不是另一个 GitHub Trending。
+OpenVibe 是一张帮助 vibe coding 初学者“找到案例、看懂案例、复刻案例”的学习地图，不是另一个 GitHub Trending。
 
 ## 首要用户
 

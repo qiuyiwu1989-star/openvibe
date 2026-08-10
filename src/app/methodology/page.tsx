@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "筛选方法",
-  description: "OpenVibe Atlas 如何为第一次做作品的人设计入口，并选择、评分和审核进阶项目。",
+  description: "OpenVibe 如何为第一次做作品的人设计入口，并选择、评分和审核进阶项目。",
 };
 
 const scoreDimensions = [
