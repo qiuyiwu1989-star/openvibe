@@ -1,0 +1,11 @@
+.git
+.github
+.next
+node_modules
+npm-debug.log*
+.env
+.env.*
+!.env.example
+data/discovery/queue.json
+data/updates/latest
+coverage
