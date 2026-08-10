@@ -2,6 +2,8 @@ import { z } from "zod";
 
 import {
   AUDIENCE_LEVELS,
+  BEGINNER_MISSION_LEVELS,
+  BEGINNER_MISSION_TRACKS,
   DIFFICULTY_LEVELS,
   LEARNING_GOALS,
   PROJECT_CATEGORIES,
@@ -309,6 +311,50 @@ export const RadarProjectBundleSchema = z
     }
   });
 
+const beginnerMissionStepSchema = z
+  .object({
+    time: nonEmptyText,
+    title: z.string().trim().min(1).max(80),
+    actions: z.array(nonEmptyText).min(1).max(5),
+    doneWhen: nonEmptyText,
+  })
+  .strict();
+
+export const BeginnerMissionSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    title: z.string().trim().min(1).max(80),
+    tagline: z.string().trim().min(10).max(140),
+    track: z.enum(BEGINNER_MISSION_TRACKS),
+    level: z.enum(BEGINNER_MISSION_LEVELS),
+    source: z
+      .object({
+        repository: z.string().regex(/^[^/\s]+\/[^/\s]+$/),
+        path: nonEmptyText,
+        url: z.string().url(),
+        license: nonEmptyText,
+      })
+      .strict(),
+    tools: z.array(nonEmptyText).min(1).max(6),
+    runMode: nonEmptyText,
+    time: z
+      .object({
+        firstVisibleMinutes: z.number().int().positive().max(15),
+        completeMinutes: z.number().int().positive().max(120),
+      })
+      .strict(),
+    outcome: z.string().trim().min(10).max(300),
+    makerDecision: z.string().trim().min(10).max(300),
+    firstChange: z.string().trim().min(10).max(300),
+    steps: z.array(beginnerMissionStepSchema).length(3),
+    aiPrompt: z.string().trim().min(30).max(1600),
+    noPaidService: z.literal(true),
+    requiresBackend: z.literal(false),
+    verifiedAt: isoDateTime,
+  })
+  .strict();
+
 export const RepositoryLocatorSchema = z
   .object({
     owner: nonEmptyText,
@@ -370,6 +416,7 @@ export type RepositorySnapshot = z.infer<typeof RepositorySnapshotSchema>;
 export type EditorialProfile = z.infer<typeof EditorialProfileSchema>;
 export type PublicationRecord = z.infer<typeof PublicationRecordSchema>;
 export type RadarProjectBundle = z.infer<typeof RadarProjectBundleSchema>;
+export type BeginnerMission = z.infer<typeof BeginnerMissionSchema>;
 export type RepositoryLocator = z.infer<typeof RepositoryLocatorSchema>;
 export type IngestCommand = z.infer<typeof IngestCommandSchema>;
 export type IngestOutcome = z.infer<typeof IngestOutcomeSchema>;

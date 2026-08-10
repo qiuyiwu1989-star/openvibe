@@ -5,6 +5,7 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 import {
+  BeginnerMissionSchema,
   EditorialProfileSchema,
   RadarProjectBundleSchema,
   RepositorySnapshotSchema,
@@ -128,4 +129,31 @@ test("30 个本地发布 bundle 全部通过审核门并达到内容覆盖目标
   const learningGoals = new Set(projects.flatMap((project) => project.editorial.learningGoals));
   assert.ok(categories.size >= 6, `项目类型覆盖不足：${categories.size}/6`);
   assert.ok(learningGoals.size >= 8, `学习目标覆盖不足：${learningGoals.size}/8`);
+});
+
+test("新手入口至少提供 12 个低门槛作品任务", async () => {
+  const raw = JSON.parse(
+    await readFile(path.join(projectRoot, "data/beginner-missions.json"), "utf8"),
+  ) as unknown[];
+  const missions = raw.map((mission, index) => {
+    const parsed = BeginnerMissionSchema.safeParse(mission);
+    assert.equal(parsed.success, true, `新手任务 #${index + 1} 未通过 Schema`);
+    if (!parsed.success) throw new Error(`新手任务 #${index + 1} 无法继续校验`);
+    return parsed.data;
+  });
+
+  assert.ok(missions.length >= 12, `新手任务不足：${missions.length}/12`);
+  assert.equal(new Set(missions.map((mission) => mission.slug)).size, missions.length);
+  assert.deepEqual(
+    new Set(missions.map((mission) => mission.track)),
+    new Set(["personal-page", "small-tool", "interaction", "mini-game"]),
+  );
+
+  for (const mission of missions) {
+    assert.ok(mission.time.firstVisibleMinutes <= 15, `${mission.slug} 首次变化太慢`);
+    assert.ok(mission.time.completeMinutes <= 120, `${mission.slug} 完成时间过长`);
+    assert.equal(mission.noPaidService, true);
+    assert.equal(mission.requiresBackend, false);
+    assert.equal(mission.source.license, "MIT", `${mission.slug} 许可证超出新手池范围`);
+  }
 });

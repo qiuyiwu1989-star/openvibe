@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
     <article className="project-page">
       <div className="shell project-hero">
         <nav className="breadcrumb" aria-label="面包屑导航">
-          <Link href="/explore">发现项目</Link>
+          <Link href="/explore">进阶项目库</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{snapshot.fullName}</span>
         </nav>

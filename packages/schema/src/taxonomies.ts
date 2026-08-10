@@ -29,6 +29,15 @@ export const AUDIENCE_LEVELS = ["beginner", "starter", "intermediate"] as const;
 
 export const DIFFICULTY_LEVELS = ["easy", "medium", "hard"] as const;
 
+export const BEGINNER_MISSION_TRACKS = [
+  "personal-page",
+  "small-tool",
+  "interaction",
+  "mini-game",
+] as const;
+
+export const BEGINNER_MISSION_LEVELS = ["first-step", "guided"] as const;
+
 export const RISK_KINDS = [
   "setup",
   "documentation",
@@ -57,4 +66,3 @@ export const SCORE_MAX = {
   maintenance: 5,
   novelty: 5,
 } as const;
-

@@ -1,0 +1,379 @@
+[
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "personal-card",
+    "title": "做一张属于你的个人名片",
+    "tagline": "先不学框架，把名字、照片和一句自我介绍变成可以分享的网页。",
+    "track": "personal-page",
+    "level": "first-step",
+    "source": {
+      "repository": "CommunityPro/portfolio-html",
+      "path": ".",
+      "url": "https://github.com/CommunityPro/portfolio-html",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS"],
+    "runMode": "下载仓库后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一张包含你的名字、介绍、作品链接和联系方式的个人网页。",
+    "makerDecision": "你希望别人记住你什么？先写出一句只有你能决定的自我介绍。",
+    "firstChange": "找到页面中的姓名和简介，把模板文字换成你自己的内容并刷新浏览器。",
+    "steps": [
+      { "time": "15 分钟", "title": "让页面出现你的名字", "actions": ["打开 index.html", "替换姓名与介绍", "刷新浏览器确认变化"], "doneWhen": "页面第一屏出现你的名字和一句真实介绍。" },
+      { "time": "45 分钟", "title": "建立自己的视觉选择", "actions": ["选一个主色", "替换头像或代表图片", "删除与你无关的区块"], "doneWhen": "页面不再像模板，而像是你自己的名片。" },
+      { "time": "2 小时", "title": "把作品交给一个真实的人", "actions": ["补充一个作品链接", "检查手机宽度", "把页面展示给朋友并记录反馈"], "doneWhen": "有人能通过页面说出你是谁、在做什么。" }
+    ],
+    "aiPrompt": "我正在修改一个纯 HTML/CSS 的个人作品集模板。请先告诉我姓名、简介、头像和项目卡分别可能在哪些文件中，不要一次重写整个页面。等我选择想保留的内容后，再逐步给出最小修改，并解释每次修改会在页面哪里发生。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "one-page-story",
+    "title": "给一个想法做单页介绍",
+    "tagline": "用一页网页讲清楚一个社团、活动、小店或你真正想做的项目。",
+    "track": "personal-page",
+    "level": "first-step",
+    "source": {
+      "repository": "ShaifArfan/one-page-website-html-css-project",
+      "path": ".",
+      "url": "https://github.com/ShaifArfan/one-page-website-html-css-project",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS"],
+    "runMode": "下载仓库后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 100 },
+    "outcome": "一个有标题、价值说明、行动按钮和联系方式的单页网站。",
+    "makerDecision": "这张页面要为谁解决什么问题？先确定读者和你希望他采取的一个行动。",
+    "firstChange": "把首屏标题改成你的项目名称，再把按钮文字改成一个明确动作。",
+    "steps": [
+      { "time": "15 分钟", "title": "换掉模板的主张", "actions": ["写一个项目名称", "写一句解决的问题", "修改主按钮文字"], "doneWhen": "陌生人看首屏就知道这是做什么的。" },
+      { "time": "45 分钟", "title": "删到只剩必要内容", "actions": ["保留三个核心区块", "替换图片和配色", "删除所有占位文字"], "doneWhen": "页面每一段都与同一个项目有关。" },
+      { "time": "2 小时", "title": "验证表达是否有效", "actions": ["邀请一人浏览", "请他复述项目用途", "根据误解修改标题或顺序"], "doneWhen": "对方能准确复述用途并找到行动按钮。" }
+    ],
+    "aiPrompt": "我想把这个单页模板改成自己的项目介绍页。请先问我三个问题：服务谁、解决什么问题、希望访客做什么。根据我的回答，只修改现有 HTML 文案与 CSS 变量，保留原来的响应式结构；每次先说明修改位置，再给出代码。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "progress-steps",
+    "title": "做一个会前进的步骤条",
+    "tagline": "点击上一页和下一页，让页面把进度变化清楚地表现出来。",
+    "track": "interaction",
+    "level": "first-step",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "progress-steps",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/progress-steps",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 progress-steps 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 75 },
+    "outcome": "一个可以表达报名、制作或学习进度的交互步骤条。",
+    "makerDecision": "这四步代表你生活中的哪段真实过程？步骤名称和完成条件由你决定。",
+    "firstChange": "把四个数字改成四个真实步骤名称，点击按钮确认仍能前进和后退。",
+    "steps": [
+      { "time": "15 分钟", "title": "让按钮真的推动进度", "actions": ["打开示例", "点击前进与后退", "替换步骤文字"], "doneWhen": "你的四个步骤能依次高亮。" },
+      { "time": "45 分钟", "title": "加入状态反馈", "actions": ["修改完成颜色", "在最后一步显示完成提示", "限制首尾按钮状态"], "doneWhen": "用户不会走出范围，并知道何时完成。" },
+      { "time": "2 小时", "title": "把它用于真实流程", "actions": ["选择一个报名或制作流程", "为每步补一句说明", "请朋友试走一遍"], "doneWhen": "对方不需要解释就能完成整个流程。" }
+    ],
+    "aiPrompt": "请陪我理解这个步骤条的 JavaScript。不要直接重写。先用生活语言解释 currentActive、按钮点击和 CSS active 类之间的关系，再帮我把四步替换成自己的流程，并一次只增加一个小功能。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "idea-notes",
+    "title": "做一个不会消失的灵感便签",
+    "tagline": "写下、编辑和保存便签，第一次理解网页如何记住你的内容。",
+    "track": "small-tool",
+    "level": "guided",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "notes-app",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/notes-app",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript", "localStorage"],
+    "runMode": "下载 notes-app 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个能新增、编辑、删除并在刷新后保留内容的个人便签工具。",
+    "makerDecision": "你要记录灵感、阅读摘录还是每日问题？决定工具只服务哪一种内容。",
+    "firstChange": "修改页面标题和新增按钮，让它明确服务于你选择的记录场景。",
+    "steps": [
+      { "time": "15 分钟", "title": "创建第一张便签", "actions": ["打开页面", "新增一张便签", "刷新确认内容仍存在"], "doneWhen": "刷新页面后，你的第一条内容还在。" },
+      { "time": "45 分钟", "title": "把通用工具改成专用工具", "actions": ["修改标题和空状态", "调整便签颜色", "加入一条真实内容"], "doneWhen": "别人能看出这个工具专门记录什么。" },
+      { "time": "2 小时", "title": "增加一个你需要的规则", "actions": ["选择字数提示或创建时间", "让 AI 帮你定位数据结构", "完成并测试刷新"], "doneWhen": "新增信息也能正确保存和恢复。" }
+    ],
+    "aiPrompt": "我想把 notes-app 改成自己的灵感记录器。先解释 localStorage 保存和读取便签的流程，并指出最适合增加“创建时间”字段的位置。请保留原功能，每次只给一个小改动和一个验证步骤。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "daily-todo",
+    "title": "做一张今天真的会用的清单",
+    "tagline": "从添加和完成任务开始，把通用待办变成只服务今天的小工具。",
+    "track": "small-tool",
+    "level": "first-step",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "todo-list",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/todo-list",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript", "localStorage"],
+    "runMode": "下载 todo-list 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一个能新增、完成、删除并保留任务的今日清单。",
+    "makerDecision": "什么事情才值得进入你的“今天”？先写下自己的收录规则。",
+    "firstChange": "把页面标题、提示语和颜色改成你的今日清单，并添加三个真实任务。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成第一项真实任务", "actions": ["添加三项任务", "标记一项完成", "刷新检查保存"], "doneWhen": "清单记录了你今天真实要做的事。" },
+      { "time": "45 分钟", "title": "让状态一眼可见", "actions": ["修改完成样式", "补充空状态提示", "调整手机上的间距"], "doneWhen": "未完成和已完成任务不会混淆。" },
+      { "time": "2 小时", "title": "加入自己的限制", "actions": ["限制最多三件重要任务", "超出时给出提示", "邀请一人试用"], "doneWhen": "工具能守住你设定的三件事规则。" }
+    ],
+    "aiPrompt": "我想把这个 todo-list 改成“今天只做三件事”。请先帮我找到新增任务的事件处理和任务数组，不要改变存储方式；然后逐步加入最多三项的限制、友好提示和测试方法。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "random-picker",
+    "title": "做一个替你抽签的小工具",
+    "tagline": "输入几个选项，让网页随机挑出今晚吃什么、谁先开始或下一个挑战。",
+    "track": "small-tool",
+    "level": "first-step",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "random-choice-picker",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/random-choice-picker",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 random-choice-picker 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 75 },
+    "outcome": "一个可以输入多个选项、播放抽签过程并随机给出结果的工具。",
+    "makerDecision": "这个抽签器为哪一个真实场景服务？决定选项格式、语气和结果呈现。",
+    "firstChange": "把标题和输入提示改成一个真实场景，例如午餐选择或课堂点名。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成第一次抽签", "actions": ["输入三个真实选项", "触发随机选择", "修改页面标题"], "doneWhen": "工具能从你的真实选项中选出一个。" },
+      { "time": "45 分钟", "title": "让过程更有仪式感", "actions": ["修改高亮颜色", "调整滚动速度", "加入结果提示语"], "doneWhen": "抽签过程和最终结果清楚可辨。" },
+      { "time": "2 小时", "title": "增加一个公平规则", "actions": ["决定是否允许重复", "实现清空或重新开始", "连续测试十次"], "doneWhen": "工具符合你自己定义的公平规则。" }
+    ],
+    "aiPrompt": "请先用通俗语言解释 random-choice-picker 如何把输入文字切成选项、如何高亮、如何选出最终结果。然后帮我把它改成一个具体场景的抽签器；我来决定规则，你只负责逐步实现并给测试方法。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "password-generator",
+    "title": "做一个密码生成器",
+    "tagline": "用复选框组合规则，生成长度和字符类型都可控制的随机密码。",
+    "track": "small-tool",
+    "level": "guided",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "password-generator",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/password-generator",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 password-generator 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个能组合长度、大小写、数字和符号规则的本地密码生成工具。",
+    "makerDecision": "哪些安全规则是必须的，哪些应该由使用者选择？你要为默认值负责。",
+    "firstChange": "修改默认长度与页面说明，生成第一条符合你规则的密码。",
+    "steps": [
+      { "time": "15 分钟", "title": "看见规则如何改变结果", "actions": ["切换字符选项", "调整密码长度", "连续生成并比较"], "doneWhen": "你能解释每个选项如何影响输出。" },
+      { "time": "45 分钟", "title": "建立更安全的默认值", "actions": ["设定最小长度", "至少保留两类字符", "无选项时给提示"], "doneWhen": "页面不会生成明显不安全或空的密码。" },
+      { "time": "2 小时", "title": "让工具更容易使用", "actions": ["加入复制反馈", "补充安全说明", "用键盘完成一次操作"], "doneWhen": "生成、复制和反馈形成完整流程。" }
+    ],
+    "aiPrompt": "我正在学习密码生成器中的随机字符逻辑。请先解释每个字符函数和 generatePassword 的职责，指出可能产生空结果的条件。然后陪我逐步加入最小长度、必选规则和复制成功反馈，不要一次贴出完整重写版本。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "theme-clock",
+    "title": "做一个有昼夜主题的时钟",
+    "tagline": "读取当前时间、旋转指针，再亲手决定白天和夜晚的视觉语言。",
+    "track": "interaction",
+    "level": "guided",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "theme-clock",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/theme-clock",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript", "Date API"],
+    "runMode": "下载 theme-clock 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 105 },
+    "outcome": "一个实时走动、显示日期并能切换明暗主题的个人时钟。",
+    "makerDecision": "什么颜色和文字代表你的白天与夜晚？主题不是装饰，而是你的表达。",
+    "firstChange": "修改明暗主题的主色和按钮文字，观察时钟保持正常走动。",
+    "steps": [
+      { "time": "15 分钟", "title": "读懂时间如何变成角度", "actions": ["观察秒针变化", "找到 Date 读取逻辑", "修改主题颜色"], "doneWhen": "你能说清秒数如何对应旋转角度。" },
+      { "time": "45 分钟", "title": "设计自己的昼夜主题", "actions": ["选择两组颜色", "修改切换按钮", "检查文字对比度"], "doneWhen": "两种主题都清晰并具有不同气质。" },
+      { "time": "2 小时", "title": "加入一句随时间变化的话", "actions": ["定义早中晚时段", "显示不同问候", "测试三个时间输入"], "doneWhen": "页面会根据时间给出正确问候。" }
+    ],
+    "aiPrompt": "请把 theme-clock 中 Date、map 和 transform 的关系解释成“时间刻度转成角度”。先不要改代码。等我选好白天与夜晚配色后，再帮我加入早中晚问候，并给我三个可验证的测试时间。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "focus-timer",
+    "title": "做一个陪你专注的计时器",
+    "tagline": "从一分钟倒计时开始，做出适合你节奏的学习或休息提醒。",
+    "track": "small-tool",
+    "level": "guided",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "simple-timer",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/simple-timer",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript", "Timer API"],
+    "runMode": "下载 simple-timer 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个可以开始、暂停、重置并在结束时给出反馈的专注计时器。",
+    "makerDecision": "你真正能坚持多久？自己决定专注时长、休息时长和结束提示。",
+    "firstChange": "把默认时长改成一分钟，启动并确认倒计时能够结束。",
+    "steps": [
+      { "time": "15 分钟", "title": "跑完第一个一分钟", "actions": ["设为一分钟", "启动倒计时", "观察结束状态"], "doneWhen": "计时器准确归零并停止。" },
+      { "time": "45 分钟", "title": "补齐开始暂停重置", "actions": ["检查三个按钮", "避免重复启动", "显示当前状态"], "doneWhen": "反复操作不会让时间跳动异常。" },
+      { "time": "2 小时", "title": "做成你的专注仪式", "actions": ["设定专注和休息时长", "写结束提示", "真实使用一个周期"], "doneWhen": "你完成一次真实任务并记录体验。" }
+    ],
+    "aiPrompt": "我想把 simple-timer 改成个人专注计时器。请先画出开始、暂停、重置三个状态之间的关系，并解释 setInterval 为什么可能重复。然后一次实现一个状态保护，我会亲自决定时长和结束提示。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "memory-game",
+    "title": "做一副自己的记忆翻牌",
+    "tagline": "把图片换成你熟悉的人、地点或作品，做一个能配对计分的小游戏。",
+    "track": "mini-game",
+    "level": "guided",
+    "source": {
+      "repository": "he-is-talha/html-css-javascript-games",
+      "path": "22-Memory-Card-Game",
+      "url": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/22-Memory-Card-Game",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 22-Memory-Card-Game 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一副使用你选择的主题图片、能够翻牌配对并统计结果的记忆游戏。",
+    "makerDecision": "这副牌要保存什么记忆？图片主题和配对意义必须来自你的真实经历。",
+    "firstChange": "替换第一组配对图片，打开页面确认两张卡片能正确匹配。",
+    "steps": [
+      { "time": "15 分钟", "title": "换上第一组自己的图片", "actions": ["准备两张相同图片", "替换资源路径", "完成一次配对"], "doneWhen": "游戏中出现并能匹配你的图片。" },
+      { "time": "45 分钟", "title": "完成一整套主题", "actions": ["替换全部卡片", "修改标题与背景", "检查随机排列"], "doneWhen": "所有卡片属于同一个明确主题。" },
+      { "time": "2 小时", "title": "增加作品的反馈", "actions": ["统计尝试次数", "完成后显示一句话", "邀请朋友玩一局"], "doneWhen": "朋友能玩完并说出这副牌的主题。" }
+    ],
+    "aiPrompt": "我要把记忆翻牌游戏改成记录自己经历的作品。请先帮我找到卡片数据、翻牌状态和匹配判断的位置。不要替我选择图片主题；等我给出主题后，再逐步替换资源并增加尝试次数统计。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "rock-paper-scissors",
+    "title": "做一个有性格的猜拳游戏",
+    "tagline": "保留剪刀石头布的规则，为对手写性格、反馈语和胜负记录。",
+    "track": "mini-game",
+    "level": "first-step",
+    "source": {
+      "repository": "he-is-talha/html-css-javascript-games",
+      "path": "08-Rock-Paper-Scissors",
+      "url": "https://github.com/he-is-talha/html-css-javascript-games/tree/main/08-Rock-Paper-Scissors",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 08-Rock-Paper-Scissors 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一个可以与电脑猜拳、显示胜负、记录比分并拥有独特语气的小游戏。",
+    "makerDecision": "电脑对手是什么性格？它赢、输、平局时分别会怎么说？",
+    "firstChange": "把页面标题和一条胜利提示改成你设定的对手语气。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成第一局", "actions": ["选择一个手势", "观察电脑选择", "修改一条反馈语"], "doneWhen": "胜负判断正确，并出现你的文字。" },
+      { "time": "45 分钟", "title": "让对手有性格", "actions": ["写三种状态文案", "修改颜色和头像", "连续玩五局"], "doneWhen": "不同结果有一致且可辨认的语气。" },
+      { "time": "2 小时", "title": "做成可以挑战的游戏", "actions": ["加入比分", "设定三局两胜", "显示最终赢家"], "doneWhen": "一轮比赛有开始、过程和明确结束。" }
+    ],
+    "aiPrompt": "请先解释这个猜拳游戏如何生成电脑选择、比较胜负和更新页面。我要亲自设计对手的性格与文案；你只帮我把文案放到正确状态，并逐步增加比分和三局两胜规则。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "mini-quiz",
+    "title": "给朋友做一份三题小测验",
+    "tagline": "把示例题换成你真正了解的主题，让朋友答题并看到结果。",
+    "track": "mini-game",
+    "level": "first-step",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "quiz-app",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/quiz-app",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript"],
+    "runMode": "下载 quiz-app 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一份围绕你选择主题、可以答题计分并展示结果的三题测验。",
+    "makerDecision": "你想检验的是记忆、理解还是观点？题目和正确答案由你负责。",
+    "firstChange": "把第一道示例题和答案换成你自己知道的一道题。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成你的第一道题", "actions": ["替换题目", "设置四个选项", "确认正确答案得分"], "doneWhen": "第一题能够正常选择和计分。" },
+      { "time": "45 分钟", "title": "形成三题完整主题", "actions": ["写完三道题", "统一语言风格", "测试所有正确答案"], "doneWhen": "测试从第一题顺利走到结果页。" },
+      { "time": "2 小时", "title": "把分数变成反馈", "actions": ["按分数写三档反馈", "加入重新挑战", "请朋友完成一次"], "doneWhen": "朋友能完成、理解结果并愿意再试一次。" }
+    ],
+    "aiPrompt": "我想把 quiz-app 改成围绕自己主题的三题测验。先帮我解释题目数据、当前题号和计分变量的关系。我会自己写题目和答案，你负责检查数据格式，并一步步增加分数反馈和重新挑战。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.0.0",
+    "slug": "drag-and-drop-board",
+    "title": "做一块可以拖动的故事板",
+    "tagline": "把图片或任务卡拖到不同位置，理解一次完整的按下、移动和放开。",
+    "track": "interaction",
+    "level": "guided",
+    "source": {
+      "repository": "bradtraversy/50projects50days",
+      "path": "drag-n-drop",
+      "url": "https://github.com/bradtraversy/50projects50days/tree/master/drag-n-drop",
+      "license": "MIT"
+    },
+    "tools": ["HTML", "CSS", "JavaScript", "Drag and Drop API"],
+    "runMode": "下载 drag-n-drop 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一块可以把卡片拖到不同分区，并用视觉状态提示落点的故事板。",
+    "makerDecision": "卡片为什么要移动？你要用它安排故事顺序、任务状态还是空间位置？",
+    "firstChange": "替换示例图片或卡片文字，拖到另一个容器并确认状态变化。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成第一次拖放", "actions": ["替换一张卡片", "拖到另一列", "观察拖动状态"], "doneWhen": "自己的内容可以被拖动并正确落下。" },
+      { "time": "45 分钟", "title": "让落点变得清楚", "actions": ["修改悬停样式", "增加分区标题", "处理拖出区域"], "doneWhen": "用户始终知道卡片将放到哪里。" },
+      { "time": "2 小时", "title": "服务一个真实编排任务", "actions": ["定义三个分区", "加入五张真实卡片", "请朋友重新排列"], "doneWhen": "朋友能用它完成一次排序并解释选择。" }
+    ],
+    "aiPrompt": "请先用“拿起—经过—放下”解释 dragstart、dragover、drop 等事件，并指出 CSS 状态类什么时候变化。我会决定故事板的三个分区与卡片内容，你只帮我逐步替换结构并检查拖放边界。",
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-11T00:00:00+09:00"
+  }
+]

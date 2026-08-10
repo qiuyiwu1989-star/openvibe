@@ -10,7 +10,8 @@ export function SiteFooter() {
           <p>把热度变成可行动的学习路径。</p>
         </div>
         <div className="footer-links">
-          <Link href="/explore">浏览项目</Link>
+          <Link href="/start">做第一个作品</Link>
+          <Link href="/explore">浏览进阶项目</Link>
           <Link href="/methodology">了解评分</Link>
         </div>
         <p className="footer-note">数据与编辑判断分层记录 · 发布前人工审核</p>

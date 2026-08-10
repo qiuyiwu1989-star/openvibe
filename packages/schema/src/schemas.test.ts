@@ -4,7 +4,7 @@ import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { RadarProjectBundleSchema } from "./schemas.js";
+import { BeginnerMissionSchema, RadarProjectBundleSchema } from "./schemas.js";
 
 const currentDirectory = path.dirname(fileURLToPath(import.meta.url));
 const fixturePath = path.resolve(
@@ -12,6 +12,13 @@ const fixturePath = path.resolve(
   "../../../data/fixtures/projects/example-project.json",
 );
 const validFixture = JSON.parse(await readFile(fixturePath, "utf8")) as Record<string, unknown>;
+const beginnerMissionsPath = path.resolve(
+  currentDirectory,
+  "../../../data/beginner-missions.json",
+);
+const beginnerMissions = JSON.parse(await readFile(beginnerMissionsPath, "utf8")) as Array<
+  Record<string, unknown>
+>;
 
 function cloneFixture(): Record<string, any> {
   return structuredClone(validFixture);
@@ -59,4 +66,33 @@ test("拒绝没有事实来源的编辑内容", () => {
   fixture.editorial.sources = [];
 
   assert.equal(RadarProjectBundleSchema.safeParse(fixture).success, false);
+});
+
+test("接受全部新手作品任务", () => {
+  assert.ok(beginnerMissions.length >= 12);
+  for (const mission of beginnerMissions) {
+    assert.equal(
+      BeginnerMissionSchema.safeParse(mission).success,
+      true,
+      `${String(mission.slug)} 未通过 BeginnerMissionSchema`,
+    );
+  }
+});
+
+test("拒绝不能快速看到变化的新手任务", () => {
+  const source = beginnerMissions[0];
+  assert.ok(source);
+  const mission = structuredClone(source);
+  mission.time = { firstVisibleMinutes: 20, completeMinutes: 90 };
+
+  assert.equal(BeginnerMissionSchema.safeParse(mission).success, false);
+});
+
+test("拒绝需要付费服务的新手任务", () => {
+  const source = beginnerMissions[0];
+  assert.ok(source);
+  const mission = structuredClone(source);
+  mission.noPaidService = false;
+
+  assert.equal(BeginnerMissionSchema.safeParse(mission).success, false);
 });

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "筛选方法",
-  description: "OpenVibe Atlas 如何选择、评分和审核适合 vibe coding 初学者的项目。",
+  description: "OpenVibe Atlas 如何为第一次做作品的人设计入口，并选择、评分和审核进阶项目。",
 };
 
 const scoreDimensions = [
@@ -21,9 +21,9 @@ export default function MethodologyPage() {
     <div className="method-page">
       <section className="method-hero shell">
         <p className="eyebrow">METHODOLOGY / 筛选方法</p>
-        <h1>我们不问“它有多火”，先问“你能从它学会什么”。</h1>
+        <h1>先让人成为作者，再让他看懂更大的系统。</h1>
         <p>
-          Star 是热度信号，不是课程大纲。OpenVibe Atlas 把仓库事实、编辑判断和发布状态分开，让每个推荐都能被检查。
+          新手层用小作品建立“我能做”的经验；进阶层才用经过核对的开源项目学产品架构。AI 可以协助实现，但意图、判断和署名不能外包。
         </p>
       </section>
 
@@ -31,13 +31,13 @@ export default function MethodologyPage() {
         <div className="shell principle-grid">
           <article>
             <span>01</span>
-            <h2>事实不写成观点</h2>
-            <p>语言、许可证、更新时间等事实来自 GitHub 快照，并标注抓取时间。</p>
+            <h2>先作品，后系统</h2>
+            <p>第一层任务要在 15 分钟内看到变化，2 小时内完成，不需要后端或付费服务。</p>
           </article>
           <article>
             <span>02</span>
-            <h2>判断必须说理由</h2>
-            <p>难度、学习价值和推荐理由属于编辑判断，每项都要留下依据。</p>
+            <h2>事实不写成观点</h2>
+            <p>语言、许可证、更新时间等事实来自 GitHub 快照；难度与学习价值则必须留下编辑理由。</p>
           </article>
           <article>
             <span>03</span>
@@ -104,9 +104,9 @@ export default function MethodologyPage() {
       </section>
 
       <section className="method-cta shell">
-        <p>方法不是为了证明我们会打分，而是为了让你更快动手。</p>
-        <Link className="button button-primary" href="/explore">
-          去找一个案例 <span aria-hidden="true">↗</span>
+        <p>方法不是为了证明我们会打分，而是让你更快获得第一次作者经验。</p>
+        <Link className="button button-primary" href="/start">
+          去做第一个作品 <span aria-hidden="true">↗</span>
         </Link>
       </section>
     </div>

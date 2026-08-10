@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const navigation = [
   { href: "/", label: "首页" },
-  { href: "/explore", label: "发现项目" },
+  { href: "/start", label: "新手开始" },
+  { href: "/explore", label: "进阶案例" },
   { href: "/methodology", label: "筛选方法" },
 ];
 

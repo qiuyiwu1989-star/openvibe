@@ -13,25 +13,25 @@ export const metadata: Metadata = {
     template: "%s · OpenVibe Atlas",
   },
   description:
-    "发现值得拆解和复刻的 GitHub 项目，看懂它适合谁、能学什么、如何开始。",
+    "从 15 分钟新手任务开始做出作品，再通过已审核的 GitHub 案例学习产品与代码。",
   keywords: ["vibe coding", "开源项目", "GitHub", "编程学习", "AI 编程"],
   openGraph: {
     type: "website",
     locale: "zh_CN",
     siteName: "OpenVibe Atlas",
-    title: "OpenVibe Atlas · 别只看 Star，找一个真能学会的项目",
-    description: "30 个经过审核的开源案例，配有中文学习卡和三段复刻路径。",
+    title: "OpenVibe Atlas · 先做出一个东西，再慢慢看懂代码",
+    description: "13 个新手作品任务，加上 30 个经过审核的进阶开源案例。",
   },
   twitter: {
     card: "summary_large_image",
     title: "OpenVibe Atlas · Vibe Coding 探索者",
-    description: "从学习价值出发，发现、看懂并复刻 GitHub 开源项目。",
+    description: "从一个小作品开始，再发现、看懂并改造 GitHub 开源项目。",
   },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" data-scroll-behavior="smooth">
       <body>
         <a className="skip-link" href="#main-content">
           跳到主内容

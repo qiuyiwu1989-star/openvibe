@@ -4,7 +4,7 @@ import { ExplorePanel } from "@/components/explore-panel";
 import { getPublishedProjects } from "@/lib/projects";
 
 export const metadata: Metadata = {
-  title: "发现项目",
+  title: "进阶项目库",
   description: "按难度、项目类型、学习目标和技术栈筛选值得复刻的开源案例。",
 };
 
@@ -23,10 +23,10 @@ export default async function ExplorePage({ searchParams }: ExplorePageProps) {
   return (
     <div className="shell page-shell">
       <header className="page-heading explore-heading">
-        <p className="eyebrow">EXPLORE / 发现</p>
-        <h1>找一个今天就能动手的案例</h1>
+        <p className="eyebrow">EXPLORE / 进阶项目库</p>
+        <h1>已经做过一个？现在来拆成熟项目。</h1>
         <p>
-          这里不追求仓库越多越好。每一个项目都要能回答：你会学到什么，以及第一步怎么走。
+          30 个经过事实核对和编辑审核的开源案例。如果你还没做过第一个作品，建议先去“新手开始”。
         </p>
       </header>
       <ExplorePanel
