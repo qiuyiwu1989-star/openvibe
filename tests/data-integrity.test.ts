@@ -9,6 +9,7 @@ import {
   EditorialProfileSchema,
   RadarProjectBundleSchema,
   RepositorySnapshotSchema,
+  UpdateHistorySchema,
   type EditorialProfile,
   type RepositorySnapshot,
 } from "../packages/schema/src/index.js";
@@ -156,4 +157,14 @@ test("新手入口至少提供 12 个低门槛作品任务", async () => {
     assert.equal(mission.requiresBackend, false);
     assert.equal(mission.source.license, "MIT", `${mission.slug} 许可证超出新手池范围`);
   }
+});
+
+test("公开更新历史只包含已审核事件", async () => {
+  const history = UpdateHistorySchema.parse(
+    JSON.parse(
+      await readFile(path.join(projectRoot, "data/updates/history.json"), "utf8"),
+    ) as unknown,
+  );
+  assert.ok(history.entries.length >= 1);
+  assert.equal(new Set(history.entries.map((entry) => entry.id)).size, history.entries.length);
 });

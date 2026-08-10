@@ -8,3 +8,4 @@ coverage/
 !.env.example
 .DS_Store
 data/discovery/queue.json
+data/updates/latest/

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.0.0",
+  "entries": [
+    {
+      "id": "beginner-maker-missions-launch",
+      "kind": "catalog_release",
+      "publishedAt": "2026-08-11T02:00:00+09:00",
+      "title": "OpenVibe Atlas 新手作品入口上线",
+      "summary": "新增 13 个低门槛作品任务，覆盖个人网页、小工具、交互练习和小游戏；原有 30 个成熟开源项目保留为进阶案例库。",
+      "repositoryId": null,
+      "projectSlug": null,
+      "changeKinds": []
+    }
+  ]
+}

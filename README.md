@@ -4,7 +4,7 @@
 
 OpenVibe Atlas 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
 
-当前状态：**阶段 3 已完成：13 个低门槛作品任务构成新手入口，30 个经过事实、策展与审核门的项目保留为进阶库；尚未部署公网。**
+当前状态：**阶段 4 已完成：13 个低门槛作品任务、30 个进阶案例、每周更新检查、显式审核门与 RSS 订阅均已落地；尚未部署公网。**
 
 ## 阶段 0 产物
 
@@ -58,11 +58,25 @@ npm run catalog:approve -- --reviewer <审核者> --reviewed-at <ISO 时间>
 
 自动发现不会提交文件，也无法生成 `published` 状态；定时 GitHub Actions 只上传候选队列 artifact。
 
+## 持续更新
+
+```bash
+# 扫描 30 个已发布仓库，只生成待审队列
+GITHUB_TOKEN=... npm run updates:scan
+
+# 审核单个更新；高风险变更需额外显式授权
+npm run updates:review -- --repository-id <id> --decision approve \
+  --reviewer <审核者> --reviewed-at <ISO 时间> --notes "<核对结论>"
+```
+
+更新日志位于 `/updates`，RSS 2.0 订阅源位于 `/updates/feed.xml`。完整操作和风险分类见 [持续更新运维手册](docs/update-operations.md)。
+
 ## 阶段报告
 
 - [阶段 1 实施报告](docs/stage-1-report.md)
 - [MVP 完成报告](docs/mvp-report.md)
 - [阶段 3：新手作品入口](docs/stage-3-report.md)
+- [阶段 4：持续更新闭环](docs/stage-4-report.md)
 
 ## 许可证
 

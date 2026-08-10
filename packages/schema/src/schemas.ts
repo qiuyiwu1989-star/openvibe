@@ -11,6 +11,8 @@ import {
   RISK_KINDS,
   SCHEMA_VERSION,
   SCORE_MAX,
+  UPDATE_CHANGE_KINDS,
+  UPDATE_RISK_LEVELS,
 } from "./taxonomies";
 
 const isoDateTime = z.string().datetime({ offset: true });
@@ -355,6 +357,143 @@ export const BeginnerMissionSchema = z
   })
   .strict();
 
+const updateFailureSchema = z
+  .object({
+    repositoryId,
+    fullName: z.string().regex(/^[^/\s]+\/[^/\s]+$/),
+    code: nonEmptyText,
+    message: nonEmptyText,
+    retryable: z.boolean(),
+  })
+  .strict();
+
+export const UpdateQueueEntrySchema = z
+  .object({
+    repositoryId,
+    fullName: z.string().regex(/^[^/\s]+\/[^/\s]+$/),
+    previousFullName: z.string().regex(/^[^/\s]+\/[^/\s]+$/),
+    snapshotFile: z.string().regex(/^[a-z0-9_.-]+\.json$/),
+    candidatePath: z.string().regex(/^candidates\/[a-z0-9_.-]+\.json$/).nullable(),
+    detectedAt: isoDateTime,
+    risk: z.enum(UPDATE_RISK_LEVELS),
+    changeKinds: z.array(z.enum(UPDATE_CHANGE_KINDS)).min(1),
+    reviewState: z.literal("review"),
+  })
+  .strict()
+  .superRefine((entry, context) => {
+    if (new Set(entry.changeKinds).size !== entry.changeKinds.length) {
+      context.addIssue({ code: "custom", path: ["changeKinds"], message: "changeKinds 不能重复" });
+    }
+    if (
+      entry.candidatePath === null &&
+      entry.changeKinds.some((kind) => kind !== "maintenance_risk")
+    ) {
+      context.addIssue({
+        code: "custom",
+        path: ["candidatePath"],
+        message: "快照变更必须包含候选快照路径",
+      });
+    }
+  });
+
+export const UpdateQueueSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    generatedAt: isoDateTime,
+    staleAfterDays: z.number().int().positive(),
+    summary: z
+      .object({
+        checked: z.number().int().nonnegative(),
+        unchanged: z.number().int().nonnegative(),
+        review: z.number().int().nonnegative(),
+        failed: z.number().int().nonnegative(),
+      })
+      .strict(),
+    entries: z.array(UpdateQueueEntrySchema),
+    failures: z.array(updateFailureSchema),
+  })
+  .strict()
+  .superRefine((queue, context) => {
+    if (
+      queue.summary.review !== queue.entries.length ||
+      queue.summary.failed !== queue.failures.length ||
+      queue.summary.checked !==
+        queue.summary.unchanged + queue.summary.review + queue.summary.failed
+    ) {
+      context.addIssue({ code: "custom", path: ["summary"], message: "更新队列摘要与条目不一致" });
+    }
+
+    const ids = queue.entries.map((entry) => entry.repositoryId);
+    if (new Set(ids).size !== ids.length) {
+      context.addIssue({ code: "custom", path: ["entries"], message: "更新队列不能重复仓库" });
+    }
+  });
+
+export const UpdateDecisionSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    repositoryId,
+    fullName: z.string().regex(/^[^/\s]+\/[^/\s]+$/),
+    queueGeneratedAt: isoDateTime,
+    decision: z.enum(["approved", "rejected"]),
+    reviewer: z
+      .object({
+        kind: z.enum(["human", "agent"]),
+        id: nonEmptyText,
+      })
+      .strict(),
+    decidedAt: isoDateTime,
+    notes: z.string().trim().min(1).max(2000),
+    applied: z.boolean(),
+    changeKinds: z.array(z.enum(UPDATE_CHANGE_KINDS)).min(1),
+  })
+  .strict()
+  .superRefine((decision, context) => {
+    if (decision.decision === "rejected" && decision.applied) {
+      context.addIssue({ code: "custom", path: ["applied"], message: "拒绝决定不能标记为已应用" });
+    }
+  });
+
+export const UpdateHistoryEntrySchema = z
+  .object({
+    id: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    kind: z.enum(["catalog_release", "repository_update"]),
+    publishedAt: isoDateTime,
+    title: z.string().trim().min(1).max(120),
+    summary: z.string().trim().min(10).max(600),
+    repositoryId: repositoryId.nullable(),
+    projectSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/).nullable(),
+    changeKinds: z.array(z.enum(UPDATE_CHANGE_KINDS)),
+  })
+  .strict()
+  .superRefine((entry, context) => {
+    if (
+      entry.kind === "repository_update" &&
+      (!entry.repositoryId || !entry.projectSlug || entry.changeKinds.length === 0)
+    ) {
+      context.addIssue({ code: "custom", message: "仓库更新必须关联项目和变更类型" });
+    }
+    if (
+      entry.kind === "catalog_release" &&
+      (entry.repositoryId !== null || entry.projectSlug !== null || entry.changeKinds.length > 0)
+    ) {
+      context.addIssue({ code: "custom", message: "目录版本事件不应关联单一仓库" });
+    }
+  });
+
+export const UpdateHistorySchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    entries: z.array(UpdateHistoryEntrySchema).max(500),
+  })
+  .strict()
+  .superRefine((history, context) => {
+    const ids = history.entries.map((entry) => entry.id);
+    if (new Set(ids).size !== ids.length) {
+      context.addIssue({ code: "custom", path: ["entries"], message: "公开更新历史 ID 不能重复" });
+    }
+  });
+
 export const RepositoryLocatorSchema = z
   .object({
     owner: nonEmptyText,
@@ -417,6 +556,11 @@ export type EditorialProfile = z.infer<typeof EditorialProfileSchema>;
 export type PublicationRecord = z.infer<typeof PublicationRecordSchema>;
 export type RadarProjectBundle = z.infer<typeof RadarProjectBundleSchema>;
 export type BeginnerMission = z.infer<typeof BeginnerMissionSchema>;
+export type UpdateQueueEntry = z.infer<typeof UpdateQueueEntrySchema>;
+export type UpdateQueue = z.infer<typeof UpdateQueueSchema>;
+export type UpdateDecision = z.infer<typeof UpdateDecisionSchema>;
+export type UpdateHistoryEntry = z.infer<typeof UpdateHistoryEntrySchema>;
+export type UpdateHistory = z.infer<typeof UpdateHistorySchema>;
 export type RepositoryLocator = z.infer<typeof RepositoryLocatorSchema>;
 export type IngestCommand = z.infer<typeof IngestCommandSchema>;
 export type IngestOutcome = z.infer<typeof IngestOutcomeSchema>;

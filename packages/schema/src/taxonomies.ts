@@ -38,6 +38,21 @@ export const BEGINNER_MISSION_TRACKS = [
 
 export const BEGINNER_MISSION_LEVELS = ["first-step", "guided"] as const;
 
+export const UPDATE_CHANGE_KINDS = [
+  "repository_renamed",
+  "default_branch_changed",
+  "description_changed",
+  "license_changed",
+  "readme_changed",
+  "technology_changed",
+  "activity_changed",
+  "metrics_changed",
+  "availability_changed",
+  "maintenance_risk",
+] as const;
+
+export const UPDATE_RISK_LEVELS = ["low", "medium", "high"] as const;
+
 export const RISK_KINDS = [
   "setup",
   "documentation",

@@ -1,4 +1,4 @@
-name: Discover review candidates
+name: Discover and monitor catalog
 
 on:
   workflow_dispatch:
@@ -36,5 +36,35 @@ jobs:
         with:
           name: discovery-review-queue
           path: data/discovery/queue.json
+          if-no-files-found: error
+          retention-days: 14
+
+  monitor-updates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scan published repositories
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run updates:scan
+
+      - name: Upload update review queue
+        uses: actions/upload-artifact@v4
+        with:
+          name: catalog-update-review-queue
+          path: data/updates/latest
           if-no-files-found: error
           retention-days: 14

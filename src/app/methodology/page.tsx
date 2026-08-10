@@ -99,6 +99,11 @@ export default function MethodologyPage() {
               <strong>人工审核发布</strong>
               <p>批准编辑判断，再进入稳定的学习案例库。</p>
             </li>
+            <li>
+              <span>05</span>
+              <strong>每周重新核对</strong>
+              <p>自动识别 README、许可证、技术栈与维护状态变化，依然先审后更新。</p>
+            </li>
           </ol>
         </div>
       </section>
