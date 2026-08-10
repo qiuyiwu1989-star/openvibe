@@ -1,6 +1,8 @@
-# 开源雷达
+# OpenVibe Atlas：Vibe Coding 探索者
 
 面向 vibe coding 初学者的 GitHub 开源项目学习导航。产品不以 Star 榜单为终点，而是回答：项目是否值得学、适合谁学、应该从哪里开始复刻。
+
+OpenVibe Atlas 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
 
 当前状态：**MVP 已完成：30 个项目通过事实、策展与审核门，自动发现候选流程和静态站点均已落地；尚未部署公网。**
 
@@ -60,3 +62,7 @@ npm run catalog:approve -- --reviewer <审核者> --reviewed-at <ISO 时间>
 
 - [阶段 1 实施报告](docs/stage-1-report.md)
 - [MVP 完成报告](docs/mvp-report.md)
+
+## 许可证
+
+项目代码以 [MIT License](LICENSE) 开源。收录项目仍分别遵循各自仓库的许可证。

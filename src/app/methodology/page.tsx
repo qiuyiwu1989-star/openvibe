@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "筛选方法",
-  description: "开源雷达如何选择、评分和审核适合 vibe coding 初学者的项目。",
+  description: "OpenVibe Atlas 如何选择、评分和审核适合 vibe coding 初学者的项目。",
 };
 
 const scoreDimensions = [
@@ -23,7 +23,7 @@ export default function MethodologyPage() {
         <p className="eyebrow">METHODOLOGY / 筛选方法</p>
         <h1>我们不问“它有多火”，先问“你能从它学会什么”。</h1>
         <p>
-          Star 是热度信号，不是课程大纲。开源雷达把仓库事实、编辑判断和发布状态分开，让每个推荐都能被检查。
+          Star 是热度信号，不是课程大纲。OpenVibe Atlas 把仓库事实、编辑判断和发布状态分开，让每个推荐都能被检查。
         </p>
       </section>
 

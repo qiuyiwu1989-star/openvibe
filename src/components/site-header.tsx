@@ -10,9 +10,9 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="shell header-inner">
-        <Link className="brand" href="/" aria-label="开源雷达首页">
+        <Link className="brand" href="/" aria-label="OpenVibe Atlas 首页">
           <span className="brand-mark" aria-hidden="true">◒</span>
-          <span>开源雷达</span>
+          <span>OpenVibe Atlas</span>
           <span className="brand-edition">BETA</span>
         </Link>
         <nav aria-label="主导航">

@@ -38,7 +38,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <aside className="hero-radar" aria-label="开源雷达的三个筛选问题">
+        <aside className="hero-radar" aria-label="OpenVibe Atlas 的三个筛选问题">
           <div className="radar-orbit orbit-one" />
           <div className="radar-orbit orbit-two" />
           <div className="radar-sweep" />
@@ -58,7 +58,7 @@ export default function HomePage() {
         </aside>
       </section>
 
-      <section className="signal-strip" aria-label="开源雷达特点">
+      <section className="signal-strip" aria-label="OpenVibe Atlas 特点">
         <div className="shell signal-grid">
           <p>
             <strong>学习价值</strong>
