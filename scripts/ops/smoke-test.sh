@@ -15,6 +15,7 @@ paths=(
   "/paths"
   "/paths/responsible-product"
   "/pilot"
+  "/pilot/guide"
   "/explore"
   "/works"
   "/updates"

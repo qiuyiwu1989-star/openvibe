@@ -3141,6 +3141,333 @@ h3 {
   font-size: 18px;
 }
 
+.pilot-guide-link {
+  margin-top: 28px;
+}
+
+.pilot-guide-page {
+  padding-bottom: 100px;
+}
+
+.pilot-guide-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(250px, 0.6fr);
+  align-items: end;
+  padding-block: 80px 60px;
+  gap: 48px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.pilot-guide-hero h1 {
+  max-width: 900px;
+  margin-bottom: 24px;
+  font-size: clamp(50px, 7vw, 92px);
+}
+
+.pilot-guide-hero > div > p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.pilot-guide-actions {
+  display: grid;
+  gap: 12px;
+}
+
+.pilot-print-button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.pilot-guide-content {
+  display: grid;
+  padding-top: 60px;
+  gap: 80px;
+}
+
+.pilot-guide-setup {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1.55fr);
+  gap: 40px;
+}
+
+.pilot-guide-setup h2,
+.pilot-evidence-sheet h2,
+.pilot-thresholds h2,
+.pilot-stop-rules h2 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 56px);
+}
+
+.pilot-guide-setup dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.pilot-guide-setup dl div {
+  min-height: 130px;
+  padding: 20px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.pilot-guide-setup dt {
+  margin-bottom: 18px;
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.pilot-guide-setup dd {
+  margin: 0;
+  font-weight: 750;
+}
+
+.pilot-protocol {
+  border: 1px solid var(--ink);
+  background: var(--white);
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+.pilot-protocol > header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  padding: 34px;
+  gap: 18px 44px;
+  color: white;
+  background: var(--blue);
+}
+
+.pilot-protocol > header .eyebrow,
+.pilot-protocol > header h2 {
+  grid-column: 1;
+}
+
+.pilot-protocol > header .eyebrow {
+  color: var(--acid);
+}
+
+.pilot-protocol > header h2 {
+  margin: 0;
+  font-size: clamp(38px, 5vw, 64px);
+}
+
+.pilot-protocol > header > p:not(.eyebrow) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: end;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.pilot-protocol-links {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 20px;
+}
+
+.pilot-protocol-links a {
+  border-bottom: 1px solid currentColor;
+  color: var(--acid);
+  font-weight: 800;
+}
+
+.pilot-schedule {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pilot-schedule li {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr) auto;
+  align-items: center;
+  padding: 22px 28px;
+  gap: 24px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.pilot-schedule time {
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 850;
+}
+
+.pilot-schedule h3 {
+  margin: 0 0 4px;
+  font-size: 22px;
+  letter-spacing: -0.025em;
+}
+
+.pilot-schedule p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.pilot-schedule label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.pilot-schedule input {
+  width: 18px;
+  height: 18px;
+}
+
+.pilot-protocol-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pilot-protocol-notes section {
+  padding: 28px;
+}
+
+.pilot-protocol-notes section + section {
+  border-left: 1px solid var(--ink);
+}
+
+.pilot-protocol-notes h3 {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-size: 19px;
+}
+
+.pilot-protocol-notes p {
+  margin: 0;
+}
+
+.pilot-evidence-sheet,
+.pilot-thresholds,
+.pilot-stop-rules {
+  display: grid;
+  gap: 32px;
+}
+
+.pilot-evidence-questions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.pilot-evidence-questions article {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.pilot-evidence-questions span {
+  color: var(--blue);
+  font: 850 11px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.pilot-evidence-questions h3 {
+  margin-top: auto;
+  font-size: 24px;
+}
+
+.pilot-evidence-questions p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.pilot-thresholds {
+  padding: 38px;
+  color: white;
+  background: var(--ink);
+}
+
+.pilot-thresholds .eyebrow {
+  color: var(--acid);
+}
+
+.pilot-thresholds ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  list-style: none;
+}
+
+.pilot-thresholds li {
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pilot-thresholds strong {
+  color: var(--acid);
+  font-size: 42px;
+}
+
+.pilot-thresholds > p {
+  max-width: 820px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pilot-stop-rules ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  counter-reset: stop-rule;
+  list-style: none;
+}
+
+.pilot-stop-rules li {
+  min-height: 150px;
+  padding: 24px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  counter-increment: stop-rule;
+}
+
+.pilot-stop-rules li::before {
+  display: block;
+  margin-bottom: 22px;
+  color: #a12300;
+  content: "STOP 0" counter(stop-rule);
+  font: 850 11px ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.pilot-guide-footer {
+  display: grid;
+  grid-template-columns: repeat(3, auto) 1fr;
+  align-items: center;
+  padding-top: 30px;
+  gap: 22px;
+  border-top: 2px solid var(--ink);
+}
+
+.pilot-guide-footer div:nth-of-type(4) {
+  grid-column: 1 / -1;
+}
+
+.pilot-guide-footer .button {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
 .pilot-hero aside {
   padding: 30px;
   color: white;
@@ -4067,13 +4394,23 @@ h3 {
   }
 
   .pilot-hero,
-  .pilot-form-intro {
+  .pilot-form-intro,
+  .pilot-guide-hero,
+  .pilot-guide-setup,
+  .pilot-protocol > header {
     grid-template-columns: 1fr;
+  }
+
+  .pilot-protocol > header > p:not(.eyebrow) {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .pilot-observation-principles > div,
   .pilot-record-grid,
-  .pilot-method-grid {
+  .pilot-method-grid,
+  .pilot-evidence-questions,
+  .pilot-thresholds ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -4105,8 +4442,34 @@ h3 {
   .pilot-choice-grid,
   .pilot-reflection-grid,
   .pilot-record-grid,
-  .pilot-method-grid {
+  .pilot-method-grid,
+  .pilot-guide-setup dl,
+  .pilot-protocol-notes,
+  .pilot-evidence-questions,
+  .pilot-thresholds ul,
+  .pilot-stop-rules ol,
+  .pilot-guide-footer {
     grid-template-columns: 1fr;
+  }
+
+  .pilot-protocol-notes section + section {
+    border-top: 1px solid var(--ink);
+    border-left: 0;
+  }
+
+  .pilot-schedule li {
+    grid-template-columns: 72px minmax(0, 1fr);
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .pilot-schedule label {
+    grid-column: 2;
+  }
+
+  .pilot-guide-footer div:nth-of-type(4),
+  .pilot-guide-footer .button {
+    grid-column: auto;
   }
 
   .pilot-route-invitation,
@@ -4226,6 +4589,159 @@ h3 {
 
   .creator-loop-grid li {
     min-height: auto;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+    font-size: 10pt;
+  }
+
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .no-print {
+    display: none !important;
+  }
+
+  .shell {
+    width: 100%;
+  }
+
+  .pilot-guide-page,
+  .pilot-guide-content {
+    padding: 0;
+  }
+
+  .pilot-guide-content {
+    gap: 10mm;
+  }
+
+  .pilot-guide-hero {
+    display: block;
+    padding: 0 0 7mm;
+  }
+
+  .pilot-guide-hero h1 {
+    margin: 0 0 4mm;
+    font-size: 26pt;
+  }
+
+  .pilot-guide-hero > div > p:last-child {
+    color: #000;
+    font-size: 10pt;
+  }
+
+  .pilot-guide-setup {
+    display: block;
+  }
+
+  .pilot-guide-setup h2,
+  .pilot-evidence-sheet h2,
+  .pilot-thresholds h2,
+  .pilot-stop-rules h2 {
+    font-size: 19pt;
+  }
+
+  .pilot-guide-setup dl {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 5mm;
+  }
+
+  .pilot-guide-setup dl div {
+    min-height: 0;
+    padding: 4mm;
+  }
+
+  .pilot-protocol {
+    break-before: page;
+    box-shadow: none;
+  }
+
+  .pilot-protocol > header {
+    display: block;
+    padding: 7mm;
+    color: #000;
+    background: #fff;
+    border-bottom: 2px solid #000;
+  }
+
+  .pilot-protocol > header .eyebrow {
+    color: #000;
+  }
+
+  .pilot-protocol > header h2 {
+    margin-bottom: 4mm;
+    font-size: 23pt;
+  }
+
+  .pilot-protocol > header > p:not(.eyebrow),
+  .pilot-schedule p,
+  .pilot-evidence-questions p {
+    color: #000;
+  }
+
+  .pilot-schedule li {
+    break-inside: avoid;
+    grid-template-columns: 18mm 1fr 18mm;
+    padding: 4mm;
+    gap: 4mm;
+  }
+
+  .pilot-schedule h3 {
+    font-size: 12pt;
+  }
+
+  .pilot-protocol-notes section {
+    padding: 5mm;
+  }
+
+  .pilot-evidence-sheet {
+    break-before: page;
+  }
+
+  .pilot-evidence-questions,
+  .pilot-thresholds ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pilot-evidence-questions article,
+  .pilot-thresholds li {
+    min-height: 0;
+    padding: 5mm;
+  }
+
+  .pilot-thresholds {
+    color: #000;
+    background: #fff;
+    border: 2px solid #000;
+  }
+
+  .pilot-thresholds .eyebrow,
+  .pilot-thresholds strong,
+  .pilot-thresholds > p {
+    color: #000;
+  }
+
+  .pilot-stop-rules ol {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pilot-stop-rules li {
+    min-height: 0;
+    break-inside: avoid;
+  }
+
+  .pilot-guide-footer {
+    grid-template-columns: repeat(3, auto) 1fr;
+    break-inside: avoid;
   }
 }
 

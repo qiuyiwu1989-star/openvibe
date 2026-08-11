@@ -18,7 +18,10 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Checkout health checks
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Check public routes
         run: bash scripts/ops/smoke-test.sh https://vibe.yongle.school
+
+      - name: Check repeated public latency
+        run: bash scripts/ops/latency-test.sh https://vibe.yongle.school

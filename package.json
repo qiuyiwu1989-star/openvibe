@@ -25,6 +25,7 @@
     "test:ops": "tsx --test scripts/ops/ops.test.ts",
     "ops:validate": "bash -n scripts/ops/*.sh",
     "ops:smoke": "bash scripts/ops/smoke-test.sh",
+    "ops:latency": "bash scripts/ops/latency-test.sh",
     "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:discover && npm run test:ingest && npm run test:updates && npm run test:data && npm run test:ops && npm run ops:validate"
   },
   "dependencies": {
