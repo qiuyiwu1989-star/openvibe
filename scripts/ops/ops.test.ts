@@ -10,6 +10,7 @@ const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url))
 const deployScript = path.join(repositoryRoot, "scripts/ops/deploy-release.sh");
 const rollbackScript = path.join(repositoryRoot, "scripts/ops/rollback-release.sh");
 const latencyScript = path.join(repositoryRoot, "scripts/ops/latency-test.sh");
+const smokeScript = path.join(repositoryRoot, "scripts/ops/smoke-test.sh");
 
 test("连续发布保留上一版本，并能显式回滚", async () => {
   const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-ops-"));
@@ -102,6 +103,60 @@ test("延迟检查只在重复严重慢样本达到阈值后失败", async () =>
     });
     assert.notEqual(result.status, 0);
     assert.match(result.stderr, /5\/5 个样本不可用或超过 8s/);
+  } finally {
+    await rm(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
+test("冒烟检查会复核一次偶发传输失败并在恢复后通过", async () => {
+  const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-smoke-"));
+  const fakeBin = path.join(temporaryRoot, "bin");
+  const stateFile = path.join(temporaryRoot, "curl-count");
+  await mkdir(fakeBin, { recursive: true });
+  await installFakeCommand(fakeBin, "curl", `#!/usr/bin/env bash
+count=0
+if [[ -f "\${OPENVIBE_FAKE_CURL_STATE}" ]]; then count="$(<"\${OPENVIBE_FAKE_CURL_STATE}")"; fi
+count=$((count + 1))
+printf '%s' "\${count}" > "\${OPENVIBE_FAKE_CURL_STATE}"
+if (( count == 1 )); then printf '200'; exit 28; fi
+printf '200'
+`);
+
+  try {
+    const result = spawnSync("bash", [smokeScript, "https://example.test"], {
+      env: {
+        ...process.env,
+        PATH: `${fakeBin}:${process.env.PATH ?? ""}`,
+        OPENVIBE_FAKE_CURL_STATE: stateFile,
+        SMOKE_RETRY_DELAY_SECONDS: "0",
+      },
+      encoding: "utf8",
+    });
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.match(result.stderr, /RETRY 1 个失败路由/);
+    assert.match(result.stdout, /PASS \/api\/health 200/);
+  } finally {
+    await rm(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
+test("冒烟检查在传输持续失败时仍然拒绝发布", async () => {
+  const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-smoke-"));
+  const fakeBin = path.join(temporaryRoot, "bin");
+  await mkdir(fakeBin, { recursive: true });
+  await installFakeCommand(fakeBin, "curl", "#!/usr/bin/env bash\nprintf '200'\nexit 28\n");
+
+  try {
+    const result = spawnSync("bash", [smokeScript, "https://example.test"], {
+      env: {
+        ...process.env,
+        PATH: `${fakeBin}:${process.env.PATH ?? ""}`,
+        SMOKE_RETRY_DELAY_SECONDS: "0",
+      },
+      encoding: "utf8",
+    });
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /curl_exit=28/);
   } finally {
     await rm(temporaryRoot, { recursive: true, force: true });
   }
