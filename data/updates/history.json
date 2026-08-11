@@ -2,6 +2,16 @@
   "schemaVersion": "1.0.0",
   "entries": [
     {
+      "id": "stage-11-pilot-validation-protocol",
+      "kind": "catalog_release",
+      "publishedAt": "2026-08-12T03:40:01+09:00",
+      "title": "真实试教执行单上线",
+      "summary": "新增小学高段与初中两套可打印的 90 分钟试教协议，统一现场节奏、作者证据四问、成功线、隐私边界和暂停条件；试教结果继续只在当前浏览器匿名保存。",
+      "repositoryId": null,
+      "projectSlug": null,
+      "changeKinds": []
+    },
+    {
       "id": "stage-10-anonymous-pilot-workbench",
       "kind": "catalog_release",
       "publishedAt": "2026-08-12T01:33:28+09:00",
