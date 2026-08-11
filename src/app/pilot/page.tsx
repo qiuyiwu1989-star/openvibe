@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { PilotWorkbench } from "@/components/pilot-workbench";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
@@ -25,9 +26,10 @@ export default async function PilotPage({
     <div className="pilot-page">
       <header className="pilot-hero shell">
         <div>
-          <p className="eyebrow">STAGE 10 / 真实试教</p>
+          <p className="eyebrow">STAGE 11 / 真实试教</p>
           <h1>把教学直觉，变成下一次能用的证据。</h1>
           <p>这里不评价孩子，也不收集身份。它只帮助引导者看见：作品在哪里发生、学习者在哪里卡住、成人何时介入，以及作者身份是否真的出现。</p>
+          <Link className="button button-primary pilot-guide-link" href="/pilot/guide">先看 90 分钟试教执行单</Link>
         </div>
         <aside>
           <strong>隐私承诺</strong>

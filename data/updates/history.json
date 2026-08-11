@@ -2,6 +2,36 @@
   "schemaVersion": "1.0.0",
   "entries": [
     {
+      "id": "stage-10-anonymous-pilot-workbench",
+      "kind": "catalog_release",
+      "publishedAt": "2026-08-12T01:33:28+09:00",
+      "title": "匿名试教工作台上线",
+      "summary": "新增只保存在当前浏览器的匿名试教记录：汇总快速可见、演示版本、成人介入和四维作者证据，并支持导出 JSON 供离线复盘。",
+      "repositoryId": null,
+      "projectSlug": null,
+      "changeKinds": []
+    },
+    {
+      "id": "stage-9-k12-paths-and-catalog",
+      "kind": "catalog_release",
+      "publishedAt": "2026-08-12T00:59:54+09:00",
+      "title": "20 个 K12 案例与四周路线上线",
+      "summary": "K12 案例扩展到四个年龄段各 5 个，并新增 4 条以单件作品为中心的四周路线、教师与家长引导卡及最终展示协议。",
+      "repositoryId": null,
+      "projectSlug": null,
+      "changeKinds": []
+    },
+    {
+      "id": "stage-8-k12-age-entry",
+      "kind": "catalog_release",
+      "publishedAt": "2026-08-12T00:08:17+09:00",
+      "title": "K12 分龄入口上线",
+      "summary": "首批 8 个分龄试点案例覆盖小学低段、小学高段、初中和高中；年龄只用于任务推荐，作品仍围绕意图、制作、反馈与署名展开。",
+      "repositoryId": null,
+      "projectSlug": null,
+      "changeKinds": []
+    },
+    {
       "id": "beginner-maker-missions-launch",
       "kind": "catalog_release",
       "publishedAt": "2026-08-11T02:00:00+09:00",

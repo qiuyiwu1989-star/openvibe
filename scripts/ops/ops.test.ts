@@ -9,6 +9,7 @@ import { fileURLToPath } from "node:url";
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const deployScript = path.join(repositoryRoot, "scripts/ops/deploy-release.sh");
 const rollbackScript = path.join(repositoryRoot, "scripts/ops/rollback-release.sh");
+const latencyScript = path.join(repositoryRoot, "scripts/ops/latency-test.sh");
 
 test("连续发布保留上一版本，并能显式回滚", async () => {
   const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-ops-"));
@@ -57,6 +58,50 @@ test("发布脚本拒绝覆盖相同版本目录", async () => {
     });
     assert.notEqual(duplicate.status, 0);
     assert.match(duplicate.stderr, /拒绝覆盖/);
+  } finally {
+    await rm(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
+test("延迟检查在健康样本下通过", async () => {
+  const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-latency-"));
+  const fakeBin = path.join(temporaryRoot, "bin");
+  await mkdir(fakeBin, { recursive: true });
+  await installFakeCommand(fakeBin, "curl", '#!/usr/bin/env bash\nprintf \'%s\\n\' "$OPENVIBE_FAKE_CURL_OUTPUT"\n');
+
+  try {
+    const result = spawnSync("bash", [latencyScript, "https://example.test"], {
+      env: {
+        ...process.env,
+        PATH: `${fakeBin}:${process.env.PATH ?? ""}`,
+        OPENVIBE_FAKE_CURL_OUTPUT: "200 0.020 0.080 0.120",
+      },
+      encoding: "utf8",
+    });
+    assert.equal(result.status, 0, result.stderr || result.stdout);
+    assert.match(result.stdout, /PASS latency severe=0\/5 warning=0\/5/);
+  } finally {
+    await rm(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
+test("延迟检查只在重复严重慢样本达到阈值后失败", async () => {
+  const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-latency-"));
+  const fakeBin = path.join(temporaryRoot, "bin");
+  await mkdir(fakeBin, { recursive: true });
+  await installFakeCommand(fakeBin, "curl", '#!/usr/bin/env bash\nprintf \'%s\\n\' "$OPENVIBE_FAKE_CURL_OUTPUT"\n');
+
+  try {
+    const result = spawnSync("bash", [latencyScript, "https://example.test"], {
+      env: {
+        ...process.env,
+        PATH: `${fakeBin}:${process.env.PATH ?? ""}`,
+        OPENVIBE_FAKE_CURL_OUTPUT: "200 0.020 8.500 8.700",
+      },
+      encoding: "utf8",
+    });
+    assert.notEqual(result.status, 0);
+    assert.match(result.stderr, /5\/5 个样本不可用或超过 8s/);
   } finally {
     await rm(temporaryRoot, { recursive: true, force: true });
   }
