@@ -32,4 +32,9 @@ jobs:
         run: npm test
 
       - name: Build web application
+        env:
+          NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
         run: npm run build
+
+      - name: Validate production container definition
+        run: docker compose -f compose.production.yml config --quiet

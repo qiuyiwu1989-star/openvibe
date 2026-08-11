@@ -11,15 +11,46 @@
 
 ## 发布步骤
 
-1. 从 GitHub 获取已通过 CI 的确定提交。
-2. 运行 `docker compose -f compose.production.yml build`。
-3. 容器构建成功后运行 `docker compose -f compose.production.yml up -d`。
-4. 首先验证 `http://127.0.0.1:3100/api/health`，再更新反向代理。
-5. 从公网验证首页、新手任务、进阶项目、更新日志和 RSS。
+### 一次性服务器准备
+
+1. 安装 Docker Engine、Compose 插件、Nginx、Certbot 和 curl。
+2. 将新的专用部署公钥加入 `ubuntu` 的 `authorized_keys`，不要启用密码自动登录。
+3. 在仓库根目录执行 `sudo bash scripts/ops/bootstrap-server.sh ubuntu /srv/openvibe`。
+4. 将 `deploy/nginx/openvibe.conf` 安装到 Nginx，检查配置后再 reload。
+5. 使用 Certbot 为 `vibe.yongle.school` 申请证书并启用 HTTPS。
+
+执行前应先检查服务器已有站点与端口占用，不能直接覆盖共享配置。
+
+### GitHub 生产环境
+
+创建受保护的 `production` Environment，并配置：
+
+- Secret `PRODUCTION_HOST`：服务器主机名或 IP。
+- Secret `PRODUCTION_USER`：专用部署用户，当前规划为 `ubuntu`。
+- Secret `PRODUCTION_SSH_KEY`：与服务器公钥对应的新私钥。
+- Secret `PRODUCTION_KNOWN_HOSTS`：人工核对过的服务器 SSH 主机公钥记录。
+- Variable `PRODUCTION_DEPLOY_ROOT`：默认 `/srv/openvibe`。
+
+不要把服务器密码、GitHub 令牌、COS 密钥或数据库密码放进仓库变量。生产 Environment 建议启用人工批准。
+
+### 每次发布
+
+1. CI 对确定提交执行测试、构建和容器定义校验。
+2. 人工触发 `Deploy production`，选择已经通过 CI 的 Git ref。
+3. 工作流只打包 Git 已跟踪文件，在服务器建立独立 SHA 版本目录和镜像。
+4. 新容器先通过 `127.0.0.1:3100/api/health`，再切换 `current` 版本链接。
+5. GitHub 从公网检查首页、新手入口、发现页、作品页、更新日志与 RSS。
+6. 公网出现无法连接或 5xx 时，工作流恢复上一已验证版本。
+
+`Monitor production` 每小时两次执行同一组公网检查。它只报告故障，不在无人审核时修改服务器。
 
 ## 回滚
 
-生产机保留上一个已验证的镜像标签。新容器健康检查失败时不切换反向代理；公网出现 `000` 或 `5xx` 时切回上一镜像。
+生产机按 Git SHA 保留不可变版本和镜像。新容器健康检查失败时自动恢复上一版本；已经上线后也可执行 `bash /srv/openvibe/current/scripts/ops/rollback-release.sh /srv/openvibe`。健康判据统一为：`000` 或 `5xx` 视为服务故障，其他 HTTP 响应说明服务器仍可达。
+
+## 数据与备份
+
+当前生产站点没有服务端用户数据：项目目录和审核后的内容都在 Git，作品进度只在用户浏览器。服务器因此不需要伪造一套数据库备份。发布包保留为不可变版本；下一阶段接入账号数据库时，再增加数据库快照、恢复演练和 COS 大文件生命周期策略。
 
 ## 密钥边界
 

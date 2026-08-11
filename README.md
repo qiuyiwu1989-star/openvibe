@@ -4,7 +4,7 @@
 
 OpenVibe 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
 
-当前状态：**阶段 6 的本地学习闭环已完成：13 个低门槛作品任务、30 个进阶案例、作品进度与作者记录、每周更新检查、显式审核门和 RSS 订阅均已落地。生产部署配置已准备，公网发布仍等待服务器和 GitHub 的安全访问通道。**
+当前状态：**阶段 7 的上线基础已完成：学习闭环、30 个进阶案例、每周更新审核门、不可变部署、失败回滚和公网监控均已落地。公网发布仍等待服务器和 GitHub 的安全访问通道。**
 
 ## 阶段 0 产物
 
@@ -71,6 +71,10 @@ npm run updates:review -- --repository-id <id> --decision approve \
 
 更新日志位于 `/updates`，RSS 2.0 订阅源位于 `/updates/feed.xml`。完整操作和风险分类见 [持续更新运维手册](docs/update-operations.md)。
 
+## 生产运行
+
+生产发布使用 GitHub 的受保护 `production` Environment。每次发布先重新测试和构建，再在服务器创建独立 Git SHA 版本；本机及公网健康检查失败都会恢复上一版本。服务器准备、密钥名称、Nginx 和回滚流程见 [生产部署手册](docs/deployment.md)。
+
 ## 阶段报告
 
 - [阶段 1 实施报告](docs/stage-1-report.md)
@@ -78,6 +82,7 @@ npm run updates:review -- --repository-id <id> --decision approve \
 - [阶段 3：新手作品入口](docs/stage-3-report.md)
 - [阶段 4：持续更新闭环](docs/stage-4-report.md)
 - [阶段 6：作品学习闭环](docs/stage-6-report.md)
+- [阶段 7：上线与运营基础](docs/stage-7-report.md)
 
 ## 许可证
 

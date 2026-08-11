@@ -22,7 +22,10 @@
     "test:ingest": "tsx --test scripts/ingest/ingest.test.ts",
     "test:updates": "tsx --test scripts/updates/updates.test.ts",
     "test:data": "tsx --test tests/data-integrity.test.ts",
-    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:discover && npm run test:ingest && npm run test:updates && npm run test:data"
+    "test:ops": "tsx --test scripts/ops/ops.test.ts",
+    "ops:validate": "bash -n scripts/ops/*.sh",
+    "ops:smoke": "bash scripts/ops/smoke-test.sh",
+    "test": "npm run typecheck && npm run validate:fixtures && npm run test:schema && npm run test:discover && npm run test:ingest && npm run test:updates && npm run test:data && npm run test:ops && npm run ops:validate"
   },
   "dependencies": {
     "next": "^16.3.0",

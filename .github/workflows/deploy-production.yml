@@ -1,0 +1,104 @@
+name: Deploy production
+
+on:
+  workflow_dispatch:
+    inputs:
+      git_ref:
+        description: Git ref that has passed CI
+        required: true
+        default: main
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: openvibe-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: production
+    env:
+      DEPLOY_ROOT: ${{ vars.PRODUCTION_DEPLOY_ROOT || '/srv/openvibe' }}
+      PRODUCTION_HOST: ${{ secrets.PRODUCTION_HOST }}
+      PRODUCTION_USER: ${{ secrets.PRODUCTION_USER }}
+      PRODUCTION_SSH_KEY: ${{ secrets.PRODUCTION_SSH_KEY }}
+      PRODUCTION_KNOWN_HOSTS: ${{ secrets.PRODUCTION_KNOWN_HOSTS }}
+
+    steps:
+      - name: Checkout approved source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.git_ref }}
+
+      - name: Resolve release version
+        run: echo "RELEASE_SHA=$(git rev-parse HEAD)" >> "${GITHUB_ENV}"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Verify release
+        env:
+          NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+      - name: Package tracked source
+        run: git archive --format=tar.gz --output="${RUNNER_TEMP}/openvibe-${RELEASE_SHA}.tar.gz" "${RELEASE_SHA}"
+
+      - name: Configure verified SSH transport
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          [[ "${PRODUCTION_HOST}" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "${PRODUCTION_USER}" =~ ^[a-z_][a-z0-9_-]*$ ]]
+          [[ "${DEPLOY_ROOT}" =~ ^/[A-Za-z0-9._/-]+$ ]]
+          [[ "/${DEPLOY_ROOT#/}/" != *"/../"* ]]
+          [[ "/${DEPLOY_ROOT#/}/" != *"/./"* ]]
+          test -n "${PRODUCTION_SSH_KEY}"
+          test -n "${PRODUCTION_KNOWN_HOSTS}"
+
+          install -m 0700 -d "${HOME}/.ssh"
+          printf '%s\n' "${PRODUCTION_SSH_KEY}" > "${HOME}/.ssh/openvibe_deploy"
+          printf '%s\n' "${PRODUCTION_KNOWN_HOSTS}" > "${HOME}/.ssh/known_hosts"
+          chmod 0600 "${HOME}/.ssh/openvibe_deploy" "${HOME}/.ssh/known_hosts"
+
+      - name: Deploy immutable release
+        id: deploy
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          ssh_options=(-i "${HOME}/.ssh/openvibe_deploy" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          remote_archive="${DEPLOY_ROOT}/incoming/${RELEASE_SHA}.tar.gz"
+          remote_script="${DEPLOY_ROOT}/incoming/deploy-release.sh"
+          ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" "mkdir -p '${DEPLOY_ROOT}/incoming'"
+          scp "${ssh_options[@]}" "${RUNNER_TEMP}/openvibe-${RELEASE_SHA}.tar.gz" \
+            "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_archive}"
+          scp "${ssh_options[@]}" scripts/ops/deploy-release.sh \
+            "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_script}"
+          ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" \
+            "bash '${remote_script}' '${remote_archive}' '${RELEASE_SHA}' '${DEPLOY_ROOT}'"
+
+      - name: Verify public service
+        id: public-smoke
+        run: bash scripts/ops/smoke-test.sh https://vibe.yongle.school
+
+      - name: Roll back failed public release
+        if: ${{ failure() && steps.deploy.outcome == 'success' && steps.public-smoke.outcome == 'failure' }}
+        shell: bash
+        run: |
+          ssh_options=(-i "${HOME}/.ssh/openvibe_deploy" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" \
+            "bash '${DEPLOY_ROOT}/current/scripts/ops/rollback-release.sh' '${DEPLOY_ROOT}'"
+
+      - name: Remove temporary SSH key
+        if: ${{ always() }}
+        run: rm -f "${HOME}/.ssh/openvibe_deploy"

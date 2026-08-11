@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: openvibe-catalog-operations
+  cancel-in-progress: false
+
 jobs:
   discover:
     runs-on: ubuntu-latest
