@@ -3,6 +3,7 @@ import Link from "next/link";
 const navigation = [
   { href: "/", label: "首页" },
   { href: "/start", label: "K12 开始" },
+  { href: "/paths", label: "学习路线" },
   { href: "/explore", label: "进阶案例" },
   { href: "/works", label: "我的作品" },
   { href: "/updates", label: "更新" },

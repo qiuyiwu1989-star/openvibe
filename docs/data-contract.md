@@ -92,6 +92,17 @@ discovered → fetched → evaluated → review → published
 
 年龄标签只存在于任务内容中。`MakerProgressRecord` 不保存生日、年龄、学校、班级或监护关系，因此选择分龄入口不会形成儿童画像。
 
+### LearningPath 1.0.0
+
+`LearningPath` 把同一主要年龄段的 5 个任务组织为一条四周学习路线：
+
+- `missionSlugs`：恰好 5 个互不重复的任务引用；数据完整性测试要求任务存在且主要年龄段与路线一致。
+- `weeks`：恰好 4 周并按 1–4 排序；每周包含焦点、行动、学习证据和引导者动作。
+- `guide`：教师/家长的准备、追问、观察、反馈协议、隐私提示和最终展示方式。
+- `successCriteria`：以作品真实性、判断证据和反思为标准，不使用积分和同伴排名。
+
+路线只是一组静态学习建议，不是五项任务清单。当前 `MakerProgressRecord` 仍按单个作品任务记录，本地不会保存年龄入口、路线完成度或学习者画像。
+
 ### MakerProgressRecord
 
 记录一个新手任务在当前设备上的制作状态。它不是打卡分数，而是最小作者记录：

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { StartMissionExplorer } from "@/components/start-mission-explorer";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
@@ -40,6 +41,11 @@ export default function StartPage() {
             <div><dt>你必须</dt><dd>决定为谁做、什么算好，并为最终版本署上自己的名字。</dd></div>
           </dl>
         </div>
+      </section>
+
+      <section className="path-invitation shell">
+        <div><p className="eyebrow">想连续学四周？</p><h2>选一条路线，只把一件作品做到真实可用。</h2></div>
+        <Link className="button button-dark" href="/paths">查看分龄学习路线 <span aria-hidden="true">→</span></Link>
       </section>
 
       <div className="shell">

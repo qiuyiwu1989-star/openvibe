@@ -435,6 +435,51 @@ export const BeginnerMissionSchema = z
     }
   });
 
+const learningPathWeekSchema = z
+  .object({
+    week: z.number().int().min(1).max(4),
+    title: z.string().trim().min(1).max(80),
+    focus: z.string().trim().min(10).max(300),
+    actions: z.array(nonEmptyText).min(2).max(4),
+    evidence: z.string().trim().min(10).max(300),
+    facilitatorMove: z.string().trim().min(10).max(300),
+  })
+  .strict();
+
+export const LearningPathSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    title: z.string().trim().min(1).max(80),
+    tagline: z.string().trim().min(10).max(180),
+    ageBand: z.enum(K12_AGE_BANDS),
+    durationWeeks: z.literal(4),
+    missionSlugs: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).length(5),
+    outcome: z.string().trim().min(10).max(400),
+    weeks: z.array(learningPathWeekSchema).length(4),
+    guide: z
+      .object({
+        forWhom: z.string().trim().min(10).max(240),
+        preparation: uniqueTextList,
+        questions: uniqueTextList,
+        observe: uniqueTextList,
+        feedbackProtocol: uniqueTextList,
+        privacyReminder: z.string().trim().min(10).max(400),
+        showcase: z.string().trim().min(10).max(400),
+      })
+      .strict(),
+    successCriteria: uniqueTextList,
+  })
+  .strict()
+  .superRefine((path, context) => {
+    if (new Set(path.missionSlugs).size !== path.missionSlugs.length) {
+      context.addIssue({ code: "custom", path: ["missionSlugs"], message: "路线案例不能重复" });
+    }
+    if (path.weeks.some((week, index) => week.week !== index + 1)) {
+      context.addIssue({ code: "custom", path: ["weeks"], message: "四周路线必须按 1 到 4 排列" });
+    }
+  });
+
 export const MakerProgressRecordSchema = z
   .object({
     missionSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
@@ -687,6 +732,7 @@ export type EditorialProfile = z.infer<typeof EditorialProfileSchema>;
 export type PublicationRecord = z.infer<typeof PublicationRecordSchema>;
 export type RadarProjectBundle = z.infer<typeof RadarProjectBundleSchema>;
 export type BeginnerMission = z.infer<typeof BeginnerMissionSchema>;
+export type LearningPath = z.infer<typeof LearningPathSchema>;
 export type MakerProgressRecord = z.infer<typeof MakerProgressRecordSchema>;
 export type MakerProgressCollection = z.infer<typeof MakerProgressCollectionSchema>;
 export type UpdateQueueEntry = z.infer<typeof UpdateQueueEntrySchema>;
