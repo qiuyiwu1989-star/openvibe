@@ -76,7 +76,13 @@ jobs:
         shell: bash
         run: |
           set -Eeuo pipefail
-          ssh_options=(-i "${HOME}/.ssh/openvibe_deploy" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          ssh_options=(
+            -i "${HOME}/.ssh/openvibe_deploy"
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o ServerAliveInterval=30
+            -o ServerAliveCountMax=20
+          )
           remote_archive="${DEPLOY_ROOT}/incoming/${RELEASE_SHA}.tar.gz"
           remote_script="${DEPLOY_ROOT}/incoming/deploy-release.sh"
           ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" "mkdir -p '${DEPLOY_ROOT}/incoming'"
@@ -95,7 +101,13 @@ jobs:
         if: ${{ failure() && steps.deploy.outcome == 'success' && steps.public-smoke.outcome == 'failure' }}
         shell: bash
         run: |
-          ssh_options=(-i "${HOME}/.ssh/openvibe_deploy" -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes)
+          ssh_options=(
+            -i "${HOME}/.ssh/openvibe_deploy"
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o ServerAliveInterval=30
+            -o ServerAliveCountMax=20
+          )
           ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" \
             "bash '${DEPLOY_ROOT}/current/scripts/ops/rollback-release.sh' '${DEPLOY_ROOT}'"
 
