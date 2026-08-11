@@ -28,7 +28,7 @@ if [[ ! -f "${previous_dir}/compose.production.yml" ]]; then
 fi
 
 OPENVIBE_IMAGE_TAG="release-${previous_id}" docker compose -p openvibe \
-  -f "${previous_dir}/compose.production.yml" up -d --wait --wait-timeout 120
+  -f "${previous_dir}/compose.production.yml" up -d --no-build --pull never --wait --wait-timeout 120
 
 health_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
   --connect-timeout 5 --max-time 15 http://127.0.0.1:3210/api/health || true)"

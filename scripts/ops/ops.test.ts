@@ -26,11 +26,11 @@ test("连续发布保留上一版本，并能显式回滚", async () => {
 
   try {
     const firstArchive = await createReleaseArchive(temporaryRoot, "first");
-    runScript(deployScript, [firstArchive, firstId, deployRoot], environment);
+    runScript(deployScript, [firstArchive, firstId, deployRoot, await createImageArchive(temporaryRoot, "first")], environment);
     assert.equal(path.basename(await readlink(path.join(deployRoot, "current"))), firstId);
 
     const secondArchive = await createReleaseArchive(temporaryRoot, "second");
-    runScript(deployScript, [secondArchive, secondId, deployRoot], environment);
+    runScript(deployScript, [secondArchive, secondId, deployRoot, await createImageArchive(temporaryRoot, "second")], environment);
     assert.equal(path.basename(await readlink(path.join(deployRoot, "current"))), secondId);
     assert.equal(path.basename(await readlink(path.join(deployRoot, "previous"))), firstId);
 
@@ -52,8 +52,8 @@ test("发布脚本拒绝覆盖相同版本目录", async () => {
   const releaseId = "c".repeat(40);
 
   try {
-    runScript(deployScript, [await createReleaseArchive(temporaryRoot, "original"), releaseId, deployRoot], environment);
-    const duplicate = spawnSync("bash", [deployScript, await createReleaseArchive(temporaryRoot, "duplicate"), releaseId, deployRoot], {
+    runScript(deployScript, [await createReleaseArchive(temporaryRoot, "original"), releaseId, deployRoot, await createImageArchive(temporaryRoot, "original")], environment);
+    const duplicate = spawnSync("bash", [deployScript, await createReleaseArchive(temporaryRoot, "duplicate"), releaseId, deployRoot, await createImageArchive(temporaryRoot, "duplicate")], {
       env: environment,
       encoding: "utf8",
     });
@@ -175,6 +175,12 @@ async function createReleaseArchive(root: string, name: string): Promise<string>
   await writeFile(path.join(source, "Dockerfile"), "FROM scratch\n", "utf8");
   await writeFile(path.join(source, "compose.production.yml"), "services: {}\n", "utf8");
   execFileSync("tar", ["-czf", archive, "-C", source, "."]);
+  return archive;
+}
+
+async function createImageArchive(root: string, name: string): Promise<string> {
+  const archive = path.join(root, `${name}.image.tar.gz`);
+  await writeFile(archive, "fake image archive\n", "utf8");
   return archive;
 }
 

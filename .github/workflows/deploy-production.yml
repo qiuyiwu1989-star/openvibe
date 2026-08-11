@@ -51,6 +51,14 @@ jobs:
           npm test
           npm run build
 
+      - name: Build immutable production image
+        run: |
+          image_ref="openvibe:release-${RELEASE_SHA}"
+          docker build --pull \
+            --build-arg NEXT_PUBLIC_SITE_URL=https://vibe.yongle.school \
+            --tag "${image_ref}" .
+          docker image save "${image_ref}" | gzip -1 > "${RUNNER_TEMP}/openvibe-image-${RELEASE_SHA}.tar.gz"
+
       - name: Package tracked source
         run: git archive --format=tar.gz --output="${RUNNER_TEMP}/openvibe-${RELEASE_SHA}.tar.gz" "${RELEASE_SHA}"
 
@@ -84,14 +92,17 @@ jobs:
             -o ServerAliveCountMax=20
           )
           remote_archive="${DEPLOY_ROOT}/incoming/${RELEASE_SHA}.tar.gz"
+          remote_image="${DEPLOY_ROOT}/incoming/${RELEASE_SHA}.image.tar.gz"
           remote_script="${DEPLOY_ROOT}/incoming/deploy-release.sh"
           ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" "mkdir -p '${DEPLOY_ROOT}/incoming'"
           scp "${ssh_options[@]}" "${RUNNER_TEMP}/openvibe-${RELEASE_SHA}.tar.gz" \
             "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_archive}"
+          scp "${ssh_options[@]}" "${RUNNER_TEMP}/openvibe-image-${RELEASE_SHA}.tar.gz" \
+            "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_image}"
           scp "${ssh_options[@]}" scripts/ops/deploy-release.sh \
             "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_script}"
           ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" \
-            "bash '${remote_script}' '${remote_archive}' '${RELEASE_SHA}' '${DEPLOY_ROOT}'"
+            "bash '${remote_script}' '${remote_archive}' '${RELEASE_SHA}' '${DEPLOY_ROOT}' '${remote_image}'"
 
       - name: Verify public service
         id: public-smoke

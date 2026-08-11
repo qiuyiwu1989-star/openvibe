@@ -4,9 +4,14 @@ set -Eeuo pipefail
 archive_path="${1:-}"
 release_id="${2:-}"
 deploy_root="${3:-/srv/openvibe}"
+image_archive_path="${4:-}"
 
 if [[ ! -f "${archive_path}" ]]; then
   echo "发布包不存在" >&2
+  exit 1
+fi
+if [[ ! -f "${image_archive_path}" ]]; then
+  echo "容器镜像包不存在" >&2
   exit 1
 fi
 if [[ ! "${release_id}" =~ ^[0-9a-f]{7,40}$ ]]; then
@@ -42,6 +47,8 @@ release_dir="${deploy_root}/releases/${release_id}"
 current_link="${deploy_root}/current"
 previous_link="${deploy_root}/previous"
 previous_release=""
+image_tag="release-${release_id}"
+image_ref="openvibe:${image_tag}"
 if [[ -e "${current_link}" ]] && [[ ! -L "${current_link}" ]]; then
   echo "current 必须是版本目录的符号链接" >&2
   exit 1
@@ -59,7 +66,9 @@ mkdir -p "${release_dir}"
 cleanup_incomplete() {
   if [[ ! -f "${release_dir}/.release-ready" ]]; then
     rm -rf -- "${release_dir}"
+    docker image rm "${image_ref}" >/dev/null 2>&1 || true
   fi
+  rm -f -- "${image_archive_path}"
 }
 trap cleanup_incomplete EXIT
 
@@ -69,9 +78,12 @@ if [[ ! -f "${release_dir}/Dockerfile" ]] || [[ ! -f "${release_dir}/compose.pro
   exit 1
 fi
 
-image_tag="release-${release_id}"
 compose=(docker compose -p openvibe -f "${release_dir}/compose.production.yml")
-OPENVIBE_IMAGE_TAG="${image_tag}" "${compose[@]}" build --pull
+docker image load --input "${image_archive_path}"
+if ! docker image inspect "${image_ref}" >/dev/null 2>&1; then
+  echo "镜像包没有提供预期版本：${image_ref}" >&2
+  exit 1
+fi
 
 rollback() {
   if [[ -z "${previous_release}" ]] || [[ ! -d "${deploy_root}/releases/${previous_release}" ]]; then
@@ -82,11 +94,11 @@ rollback() {
   local previous_tag="release-${previous_release}"
   echo "新版本未通过健康检查，正在恢复上一版本" >&2
   OPENVIBE_IMAGE_TAG="${previous_tag}" docker compose -p openvibe \
-    -f "${previous_dir}/compose.production.yml" up -d --wait --wait-timeout 120
+    -f "${previous_dir}/compose.production.yml" up -d --no-build --pull never --wait --wait-timeout 120
   ln -sfn "${previous_dir}" "${current_link}"
 }
 
-if ! OPENVIBE_IMAGE_TAG="${image_tag}" "${compose[@]}" up -d --wait --wait-timeout 120; then
+if ! OPENVIBE_IMAGE_TAG="${image_tag}" "${compose[@]}" up -d --no-build --pull never --wait --wait-timeout 120; then
   rollback || true
   exit 1
 fi
@@ -104,6 +116,7 @@ if [[ -n "${previous_release}" ]]; then
 fi
 ln -sfn "${release_dir}" "${current_link}"
 rm -f -- "${archive_path}"
+rm -f -- "${image_archive_path}"
 trap - EXIT
 
 echo "OpenVibe 已切换到版本 ${release_id}"
