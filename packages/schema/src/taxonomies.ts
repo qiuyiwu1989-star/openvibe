@@ -61,6 +61,29 @@ export const K12_SUPPORT_LEVELS = ["required", "recommended", "optional"] as con
 
 export const K12_LEARNING_CONTEXTS = ["home", "classroom", "club"] as const;
 
+export const PILOT_BLOCKERS = [
+  "choosing-problem",
+  "choosing-work",
+  "tool-setup",
+  "understanding-code",
+  "debugging",
+  "getting-feedback",
+  "finishing",
+  "presenting",
+] as const;
+
+export const PILOT_INTERVENTIONS = [
+  "environment-setup",
+  "question-prompt",
+  "code-explanation",
+  "debugging-help",
+  "safety-reminder",
+  "feedback-facilitation",
+  "reflection-prompt",
+] as const;
+
+export const PILOT_EVIDENCE_LEVELS = ["not-seen", "emerging", "clear"] as const;
+
 export const UPDATE_CHANGE_KINDS = [
   "repository_renamed",
   "default_branch_changed",
