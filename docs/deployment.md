@@ -46,6 +46,8 @@
 
 延迟检查独立于部署冒烟和自动回滚。部署把无法连接、传输不完整或 5xx 视为失败，但会对失败路由做一次有界复核，避免单次公网或 TLS 抖动造成不必要回滚；持续失败仍然回滚。本地可执行 `npm run ops:latency` 复核当前公网延迟。
 
+`Diagnose production` 是只读人工诊断工作流。它通过同一受保护 SSH 身份采集主机负载、内存、OpenVibe 磁盘占用、Nginx 状态、OpenVibe 容器重启/健康/资源和本机健康延迟，并从 GitHub Runner 重复采样公开 `/explore`。它不读取其他项目容器日志，不修改服务器，也不执行重启。
+
 ## 回滚
 
 生产机按 Git SHA 保留不可变版本和镜像。新容器健康检查失败时自动恢复上一版本；已经上线后也可执行 `bash /srv/openvibe/current/scripts/ops/rollback-release.sh /srv/openvibe`。健康判据统一为：`000` 或 `5xx` 视为服务故障，其他 HTTP 响应说明服务器仍可达。

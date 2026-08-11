@@ -1,0 +1,70 @@
+name: Diagnose production
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: openvibe-production-diagnostics
+  cancel-in-progress: false
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    env:
+      DEPLOY_ROOT: ${{ vars.PRODUCTION_DEPLOY_ROOT || '/srv/openvibe' }}
+      PRODUCTION_HOST: ${{ secrets.PRODUCTION_HOST }}
+      PRODUCTION_USER: ${{ secrets.PRODUCTION_USER }}
+      PRODUCTION_SSH_KEY: ${{ secrets.PRODUCTION_SSH_KEY }}
+      PRODUCTION_KNOWN_HOSTS: ${{ secrets.PRODUCTION_KNOWN_HOSTS }}
+
+    steps:
+      - name: Checkout diagnostic script
+        uses: actions/checkout@v7
+
+      - name: Configure verified SSH transport
+        shell: bash
+        run: |
+          set -Eeuo pipefail
+          [[ "${PRODUCTION_HOST}" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "${PRODUCTION_USER}" =~ ^[a-z_][a-z0-9_-]*$ ]]
+          [[ "${DEPLOY_ROOT}" =~ ^/[A-Za-z0-9._/-]+$ ]]
+          [[ "/${DEPLOY_ROOT#/}/" != *"/../"* ]]
+          [[ "/${DEPLOY_ROOT#/}/" != *"/./"* ]]
+          test -n "${PRODUCTION_SSH_KEY}"
+          test -n "${PRODUCTION_KNOWN_HOSTS}"
+
+          install -m 0700 -d "${HOME}/.ssh"
+          printf '%s\n' "${PRODUCTION_SSH_KEY}" > "${HOME}/.ssh/openvibe_diagnostics"
+          printf '%s\n' "${PRODUCTION_KNOWN_HOSTS}" > "${HOME}/.ssh/known_hosts"
+          chmod 0600 "${HOME}/.ssh/openvibe_diagnostics" "${HOME}/.ssh/known_hosts"
+
+      - name: Sample OpenVibe and host resources
+        shell: bash
+        run: |
+          ssh_options=(
+            -i "${HOME}/.ssh/openvibe_diagnostics"
+            -o IdentitiesOnly=yes
+            -o StrictHostKeyChecking=yes
+            -o ServerAliveInterval=15
+            -o ServerAliveCountMax=4
+          )
+          ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" \
+            "bash -s -- '${DEPLOY_ROOT}'" < scripts/ops/diagnose-release.sh
+
+      - name: Sample public transport
+        shell: bash
+        run: |
+          for sample in 1 2 3 4 5; do
+            curl --silent --show-error --location --output /dev/null \
+              --write-out "sample=${sample} status=%{http_code} connect=%{time_connect}s tls=%{time_appconnect}s first=%{time_starttransfer}s total=%{time_total}s bytes=%{size_download}\n" \
+              --connect-timeout 8 --max-time 20 https://vibe.yongle.school/explore || true
+          done
+
+      - name: Remove temporary SSH key
+        if: ${{ always() }}
+        run: rm -f "${HOME}/.ssh/openvibe_diagnostics"
