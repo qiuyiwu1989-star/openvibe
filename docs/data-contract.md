@@ -80,6 +80,18 @@ discovered → fetched → evaluated → review → published
 
 ## 学习进度模型
 
+### BeginnerMission 1.1.0 与 K12LearningDesign
+
+普通新手任务继续兼容 `1.0.0`；包含分龄学习设计的试点使用 `1.1.0`，并必须提供 `k12` 对象：
+
+- `primaryAgeBand` 与 `ageBands`：小学低段、小学高段、初中、高中的推荐关系；主要年龄段必须包含在推荐范围中。
+- `subjectLinks` 与 `learningContext`：学科连接，以及家庭、课堂或社团使用场景。
+- `adultSupport` 与 `safetyNotes`：成人介入程度、具体角色和未成年人安全提示；小学低段不能标记为完全无需支持。
+- `creatorLoop`：问题、知识、工具、作品、反馈、身份六个环节，不能只记录技术操作。
+- `aiBoundary`：学习者亲自决定、AI 可以帮助、完成前必须验证三条边界。
+
+年龄标签只存在于任务内容中。`MakerProgressRecord` 不保存生日、年龄、学校、班级或监护关系，因此选择分龄入口不会形成儿童画像。
+
 ### MakerProgressRecord
 
 记录一个新手任务在当前设备上的制作状态。它不是打卡分数，而是最小作者记录：

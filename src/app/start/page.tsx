@@ -1,33 +1,25 @@
 import type { Metadata } from "next";
 
-import { MissionCard, trackLabels } from "@/components/mission-card";
+import { StartMissionExplorer } from "@/components/start-mission-explorer";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
 
 export const metadata: Metadata = {
-  title: "第一次做作品",
-  description: "不用先学会框架，从 15 分钟可见变化的小任务开始做出第一个作品。",
+  title: "K12 分龄作品入口",
+  description: "从小学低段到高中，按成长阶段和兴趣找到 15 分钟可见变化的创造者学习案例。",
 };
-
-const trackDescriptions = {
-  "personal-page": "把你的身份和想法放到网页上",
-  "small-tool": "解决一个自己真的会遇到的小问题",
-  interaction: "亲手做出点击、状态和反馈",
-  "mini-game": "用规则、胜负和反馈理解程序",
-} as const;
 
 export default function StartPage() {
   const missions = getBeginnerMissions();
-  const tracks = Object.keys(trackLabels) as Array<keyof typeof trackLabels>;
 
   return (
     <div className="start-page">
       <section className="start-hero shell">
         <div>
-          <p className="eyebrow">START / 第一次做作品</p>
-          <h1>不懂框架，也可以先做出一个东西。</h1>
+          <p className="eyebrow">K12 START / 分龄作品入口</p>
+          <h1>每个年龄，都可以成为作品的作者。</h1>
           <p>
-            从一个看得见的小变化开始。每个任务都不要后端、不要付费 API，
-            并且把第一次修改和完成标志说清楚。
+            从一个看得见的小变化开始。年龄只是推荐，不是限制；每个任务都不要后端、不要付费 API，
+            并把孩子亲自决定的部分说清楚。
           </p>
         </div>
         <div className="start-gates" aria-label="新手任务收录标准">
@@ -50,36 +42,9 @@ export default function StartPage() {
         </div>
       </section>
 
-      <section className="section shell" aria-labelledby="mission-list-title">
-        <div className="section-heading start-section-heading">
-          <div>
-            <p className="eyebrow">{missions.length} 个新手任务</p>
-            <h2 id="mission-list-title">选一个你真想做的</h2>
-          </div>
-          <p>不用按顺序。兴趣比“正确路线”更能帮你完成第一个作品。</p>
-        </div>
-
-        {tracks.map((track) => {
-          const trackMissions = missions.filter((mission) => mission.track === track);
-          return (
-            <section className="mission-track" key={track} id={track}>
-              <header>
-                <h3>{trackLabels[track]}</h3>
-                <p>{trackDescriptions[track]}</p>
-              </header>
-              <div className="mission-grid">
-                {trackMissions.map((mission) => (
-                  <MissionCard
-                    key={mission.slug}
-                    mission={mission}
-                    index={missions.indexOf(mission) + 1}
-                  />
-                ))}
-              </div>
-            </section>
-          );
-        })}
-      </section>
+      <div className="shell">
+        <StartMissionExplorer missions={missions} />
+      </div>
     </div>
   );
 }

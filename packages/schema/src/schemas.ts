@@ -2,10 +2,15 @@ import { z } from "zod";
 
 import {
   AUDIENCE_LEVELS,
+  BEGINNER_MISSION_SCHEMA_VERSION,
   BEGINNER_MISSION_LEVELS,
   BEGINNER_MISSION_TRACKS,
   DIFFICULTY_LEVELS,
   LEARNING_GOALS,
+  K12_AGE_BANDS,
+  K12_LEARNING_CONTEXTS,
+  K12_SUBJECTS,
+  K12_SUPPORT_LEVELS,
   PROJECT_CATEGORIES,
   PUBLICATION_STATUSES,
   RISK_KINDS,
@@ -322,9 +327,69 @@ const beginnerMissionStepSchema = z
   })
   .strict();
 
+const uniqueTextList = z.array(nonEmptyText).min(1).max(5).refine(
+  (items) => new Set(items).size === items.length,
+  { message: "列表内容不能重复" },
+);
+
+const k12LearningDesignSchema = z
+  .object({
+    primaryAgeBand: z.enum(K12_AGE_BANDS),
+    ageBands: z.array(z.enum(K12_AGE_BANDS)).min(1).max(2),
+    subjectLinks: z.array(z.enum(K12_SUBJECTS)).min(1).max(3),
+    learningContext: z.enum(K12_LEARNING_CONTEXTS),
+    adultSupport: z
+      .object({
+        level: z.enum(K12_SUPPORT_LEVELS),
+        role: z.string().trim().min(10).max(300),
+      })
+      .strict(),
+    safetyNotes: uniqueTextList,
+    creatorLoop: z
+      .object({
+        problem: z.string().trim().min(10).max(300),
+        knowledge: z.string().trim().min(10).max(300),
+        tool: z.string().trim().min(10).max(300),
+        work: z.string().trim().min(10).max(300),
+        feedback: z.string().trim().min(10).max(300),
+        identity: z.string().trim().min(10).max(300),
+      })
+      .strict(),
+    aiBoundary: z
+      .object({
+        learnerOwns: uniqueTextList,
+        aiCanHelp: uniqueTextList,
+        mustVerify: uniqueTextList,
+      })
+      .strict(),
+  })
+  .strict()
+  .superRefine((design, context) => {
+    if (!design.ageBands.includes(design.primaryAgeBand)) {
+      context.addIssue({
+        code: "custom",
+        path: ["ageBands"],
+        message: "主要年龄段必须包含在推荐年龄段中",
+      });
+    }
+    if (new Set(design.ageBands).size !== design.ageBands.length) {
+      context.addIssue({ code: "custom", path: ["ageBands"], message: "推荐年龄段不能重复" });
+    }
+    if (new Set(design.subjectLinks).size !== design.subjectLinks.length) {
+      context.addIssue({ code: "custom", path: ["subjectLinks"], message: "学科连接不能重复" });
+    }
+    if (design.primaryAgeBand === "lower-primary" && design.adultSupport.level === "optional") {
+      context.addIssue({
+        code: "custom",
+        path: ["adultSupport", "level"],
+        message: "小学低段案例至少需要建议成人支持",
+      });
+    }
+  });
+
 export const BeginnerMissionSchema = z
   .object({
-    schemaVersion: z.literal(SCHEMA_VERSION),
+    schemaVersion: z.enum([SCHEMA_VERSION, BEGINNER_MISSION_SCHEMA_VERSION]),
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
     title: z.string().trim().min(1).max(80),
     tagline: z.string().trim().min(10).max(140),
@@ -351,11 +416,24 @@ export const BeginnerMissionSchema = z
     firstChange: z.string().trim().min(10).max(300),
     steps: z.array(beginnerMissionStepSchema).length(3),
     aiPrompt: z.string().trim().min(30).max(1600),
+    k12: k12LearningDesignSchema.optional(),
     noPaidService: z.literal(true),
     requiresBackend: z.literal(false),
     verifiedAt: isoDateTime,
   })
-  .strict();
+  .strict()
+  .superRefine((mission, context) => {
+    if (mission.schemaVersion === BEGINNER_MISSION_SCHEMA_VERSION && !mission.k12) {
+      context.addIssue({ code: "custom", path: ["k12"], message: "1.1.0 任务必须包含 K12 学习设计" });
+    }
+    if (mission.schemaVersion === SCHEMA_VERSION && mission.k12) {
+      context.addIssue({
+        code: "custom",
+        path: ["schemaVersion"],
+        message: "包含 K12 学习设计的任务必须使用 1.1.0",
+      });
+    }
+  });
 
 export const MakerProgressRecordSchema = z
   .object({
