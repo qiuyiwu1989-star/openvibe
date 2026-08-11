@@ -31,7 +31,7 @@ export function StartMissionExplorer({ missions }: StartMissionExplorerProps) {
     [ageBand, missions, track],
   );
 
-  const pilotCount = missions.filter((mission) => mission.k12).length;
+  const k12CaseCount = missions.filter((mission) => mission.k12).length;
   const hasFilters = Boolean(ageBand || track);
 
   return (
@@ -39,7 +39,7 @@ export function StartMissionExplorer({ missions }: StartMissionExplorerProps) {
       <section className="k12-path-picker" aria-labelledby="k12-picker-title">
         <div className="section-heading k12-picker-heading">
           <div>
-            <p className="eyebrow">K12 PILOT / {pilotCount} 个分龄试点</p>
+            <p className="eyebrow">K12 CASES / {k12CaseCount} 个分龄案例</p>
             <h2 id="k12-picker-title">先选成长阶段，再选想做的作品。</h2>
           </div>
           <p>年龄只是推荐入口，不是能力标签。跨年龄尝试完全可以。</p>
@@ -107,7 +107,7 @@ export function StartMissionExplorer({ missions }: StartMissionExplorerProps) {
           </div>
         ) : (
           <div className="k12-empty">
-            <h3>这个组合还没有试点案例。</h3>
+            <h3>这个组合暂时没有合适案例。</h3>
             <p>先清空兴趣筛选，查看这个年龄段的全部推荐。</p>
             <button className="button button-ghost" type="button" onClick={() => setTrack("")}>查看全部兴趣</button>
           </div>

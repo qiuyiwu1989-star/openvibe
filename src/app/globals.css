@@ -1537,6 +1537,412 @@ h3 {
   font-size: 10px;
 }
 
+.path-invitation {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  padding-block: 64px;
+  gap: 32px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.path-invitation .eyebrow,
+.path-invitation h2 {
+  margin-bottom: 0;
+}
+
+.path-invitation h2 {
+  max-width: 760px;
+  margin-top: 8px;
+  font-size: clamp(30px, 4vw, 50px);
+}
+
+.paths-page,
+.learning-path-page {
+  overflow: hidden;
+}
+
+.paths-hero {
+  min-height: 610px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.5fr);
+  align-items: end;
+  padding-block: 100px 70px;
+  gap: 50px;
+}
+
+.paths-hero h1 {
+  max-width: 900px;
+  margin-bottom: 28px;
+  font-size: clamp(54px, 8vw, 112px);
+}
+
+.paths-hero h1 span {
+  color: var(--blue);
+}
+
+.paths-hero > div > p:last-child {
+  max-width: 730px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.paths-facts {
+  margin: 0;
+  border-top: 1px solid var(--ink);
+}
+
+.paths-facts div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-block: 16px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.paths-facts dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.paths-facts dd {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.paths-principles {
+  color: white;
+  background: var(--ink);
+}
+
+.paths-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.paths-principle-grid article {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.paths-principle-grid article:first-child {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.paths-principle-grid span {
+  color: var(--acid);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.paths-principle-grid h2 {
+  max-width: 290px;
+  margin-top: auto;
+  font-size: 30px;
+}
+
+.paths-principle-grid p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.paths-section-note {
+  max-width: 390px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.learning-path-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.learning-path-card {
+  min-height: 470px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  box-shadow: 7px 7px 0 rgba(23, 23, 19, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.learning-path-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 9px 9px 0 var(--acid);
+}
+
+.learning-path-card-topline {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.learning-path-card > div:nth-child(2) {
+  padding-block: 34px 24px;
+}
+
+.learning-path-card h2 {
+  margin-bottom: 16px;
+  font-size: clamp(34px, 4vw, 54px);
+}
+
+.learning-path-card h2 a:hover {
+  color: var(--blue);
+}
+
+.learning-path-card > div:nth-child(2) > p:last-child,
+.learning-path-outcome {
+  color: var(--muted);
+}
+
+.learning-path-outcome {
+  display: grid;
+  grid-template-columns: 85px 1fr;
+  margin-top: auto;
+  padding-block: 18px;
+  gap: 12px;
+  border-block: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.learning-path-outcome strong {
+  color: var(--ink);
+}
+
+.learning-path-card .text-link {
+  margin-top: 22px;
+}
+
+.path-detail-hero {
+  min-height: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 72px;
+}
+
+.path-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  margin-block: 34px 22px;
+  gap: 8px;
+}
+
+.path-detail-badges span {
+  padding: 5px 10px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 760;
+}
+
+.path-detail-hero h1 {
+  max-width: 1000px;
+  margin-bottom: 18px;
+  font-size: clamp(62px, 10vw, 132px);
+}
+
+.path-detail-hero > p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.path-detail-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  gap: 10px;
+}
+
+.path-outcome-panel {
+  max-width: 790px;
+  display: grid;
+  grid-template-columns: 95px 1fr;
+  margin-top: 48px;
+  padding: 22px;
+  gap: 16px;
+  border: 1px solid var(--ink);
+  background: var(--acid);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.path-outcome-panel span {
+  font-weight: 900;
+}
+
+.path-outcome-panel p {
+  margin: 0;
+}
+
+.four-week-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  list-style: none;
+}
+
+.four-week-grid > li {
+  min-height: 510px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.week-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.week-heading span {
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 850;
+}
+
+.week-heading h3 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.four-week-grid > li > p {
+  margin-block: 22px;
+  color: var(--muted);
+}
+
+.four-week-grid ul,
+.four-week-grid dl {
+  margin: 0;
+}
+
+.four-week-grid ul {
+  padding-left: 20px;
+}
+
+.four-week-grid dl {
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.four-week-grid dl div {
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.four-week-grid dt {
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.four-week-grid dd {
+  margin: 4px 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.guide-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.6fr);
+  align-items: end;
+  margin-bottom: 42px;
+  gap: 36px;
+}
+
+.guide-heading h2 {
+  margin-bottom: 16px;
+  font-size: clamp(42px, 6vw, 76px);
+}
+
+.guide-heading > div > p:last-child {
+  max-width: 700px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.guide-privacy {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid var(--ink);
+  background: #fff0e9;
+  font-size: 13px;
+}
+
+.guide-privacy strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.guide-grid article {
+  min-height: 290px;
+  padding: 28px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.guide-grid h3 {
+  font-size: 26px;
+}
+
+.guide-grid ul,
+.guide-grid ol {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.showcase-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.7fr);
+  padding: 38px;
+  gap: 42px;
+  color: white;
+  background: var(--blue);
+}
+
+.showcase-panel .eyebrow {
+  color: var(--acid);
+}
+
+.showcase-panel h3 {
+  font-size: 34px;
+}
+
+.showcase-panel p,
+.showcase-panel ul {
+  margin-bottom: 0;
+}
+
+.showcase-panel ul {
+  padding-left: 20px;
+}
+
 .mission-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -3064,6 +3470,50 @@ h3 {
 }
 
 @media (max-width: 980px) {
+  .paths-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .paths-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .paths-facts div {
+    display: block;
+    padding: 16px;
+    border: 1px solid var(--ink);
+    border-right: 0;
+  }
+
+  .paths-facts div:last-child {
+    border-right: 1px solid var(--ink);
+  }
+
+  .paths-facts dd {
+    margin-top: 6px;
+  }
+
+  .paths-principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paths-principle-grid article {
+    min-height: 240px;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .four-week-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .guide-heading,
+  .showcase-panel {
+    grid-template-columns: 1fr;
+  }
+
   .k12-age-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3074,6 +3524,58 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  .path-invitation,
+  .learning-path-grid,
+  .four-week-grid,
+  .guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .path-invitation {
+    align-items: start;
+  }
+
+  .paths-hero {
+    padding-block: 70px 48px;
+  }
+
+  .paths-hero h1 {
+    font-size: clamp(46px, 14vw, 68px);
+  }
+
+  .paths-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .paths-facts div,
+  .paths-facts div:last-child {
+    border: 1px solid var(--ink);
+    border-bottom: 0;
+  }
+
+  .paths-facts div:last-child {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .learning-path-card,
+  .four-week-grid > li,
+  .guide-grid article {
+    min-height: auto;
+  }
+
+  .path-detail-hero h1 {
+    font-size: clamp(54px, 18vw, 82px);
+  }
+
+  .path-outcome-panel,
+  .learning-path-outcome {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase-panel {
+    padding: 28px 22px;
+  }
+
   .k12-path-picker {
     padding-top: 58px;
   }

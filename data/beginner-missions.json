@@ -1,6 +1,6 @@
 [
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "personal-card",
     "title": "做一张属于你的个人名片",
     "tagline": "先不学框架，把名字、照片和一句自我介绍变成可以分享的网页。",
@@ -24,6 +24,27 @@
       { "time": "2 小时", "title": "把作品交给一个真实的人", "actions": ["补充一个作品链接", "检查手机宽度", "把页面展示给朋友并记录反馈"], "doneWhen": "有人能通过页面说出你是谁、在做什么。" }
     ],
     "aiPrompt": "我正在修改一个纯 HTML/CSS 的个人作品集模板。请先告诉我姓名、简介、头像和项目卡分别可能在哪些文件中，不要一次重写整个页面。等我选择想保留的内容后，再逐步给出最小修改，并解释每次修改会在页面哪里发生。",
+    "k12": {
+      "primaryAgeBand": "lower-primary",
+      "ageBands": ["lower-primary", "upper-primary"],
+      "subjectLinks": ["language-arts", "arts", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": { "level": "required", "role": "成人负责文件操作和公开前检查，孩子亲自选择昵称、作品内容、颜色和想让别人记住的特点。" },
+      "safetyNotes": ["使用昵称或名字缩写，不填写学校、班级、家庭地址和私人联系方式。", "头像优先使用自画像、玩偶或成人确认可公开的图片。"],
+      "creatorLoop": {
+        "problem": "想一想第一次认识自己的人最需要知道什么，而不是什么信息都放上去。",
+        "knowledge": "学习姓名、介绍、图片和作品链接在网页中的层级与作用。",
+        "tool": "在成人协助下修改 HTML 文字和 CSS 颜色，让模板表达真实的自己。",
+        "work": "完成一张带安全署名、自我介绍和一个真实作品的个人网页名片。",
+        "feedback": "请家人看十秒后复述记住了什么，孩子再决定是否修改。",
+        "identity": "孩子能够署名说出自己选择展示什么、保护什么，以及为什么。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["决定希望别人记住自己的什么特点", "选择昵称、作品、颜色和要删除的模板内容"],
+        "aiCanHelp": ["告诉成人文字与颜色可能在哪些文件中", "逐步解释每次修改会改变页面哪里"],
+        "mustVerify": ["成人与孩子一起检查页面没有暴露真实学校、位置和私人联系方式"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -85,7 +106,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "progress-steps",
     "title": "做一个会前进的步骤条",
     "tagline": "点击上一页和下一页，让页面把进度变化清楚地表现出来。",
@@ -109,6 +130,27 @@
       { "time": "2 小时", "title": "把它用于真实流程", "actions": ["选择一个报名或制作流程", "为每步补一句说明", "请朋友试走一遍"], "doneWhen": "对方不需要解释就能完成整个流程。" }
     ],
     "aiPrompt": "请陪我理解这个步骤条的 JavaScript。不要直接重写。先用生活语言解释 currentActive、按钮点击和 CSS active 类之间的关系，再帮我把四步替换成自己的流程，并一次只增加一个小功能。",
+    "k12": {
+      "primaryAgeBand": "upper-primary",
+      "ageBands": ["upper-primary", "middle-school"],
+      "subjectLinks": ["mathematics", "language-arts", "information-technology"],
+      "learningContext": "classroom",
+      "adultSupport": { "level": "recommended", "role": "教师帮助学习者找到一个真实流程并检查完成条件是否清楚，不替学习者设计步骤。" },
+      "safetyNotes": ["不要把同学的表现或成绩放进公开步骤条。", "步骤条只描述任务过程，不用于追踪个人位置或行为。"],
+      "creatorLoop": {
+        "problem": "选择一个别人经常不知道下一步做什么的真实流程。",
+        "knowledge": "理解顺序、状态和边界，学习怎样写可观察的完成条件。",
+        "tool": "修改当前步骤变量、按钮状态与 CSS 高亮，承载自己的流程规则。",
+        "work": "完成一个能前进、后退、限制首尾并清楚说明完成状态的步骤条。",
+        "feedback": "请同伴不听解释走完整个流程，并记录他在哪里犹豫。",
+        "identity": "能够说明自己如何定义步骤与完成标准，并为流程是否清楚负责。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["选择真实流程并决定每一步的名称", "亲自定义什么证据表示一步已经完成"],
+        "aiCanHelp": ["解释 currentActive 与高亮状态的关系", "协助处理首尾按钮和完成提示"],
+        "mustVerify": ["让一位不熟悉流程的同伴独立操作并记录卡点"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -170,7 +212,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "daily-todo",
     "title": "做一张今天真的会用的清单",
     "tagline": "从添加和完成任务开始，把通用待办变成只服务今天的小工具。",
@@ -194,6 +236,27 @@
       { "time": "2 小时", "title": "加入自己的限制", "actions": ["限制最多三件重要任务", "超出时给出提示", "邀请一人试用"], "doneWhen": "工具能守住你设定的三件事规则。" }
     ],
     "aiPrompt": "我想把这个 todo-list 改成“今天只做三件事”。请先帮我找到新增任务的事件处理和任务数组，不要改变存储方式；然后逐步加入最多三项的限制、友好提示和测试方法。",
+    "k12": {
+      "primaryAgeBand": "middle-school",
+      "ageBands": ["middle-school", "high-school"],
+      "subjectLinks": ["wellbeing", "mathematics", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": { "level": "optional", "role": "成人或教师可以作为一次真实试用者，只反馈规则是否清楚，不用清单监督或排名学习者。" },
+      "safetyNotes": ["清单保存在本机，也不要记录密码、健康状况和他人的私人事务。", "任务数量限制服务于自我选择，不用来评价学习者是否勤奋。"],
+      "creatorLoop": {
+        "problem": "观察任务很多却总难开始的真实时刻，判断最需要解决的一个卡点。",
+        "knowledge": "理解任务数组、完成状态与本地存储，并比较数量限制带来的影响。",
+        "tool": "修改新增、完成和保存逻辑，把通用待办改成符合自己节奏的工具。",
+        "work": "完成一个能保存任务、限制重点数量并清楚显示状态的今日清单。",
+        "feedback": "真实使用一天，记录哪条规则有帮助、哪条规则造成阻碍。",
+        "identity": "能够说明自己怎样决定重要事项，而不是让工具或 AI 替自己安排生活。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["决定什么事情值得进入今天以及数量上限", "根据亲身使用选择保留或修改规则"],
+        "aiCanHelp": ["定位任务数组、事件与本地存储流程", "协助增加限制提示和刷新测试"],
+        "mustVerify": ["真实使用一天并记录至少一次规则帮助或阻碍行动的证据"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -255,7 +318,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "password-generator",
     "title": "做一个密码生成器",
     "tagline": "用复选框组合规则，生成长度和字符类型都可控制的随机密码。",
@@ -279,12 +342,33 @@
       { "time": "2 小时", "title": "让工具更容易使用", "actions": ["加入复制反馈", "补充安全说明", "用键盘完成一次操作"], "doneWhen": "生成、复制和反馈形成完整流程。" }
     ],
     "aiPrompt": "我正在学习密码生成器中的随机字符逻辑。请先解释每个字符函数和 generatePassword 的职责，指出可能产生空结果的条件。然后陪我逐步加入最小长度、必选规则和复制成功反馈，不要一次贴出完整重写版本。",
+    "k12": {
+      "primaryAgeBand": "high-school",
+      "ageBands": ["high-school"],
+      "subjectLinks": ["mathematics", "information-technology", "social-studies"],
+      "learningContext": "classroom",
+      "adultSupport": { "level": "optional", "role": "教师可以引导安全威胁讨论与代码审查，但默认规则、风险说明和最终验证由学习者完成。" },
+      "safetyNotes": ["只用虚构账户测试，不在课堂或截图中输入、保存和展示真实密码。", "页面必须明确这是学习工具，不能承诺生成结果绝对安全。"],
+      "creatorLoop": {
+        "problem": "分析弱密码为什么出现，并定义生成工具应该避免哪些风险。",
+        "knowledge": "学习随机性、字符空间、长度与可用性的权衡，以及前端随机的限制。",
+        "tool": "修改生成、校验与复制反馈逻辑，实现自己定义的安全默认值。",
+        "work": "完成一个不会生成空结果、提供安全说明并支持键盘操作的密码生成器。",
+        "feedback": "请同伴尝试边界输入并检查错误提示是否准确、不夸大安全性。",
+        "identity": "能够公开说明安全默认值、技术限制和自己愿意承担的产品责任。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["定义最低安全规则与工具不能承诺的边界", "判断可用性与安全性发生冲突时如何取舍"],
+        "aiCanHelp": ["解释字符函数、随机选择和空结果条件", "协助增加规则校验、复制反馈与测试用例"],
+        "mustVerify": ["使用虚构数据完成边界测试，并亲自核对安全说明没有夸大"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "theme-clock",
     "title": "做一个有昼夜主题的时钟",
     "tagline": "读取当前时间、旋转指针，再亲手决定白天和夜晚的视觉语言。",
@@ -308,6 +392,27 @@
       { "time": "2 小时", "title": "加入一句随时间变化的话", "actions": ["定义早中晚时段", "显示不同问候", "测试三个时间输入"], "doneWhen": "页面会根据时间给出正确问候。" }
     ],
     "aiPrompt": "请把 theme-clock 中 Date、map 和 transform 的关系解释成“时间刻度转成角度”。先不要改代码。等我选好白天与夜晚配色后，再帮我加入早中晚问候，并给我三个可验证的测试时间。",
+    "k12": {
+      "primaryAgeBand": "upper-primary",
+      "ageBands": ["upper-primary", "middle-school"],
+      "subjectLinks": ["mathematics", "arts", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": { "level": "recommended", "role": "成人帮助设置测试时间和检查文字对比度，学习者决定昼夜视觉与问候规则。" },
+      "safetyNotes": ["问候内容不读取位置、身份或个人日程。", "颜色选择需要同时保证文字清楚，不能只追求装饰效果。"],
+      "creatorLoop": {
+        "problem": "思考怎样让时间不只是数字，而能用颜色和语言帮助人理解一天的节奏。",
+        "knowledge": "理解时分秒与角度映射，观察时间区间怎样控制主题和问候。",
+        "tool": "修改 Date、映射与 CSS 变量，实现自己的昼夜视觉和时段规则。",
+        "work": "完成一个实时走动、能切换主题并按时段显示问候的个人时钟。",
+        "feedback": "请家人在三个时段测试，确认指针、问候和颜色都容易理解。",
+        "identity": "能够说明自己怎样把数学规则变成视觉表达，并为可读性负责。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["选择白天与夜晚的颜色和语言", "亲自定义早中晚区间与每段问候"],
+        "aiCanHelp": ["解释时间数值怎样映射成角度", "协助构造三个测试时间和检查状态条件"],
+        "mustVerify": ["亲自测试边界时间，并请一位家人确认文字与指针清楚"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -591,5 +696,222 @@
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "drawing-studio",
+    "title": "做一块会画画的数字画布",
+    "tagline": "选择颜色和笔刷，把鼠标移动变成线条，再画一张只有你能决定的作品。",
+    "track": "interaction",
+    "level": "first-step",
+    "source": { "repository": "bradtraversy/50projects50days", "path": "drawing-app", "url": "https://github.com/bradtraversy/50projects50days/tree/master/drawing-app", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "Canvas API"],
+    "runMode": "下载 drawing-app 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一块可以选择颜色、改变笔刷、清空并保存主题画面的数字画布。",
+    "makerDecision": "你想画给谁看、希望他感受到什么？主题和完成标准由你决定。",
+    "firstChange": "把默认颜色和笔刷大小改成自己的选择，再画出第一条线。",
+    "steps": [
+      { "time": "15 分钟", "title": "画出第一条自己的线", "actions": ["选择颜色", "调整笔刷大小", "用鼠标完成一条线"], "doneWhen": "画布上出现由你控制颜色和粗细的线条。" },
+      { "time": "45 分钟", "title": "让工具符合你的画法", "actions": ["增加一组常用颜色", "限制笔刷范围", "给清空按钮写清楚提示"], "doneWhen": "颜色、笔刷和按钮都适合你的主题。" },
+      { "time": "2 小时", "title": "完成并讲述一张画", "actions": ["画完一个完整主题", "请家人观看", "根据提问补充一处细节"], "doneWhen": "你能展示画面并说出最重要的一处选择。" }
+    ],
+    "aiPrompt": "请先用生活语言解释画布如何从鼠标位置画出线条，不要替我选择主题或生成成品。等我决定颜色和笔刷后，再一步步帮我调整控件，并告诉我每次怎样验证。",
+    "k12": {
+      "primaryAgeBand": "lower-primary", "ageBands": ["lower-primary", "upper-primary"], "subjectLinks": ["arts", "mathematics", "information-technology"], "learningContext": "home",
+      "adultSupport": { "level": "required", "role": "成人负责下载与打开文件，孩子负责主题、颜色、笔触和完成判断。" },
+      "safetyNotes": ["公开画作时使用昵称，不在画面中写学校、住址和私人联系方式。", "如果参考他人作品，需要说明参考来源而不是直接冒充原创。"],
+      "creatorLoop": { "problem": "选择一种自己想表达又难用语言说清的感受或故事。", "knowledge": "观察坐标、颜色和线条粗细怎样共同改变画面。", "tool": "修改 Canvas 画线逻辑和控制按钮，让工具符合自己的画法。", "work": "完成一张有明确主题、可以展示并保存的数字画。", "feedback": "请家人描述第一眼看到什么，孩子选择是否补充细节。", "identity": "孩子能够署名说明主题、笔触和颜色为什么这样选择。" },
+      "aiBoundary": { "learnerOwns": ["亲自决定画面主题与情感", "选择颜色、笔触和作品完成标准"], "aiCanHelp": ["解释坐标怎样变成线条", "协助调整笔刷控件和清空逻辑"], "mustVerify": ["孩子亲自画完并向一位家人解释最重要的选择"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "sound-storyboard",
+    "title": "用声音讲一个三幕小故事",
+    "tagline": "把音效按钮重新命名和排序，用三个声音讲出开始、变化和结尾。",
+    "track": "interaction",
+    "level": "first-step",
+    "source": { "repository": "bradtraversy/50projects50days", "path": "sound-board", "url": "https://github.com/bradtraversy/50projects50days/tree/master/sound-board", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "Audio API"],
+    "runMode": "下载 sound-board 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 10, "completeMinutes": 90 },
+    "outcome": "一个有三到六个声音按钮、能按顺序播放并讲述完整小故事的声音板。",
+    "makerDecision": "这三个声音之间发生了什么故事？按钮顺序和每个声音的意义由你决定。",
+    "firstChange": "把三个按钮改成故事中的角色或动作名称，并依次播放一次。",
+    "steps": [
+      { "time": "15 分钟", "title": "让三个声音成为故事", "actions": ["试听全部声音", "选择三个声音", "重新命名按钮"], "doneWhen": "按顺序播放时，你能讲出开始、变化和结尾。" },
+      { "time": "45 分钟", "title": "让播放状态看得见", "actions": ["修改按钮颜色", "播放时显示高亮", "阻止多个声音混在一起"], "doneWhen": "听众能看出当前正在播放哪个声音。" },
+      { "time": "2 小时", "title": "给家人演一场声音剧", "actions": ["写一句开场", "完成一次现场播放", "根据听众复述修改顺序"], "doneWhen": "听众能复述故事并指出最喜欢的声音。" }
+    ],
+    "aiPrompt": "请先解释每个按钮如何找到并播放对应音频。故事主题、按钮名字和播放顺序由我决定；你只帮我逐步加入播放高亮和停止上一个声音，并提醒我每一步怎样试听。",
+    "k12": {
+      "primaryAgeBand": "lower-primary", "ageBands": ["lower-primary", "upper-primary"], "subjectLinks": ["language-arts", "arts", "information-technology"], "learningContext": "home",
+      "adultSupport": { "level": "required", "role": "成人负责文件和音量设置，孩子负责声音选择、故事顺序和现场演出。" },
+      "safetyNotes": ["先把设备音量调低，避免突然的大声音伤害听力。", "录制他人声音前必须获得同意，公开时不使用可识别的私人对话。"],
+      "creatorLoop": { "problem": "尝试不用画面，只靠几个声音让别人听懂一个故事。", "knowledge": "学习顺序、重复和声音强弱怎样改变听众感受。", "tool": "修改音频按钮、播放状态和停止逻辑，编排自己的声音故事。", "work": "完成一个能清楚播放三幕故事并显示当前状态的声音板。", "feedback": "请家人只听声音复述故事，孩子再决定是否调整顺序。", "identity": "孩子能够署名说出故事为什么这样开始、变化和结束。" },
+      "aiBoundary": { "learnerOwns": ["选择声音并亲自编排三幕故事", "决定按钮名称和希望听众感受到什么"], "aiCanHelp": ["解释按钮与音频文件怎样对应", "协助实现播放高亮和停止重叠"], "mustVerify": ["控制安全音量并请一位家人只听声音复述故事"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "digital-terrarium",
+    "title": "布置一座自己的数字植物园",
+    "tagline": "拖动植物、调整层次和说明文字，用网页空间表达一种真实的生态观察。",
+    "track": "interaction",
+    "level": "guided",
+    "source": { "repository": "microsoft/Web-Dev-For-Beginners", "path": "3-terrarium/solution", "url": "https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/3-terrarium/solution", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "DOM"],
+    "runMode": "下载 3-terrarium/solution 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一座可以拖动植物、调整布局并附带观察说明的数字植物园。",
+    "makerDecision": "你的植物园遵循什么环境主题？植物位置和说明必须来自你的观察与判断。",
+    "firstChange": "拖动一株植物到新位置，并把页面标题改成自己的环境主题。",
+    "steps": [
+      { "time": "15 分钟", "title": "移动第一株植物", "actions": ["打开页面", "拖动一株植物", "修改植物园标题"], "doneWhen": "植物能被拖动，页面显示你的主题。" },
+      { "time": "45 分钟", "title": "建立一条布局规则", "actions": ["选择光照或高度规则", "重新摆放全部植物", "为两株植物写说明"], "doneWhen": "别人能从布局和文字看出你的规则。" },
+      { "time": "2 小时", "title": "用观察修正植物园", "actions": ["查找一个可靠植物来源", "核对两条说明", "请同伴找出不合理位置"], "doneWhen": "布局和说明经过来源核对与同伴反馈。" }
+    ],
+    "aiPrompt": "请先解释植物拖动时 DOM 元素和坐标怎样变化，不要替我决定生态主题。等我给出布局规则后，再帮我逐步调整样式和说明，并提醒我核对植物事实来源。",
+    "k12": {
+      "primaryAgeBand": "upper-primary", "ageBands": ["upper-primary", "middle-school"], "subjectLinks": ["science", "arts", "information-technology"], "learningContext": "classroom",
+      "adultSupport": { "level": "recommended", "role": "教师帮助提供可靠植物资料与素材授权，学习者亲自制定布局规则和说明。" },
+      "safetyNotes": ["植物说明必须核对来源，不把 AI 生成内容直接当成科学事实。", "只使用仓库素材、自绘图片或确认可以公开使用的资源。"],
+      "creatorLoop": { "problem": "思考怎样用有限空间表达一种植物生长环境。", "knowledge": "学习植物需求、空间层次以及 DOM 元素与坐标关系。", "tool": "使用拖放与 CSS 布局实现自己的环境规则。", "work": "完成一座可拖动、有统一环境主题和可靠说明的数字植物园。", "feedback": "请同伴找出一处不理解或不合理的布局并据此修改。", "identity": "能够署名解释布局规则、事实来源和自己做出的生态判断。" },
+      "aiBoundary": { "learnerOwns": ["决定环境主题与植物布局规则", "亲自判断哪些说明可靠并选择引用来源"], "aiCanHelp": ["解释 DOM、拖动坐标和 CSS 层次", "协助整理来源格式和检查布局代码"], "mustVerify": ["用可靠来源核对植物说明，并请同伴检查布局规则"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "typing-challenge",
+    "title": "做一场自己写文本的打字挑战",
+    "tagline": "选择一段值得认真读的文字，记录输入时间和错误，把速度挑战变成理解与表达练习。",
+    "track": "mini-game",
+    "level": "guided",
+    "source": { "repository": "microsoft/Web-Dev-For-Beginners", "path": "4-typing-game/solution", "url": "https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/4-typing-game/solution", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "Timer API"],
+    "runMode": "下载 4-typing-game/solution 目录后直接打开 index.html",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个使用自选文本、能记录时间和错误并给出重新挑战反馈的打字练习。",
+    "makerDecision": "哪段文字值得别人慢下来准确输入？文本、反馈语和速度之外的完成标准由你决定。",
+    "firstChange": "把示例文字换成自己写或有来源的一小段文字，完成第一次挑战。",
+    "steps": [
+      { "time": "15 分钟", "title": "完成第一次挑战", "actions": ["替换练习文字", "开始输入", "查看时间和错误"], "doneWhen": "挑战能从开始运行到完成并显示结果。" },
+      { "time": "45 分钟", "title": "让反馈不只剩速度", "actions": ["区分时间和错误", "写三种友好反馈", "增加重新开始按钮"], "doneWhen": "不同结果得到清楚且不羞辱人的反馈。" },
+      { "time": "2 小时", "title": "比较两次真实练习", "actions": ["连续完成两次", "记录改善与退步", "请同伴判断文字是否值得读"], "doneWhen": "你能用两次结果说明设计是否帮助准确输入。" }
+    ],
+    "aiPrompt": "请先解释计时、当前字符和错误状态怎样配合。练习文本与反馈语由我亲自写；你只帮我逐步替换数据、增加重新开始，并设计两次可以比较的测试。",
+    "k12": {
+      "primaryAgeBand": "middle-school", "ageBands": ["upper-primary", "middle-school"], "subjectLinks": ["language-arts", "mathematics", "information-technology"], "learningContext": "classroom",
+      "adultSupport": { "level": "optional", "role": "教师帮助核对引用与观察测试，不用速度排名学生；文本和反馈设计由学习者负责。" },
+      "safetyNotes": ["不记录或公开同学姓名与打字成绩，不进行速度排行榜。", "使用非原创文字时标明作者和来源，避免复制受限制的长文本。"],
+      "creatorLoop": { "problem": "思考怎样让打字练习同时服务准确阅读而不只追求速度。", "knowledge": "理解计时、字符匹配、错误计数和结果比较。", "tool": "修改文本数据、状态和反馈，把示例变成自己的挑战。", "work": "完成一个可重复、能区分时间与错误并尊重学习者的打字练习。", "feedback": "比较两次真实结果并请同伴评价文字与反馈是否清楚。", "identity": "能够说明自己为何选择这段文字以及怎样定义一次好的练习。" },
+      "aiBoundary": { "learnerOwns": ["选择或创作练习文字并说明来源", "定义速度、准确和理解之间的完成标准"], "aiCanHelp": ["解释计时与字符匹配状态", "协助增加结果反馈与重新开始"], "mustVerify": ["亲自完成两次挑战并检查结果计算准确、不用于排名"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "space-defender",
+    "title": "设计一场有规则的太空守护游戏",
+    "tagline": "修改角色、移动、碰撞和结束条件，让游戏表达你对挑战、公平与胜负的判断。",
+    "track": "mini-game",
+    "level": "guided",
+    "source": { "repository": "microsoft/Web-Dev-For-Beginners", "path": "6-space-game/6-end-condition/solution", "url": "https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/6-space-game/6-end-condition/solution", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "Canvas API"],
+    "runMode": "下载解决方案目录后运行 npm install 与 npm start",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个拥有自定角色、移动规则、得分与明确结束状态的 Canvas 小游戏。",
+    "makerDecision": "玩家在守护什么、怎样才算公平？角色主题、难度和胜负规则由你决定。",
+    "firstChange": "修改玩家名称、背景颜色或一条结束提示，启动游戏确认变化。",
+    "steps": [
+      { "time": "15 分钟", "title": "让游戏带上你的主题", "actions": ["启动游戏", "修改角色或提示", "完成一次胜负"], "doneWhen": "完整一局中出现你的角色主题或文字。" },
+      { "time": "45 分钟", "title": "调整一条公平规则", "actions": ["修改移动速度或生命值", "测试太易和太难", "写下选择理由"], "doneWhen": "规则经过两种边界测试并有明确理由。" },
+      { "time": "2 小时", "title": "让同伴挑战并复盘", "actions": ["邀请同伴玩两局", "记录卡点", "修改一项难度或反馈"], "doneWhen": "你能用同伴行为解释最后一次规则修改。" }
+    ],
+    "aiPrompt": "请先帮我画出玩家移动、碰撞、得分和结束状态之间的关系。主题和公平规则由我决定；你只协助定位常量、一次修改一条规则，并给出太易与太难的测试方法。",
+    "k12": {
+      "primaryAgeBand": "middle-school", "ageBands": ["middle-school", "high-school"], "subjectLinks": ["mathematics", "arts", "information-technology"], "learningContext": "club",
+      "adultSupport": { "level": "optional", "role": "教师或社团导师帮助安装本地环境和组织试玩，不替学习者设定角色与公平规则。" },
+      "safetyNotes": ["角色和提示不使用仇恨、羞辱或针对真实群体的表达。", "游戏结束后安排休息，不以高分或胜负评价学习者能力。"],
+      "creatorLoop": { "problem": "提出怎样让一场挑战既有难度又让玩家觉得公平。", "knowledge": "理解坐标、速度、碰撞、生命值和结束状态之间的关系。", "tool": "修改 Canvas 游戏常量和状态流程，实现自己的规则。", "work": "完成一个有自定主题、得分、失败与胜利状态的太空游戏。", "feedback": "请同伴玩两局，记录他在什么位置困惑或失去兴趣。", "identity": "能够署名解释角色、难度和公平规则，并为玩家体验负责。" },
+      "aiBoundary": { "learnerOwns": ["决定玩家守护什么以及游戏的价值表达", "定义难度、公平和胜负条件"], "aiCanHelp": ["解释移动、碰撞与状态流程", "协助修改常量并设计边界测试"], "mustVerify": ["亲自完成胜利和失败状态，并让同伴试玩后再修改规则"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "open-source-profile",
+    "title": "做一个不只看数字的开源人物卡",
+    "tagline": "读取公开 GitHub 资料，同时加入作品证据和局限说明，避免把一个人压缩成关注数。",
+    "track": "small-tool",
+    "level": "guided",
+    "source": { "repository": "bradtraversy/50projects50days", "path": "github-profiles", "url": "https://github.com/bradtraversy/50projects50days/tree/master/github-profiles", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "GitHub API"],
+    "runMode": "下载 github-profiles 目录后直接打开 index.html；查询时需要网络",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一张能查询公开 GitHub 资料、展示代表仓库并说明指标局限的人物研究卡。",
+    "makerDecision": "哪些公开信息能说明一个人的作品，哪些数字会造成误解？展示顺序和局限提示由你决定。",
+    "firstChange": "修改页面标题和空状态，再查询一个自己选择的公开开源账号。",
+    "steps": [
+      { "time": "15 分钟", "title": "读懂一次公开查询", "actions": ["查询公开账号", "找到请求与结果字段", "修改标题和空状态"], "doneWhen": "页面能显示公开资料，并出现你的研究目的。" },
+      { "time": "45 分钟", "title": "让作品证据先于人气数字", "actions": ["调整信息顺序", "突出代表仓库", "增加指标局限提示"], "doneWhen": "页面不会只靠粉丝数描述一个人。" },
+      { "time": "2 小时", "title": "完成一张有依据的研究卡", "actions": ["选择一个公开账号", "核对两个仓库", "写下观察与限制"], "doneWhen": "每条判断都能指回公开资料或仓库证据。" }
+    ],
+    "aiPrompt": "请先解释页面如何请求 GitHub 公开资料以及哪些字段可能被误读。人物选择、展示顺序和评价标准由我决定；你只帮我调整布局、突出仓库证据并加入局限提示。",
+    "k12": {
+      "primaryAgeBand": "high-school", "ageBands": ["high-school"], "subjectLinks": ["social-studies", "language-arts", "information-technology"], "learningContext": "classroom",
+      "adultSupport": { "level": "optional", "role": "教师帮助讨论数据伦理和公开资料边界，人物选择与评价标准由学习者负责。" },
+      "safetyNotes": ["只查询公开 GitHub 账号，不收集或推断真实住址、学校和私人身份。", "关注数和仓库数不能代表人的价值，页面必须写明指标局限。"],
+      "creatorLoop": { "problem": "思考公开平台怎样用少量数字描述人，以及这种描述遗漏了什么。", "knowledge": "学习 API 请求、公开字段、证据与指标偏差。", "tool": "修改资料卡的数据选择、顺序和说明，让作品证据先于人气。", "work": "完成一张可查询公开账号、有仓库证据和局限说明的人物研究卡。", "feedback": "请同伴指出页面是否让他对人物形成了没有依据的判断。", "identity": "能够署名说明自己的评价标准、证据来源和不愿做出的推断。" },
+      "aiBoundary": { "learnerOwns": ["决定为什么研究这个公开账号以及采用什么评价标准", "判断哪些信息不应展示或推断"], "aiCanHelp": ["解释 GitHub API 字段和请求错误", "协助调整信息层级与局限提示"], "mustVerify": ["逐项打开代表仓库核对事实，并检查没有推断私人身份"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
+  },
+  {
+    "schemaVersion": "1.1.0",
+    "slug": "browser-habit-extension",
+    "title": "做一个提醒自己行动的浏览器扩展",
+    "tagline": "读懂扩展界面、本地设置和后台任务，把一次浏览提醒变成透明、可关闭的个人工具。",
+    "track": "small-tool",
+    "level": "guided",
+    "source": { "repository": "microsoft/Web-Dev-For-Beginners", "path": "5-browser-extension/solution", "url": "https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/5-browser-extension/solution", "license": "MIT" },
+    "tools": ["HTML", "CSS", "JavaScript", "Browser Extension API"],
+    "runMode": "下载 solution，运行 npm install 与 npm run build，再以开发者模式载入 dist",
+    "time": { "firstVisibleMinutes": 15, "completeMinutes": 120 },
+    "outcome": "一个用途透明、设置保存在本机、可以关闭并解释数据来源的个人浏览提醒扩展。",
+    "makerDecision": "什么提醒真的帮助你行动，什么会变成打扰？默认频率、数据和关闭方式由你负责。",
+    "firstChange": "修改扩展标题、说明和一种提醒文字，重新载入后确认变化。",
+    "steps": [
+      { "time": "15 分钟", "title": "看见扩展如何进入浏览器", "actions": ["构建并载入扩展", "修改标题与说明", "重新载入确认"], "doneWhen": "浏览器显示你的扩展名称和用途。" },
+      { "time": "45 分钟", "title": "建立透明的设置", "actions": ["设置提醒频率", "保存到本地", "加入暂停或关闭入口"], "doneWhen": "使用者知道数据存在哪里并能随时关闭提醒。" },
+      { "time": "2 小时", "title": "用真实一天判断是否有帮助", "actions": ["使用一个真实时段", "记录帮助与打扰", "修改默认频率或文字"], "doneWhen": "最终默认值来自真实使用证据而不是 AI 猜测。" }
+    ],
+    "aiPrompt": "请先解释扩展弹窗、本地设置和后台任务之间的边界，并指出原项目可能访问的外部数据。提醒目的、默认频率和关闭方式由我决定；你只帮我逐步修改和设计隐私检查。",
+    "k12": {
+      "primaryAgeBand": "high-school", "ageBands": ["high-school"], "subjectLinks": ["social-studies", "wellbeing", "information-technology"], "learningContext": "home",
+      "adultSupport": { "level": "optional", "role": "教师可以帮助审查扩展权限与数据流，提醒目的和默认设置由学习者根据亲身体验决定。" },
+      "safetyNotes": ["只申请实现功能必需的浏览器权限，不读取历史、账号和页面内容。", "说明外部数据来源与本地存储，并提供清楚的暂停、关闭和删除入口。"],
+      "creatorLoop": { "problem": "观察一种浏览行为，判断提醒什么时候帮助行动、什么时候只是打扰。", "knowledge": "理解扩展弹窗、后台任务、权限、本地存储与外部数据。", "tool": "修改扩展设置、提醒和关闭流程，实现透明的个人工具。", "work": "完成一个可载入、可设置、可关闭并说明数据边界的浏览器扩展。", "feedback": "真实使用一个时段，记录帮助和打扰并修改默认值。", "identity": "能够署名说明提醒目的、权限取舍和自己愿意承担的数据责任。" },
+      "aiBoundary": { "learnerOwns": ["决定提醒服务什么行动以及默认频率", "亲自判断哪些权限和数据不应该获取"], "aiCanHelp": ["解释扩展结构、构建与本地存储", "协助检查权限、暂停和删除逻辑"], "mustVerify": ["检查 manifest 权限，并真实使用后根据证据修改默认设置"] }
+    },
+    "noPaidService": true,
+    "requiresBackend": false,
+    "verifiedAt": "2026-08-12T00:00:00+09:00"
   }
 ]

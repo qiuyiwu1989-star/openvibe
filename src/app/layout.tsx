@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     locale: "zh_CN",
     siteName: "OpenVibe",
     title: "OpenVibe · 先做出一个东西，再慢慢看懂代码",
-    description: "13 个新手作品任务，加上 30 个经过审核的进阶开源案例。",
+    description: "20 个 K12 分龄作品案例、4 条四周路线，加上 30 个经过审核的进阶开源项目。",
   },
   twitter: {
     card: "summary_large_image",

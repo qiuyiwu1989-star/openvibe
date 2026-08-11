@@ -12,6 +12,8 @@ paths=(
   "/api/health"
   "/"
   "/start"
+  "/paths"
+  "/paths/responsible-product"
   "/explore"
   "/works"
   "/updates"

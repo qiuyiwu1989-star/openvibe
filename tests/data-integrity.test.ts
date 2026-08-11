@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import {
   BeginnerMissionSchema,
   EditorialProfileSchema,
+  LearningPathSchema,
   RadarProjectBundleSchema,
   RepositorySnapshotSchema,
   UpdateHistorySchema,
@@ -132,7 +133,7 @@ test("30 个本地发布 bundle 全部通过审核门并达到内容覆盖目标
   assert.ok(learningGoals.size >= 8, `学习目标覆盖不足：${learningGoals.size}/8`);
 });
 
-test("新手入口至少提供 12 个低门槛作品任务", async () => {
+test("20 个 K12 案例与四条学习路线形成完整分龄覆盖", async () => {
   const raw = JSON.parse(
     await readFile(path.join(projectRoot, "data/beginner-missions.json"), "utf8"),
   ) as unknown[];
@@ -143,7 +144,7 @@ test("新手入口至少提供 12 个低门槛作品任务", async () => {
     return parsed.data;
   });
 
-  assert.ok(missions.length >= 12, `新手任务不足：${missions.length}/12`);
+  assert.equal(missions.length, 20, `K12 案例数量不正确：${missions.length}/20`);
   assert.equal(new Set(missions.map((mission) => mission.slug)).size, missions.length);
   assert.deepEqual(
     new Set(missions.map((mission) => mission.track)),
@@ -159,13 +160,13 @@ test("新手入口至少提供 12 个低门槛作品任务", async () => {
   }
 
   const k12Pilots = missions.filter((mission) => mission.k12);
-  assert.equal(k12Pilots.length, 8, `K12 试点数量不正确：${k12Pilots.length}/8`);
+  assert.equal(k12Pilots.length, 20, `K12 案例数量不正确：${k12Pilots.length}/20`);
 
   for (const ageBand of ["lower-primary", "upper-primary", "middle-school", "high-school"] as const) {
     assert.equal(
       k12Pilots.filter((mission) => mission.k12?.primaryAgeBand === ageBand).length,
-      2,
-      `${ageBand} 应有两个主要试点案例`,
+      5,
+      `${ageBand} 应有五个主要案例`,
     );
   }
 
@@ -176,6 +177,26 @@ test("新手入口至少提供 12 个低门槛作品任务", async () => {
     assert.ok(mission.k12.safetyNotes.length >= 2);
     assert.ok(mission.k12.aiBoundary.learnerOwns.length >= 2);
     assert.ok(mission.k12.aiBoundary.mustVerify.length >= 1);
+  }
+
+  const rawPaths = JSON.parse(
+    await readFile(path.join(projectRoot, "data/learning-paths.json"), "utf8"),
+  ) as unknown[];
+  const paths = rawPaths.map((pathData, index) => {
+    const parsed = LearningPathSchema.safeParse(pathData);
+    assert.equal(parsed.success, true, `学习路线 #${index + 1} 未通过 Schema`);
+    if (!parsed.success) throw new Error(`学习路线 #${index + 1} 无法继续校验`);
+    return parsed.data;
+  });
+  assert.equal(paths.length, 4);
+  assert.equal(new Set(paths.map((learningPath) => learningPath.ageBand)).size, 4);
+  const missionBySlug = new Map(missions.map((mission) => [mission.slug, mission]));
+  for (const learningPath of paths) {
+    for (const slug of learningPath.missionSlugs) {
+      const mission = missionBySlug.get(slug);
+      assert.ok(mission, `${learningPath.slug} 引用了不存在的案例 ${slug}`);
+      assert.equal(mission.k12?.primaryAgeBand, learningPath.ageBand, `${slug} 与路线年龄段不一致`);
+    }
   }
 });
 

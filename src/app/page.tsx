@@ -4,6 +4,7 @@ import { MissionCard } from "@/components/mission-card";
 import { ProjectCard } from "@/components/project-card";
 import { ContinueMaking } from "@/components/continue-making";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
+import { getLearningPaths } from "@/lib/learning-paths";
 import { categoryLabels, learningGoalLabels } from "@/lib/labels";
 import { getPublishedProjects } from "@/lib/projects";
 
@@ -14,6 +15,7 @@ export default function HomePage() {
   const projects = getPublishedProjects();
   const missions = getBeginnerMissions();
   const k12Pilots = missions.filter((mission) => mission.k12);
+  const learningPaths = getLearningPaths();
   const firstMissions = k12Pilots.slice(0, 3);
   const featured = projects.slice(0, 3);
 
@@ -23,7 +25,7 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="live-dot" aria-hidden="true" />
-            {k12Pilots.length} 个 K12 分龄试点 · 不需要先懂框架
+            {k12Pilots.length} 个 K12 分龄案例 · 4 条学习路线
           </p>
           <h1>
             先做出一个东西。
@@ -40,6 +42,9 @@ export default function HomePage() {
             </Link>
             <Link className="button button-ghost" href="/explore">
               我想看进阶案例
+            </Link>
+            <Link className="button button-ghost" href="/paths">
+              查看四周路线
             </Link>
           </div>
         </div>
@@ -86,11 +91,11 @@ export default function HomePage() {
       <section className="section shell" aria-labelledby="first-missions-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">K12 分龄试点</p>
+            <p className="eyebrow">K12 分龄案例</p>
             <h2 id="first-missions-title">不同年龄，都从真实作品开始</h2>
           </div>
           <Link className="text-link" href="/start">
-            查看 4 个年龄段 <span aria-hidden="true">→</span>
+            查看 {learningPaths.length} 条四周路线 <span aria-hidden="true">→</span>
           </Link>
         </div>
         <div className="mission-grid">
