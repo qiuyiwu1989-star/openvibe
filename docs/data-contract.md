@@ -120,6 +120,19 @@ discovered → fetched → evaluated → review → published
 
 当前浏览器中的进度集合，每个任务只允许一份记录，最多 100 份。现阶段保存在 `openvibe:maker-progress:v1`，页面可导出完整 JSON。未来接入账号与数据库时，以这个已版本化 Schema 作为迁移输入，不直接读取任意浏览器对象。
 
+### PilotSessionRecord 与 PilotSessionCollection
+
+`PilotSessionRecord` 记录一次家庭、课堂或社团活动的匿名整场汇总，不记录单个儿童：
+
+- `pathSlug`、`missionSlug`、`sessionDate`、`context`：所使用的路线、作品、日期和活动场景。
+- `participantCount`、`firstVisibleCount`、`completedCount`、`authorEvidenceCount`：整场人数统计，后三项都不能超过参与人数。
+- `blockers` 与 `interventions`：最多 4 个主要卡点和 4 个成人介入动作，不写个体归因。
+- `evidence`：分别观察意图所有权、亲身投入、第一人称意义和署名担责，只有“未观察到、正在形成、有清楚证据”三级，不形成个人分数。
+- `workedWell` 与 `changeNext`：各 10–300 字的活动反思；Schema 拒绝网址、邮箱和手机号，界面持续提示不得填写其他可识别信息。
+- `privacyConfirmed`：保存前必须显式确认不含姓名、学校、联系方式、私密作品链接或其他未成年人身份信息。
+
+集合最多保存 100 场，每条 UUID 唯一，存储键为 `openvibe:pilot-sessions:v1`。页面支持修改、确认后删除和主动导出 JSON，不会自动上传到服务器。
+
 ## 持续更新模型
 
 ### UpdateQueue

@@ -12,6 +12,7 @@ export function SiteFooter() {
         <div className="footer-links">
           <Link href="/start">做第一个作品</Link>
           <Link href="/works">我的作品</Link>
+          <Link href="/pilot">试教工作台</Link>
           <Link href="/explore">浏览进阶项目</Link>
           <Link href="/updates">订阅更新</Link>
           <Link href="/methodology">了解评分</Link>

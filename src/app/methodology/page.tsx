@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "筛选方法",
-  description: "OpenVibe 如何为第一次做作品的人设计入口，并选择、评分和审核进阶项目。",
+  description: "OpenVibe 如何设计作品入口、观察作者身份证据，并选择、评分和审核进阶项目。",
 };
 
 const scoreDimensions = [
@@ -106,6 +106,20 @@ export default function MethodologyPage() {
             </li>
           </ol>
         </div>
+      </section>
+
+      <section className="section shell pilot-method" aria-labelledby="pilot-method-title">
+        <div className="method-section-heading">
+          <div><p className="eyebrow">试教观察</p><h2 id="pilot-method-title">评价作品证据，不分拣学习者</h2></div>
+          <p>四个观察维度对应作者身份的不可外包部分，只用于判断教学设计是否有效。</p>
+        </div>
+        <div className="pilot-method-grid">
+          <article><span>01</span><h3>意图与价值</h3><p>能否说出想为谁做，以及自己认为什么算好。</p></article>
+          <article><span>02</span><h3>亲身投入</h3><p>是否经历必要的尝试、修改和有价值的挣扎。</p></article>
+          <article><span>03</span><h3>第一人称意义</h3><p>能否联系自己的经验，解释作品为什么这样做。</p></article>
+          <article><span>04</span><h3>署名与担责</h3><p>能否指出自己的决定，面对反馈并继续修改。</p></article>
+        </div>
+        <Link className="text-link" href="/pilot">打开匿名试教工作台 <span aria-hidden="true">→</span></Link>
       </section>
 
       <section className="method-cta shell">

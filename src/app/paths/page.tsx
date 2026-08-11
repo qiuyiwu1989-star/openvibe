@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import { LearningPathCard } from "@/components/learning-path-card";
 import { getLearningPaths } from "@/lib/learning-paths";
@@ -44,6 +45,10 @@ export default function LearningPathsPage() {
             <LearningPathCard key={learningPath.slug} learningPath={learningPath} index={index + 1} />
           ))}
         </div>
+        <aside className="pilot-route-invitation">
+          <div><p className="eyebrow">准备真实试教？</p><h2>带一条路线走进家庭、课堂或社团。</h2><p>用匿名汇总记录完成情况、主要卡点、成人介入和作者身份证据，为下一版路线留下依据。</p></div>
+          <Link className="button button-dark" href="/pilot">打开试教工作台 <span aria-hidden="true">→</span></Link>
+        </aside>
       </section>
     </div>
   );

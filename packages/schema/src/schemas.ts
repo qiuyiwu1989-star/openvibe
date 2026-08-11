@@ -11,6 +11,9 @@ import {
   K12_LEARNING_CONTEXTS,
   K12_SUBJECTS,
   K12_SUPPORT_LEVELS,
+  PILOT_BLOCKERS,
+  PILOT_EVIDENCE_LEVELS,
+  PILOT_INTERVENTIONS,
   PROJECT_CATEGORIES,
   PUBLICATION_STATUSES,
   RISK_KINDS,
@@ -24,6 +27,15 @@ const isoDateTime = z.string().datetime({ offset: true });
 const nullableUrl = z.string().url().nullable();
 const repositoryId = z.number().int().positive();
 const nonEmptyText = z.string().trim().min(1);
+const anonymousPilotReflection = z
+  .string()
+  .trim()
+  .min(10)
+  .max(300)
+  .refine(
+    (value) => !/(?:https?:\/\/|www\.|[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|1[3-9]\d{9})/i.test(value),
+    { message: "试教反思不能包含网址、邮箱或手机号" },
+  );
 
 export const RepositorySnapshotSchema = z
   .object({
@@ -533,6 +545,66 @@ export const MakerProgressCollectionSchema = z
     }
   });
 
+export const PilotSessionRecordSchema = z
+  .object({
+    id: z.string().uuid(),
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    pathSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    missionSlug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+    sessionDate: z.string().date(),
+    context: z.enum(K12_LEARNING_CONTEXTS),
+    participantCount: z.number().int().min(1).max(60),
+    firstVisibleCount: z.number().int().nonnegative().max(60),
+    completedCount: z.number().int().nonnegative().max(60),
+    authorEvidenceCount: z.number().int().nonnegative().max(60),
+    blockers: z.array(z.enum(PILOT_BLOCKERS)).max(4),
+    interventions: z.array(z.enum(PILOT_INTERVENTIONS)).max(4),
+    evidence: z
+      .object({
+        intentionOwnership: z.enum(PILOT_EVIDENCE_LEVELS),
+        focusedMaking: z.enum(PILOT_EVIDENCE_LEVELS),
+        firstPersonMeaning: z.enum(PILOT_EVIDENCE_LEVELS),
+        namedResponsibility: z.enum(PILOT_EVIDENCE_LEVELS),
+      })
+      .strict(),
+    workedWell: anonymousPilotReflection,
+    changeNext: anonymousPilotReflection,
+    privacyConfirmed: z.literal(true),
+    createdAt: isoDateTime,
+    updatedAt: isoDateTime,
+  })
+  .strict()
+  .superRefine((record, context) => {
+    for (const field of ["firstVisibleCount", "completedCount", "authorEvidenceCount"] as const) {
+      if (record[field] > record.participantCount) {
+        context.addIssue({
+          code: "custom",
+          path: [field],
+          message: "人数不能超过参与人数",
+        });
+      }
+    }
+    if (new Set(record.blockers).size !== record.blockers.length) {
+      context.addIssue({ code: "custom", path: ["blockers"], message: "卡点不能重复" });
+    }
+    if (new Set(record.interventions).size !== record.interventions.length) {
+      context.addIssue({ code: "custom", path: ["interventions"], message: "成人介入不能重复" });
+    }
+  });
+
+export const PilotSessionCollectionSchema = z
+  .object({
+    schemaVersion: z.literal(SCHEMA_VERSION),
+    records: z.array(PilotSessionRecordSchema).max(100),
+  })
+  .strict()
+  .superRefine((collection, context) => {
+    const ids = collection.records.map((record) => record.id);
+    if (new Set(ids).size !== ids.length) {
+      context.addIssue({ code: "custom", path: ["records"], message: "试教记录 ID 不能重复" });
+    }
+  });
+
 const updateFailureSchema = z
   .object({
     repositoryId,
@@ -735,6 +807,8 @@ export type BeginnerMission = z.infer<typeof BeginnerMissionSchema>;
 export type LearningPath = z.infer<typeof LearningPathSchema>;
 export type MakerProgressRecord = z.infer<typeof MakerProgressRecordSchema>;
 export type MakerProgressCollection = z.infer<typeof MakerProgressCollectionSchema>;
+export type PilotSessionRecord = z.infer<typeof PilotSessionRecordSchema>;
+export type PilotSessionCollection = z.infer<typeof PilotSessionCollectionSchema>;
 export type UpdateQueueEntry = z.infer<typeof UpdateQueueEntrySchema>;
 export type UpdateQueue = z.infer<typeof UpdateQueueSchema>;
 export type UpdateDecision = z.infer<typeof UpdateDecisionSchema>;

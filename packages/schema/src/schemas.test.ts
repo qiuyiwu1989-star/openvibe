@@ -9,6 +9,8 @@ import {
   LearningPathSchema,
   MakerProgressCollectionSchema,
   MakerProgressRecordSchema,
+  PilotSessionCollectionSchema,
+  PilotSessionRecordSchema,
   RadarProjectBundleSchema,
 } from "./schemas.js";
 
@@ -226,4 +228,56 @@ test("拒绝非 HTTP 协议的作品网址", () => {
   });
 
   assert.equal(result.success, false);
+});
+
+const validPilotSession = {
+  id: "5d986152-820b-4b3f-91b1-659d5448e2af",
+  schemaVersion: "1.0.0",
+  pathSlug: "play-and-tell",
+  missionSlug: "memory-game",
+  sessionDate: "2026-08-12",
+  context: "classroom",
+  participantCount: 12,
+  firstVisibleCount: 11,
+  completedCount: 9,
+  authorEvidenceCount: 8,
+  blockers: ["debugging", "presenting"],
+  interventions: ["question-prompt", "debugging-help"],
+  evidence: {
+    intentionOwnership: "clear",
+    focusedMaking: "emerging",
+    firstPersonMeaning: "clear",
+    namedResponsibility: "emerging",
+  },
+  workedWell: "孩子能用自己的话解释游戏规则。",
+  changeNext: "下次减少开场讲解，给选择作品留更多时间。",
+  privacyConfirmed: true,
+  createdAt: "2026-08-12T04:00:00Z",
+  updatedAt: "2026-08-12T04:00:00Z",
+};
+
+test("接受不含儿童身份信息的匿名试教汇总", () => {
+  assert.equal(PilotSessionRecordSchema.safeParse(validPilotSession).success, true);
+  assert.equal(PilotSessionCollectionSchema.safeParse({
+    schemaVersion: "1.0.0",
+    records: [validPilotSession],
+  }).success, true);
+});
+
+test("拒绝超过参与总数的试教结果", () => {
+  const invalid = structuredClone(validPilotSession);
+  invalid.authorEvidenceCount = 13;
+  assert.equal(PilotSessionRecordSchema.safeParse(invalid).success, false);
+});
+
+test("拒绝未经隐私确认的试教记录", () => {
+  const invalid = structuredClone(validPilotSession) as Record<string, unknown>;
+  invalid.privacyConfirmed = false;
+  assert.equal(PilotSessionRecordSchema.safeParse(invalid).success, false);
+});
+
+test("拒绝在试教反思中保存联系方式或网址", () => {
+  const invalid = structuredClone(validPilotSession);
+  invalid.changeNext = "请联系 teacher@example.com 获取孩子的完整记录。";
+  assert.equal(PilotSessionRecordSchema.safeParse(invalid).success, false);
 });

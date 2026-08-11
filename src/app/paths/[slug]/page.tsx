@@ -47,6 +47,7 @@ export default async function LearningPathPage({ params }: LearningPathPageProps
         <div className="path-detail-actions">
           <a className="button button-primary" href="#choose-work">先选择作品 <span aria-hidden="true">↓</span></a>
           <a className="button button-ghost" href="#facilitator-guide">查看引导卡</a>
+          <Link className="button button-ghost" href={`/pilot?path=${learningPath.slug}`}>记录一次试教</Link>
         </div>
         <div className="path-outcome-panel"><span>四周后</span><p>{learningPath.outcome}</p></div>
       </section>
