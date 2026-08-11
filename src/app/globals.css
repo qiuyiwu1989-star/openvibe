@@ -1543,6 +1543,130 @@ h3 {
   gap: 18px;
 }
 
+.k12-path-picker {
+  padding-block: 82px 28px;
+}
+
+.k12-picker-heading > p,
+.mission-results-note {
+  max-width: 390px;
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.k12-age-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.k12-age-card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  border: 0;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  text-align: left;
+  background: var(--white);
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.k12-age-card:hover {
+  background: var(--acid);
+}
+
+.k12-age-card.is-active {
+  color: white;
+  background: var(--blue);
+  transform: translateY(-5px);
+}
+
+.k12-age-card > span {
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.k12-age-card.is-active > span,
+.k12-age-card.is-active > small {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.k12-age-card strong {
+  margin-block: 22px 12px;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.k12-age-card small {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.k12-interest-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: 24px;
+  gap: 8px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.k12-interest-filter > span {
+  margin-right: 6px;
+  font-weight: 820;
+}
+
+.k12-interest-filter button,
+.text-button {
+  padding: 7px 13px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.k12-interest-filter button[aria-pressed="true"] {
+  color: white;
+  background: var(--ink);
+}
+
+.mission-results {
+  padding-top: 56px;
+}
+
+.mission-results-note p {
+  margin-bottom: 8px;
+}
+
+.text-button {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  color: var(--blue);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.k12-empty {
+  padding: 50px;
+  border: 1px solid var(--ink);
+  background: var(--white);
+  text-align: center;
+}
+
+.k12-empty h3 {
+  font-size: 30px;
+}
+
 .mission-card {
   position: relative;
   min-height: 430px;
@@ -1583,6 +1707,33 @@ h3 {
 
 .mission-card-main {
   margin-block: 34px 22px;
+}
+
+.mission-k12-meta,
+.mission-k12-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mission-k12-meta {
+  margin-bottom: 13px;
+}
+
+.mission-k12-meta span,
+.mission-k12-badges span {
+  padding: 4px 8px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.mission-k12-meta span:first-child,
+.mission-k12-badges span:first-child {
+  background: var(--acid);
 }
 
 .mission-time {
@@ -1793,6 +1944,10 @@ h3 {
   color: var(--blue);
 }
 
+.mission-k12-badges {
+  margin-block: 20px;
+}
+
 .mission-lead {
   max-width: 820px;
   margin-bottom: 30px;
@@ -1866,6 +2021,111 @@ h3 {
   margin-bottom: 0;
   font-size: 19px;
   font-weight: 750;
+}
+
+.k12-learning-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px;
+}
+
+.k12-learning-heading ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 0 0 8px;
+  padding: 0;
+  gap: 6px;
+  list-style: none;
+}
+
+.k12-learning-heading li {
+  padding: 4px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--white);
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.creator-loop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+  list-style: none;
+}
+
+.creator-loop-grid li {
+  min-height: 180px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  padding: 22px;
+  gap: 14px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  background: var(--white);
+}
+
+.creator-loop-grid li > span {
+  color: var(--blue);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.creator-loop-grid strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.creator-loop-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.human-ai-boundary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 28px;
+  border-top: 1px solid var(--ink);
+  border-left: 1px solid var(--ink);
+}
+
+.human-ai-boundary article {
+  padding: 22px;
+  border-right: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.human-ai-boundary article:first-child {
+  background: var(--acid);
+}
+
+.human-ai-boundary ul,
+.k12-safety-card ul {
+  margin: 0;
+  padding-left: 19px;
+}
+
+.human-ai-boundary li,
+.k12-safety-card li {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.k12-safety-card {
+  border-color: var(--orange);
+  background: #fff1e9;
+}
+
+.k12-safety-card h2 {
+  font-size: 24px;
 }
 
 .beginner-steps {
@@ -2800,6 +3060,44 @@ h3 {
 
   .footer-note {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 980px) {
+  .k12-age-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .human-ai-boundary {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .k12-path-picker {
+    padding-top: 58px;
+  }
+
+  .k12-picker-heading,
+  .k12-learning-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .k12-age-grid,
+  .creator-loop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .k12-age-card {
+    min-height: 185px;
+  }
+
+  .k12-learning-heading ul {
+    justify-content: flex-start;
+  }
+
+  .creator-loop-grid li {
+    min-height: auto;
   }
 }
 

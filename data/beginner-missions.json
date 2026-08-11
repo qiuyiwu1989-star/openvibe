@@ -29,7 +29,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "one-page-story",
     "title": "给一个想法做单页介绍",
     "tagline": "用一页网页讲清楚一个社团、活动、小店或你真正想做的项目。",
@@ -53,6 +53,33 @@
       { "time": "2 小时", "title": "验证表达是否有效", "actions": ["邀请一人浏览", "请他复述项目用途", "根据误解修改标题或顺序"], "doneWhen": "对方能准确复述用途并找到行动按钮。" }
     ],
     "aiPrompt": "我想把这个单页模板改成自己的项目介绍页。请先问我三个问题：服务谁、解决什么问题、希望访客做什么。根据我的回答，只修改现有 HTML 文案与 CSS 变量，保留原来的响应式结构；每次先说明修改位置，再给出代码。",
+    "k12": {
+      "primaryAgeBand": "high-school",
+      "ageBands": ["high-school"],
+      "subjectLinks": ["language-arts", "social-studies", "arts"],
+      "learningContext": "club",
+      "adultSupport": {
+        "level": "optional",
+        "role": "教师或社团导师可以作为第一位真实读者，只反馈表达是否清楚，不替学习者决定项目主张。"
+      },
+      "safetyNotes": [
+        "公开页面不要填写家庭住址、私人电话、个人课表等敏感信息。",
+        "使用图片前确认拥有使用权，并为非原创素材标明来源。"
+      ],
+      "creatorLoop": {
+        "problem": "选择一个真实社团、活动或倡议，先说清它正在解决谁的什么问题。",
+        "knowledge": "学习信息层级、受众表达和基本视觉对比，用这些知识判断什么内容应该被看见。",
+        "tool": "修改现有 HTML 结构与 CSS 变量，把模板变成服务真实主张的表达工具。",
+        "work": "完成一个有明确受众、价值说明和行动入口的单页网站。",
+        "feedback": "请一位不了解项目的人浏览，并根据他能否准确复述用途来修改页面。",
+        "identity": "能够署名说明自己为何选择这个问题、删掉了什么，以及最终愿意为哪句主张负责。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["决定页面服务谁以及希望访客采取什么行动", "选择核心主张并为公开表达署名负责"],
+        "aiCanHelp": ["定位标题、按钮和样式变量所在文件", "检查页面结构、响应式布局和文字对比度"],
+        "mustVerify": ["逐项核对事实、联系方式和素材授权后再公开页面"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -87,7 +114,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "idea-notes",
     "title": "做一个不会消失的灵感便签",
     "tagline": "写下、编辑和保存便签，第一次理解网页如何记住你的内容。",
@@ -111,6 +138,33 @@
       { "time": "2 小时", "title": "增加一个你需要的规则", "actions": ["选择字数提示或创建时间", "让 AI 帮你定位数据结构", "完成并测试刷新"], "doneWhen": "新增信息也能正确保存和恢复。" }
     ],
     "aiPrompt": "我想把 notes-app 改成自己的灵感记录器。先解释 localStorage 保存和读取便签的流程，并指出最适合增加“创建时间”字段的位置。请保留原功能，每次只给一个小改动和一个验证步骤。",
+    "k12": {
+      "primaryAgeBand": "high-school",
+      "ageBands": ["high-school"],
+      "subjectLinks": ["language-arts", "science", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": {
+        "level": "optional",
+        "role": "教师可以帮助学习者区分事实、摘录和个人判断，但不代写研究问题或结论。"
+      },
+      "safetyNotes": [
+        "本地便签也不要保存密码、身份证号码、同学隐私或其他敏感资料。",
+        "记录引用内容时保留作者与来源，不能把 AI 生成文字当成已经核实的事实。"
+      ],
+      "creatorLoop": {
+        "problem": "从一个持续想追问的学习主题出发，决定自己真正需要保存哪类证据和想法。",
+        "knowledge": "理解事实、引用、疑问和个人判断的区别，并学习浏览器本地存储的基本机制。",
+        "tool": "给便签增加类型、时间或来源字段，让工具服务自己的研究方法。",
+        "work": "做出一个刷新后仍能保留内容、能区分记录类型的个人研究便签。",
+        "feedback": "用它完成一次真实阅读或小研究，再根据检索和理解困难修改字段。",
+        "identity": "能够解释哪些观点来自自己、哪些来自来源，并为最终判断承担署名责任。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["提出研究问题并决定什么证据值得保存", "区分自己的判断、原文引用和仍未解决的疑问"],
+        "aiCanHelp": ["解释 localStorage 的保存与读取流程", "协助增加字段并设计刷新后的验证步骤"],
+        "mustVerify": ["核对引用来源，并亲自判断 AI 总结是否忠于原意"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -145,7 +199,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "random-picker",
     "title": "做一个替你抽签的小工具",
     "tagline": "输入几个选项，让网页随机挑出今晚吃什么、谁先开始或下一个挑战。",
@@ -169,6 +223,33 @@
       { "time": "2 小时", "title": "增加一个公平规则", "actions": ["决定是否允许重复", "实现清空或重新开始", "连续测试十次"], "doneWhen": "工具符合你自己定义的公平规则。" }
     ],
     "aiPrompt": "请先用通俗语言解释 random-choice-picker 如何把输入文字切成选项、如何高亮、如何选出最终结果。然后帮我把它改成一个具体场景的抽签器；我来决定规则，你只负责逐步实现并给测试方法。",
+    "k12": {
+      "primaryAgeBand": "upper-primary",
+      "ageBands": ["upper-primary", "middle-school"],
+      "subjectLinks": ["mathematics", "social-studies", "information-technology"],
+      "learningContext": "classroom",
+      "adultSupport": {
+        "level": "recommended",
+        "role": "教师或家长帮助检查抽签场景是否公平、安全，不替孩子制定结果规则。"
+      },
+      "safetyNotes": [
+        "课堂使用时不要输入同学真实姓名，可改用小组号或自愿昵称。",
+        "不能用随机结果决定惩罚、排斥或涉及人身安全的重要事情。"
+      ],
+      "creatorLoop": {
+        "problem": "找到一次真实的选择困难，判断它是否适合交给随机规则处理。",
+        "knowledge": "理解随机、重复和样本次数，用连续测试观察结果是否符合自己的公平标准。",
+        "tool": "修改选项解析、高亮过程和重新开始规则，把示例变成专用抽签器。",
+        "work": "完成一个用于课堂顺序、游戏挑战或家庭选择的随机工具。",
+        "feedback": "邀请同伴连续使用十次，记录他是否理解规则、信任结果并能重新开始。",
+        "identity": "能够说明自己为何采用这套公平规则，以及哪些决定不应该交给程序。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["决定抽签器服务的真实场景与公平规则", "判断哪些选择可以随机、哪些选择必须由人负责"],
+        "aiCanHelp": ["解释文字如何切成选项以及随机选择如何发生", "协助增加不重复、清空和重新开始功能"],
+        "mustVerify": ["亲自连续测试结果，并请真实使用者确认规则容易理解"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
@@ -232,7 +313,7 @@
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "focus-timer",
     "title": "做一个陪你专注的计时器",
     "tagline": "从一分钟倒计时开始，做出适合你节奏的学习或休息提醒。",
@@ -256,12 +337,39 @@
       { "time": "2 小时", "title": "做成你的专注仪式", "actions": ["设定专注和休息时长", "写结束提示", "真实使用一个周期"], "doneWhen": "你完成一次真实任务并记录体验。" }
     ],
     "aiPrompt": "我想把 simple-timer 改成个人专注计时器。请先画出开始、暂停、重置三个状态之间的关系，并解释 setInterval 为什么可能重复。然后一次实现一个状态保护，我会亲自决定时长和结束提示。",
+    "k12": {
+      "primaryAgeBand": "middle-school",
+      "ageBands": ["middle-school", "high-school"],
+      "subjectLinks": ["mathematics", "information-technology", "wellbeing"],
+      "learningContext": "home",
+      "adultSupport": {
+        "level": "optional",
+        "role": "家长或教师只需协助观察真实使用效果，不把专注时长变成对学习者的排名。"
+      },
+      "safetyNotes": [
+        "计时器不是健康诊断工具，不把专注时长解释为能力高低。",
+        "结束提示应包含休息和活动建议，避免鼓励长时间连续盯屏。"
+      ],
+      "creatorLoop": {
+        "problem": "观察自己在哪类任务中容易分心，提出一个想用计时器验证的节奏假设。",
+        "knowledge": "理解分钟、秒、状态转换和重复计时，学习用一次真实记录判断设计是否有效。",
+        "tool": "实现开始、暂停、重置和结束反馈，并调整成适合自己的专注与休息时长。",
+        "work": "完成一个能够稳定运行、明确显示状态并支持真实学习任务的个人计时器。",
+        "feedback": "连续使用一个周期，记录哪里被打断、提示是否有效，再修改默认时长。",
+        "identity": "能够说明自己如何观察和调整学习节奏，而不是照搬别人或 AI 推荐的时间。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["根据亲身体验决定专注与休息时长", "判断提示语是否尊重自己的节奏并记录真实体验"],
+        "aiCanHelp": ["解释计时状态和 setInterval 重复启动风险", "协助实现按钮保护、归零和结束反馈"],
+        "mustVerify": ["用真实任务完成一次周期，并亲自检查暂停、恢复和重置是否准确"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "memory-game",
     "title": "做一副自己的记忆翻牌",
     "tagline": "把图片换成你熟悉的人、地点或作品，做一个能配对计分的小游戏。",
@@ -285,12 +393,39 @@
       { "time": "2 小时", "title": "增加作品的反馈", "actions": ["统计尝试次数", "完成后显示一句话", "邀请朋友玩一局"], "doneWhen": "朋友能玩完并说出这副牌的主题。" }
     ],
     "aiPrompt": "我要把记忆翻牌游戏改成记录自己经历的作品。请先帮我找到卡片数据、翻牌状态和匹配判断的位置。不要替我选择图片主题；等我给出主题后，再逐步替换资源并增加尝试次数统计。",
+    "k12": {
+      "primaryAgeBand": "lower-primary",
+      "ageBands": ["lower-primary", "upper-primary"],
+      "subjectLinks": ["arts", "language-arts", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": {
+        "level": "required",
+        "role": "成人负责下载并打开项目、处理图片文件；孩子亲自选择主题、画面和完成反馈。"
+      },
+      "safetyNotes": [
+        "优先使用自己画的图、公共领域图片或成人确认可以使用的素材。",
+        "不要放入同学正脸、姓名、学校班级或家庭位置等可识别信息。"
+      ],
+      "creatorLoop": {
+        "problem": "选择一个孩子真正在意、想让别人记住的动物、故事或生活主题。",
+        "knowledge": "观察相同与不同、理解成对和轮流规则，并用语言说出自己的分类理由。",
+        "tool": "在成人协助下替换卡片图片、标题和完成提示，保留原来的配对逻辑。",
+        "work": "完成一副有统一主题、可以翻牌配对并统计尝试次数的记忆游戏。",
+        "feedback": "请家人玩一局，让孩子听取对方是否看懂主题、是否容易找到配对。",
+        "identity": "孩子能够署名说出为什么选择这些图片，以及希望玩家记住什么。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["亲自决定卡片主题以及每一组图片为什么配对", "选择游戏完成时想对玩家说的话"],
+        "aiCanHelp": ["告诉成人图片文件和卡片数据在哪里", "解释翻开、比较和盖回去三个游戏状态"],
+        "mustVerify": ["孩子亲自玩完整局，并向成人解释每一组配对的意义"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "rock-paper-scissors",
     "title": "做一个有性格的猜拳游戏",
     "tagline": "保留剪刀石头布的规则，为对手写性格、反馈语和胜负记录。",
@@ -314,12 +449,39 @@
       { "time": "2 小时", "title": "做成可以挑战的游戏", "actions": ["加入比分", "设定三局两胜", "显示最终赢家"], "doneWhen": "一轮比赛有开始、过程和明确结束。" }
     ],
     "aiPrompt": "请先解释这个猜拳游戏如何生成电脑选择、比较胜负和更新页面。我要亲自设计对手的性格与文案；你只帮我把文案放到正确状态，并逐步增加比分和三局两胜规则。",
+    "k12": {
+      "primaryAgeBand": "lower-primary",
+      "ageBands": ["lower-primary", "upper-primary"],
+      "subjectLinks": ["language-arts", "mathematics", "information-technology"],
+      "learningContext": "home",
+      "adultSupport": {
+        "level": "recommended",
+        "role": "成人帮助打开文件和定位文字，孩子负责角色性格、胜负语言和是否公平的判断。"
+      },
+      "safetyNotes": [
+        "角色文案不嘲笑失败者，不使用羞辱、威胁或排斥性的表达。",
+        "如果加入头像，使用自绘角色或成人确认可以使用的图片。"
+      ],
+      "creatorLoop": {
+        "problem": "思考怎样让一个熟悉的猜拳游戏变得更友好、更有自己的角色性格。",
+        "knowledge": "理解三种手势的循环胜负关系，并用计数比较一轮比赛的结果。",
+        "tool": "修改胜负文案、颜色和比分显示，让代码表达孩子设计的对手性格。",
+        "work": "完成一个有角色、有比分、有明确结束状态的三局两胜小游戏。",
+        "feedback": "请家人连续玩一轮，观察输赢提示是否清楚、角色语言是否让人舒服。",
+        "identity": "孩子能够署名介绍角色，并解释自己如何让游戏既有趣又尊重玩家。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["亲自设计电脑对手的性格和三种胜负文案", "判断怎样的竞争规则既清楚又尊重玩家"],
+        "aiCanHelp": ["解释电脑选择与胜负比较的顺序", "协助把孩子写好的文字放到正确状态并增加比分"],
+        "mustVerify": ["孩子亲自完成输、赢、平局三种结果并检查文字是否对应"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "mini-quiz",
     "title": "给朋友做一份三题小测验",
     "tagline": "把示例题换成你真正了解的主题，让朋友答题并看到结果。",
@@ -343,12 +505,39 @@
       { "time": "2 小时", "title": "把分数变成反馈", "actions": ["按分数写三档反馈", "加入重新挑战", "请朋友完成一次"], "doneWhen": "朋友能完成、理解结果并愿意再试一次。" }
     ],
     "aiPrompt": "我想把 quiz-app 改成围绕自己主题的三题测验。先帮我解释题目数据、当前题号和计分变量的关系。我会自己写题目和答案，你负责检查数据格式，并一步步增加分数反馈和重新挑战。",
+    "k12": {
+      "primaryAgeBand": "upper-primary",
+      "ageBands": ["upper-primary", "middle-school"],
+      "subjectLinks": ["science", "language-arts", "information-technology"],
+      "learningContext": "classroom",
+      "adultSupport": {
+        "level": "recommended",
+        "role": "教师或家长帮助查找可靠资料和复核事实，不代替学习者选择主题、写题或设计反馈。"
+      },
+      "safetyNotes": [
+        "题目不收集答题者姓名、联系方式、成绩档案或其他个人信息。",
+        "不把分数用来给同伴贴标签，反馈只说明本次作品中的理解情况。"
+      ],
+      "creatorLoop": {
+        "problem": "选择一个自己真正理解、也想让朋友理解的知识主题。",
+        "knowledge": "区分记忆题、理解题和观点题，查证答案并学习怎样写清楚的选项。",
+        "tool": "修改题目数据、计分变量和结果反馈，把示例测验变成自己的知识作品。",
+        "work": "完成一份主题一致、答案可靠、可以重新挑战的三题小测验。",
+        "feedback": "请一位同伴完成测验并复述错题原因，再修改让人误解的题干或选项。",
+        "identity": "能够署名说明为什么选择这些题，以及自己如何判断答案可信。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["亲自选择主题并写出题目、选项和反馈", "决定题目要检验记忆、理解还是观点"],
+        "aiCanHelp": ["解释题目数据、当前题号和计分变量", "检查数据格式并提示可能含糊的表达"],
+        "mustVerify": ["用可靠来源核对每个事实答案，并邀请真实同伴完成一次"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"
   },
   {
-    "schemaVersion": "1.0.0",
+    "schemaVersion": "1.1.0",
     "slug": "drag-and-drop-board",
     "title": "做一块可以拖动的故事板",
     "tagline": "把图片或任务卡拖到不同位置，理解一次完整的按下、移动和放开。",
@@ -372,6 +561,33 @@
       { "time": "2 小时", "title": "服务一个真实编排任务", "actions": ["定义三个分区", "加入五张真实卡片", "请朋友重新排列"], "doneWhen": "朋友能用它完成一次排序并解释选择。" }
     ],
     "aiPrompt": "请先用“拿起—经过—放下”解释 dragstart、dragover、drop 等事件，并指出 CSS 状态类什么时候变化。我会决定故事板的三个分区与卡片内容，你只帮我逐步替换结构并检查拖放边界。",
+    "k12": {
+      "primaryAgeBand": "middle-school",
+      "ageBands": ["middle-school", "high-school"],
+      "subjectLinks": ["language-arts", "social-studies", "arts"],
+      "learningContext": "club",
+      "adultSupport": {
+        "level": "optional",
+        "role": "教师或社团导师可以提供地方资料和第一轮反馈，但故事结构与取舍必须由学习者完成。"
+      },
+      "safetyNotes": [
+        "讲述真实人物时先获得同意，或改用匿名角色和非识别性信息。",
+        "使用地方照片、档案和文字时保留来源，并确认公开展示许可。"
+      ],
+      "creatorLoop": {
+        "problem": "选择一个值得重新讲述的校园、社区或地方文化故事，提出自己的叙事角度。",
+        "knowledge": "学习事件顺序、因果关系和资料来源，判断怎样排列会改变读者理解。",
+        "tool": "用拖放事件和三个自定义分区，制作可以重新编排的数字故事板。",
+        "work": "完成至少五张真实内容卡片、能拖动排序并清楚提示落点的故事板。",
+        "feedback": "请同伴重新排列并解释他的顺序，再比较两种叙事为什么产生不同理解。",
+        "identity": "能够署名说明自己选择了什么视角、舍弃了什么材料，以及为何这样讲述。"
+      },
+      "aiBoundary": {
+        "learnerOwns": ["选择故事视角、资料和三种分区规则", "决定卡片顺序并解释取舍背后的意义"],
+        "aiCanHelp": ["解释拖放事件与视觉状态的关系", "协助检查交互边界、键盘替代说明和卡片结构"],
+        "mustVerify": ["核对每份资料来源，并让真实同伴完成一次重新排序"]
+      }
+    },
     "noPaidService": true,
     "requiresBackend": false,
     "verifiedAt": "2026-08-11T00:00:00+09:00"

@@ -1,5 +1,7 @@
 export const SCHEMA_VERSION = "1.0.0" as const;
 
+export const BEGINNER_MISSION_SCHEMA_VERSION = "1.1.0" as const;
+
 export const PROJECT_CATEGORIES = [
   "ai-app",
   "agent",
@@ -37,6 +39,27 @@ export const BEGINNER_MISSION_TRACKS = [
 ] as const;
 
 export const BEGINNER_MISSION_LEVELS = ["first-step", "guided"] as const;
+
+export const K12_AGE_BANDS = [
+  "lower-primary",
+  "upper-primary",
+  "middle-school",
+  "high-school",
+] as const;
+
+export const K12_SUBJECTS = [
+  "language-arts",
+  "mathematics",
+  "science",
+  "social-studies",
+  "arts",
+  "information-technology",
+  "wellbeing",
+] as const;
+
+export const K12_SUPPORT_LEVELS = ["required", "recommended", "optional"] as const;
+
+export const K12_LEARNING_CONTEXTS = ["home", "classroom", "club"] as const;
 
 export const UPDATE_CHANGE_KINDS = [
   "repository_renamed",

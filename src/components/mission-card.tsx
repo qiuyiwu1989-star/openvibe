@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import type { BeginnerMission } from "../../packages/schema/src/index";
+import { k12AgeBandLabels, k12SubjectLabels } from "@/lib/k12";
 
 const trackLabels = {
   "personal-page": "个人网页",
@@ -22,6 +23,14 @@ export function MissionCard({ mission, index }: MissionCardProps) {
         <span>{trackLabels[mission.track]}</span>
       </div>
       <div className="mission-card-main">
+        {mission.k12 && (
+          <div className="mission-k12-meta">
+            <span>{k12AgeBandLabels[mission.k12.primaryAgeBand]}</span>
+            {mission.k12.subjectLinks.slice(0, 1).map((subject) => (
+              <span key={subject}>{k12SubjectLabels[subject]}</span>
+            ))}
+          </div>
+        )}
         <p className="mission-time">≈ {mission.time.firstVisibleMinutes} 分钟看到变化</p>
         <h3>
           <Link href={`/start/${mission.slug}`}>{mission.title}</Link>

@@ -84,6 +84,48 @@ test("接受全部新手作品任务", () => {
   }
 });
 
+test("K12 试点覆盖四个年龄段且每段有两个主要案例", () => {
+  const pilots = beginnerMissions
+    .map((mission) => BeginnerMissionSchema.parse(mission))
+    .filter((mission) => mission.k12);
+
+  assert.equal(pilots.length, 8);
+  assert.deepEqual(
+    Object.fromEntries(
+      ["lower-primary", "upper-primary", "middle-school", "high-school"].map((ageBand) => [
+        ageBand,
+        pilots.filter((mission) => mission.k12?.primaryAgeBand === ageBand).length,
+      ]),
+    ),
+    {
+      "lower-primary": 2,
+      "upper-primary": 2,
+      "middle-school": 2,
+      "high-school": 2,
+    },
+  );
+});
+
+test("拒绝没有 K12 学习设计的 1.1.0 任务", () => {
+  const source = beginnerMissions.find((mission) => mission.schemaVersion === "1.0.0");
+  assert.ok(source);
+  const mission = structuredClone(source);
+  mission.schemaVersion = "1.1.0";
+
+  assert.equal(BeginnerMissionSchema.safeParse(mission).success, false);
+});
+
+test("拒绝把小学低段案例标为无需成人支持", () => {
+  const source = beginnerMissions.find(
+    (mission) => mission.k12 && (mission.k12 as Record<string, unknown>).primaryAgeBand === "lower-primary",
+  );
+  assert.ok(source);
+  const mission = structuredClone(source);
+  (mission.k12 as Record<string, any>).adultSupport.level = "optional";
+
+  assert.equal(BeginnerMissionSchema.safeParse(mission).success, false);
+});
+
 test("拒绝不能快速看到变化的新手任务", () => {
   const source = beginnerMissions[0];
   assert.ok(source);

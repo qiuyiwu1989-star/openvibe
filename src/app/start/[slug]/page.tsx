@@ -6,6 +6,14 @@ import { PromptCopy } from "@/components/prompt-copy";
 import { MissionProgressPanel } from "@/components/mission-progress-panel";
 import { trackLabels } from "@/components/mission-card";
 import { getBeginnerMissionBySlug, getBeginnerMissions } from "@/lib/beginner-missions";
+import {
+  creatorLoopLabels,
+  k12AgeBandAges,
+  k12AgeBandLabels,
+  k12ContextLabels,
+  k12SubjectLabels,
+  k12SupportLabels,
+} from "@/lib/k12";
 
 type MissionPageProps = {
   params: Promise<{ slug: string }>;
@@ -40,6 +48,13 @@ export default async function MissionPage({ params }: MissionPageProps) {
           <span aria-current="page">{mission.title}</span>
         </nav>
         <p className="eyebrow">{trackLabels[mission.track]} · {mission.level === "first-step" ? "第一步" : "跟做练习"}</p>
+        {mission.k12 && (
+          <div className="mission-k12-badges" aria-label="K12 学习建议">
+            <span>{k12AgeBandLabels[mission.k12.primaryAgeBand]} · {k12AgeBandAges[mission.k12.primaryAgeBand]}</span>
+            <span>{k12SupportLabels[mission.k12.adultSupport.level]}</span>
+            <span>{k12ContextLabels[mission.k12.learningContext]}场景</span>
+          </div>
+        )}
         <h1>{mission.title}</h1>
         <p className="mission-lead">{mission.tagline}</p>
         <div className="mission-hero-actions">
@@ -63,6 +78,49 @@ export default async function MissionPage({ params }: MissionPageProps) {
             <h2>先做这一件事</h2>
             <p>{mission.firstChange}</p>
           </section>
+
+          {mission.k12 && (
+            <section className="content-block k12-learning-design" aria-labelledby="creator-loop-title">
+              <div className="k12-learning-heading">
+                <div>
+                  <p className="eyebrow">CREATOR LOOP / 创造者六环</p>
+                  <h2 id="creator-loop-title">前五环长能力，最后一环长身份。</h2>
+                </div>
+                <ul aria-label="学科连接">
+                  {mission.k12.subjectLinks.map((subject) => (
+                    <li key={subject}>{k12SubjectLabels[subject]}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <ol className="creator-loop-grid">
+                {(Object.entries(creatorLoopLabels) as Array<[
+                  keyof typeof creatorLoopLabels,
+                  string,
+                ]>).map(([key, label], index) => (
+                  <li key={key}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div><strong>{label}</strong><p>{mission.k12?.creatorLoop[key]}</p></div>
+                  </li>
+                ))}
+              </ol>
+
+              <div className="human-ai-boundary">
+                <article>
+                  <p className="eyebrow">你必须亲自做</p>
+                  <ul>{mission.k12.aiBoundary.learnerOwns.map((item) => <li key={item}>{item}</li>)}</ul>
+                </article>
+                <article>
+                  <p className="eyebrow">AI 可以帮助</p>
+                  <ul>{mission.k12.aiBoundary.aiCanHelp.map((item) => <li key={item}>{item}</li>)}</ul>
+                </article>
+                <article>
+                  <p className="eyebrow">完成前要验证</p>
+                  <ul>{mission.k12.aiBoundary.mustVerify.map((item) => <li key={item}>{item}</li>)}</ul>
+                </article>
+              </div>
+            </section>
+          )}
 
           <MissionProgressPanel
             missionSlug={mission.slug}
@@ -89,6 +147,16 @@ export default async function MissionPage({ params }: MissionPageProps) {
             <h2>一个可以展示的作品</h2>
             <p>{mission.outcome}</p>
           </section>
+          {mission.k12 && (
+            <section className="side-card k12-safety-card">
+              <p className="eyebrow">成人支持与安全</p>
+              <h2>{k12SupportLabels[mission.k12.adultSupport.level]}</h2>
+              <p>{mission.k12.adultSupport.role}</p>
+              <ul>
+                {mission.k12.safetyNotes.map((note) => <li key={note}>{note}</li>)}
+              </ul>
+            </section>
+          )}
           <section className="side-card mission-source-card">
             <p className="eyebrow">源项目</p>
             <h2>向开源作者学习</h2>

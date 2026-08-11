@@ -157,6 +157,26 @@ test("新手入口至少提供 12 个低门槛作品任务", async () => {
     assert.equal(mission.requiresBackend, false);
     assert.equal(mission.source.license, "MIT", `${mission.slug} 许可证超出新手池范围`);
   }
+
+  const k12Pilots = missions.filter((mission) => mission.k12);
+  assert.equal(k12Pilots.length, 8, `K12 试点数量不正确：${k12Pilots.length}/8`);
+
+  for (const ageBand of ["lower-primary", "upper-primary", "middle-school", "high-school"] as const) {
+    assert.equal(
+      k12Pilots.filter((mission) => mission.k12?.primaryAgeBand === ageBand).length,
+      2,
+      `${ageBand} 应有两个主要试点案例`,
+    );
+  }
+
+  for (const mission of k12Pilots) {
+    assert.equal(mission.schemaVersion, "1.1.0");
+    assert.ok(mission.k12);
+    assert.match(mission.k12.creatorLoop.identity, /署名|负责|亲自|自己/);
+    assert.ok(mission.k12.safetyNotes.length >= 2);
+    assert.ok(mission.k12.aiBoundary.learnerOwns.length >= 2);
+    assert.ok(mission.k12.aiBoundary.mustVerify.length >= 1);
+  }
 });
 
 test("公开更新历史只包含已审核事件", async () => {

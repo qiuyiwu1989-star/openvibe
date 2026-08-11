@@ -13,7 +13,8 @@ const featuredGoals = ["ui", "product-architecture", "ai-integration", "project-
 export default function HomePage() {
   const projects = getPublishedProjects();
   const missions = getBeginnerMissions();
-  const firstMissions = missions.slice(0, 3);
+  const k12Pilots = missions.filter((mission) => mission.k12);
+  const firstMissions = k12Pilots.slice(0, 3);
   const featured = projects.slice(0, 3);
 
   return (
@@ -22,7 +23,7 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="live-dot" aria-hidden="true" />
-            {missions.length} 个第一次做作品任务 · 不需要先懂框架
+            {k12Pilots.length} 个 K12 分龄试点 · 不需要先懂框架
           </p>
           <h1>
             先做出一个东西。
@@ -35,7 +36,7 @@ export default function HomePage() {
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/start">
-              开始第一个作品 <span aria-hidden="true">↗</span>
+            按年龄找到作品 <span aria-hidden="true">↗</span>
             </Link>
             <Link className="button button-ghost" href="/explore">
               我想看进阶案例
@@ -85,11 +86,11 @@ export default function HomePage() {
       <section className="section shell" aria-labelledby="first-missions-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">从这里起步</p>
-            <h2 id="first-missions-title">先选一个当天能做完的</h2>
+            <p className="eyebrow">K12 分龄试点</p>
+            <h2 id="first-missions-title">不同年龄，都从真实作品开始</h2>
           </div>
           <Link className="text-link" href="/start">
-            查看 {missions.length} 个任务 <span aria-hidden="true">→</span>
+            查看 4 个年龄段 <span aria-hidden="true">→</span>
           </Link>
         </div>
         <div className="mission-grid">
