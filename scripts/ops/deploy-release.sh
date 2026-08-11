@@ -110,6 +110,13 @@ if [[ "${health_status}" == 000* ]] || [[ "${health_status}" == 5?? ]]; then
   exit 1
 fi
 
+if ! SMOKE_FULL_BODY=1 SMOKE_RETRY_DELAY_SECONDS=1 \
+  bash "${release_dir}/scripts/ops/smoke-test.sh" http://127.0.0.1:3210; then
+  echo "新版本没有通过服务器本机完整页面检查" >&2
+  rollback || true
+  exit 1
+fi
+
 touch "${release_dir}/.release-ready"
 if [[ -n "${previous_release}" ]]; then
   ln -sfn "${deploy_root}/releases/${previous_release}" "${previous_link}"

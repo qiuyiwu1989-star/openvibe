@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync, spawnSync } from "node:child_process";
-import { chmod, mkdir, mkdtemp, readlink, rm, writeFile } from "node:fs/promises";
+import { chmod, mkdir, mkdtemp, readFile, readlink, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import test from "node:test";
@@ -162,6 +162,42 @@ test("冒烟检查在传输持续失败时仍然拒绝发布", async () => {
   }
 });
 
+test("公网冒烟只取页面响应头，本机模式完整下载页面", async () => {
+  const temporaryRoot = await mkdtemp(path.join(os.tmpdir(), "openvibe-smoke-mode-"));
+  const fakeBin = path.join(temporaryRoot, "bin");
+  const publicLog = path.join(temporaryRoot, "public-args");
+  const localLog = path.join(temporaryRoot, "local-args");
+  await mkdir(fakeBin, { recursive: true });
+  await installFakeCommand(fakeBin, "curl", `#!/usr/bin/env bash
+printf '%s\\n' "$*" >> "\${OPENVIBE_FAKE_CURL_LOG}"
+printf '200'
+`);
+
+  try {
+    const baseEnvironment = {
+      ...process.env,
+      PATH: `${fakeBin}:${process.env.PATH ?? ""}`,
+      SMOKE_RETRY_DELAY_SECONDS: "0",
+    };
+    runScript(smokeScript, ["https://example.test"], {
+      ...baseEnvironment,
+      OPENVIBE_FAKE_CURL_LOG: publicLog,
+    });
+    runScript(smokeScript, ["http://127.0.0.1:3000"], {
+      ...baseEnvironment,
+      OPENVIBE_FAKE_CURL_LOG: localLog,
+      SMOKE_FULL_BODY: "1",
+    });
+
+    const publicCalls = (await readFile(publicLog, "utf8")).trim().split("\n");
+    const localCalls = (await readFile(localLog, "utf8")).trim().split("\n");
+    assert.equal(publicCalls.filter((call) => call.includes("--head")).length, 10);
+    assert.equal(localCalls.some((call) => call.includes("--head")), false);
+  } finally {
+    await rm(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
 async function installFakeCommand(directory: string, name: string, contents: string): Promise<void> {
   const target = path.join(directory, name);
   await writeFile(target, contents, "utf8");
@@ -171,9 +207,10 @@ async function installFakeCommand(directory: string, name: string, contents: str
 async function createReleaseArchive(root: string, name: string): Promise<string> {
   const source = path.join(root, `source-${name}`);
   const archive = path.join(root, `${name}.tar.gz`);
-  await mkdir(source, { recursive: true });
+  await mkdir(path.join(source, "scripts/ops"), { recursive: true });
   await writeFile(path.join(source, "Dockerfile"), "FROM scratch\n", "utf8");
   await writeFile(path.join(source, "compose.production.yml"), "services: {}\n", "utf8");
+  await writeFile(path.join(source, "scripts/ops/smoke-test.sh"), "#!/usr/bin/env bash\nexit 0\n", "utf8");
   execFileSync("tar", ["-czf", archive, "-C", source, "."]);
   return archive;
 }
