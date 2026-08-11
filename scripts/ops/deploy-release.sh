@@ -92,7 +92,7 @@ if ! OPENVIBE_IMAGE_TAG="${image_tag}" "${compose[@]}" up -d --wait --wait-timeo
 fi
 
 health_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
-  --connect-timeout 5 --max-time 15 http://127.0.0.1:3100/api/health || true)"
+  --connect-timeout 5 --max-time 15 http://127.0.0.1:3210/api/health || true)"
 if [[ "${health_status}" == 000* ]] || [[ "${health_status}" == 5?? ]]; then
   rollback || true
   exit 1
