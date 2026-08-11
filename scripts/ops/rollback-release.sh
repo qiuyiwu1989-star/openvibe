@@ -31,7 +31,7 @@ OPENVIBE_IMAGE_TAG="release-${previous_id}" docker compose -p openvibe \
   -f "${previous_dir}/compose.production.yml" up -d --wait --wait-timeout 120
 
 health_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
-  --connect-timeout 5 --max-time 15 http://127.0.0.1:3100/api/health || true)"
+  --connect-timeout 5 --max-time 15 http://127.0.0.1:3210/api/health || true)"
 if [[ "${health_status}" == 000* ]] || [[ "${health_status}" == 5?? ]]; then
   echo "上一版本也没有通过健康检查" >&2
   exit 1
