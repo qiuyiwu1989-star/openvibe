@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Check public routes
-        run: bash scripts/ops/smoke-test.sh https://vibe.yongle.school
+        run: bash scripts/ops/smoke-test.sh https://tongxue.yongle.school/openvibe
 
       - name: Check repeated public latency
-        run: bash scripts/ops/latency-test.sh https://vibe.yongle.school
+        run: bash scripts/ops/latency-test.sh https://tongxue.yongle.school/openvibe

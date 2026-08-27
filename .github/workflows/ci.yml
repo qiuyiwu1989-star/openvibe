@@ -33,7 +33,7 @@ jobs:
 
       - name: Build web application
         env:
-          NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
+          NEXT_PUBLIC_SITE_URL: https://tongxue.yongle.school/openvibe
         run: npm run build
 
       - name: Validate production container definition

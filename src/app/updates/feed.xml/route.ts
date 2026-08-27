@@ -3,7 +3,7 @@ import { getUpdateHistory } from "@/lib/update-history";
 export const dynamic = "force-static";
 
 export function GET() {
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/openvibe").replace(/\/$/, "");
   const entries = getUpdateHistory();
   const items = entries.map((entry) => {
     const link = entry.projectSlug

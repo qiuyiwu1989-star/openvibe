@@ -6,21 +6,21 @@ import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
-  applicationName: "OpenVibe",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000/openvibe"),
+  applicationName: "同学 · OpenVibe",
   title: {
     default: "OpenVibe · Vibe Coding 探索者",
     template: "%s · OpenVibe",
   },
   description:
-    "从 15 分钟新手任务开始做出作品，再通过已审核的 GitHub 案例学习产品与代码。",
+    "面向全年龄学习者：从 15 分钟新手任务开始做出作品，再通过已审核的 GitHub 案例学习产品与代码。",
   keywords: ["vibe coding", "开源项目", "GitHub", "编程学习", "AI 编程"],
   openGraph: {
     type: "website",
     locale: "zh_CN",
     siteName: "OpenVibe",
     title: "OpenVibe · 先做出一个东西，再慢慢看懂代码",
-    description: "20 个 K12 分龄案例、4 条四周路线、匿名试教工具，加上 30 个经过审核的进阶开源项目。",
+    description: "全年龄都能从小作品开始；另有 K12 分龄支持、四周路线和 30 个经过审核的进阶开源项目。",
   },
   twitter: {
     card: "summary_large_image",

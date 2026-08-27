@@ -5,8 +5,8 @@ import { LearningPathCard } from "@/components/learning-path-card";
 import { getLearningPaths } from "@/lib/learning-paths";
 
 export const metadata: Metadata = {
-  title: "K12 四周学习路线",
-  description: "从小学低段到高中，用四周完成问题、作品、反馈和作者身份的学习闭环。",
+  title: "K12 分龄四周路线",
+  description: "OpenVibe 全年龄学习地图中的 K12 专项：从小学低段到高中，用四周完成问题、作品、反馈和作者身份闭环。",
 };
 
 export default function LearningPathsPage() {
@@ -16,9 +16,9 @@ export default function LearningPathsPage() {
     <div className="paths-page">
       <section className="paths-hero shell">
         <div>
-          <p className="eyebrow">K12 PATHS / 创造者学习路线</p>
+          <p className="eyebrow">K12 PATHS / 全年龄产品中的分龄支持</p>
           <h1>不是多做几个练习，<br /><span>而是完成一次作者旅程。</span></h1>
-          <p>每条路线提供 5 个案例作为选择，不要求全部完成。四周只围绕一件作品，经历意图、制作、反馈和署名。</p>
+          <p>这是 OpenVibe 为 K12 场景增加的专项支持，不是全站年龄门槛。每条路线提供 5 个案例作为选择，四周只围绕一件作品经历意图、制作、反馈和署名；其他年龄可直接使用同样的作品方法。</p>
         </div>
         <dl className="paths-facts">
           <div><dt>年龄入口</dt><dd>4 个</dd></div>

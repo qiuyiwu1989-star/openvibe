@@ -62,7 +62,7 @@ jobs:
           for sample in 1 2 3 4 5; do
             curl --silent --show-error --location --output /dev/null \
               --write-out "sample=${sample} status=%{http_code} connect=%{time_connect}s tls=%{time_appconnect}s first=%{time_starttransfer}s total=%{time_total}s bytes=%{size_download}\n" \
-              --connect-timeout 8 --max-time 20 https://vibe.yongle.school/explore || true
+              --connect-timeout 8 --max-time 20 https://tongxue.yongle.school/openvibe/explore || true
           done
 
       - name: Remove temporary SSH key

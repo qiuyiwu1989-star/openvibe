@@ -26,5 +26,5 @@ for sample in 1 2 3 4 5; do
     "${container_name}"
   curl --silent --show-error --output /dev/null \
     --write-out "sample=${sample} local_status=%{http_code} local_total=%{time_total}s\n" \
-    --connect-timeout 3 --max-time 5 http://127.0.0.1:3210/api/health
+    --connect-timeout 3 --max-time 5 http://127.0.0.1:3210/openvibe/api/health
 done

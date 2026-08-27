@@ -3,7 +3,7 @@ services:
     build:
       context: .
       args:
-        NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
+        NEXT_PUBLIC_SITE_URL: https://tongxue.yongle.school/openvibe
     image: openvibe:${OPENVIBE_IMAGE_TAG:-latest}
     restart: unless-stopped
     environment:
@@ -13,7 +13,7 @@ services:
     ports:
       - "127.0.0.1:3210:3000"
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/api/health"]
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:3000/openvibe/api/health"]
       interval: 30s
       timeout: 5s
       retries: 3

@@ -5,8 +5,8 @@ import { StartMissionExplorer } from "@/components/start-mission-explorer";
 import { getBeginnerMissions } from "@/lib/beginner-missions";
 
 export const metadata: Metadata = {
-  title: "K12 分龄作品入口",
-  description: "从小学低段到高中，按成长阶段和兴趣找到 15 分钟可见变化的创造者学习案例。",
+  title: "全年龄作品入口",
+  description: "无论几岁，都可以按兴趣找到 15 分钟看到变化的创造者学习案例；K12 学习者另有可选分龄建议。",
 };
 
 export default function StartPage() {
@@ -16,11 +16,11 @@ export default function StartPage() {
     <div className="start-page">
       <section className="start-hero shell">
         <div>
-          <p className="eyebrow">K12 START / 分龄作品入口</p>
+          <p className="eyebrow">START MAKING / 全年龄作品入口</p>
           <h1>每个年龄，都可以成为作品的作者。</h1>
           <p>
-            从一个看得见的小变化开始。年龄只是推荐，不是限制；每个任务都不要后端、不要付费 API，
-            并把孩子亲自决定的部分说清楚。
+            儿童、青少年、大学生、职场人或退休后的探索者，都可以从一个看得见的小变化开始。
+            先按兴趣选作品；需要时再用年龄建议调整表达、支持和安全边界。
           </p>
         </div>
         <div className="start-gates" aria-label="新手任务收录标准">
@@ -45,7 +45,7 @@ export default function StartPage() {
 
       <section className="path-invitation shell">
         <div><p className="eyebrow">想连续学四周？</p><h2>选一条路线，只把一件作品做到真实可用。</h2></div>
-        <Link className="button button-dark" href="/paths">查看分龄学习路线 <span aria-hidden="true">→</span></Link>
+        <Link className="button button-dark" href="/paths">查看 K12 分龄路线 <span aria-hidden="true">→</span></Link>
       </section>
 
       <div className="shell">

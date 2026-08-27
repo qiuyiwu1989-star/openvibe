@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { tongxueCreateUrl, tongxueHomeUrl } from "@/lib/site-links";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -10,6 +12,8 @@ export function SiteFooter() {
           <p>把热度变成可行动的学习路径。</p>
         </div>
         <div className="footer-links">
+          <a href={tongxueHomeUrl}>返回同学</a>
+          <a href={tongxueCreateUrl}>进入同学创作中心</a>
           <Link href="/start">做第一个作品</Link>
           <Link href="/works">我的作品</Link>
           <Link href="/pilot">试教工作台</Link>
@@ -17,7 +21,7 @@ export function SiteFooter() {
           <Link href="/updates">订阅更新</Link>
           <Link href="/methodology">了解评分</Link>
         </div>
-        <p className="footer-note">数据与编辑判断分层记录 · 发布前人工审核</p>
+        <p className="footer-note">同学旗下开源学习频道 · 数据与编辑判断分层记录 · 发布前人工审核</p>
       </div>
     </footer>
   );
