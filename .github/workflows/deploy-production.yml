@@ -19,7 +19,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     environment: production
     env:
       DEPLOY_ROOT: ${{ vars.PRODUCTION_DEPLOY_ROOT || '/srv/openvibe' }}
@@ -97,7 +97,12 @@ jobs:
           ssh "${ssh_options[@]}" "${PRODUCTION_USER}@${PRODUCTION_HOST}" "mkdir -p '${DEPLOY_ROOT}/incoming'"
           scp "${ssh_options[@]}" "${RUNNER_TEMP}/openvibe-${RELEASE_SHA}.tar.gz" \
             "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_archive}"
-          scp "${ssh_options[@]}" "${RUNNER_TEMP}/openvibe-image-${RELEASE_SHA}.tar.gz" \
+          # The compressed image is the largest artifact and East-US-to-Asia links can be
+          # slow. rsync keeps a verified partial file so a retried workflow resumes instead
+          # of restarting the entire transfer.
+          rsync --partial --append-verify --timeout=120 \
+            -e "ssh -i ${HOME}/.ssh/openvibe_deploy -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes -o ServerAliveInterval=30 -o ServerAliveCountMax=20" \
+            "${RUNNER_TEMP}/openvibe-image-${RELEASE_SHA}.tar.gz" \
             "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_image}"
           scp "${ssh_options[@]}" scripts/ops/deploy-release.sh \
             "${PRODUCTION_USER}@${PRODUCTION_HOST}:${remote_script}"
