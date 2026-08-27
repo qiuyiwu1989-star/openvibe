@@ -1,13 +1,13 @@
 # 生产部署
 
-目标域名：`https://vibe.yongle.school`。
+目标地址：`https://tongxue.yongle.school/openvibe`。旧域名 `https://vibe.yongle.school` 仅作为迁移别名。
 
 ## 运行形态
 
 - Next.js 16 standalone Node.js 服务。
 - Docker 多阶段构建，最终容器以非 root 用户运行。生产镜像在 GitHub Runner 构建并压缩传输，服务器只加载已验证镜像，不现场执行依赖安装和应用构建。
 - 宿主机只暴露 `127.0.0.1:3210`，公网请求必须经过已有的 Nginx 或 Caddy。该端口在首次生产取证时确认未被共享服务器上的其他服务占用。
-- `/api/health` 作为容器、反向代理和部署后验证的统一健康检查。
+- `/openvibe/api/health` 作为容器、反向代理和部署后验证的统一健康检查。
 
 ## 发布步骤
 
@@ -16,8 +16,8 @@
 1. 安装 Docker Engine、Compose 插件、Nginx、Certbot 和 curl。
 2. 将新的专用部署公钥加入 `ubuntu` 的 `authorized_keys`，不要启用密码自动登录。
 3. 在仓库根目录执行 `sudo bash scripts/ops/bootstrap-server.sh ubuntu /srv/openvibe`。
-4. 将 `deploy/nginx/openvibe.conf` 安装到 Nginx，检查配置后再 reload。
-5. 使用 Certbot 为 `vibe.yongle.school` 申请证书并启用 HTTPS。
+4. 把两个都执行反向代理的 `location = /openvibe` 与 `location ^~ /openvibe/` 加入 `tongxue.yongle.school` 现有 HTTPS server 块；`proxy_pass` 不得带尾部 `/`，以保留基础路径。不要把 `/openvibe` 重定向到尾部斜杠，Next.js 会把 `/openvibe/` 规范化为 `/openvibe`。
+5. 将 `deploy/nginx/openvibe.conf` 作为旧域名迁移配置；确认旧域名证书仍有效。
 
 执行前应先检查服务器已有站点与端口占用，不能直接覆盖共享配置。
 
@@ -46,11 +46,15 @@
 
 延迟检查独立于部署冒烟和自动回滚。服务器本机检查要求页面完整传输，GitHub 公网检查要求响应头完整且状态为 2xx/3xx；两者都会对失败路由做一次有界复核，持续失败仍然回滚。本地可执行 `npm run ops:latency` 复核当前公网延迟。
 
-`Diagnose production` 是只读人工诊断工作流。它通过同一受保护 SSH 身份采集主机负载、内存、OpenVibe 磁盘占用、Nginx 状态、OpenVibe 容器重启/健康/资源和本机健康延迟，并从 GitHub Runner 重复采样公开 `/explore`。它不读取其他项目容器日志，不修改服务器，也不执行重启。
+`Diagnose production` 是只读人工诊断工作流。它通过同一受保护 SSH 身份采集主机负载、内存、OpenVibe 磁盘占用、Nginx 状态、OpenVibe 容器重启/健康/资源和本机健康延迟，并从 GitHub Runner 重复采样公开 `/openvibe/explore`。它不读取其他项目容器日志，不修改服务器，也不执行重启。
 
 ## 回滚
 
-生产机按 Git SHA 保留不可变版本和镜像。新容器健康检查失败时自动恢复上一版本；已经上线后也可执行 `bash /srv/openvibe/current/scripts/ops/rollback-release.sh /srv/openvibe`。健康判据统一为：`000` 或 `5xx` 视为服务故障，其他 HTTP 响应说明服务器仍可达。
+生产机按 Git SHA 保留不可变版本和镜像。新容器健康检查失败时自动恢复上一版本；已经上线后也可执行 `bash /srv/openvibe/current/scripts/ops/rollback-release.sh /srv/openvibe`。健康判据统一为：`000` 或 `5xx` 视为服务故障，其他 HTTP 响应说明服务器仍可达。Nginx 变更要单独保留改动前配置；应用回滚不能替代反向代理回滚。
+
+## 浏览器本机数据迁移
+
+OpenVibe 的作品进度仍使用浏览器本机存储。`vibe.yongle.school` 与 `tongxue.yongle.school` 是不同 origin，浏览器不会自动共享数据。切换前，有历史作品的学习者应在旧站 `/works` 导出 JSON，切换后在新频道导入；没有本机作品的用户无需操作。迁移期不得宣称数据会自动带入。
 
 ## 数据与备份
 

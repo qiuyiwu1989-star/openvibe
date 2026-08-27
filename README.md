@@ -1,10 +1,10 @@
 # OpenVibe：Vibe Coding 探索者
 
-面向 vibe coding 初学者的 GitHub 开源项目学习导航。产品不以 Star 榜单为终点，而是回答：项目是否值得学、适合谁学、应该从哪里开始复刻。
+面向全年龄学习者的 Vibe Coding 开源学习地图。无论是儿童、青少年、大学生、职场人还是退休后的探索者，都可以从一个自己真正在意的小作品开始，再逐步看懂和改造成熟的 GitHub 项目。
 
-OpenVibe 的目标，是把散落在 GitHub 上的优秀开源项目整理成一张可探索、可理解、可动手复刻的学习地图。
+OpenVibe 不以 Star 榜单或年龄分类为终点，而是回答：我想做什么、哪个案例适合我现在的经验、应该从哪里开始，以及怎样让作品真正属于自己。年龄只在需要时帮助推荐起点，不构成使用门槛或能力判断。
 
-当前状态：**阶段 11 的真实试教执行单与运维升级已上线，等待完成两场真实试教。**生产站点为 [vibe.yongle.school](https://vibe.yongle.school)。
+当前状态：**全年龄产品定位已经明确；OpenVibe 正在接入“同学”成为独立频道，阶段 11 的 K12 真实试教执行单仍等待完成两场专项试教。**目标生产地址为 [tongxue.yongle.school/openvibe](https://tongxue.yongle.school/openvibe)。
 
 ## 阶段 0 产物
 
@@ -35,12 +35,12 @@ npm run build
 npm run dev
 ```
 
-当前包含 20 个 K12 新手作品任务，四个年龄段各 5 个；`/paths` 提供 4 条四周学习路线和教师/家长引导卡。每条路线的 5 个案例是选择池，不是作业清单，学习者只选一件作品完成“意图—制作—反馈—署名”闭环。`/pilot/guide` 提供两套可打印的 90 分钟试教执行单，`/pilot` 记录匿名整场汇总、卡点、成人介入与作者证据；数据只保存在当前浏览器并可导出 JSON。另有 30 个进阶学习案例。
+当前包含 20 个全年龄可用的新手作品任务，以及 30 个经过审核的进阶学习案例。学习者可以按兴趣直接选择，也可以使用针对 K12 场景补充的四个年龄入口、四周路线和教师/家长引导卡。年龄标签只是额外的学习设计，不把 OpenVibe 限定为儿童产品。`/pilot/guide` 提供两套 K12 场景的 90 分钟试教执行单，`/pilot` 记录匿名整场汇总、卡点、成人介入与作者证据；数据只保存在当前浏览器并可导出 JSON。
 
 如需生成正确的绝对社交分享地址，在构建或部署环境中设置：
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://你的站点域名
+NEXT_PUBLIC_SITE_URL=https://你的站点域名/openvibe
 ```
 
 ## 内容工作流
@@ -77,6 +77,7 @@ npm run updates:review -- --repository-id <id> --decision approve \
 
 ## 阶段报告
 
+- [人机协作开发总结报告](docs/collaboration-retrospective.md)
 - [阶段 1 实施报告](docs/stage-1-report.md)
 - [MVP 完成报告](docs/mvp-report.md)
 - [阶段 3：新手作品入口](docs/stage-3-report.md)

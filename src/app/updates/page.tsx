@@ -28,9 +28,9 @@ export default function UpdatesPage() {
             只有通过复核的变化才会出现在这里。
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="/updates/feed.xml">
+            <Link className="button button-primary" href="/updates/feed.xml">
               订阅 RSS <span aria-hidden="true">↗</span>
-            </a>
+            </Link>
             <Link className="button button-ghost" href="/methodology">
               了解审核方法
             </Link>

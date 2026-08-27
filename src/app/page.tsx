@@ -14,9 +14,9 @@ const featuredGoals = ["ui", "product-architecture", "ai-integration", "project-
 export default function HomePage() {
   const projects = getPublishedProjects();
   const missions = getBeginnerMissions();
-  const k12Pilots = missions.filter((mission) => mission.k12);
+  const ageGuidedMissions = missions.filter((mission) => mission.k12);
   const learningPaths = getLearningPaths();
-  const firstMissions = k12Pilots.slice(0, 3);
+  const firstMissions = missions.slice(0, 3);
   const featured = projects.slice(0, 3);
 
   return (
@@ -25,7 +25,7 @@ export default function HomePage() {
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="live-dot" aria-hidden="true" />
-            {k12Pilots.length} 个 K12 分龄案例 · 4 条学习路线
+            全年龄开放 · {missions.length} 个新手作品 · {projects.length} 个进阶案例
           </p>
           <h1>
             先做出一个东西。
@@ -33,12 +33,12 @@ export default function HomePage() {
             <span>再慢慢看懂代码。</span>
           </h1>
           <p className="hero-intro">
-            不用从技术名词开始。选一个你真想做的小作品，让 AI 帮你找路，
-            你亲自决定它为谁而做、什么才算完成。
+            无论几岁，都不用从技术名词开始。选一个你真想做的小作品，让 AI 帮你找路，
+            你亲自决定它为谁而做、什么才算完成。年龄只是可选建议，不是门槛。
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/start">
-            按年龄找到作品 <span aria-hidden="true">↗</span>
+            找到第一个作品 <span aria-hidden="true">↗</span>
             </Link>
             <Link className="button button-ghost" href="/explore">
               我想看进阶案例
@@ -91,11 +91,11 @@ export default function HomePage() {
       <section className="section shell" aria-labelledby="first-missions-title">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">K12 分龄案例</p>
-            <h2 id="first-missions-title">不同年龄，都从真实作品开始</h2>
+            <p className="eyebrow">全年龄创作入口</p>
+            <h2 id="first-missions-title">每个年龄，都可以从真实作品开始</h2>
           </div>
           <Link className="text-link" href="/start">
-            查看 {learningPaths.length} 条四周路线 <span aria-hidden="true">→</span>
+            查看 {ageGuidedMissions.length} 个分龄建议与 {learningPaths.length} 条路线 <span aria-hidden="true">→</span>
           </Link>
         </div>
         <div className="mission-grid">

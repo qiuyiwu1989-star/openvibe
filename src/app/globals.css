@@ -139,6 +139,26 @@ h3 {
   letter-spacing: -0.04em;
 }
 
+.brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.tongxue-return {
+  padding-left: 12px;
+  border-left: 1px solid var(--line-strong);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 760;
+  white-space: nowrap;
+}
+
+.tongxue-return:hover {
+  color: var(--blue);
+}
+
 .brand-mark {
   display: grid;
   width: 31px;
@@ -1521,6 +1541,8 @@ h3 {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 22px;
   font-weight: 760;
 }
@@ -4034,6 +4056,10 @@ h3 {
     display: none;
   }
 
+  .tongxue-return {
+    display: none;
+  }
+
   .nav-list {
     gap: 0;
   }
@@ -4333,6 +4359,10 @@ h3 {
   .footer-inner {
     grid-template-columns: 1fr;
     padding-block: 38px;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
   }
 
   .footer-note {

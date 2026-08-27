@@ -104,14 +104,14 @@ if ! OPENVIBE_IMAGE_TAG="${image_tag}" "${compose[@]}" up -d --no-build --pull n
 fi
 
 health_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' \
-  --connect-timeout 5 --max-time 15 http://127.0.0.1:3210/api/health || true)"
+  --connect-timeout 5 --max-time 15 http://127.0.0.1:3210/openvibe/api/health || true)"
 if [[ "${health_status}" == 000* ]] || [[ "${health_status}" == 5?? ]]; then
   rollback || true
   exit 1
 fi
 
 if ! SMOKE_FULL_BODY=1 SMOKE_RETRY_DELAY_SECONDS=1 \
-  bash "${release_dir}/scripts/ops/smoke-test.sh" http://127.0.0.1:3210; then
+  bash "${release_dir}/scripts/ops/smoke-test.sh" http://127.0.0.1:3210/openvibe; then
   echo "新版本没有通过服务器本机完整页面检查" >&2
   rollback || true
   exit 1

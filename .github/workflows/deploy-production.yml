@@ -45,7 +45,7 @@ jobs:
 
       - name: Verify release
         env:
-          NEXT_PUBLIC_SITE_URL: https://vibe.yongle.school
+          NEXT_PUBLIC_SITE_URL: https://tongxue.yongle.school/openvibe
         run: |
           npm ci
           npm test
@@ -55,7 +55,7 @@ jobs:
         run: |
           image_ref="openvibe:release-${RELEASE_SHA}"
           docker build --pull \
-            --build-arg NEXT_PUBLIC_SITE_URL=https://vibe.yongle.school \
+            --build-arg NEXT_PUBLIC_SITE_URL=https://tongxue.yongle.school/openvibe \
             --tag "${image_ref}" .
           docker image save "${image_ref}" | gzip -1 > "${RUNNER_TEMP}/openvibe-image-${RELEASE_SHA}.tar.gz"
 
@@ -106,7 +106,7 @@ jobs:
 
       - name: Verify public service
         id: public-smoke
-        run: bash scripts/ops/smoke-test.sh https://vibe.yongle.school
+        run: bash scripts/ops/smoke-test.sh https://tongxue.yongle.school/openvibe
 
       - name: Roll back failed public release
         if: ${{ failure() && steps.deploy.outcome == 'success' && steps.public-smoke.outcome == 'failure' }}

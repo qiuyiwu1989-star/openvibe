@@ -39,10 +39,10 @@ export function StartMissionExplorer({ missions }: StartMissionExplorerProps) {
       <section className="k12-path-picker" aria-labelledby="k12-picker-title">
         <div className="section-heading k12-picker-heading">
           <div>
-            <p className="eyebrow">K12 CASES / {k12CaseCount} 个分龄案例</p>
-            <h2 id="k12-picker-title">先选成长阶段，再选想做的作品。</h2>
+            <p className="eyebrow">可选分龄建议 / {k12CaseCount} 个案例</p>
+            <h2 id="k12-picker-title">先选想做的作品；需要时再按年龄缩小范围。</h2>
           </div>
-          <p>年龄只是推荐入口，不是能力标签。跨年龄尝试完全可以。</p>
+          <p>以下筛选为 K12 学习者提供额外支持。所有年龄都可以不选年龄、直接按兴趣浏览全部作品。</p>
         </div>
 
         <div className="k12-age-grid" role="group" aria-label="按年龄段筛选">

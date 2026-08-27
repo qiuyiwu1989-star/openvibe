@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-base_url="${1:-https://vibe.yongle.school}"
+base_url="${1:-https://tongxue.yongle.school/openvibe}"
 base_url="${base_url%/}"
 samples="${LATENCY_SAMPLES:-5}"
 warn_seconds="${LATENCY_WARN_SECONDS:-3}"
