@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { TONGXUE_TRACKING } from "@/lib/tongxue-tracking";
 
 import "./globals.css";
 
@@ -39,6 +41,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <Script
+          src={TONGXUE_TRACKING.scriptUrl}
+          data-slug={TONGXUE_TRACKING.workSlug}
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

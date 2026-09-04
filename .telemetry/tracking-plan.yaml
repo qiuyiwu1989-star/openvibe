@@ -1,0 +1,23 @@
+version: 1
+product: openvibe
+environment: production
+destination: tongxue
+work_id: 215
+work_slug: app-96d5b4
+collection:
+  mode: vendor_managed_browser_script
+  script_url: https://tongxue.yongle.school/z.js
+  endpoint: https://tongxue.yongle.school/api/collect
+  base_path: /openvibe
+events:
+  - name: page_usage
+    owner: tongxue_z_js
+    trigger: page load and navigation as implemented by the platform script
+    pii: none_sent_by_openvibe
+  - name: engagement_heartbeat
+    owner: tongxue_z_js
+    trigger: active use and page lifecycle as implemented by the platform script
+    pii: none_sent_by_openvibe
+verification:
+  expected_collect_status: 204
+  platform_work_id: 215
